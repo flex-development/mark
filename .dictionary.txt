@@ -10,6 +10,7 @@ jchen
 kaisugi
 nvmrc
 shfmt
+succ
 vates
 vitest
 yarnrc

@@ -63,7 +63,7 @@
     ]
   },
   "scripts": {
-    "build": "yarn clean:build && tsc -p tsconfig.build.json --noEmit false && rollup -c=rollup.config.mts && trash dist/*/*.mts \"!dist/**/index.d.mts\"",
+    "build": "yarn clean:build && tsc -p tsconfig.build.json --noEmit false && rollup -c=rollup.config.mts && trash dist/**/*.mts \"!dist/{compile,parse}/index.d.mts\" && delete-empty dist",
     "check:ci": "yarn dedupe --check && yarn check:format && yarn check:lint && yarn check:spelling && yarn typecheck && yarn check:types && attw --pack && yarn check:types:build",
     "check:format": "dprint check --incremental=false",
     "check:lint": "eslint --exit-on-fatal-error --max-warnings 0 .",
@@ -123,6 +123,7 @@
     "concat-stream": "2.0.0",
     "cross-env": "10.1.0",
     "cspell": "10.0.1",
+    "delete-empty": "3.0.0",
     "devlop": "1.1.0",
     "dprint": "0.54.0",
     "editorconfig": "3.0.2",
