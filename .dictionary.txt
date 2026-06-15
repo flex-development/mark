@@ -1,0 +1,15 @@
+attw
+cefc
+commitlintrc
+dedupe
+devlop
+fbca
+gpgsign
+hmarr
+jchen
+kaisugi
+nvmrc
+shfmt
+vates
+vitest
+yarnrc
