@@ -19,11 +19,25 @@ import pkg from './package.json' with { type: 'json' }
 import listSubdomains from './utils/list-subdomains.mts'
 
 /**
+ * The list of subdomains.
+ *
+ * @const {ReadonlyArray<Dirent>} subdomains
+ */
+const subdomains: readonly Dirent[] = listSubdomains()
+
+/**
+ * The list of subpath exports.
+ *
+ * @const {string[]} subpaths
+ */
+const subpaths: string[] = subdomains.map(sub => `${pkg.name}/${sub.name}`)
+
+/**
  * The rollup configuration.
  *
  * @type {RollupOptions[]}
  */
-export default listSubdomains().map((subdomain: Dirent): RollupOptions => {
+export default subdomains.map((subdomain: Dirent): RollupOptions => {
   /**
    * The target file.
    *
@@ -31,8 +45,43 @@ export default listSubdomains().map((subdomain: Dirent): RollupOptions => {
    */
   const input: string = `./dist/${subdomain.name}/index.d.mts`
 
+  /**
+   * The list of external dependencies.
+   *
+   * @const {Set<string>} external
+   */
+  const external: Set<string> = new Set(Object.keys(pkg.dependencies))
+
+  // add subpath exports as external dependencies.
+  for (const subpath of subpaths) {
+    if (subpath !== `${pkg.name}/${subdomain.name}`) external.add(subpath)
+  }
+
   return {
-    external: Object.keys(pkg.dependencies),
+    /**
+     * Determine if a module is external.
+     *
+     * @see https://rollupjs.org/configuration-options#external
+     *
+     * @this {void}
+     *
+     * @param {string} id
+     *  The module id
+     * @param {string | undefined} importer
+     *  The path to the parent module
+     * @param {boolean} isResolved
+     *  Whether `id` has already been resolved
+     * @return {boolean | null}
+     *  Whether the module at `id` is external, or `null` to use rollup defaults
+     */
+    external(
+      this: void,
+      id: string,
+      importer: string | undefined,
+      isResolved: boolean
+    ): boolean | null {
+      return void importer, void isResolved, external.has(id)
+    },
     input,
     output: [{ file: input, format: 'esm' }],
     plugins: [

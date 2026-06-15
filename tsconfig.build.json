@@ -15,6 +15,9 @@
   },
   "exclude": ["**/__mocks__/**", "**/__tests__/**"],
   "extends": "./tsconfig.json",
-  "files": [],
+  "files": [
+    "typings/@flex-development/fsm/compile/index.d.mts",
+    "typings/@flex-development/fsm/parse/index.d.mts"
+  ],
   "include": ["dist/**/*", "src/**/**.mts"]
 }
