@@ -1,6 +1,6 @@
 /**
- * @file Type Tests - TokenFactory
- * @module fsm/parse/types/tests/unit-d/TokenFactory
+ * @file Type Tests - CreateToken
+ * @module fsm/parse/types/tests/unit-d/CreateToken
  */
 
 import type {
@@ -8,9 +8,9 @@ import type {
   TokenInfo,
   TokenType
 } from '@flex-development/fsm/parse'
-import type TestSubject from '../token-factory.mts'
+import type TestSubject from '../create-token.mts'
 
-describe('unit-d:types/TokenFactory', () => {
+describe('unit-d:types/CreateToken', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

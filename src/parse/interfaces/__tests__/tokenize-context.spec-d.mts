@@ -6,6 +6,7 @@
 import type {
   Code,
   Construct,
+  CreateToken,
   DefineSkip,
   Event,
   Now,
@@ -13,7 +14,6 @@ import type {
   Preprocess,
   SliceSerialize,
   SliceStream,
-  TokenFactory,
   Write
 } from '@flex-development/fsm/parse'
 import type { Nilable } from '@flex-development/tutils'
@@ -80,10 +80,10 @@ describe('unit-d:interfaces/TokenizeContext', () => {
       .toEqualTypeOf<SliceStream>()
   })
 
-  it('should match [token: TokenFactory]', () => {
+  it('should match [token: CreateToken]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('token')
-      .toEqualTypeOf<TokenFactory>()
+      .toEqualTypeOf<CreateToken>()
   })
 
   it('should match [write: Write]', () => {

@@ -1,6 +1,6 @@
 /**
- * @file Type Aliases - TokenFactory
- * @module fsm/parse/types/TokenFactory
+ * @file Type Aliases - CreateToken
+ * @module fsm/parse/types/CreateToken
  */
 
 import type {
@@ -25,10 +25,10 @@ import type {
  * @return {Token}
  *  The new token
  */
-type TokenFactory = (
+type CreateToken = (
   this: void,
   type: TokenType,
   info?: TokenInfo | null | undefined
 ) => Token
 
-export type { TokenFactory as default }
+export type { CreateToken as default }

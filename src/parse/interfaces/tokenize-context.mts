@@ -6,6 +6,7 @@
 import type {
   Code,
   Construct,
+  CreateToken,
   DefineSkip,
   Encoding,
   Event,
@@ -16,7 +17,6 @@ import type {
   SerializeChunks,
   SliceSerialize,
   SliceStream,
-  TokenFactory,
   Write
 } from '@flex-development/fsm/parse'
 
@@ -138,9 +138,9 @@ interface TokenizeContext {
   /**
    * The token factory.
    *
-   * @see {@linkcode TokenFactory}
+   * @see {@linkcode CreateToken}
    */
-  token: TokenFactory
+  token: CreateToken
 
   /**
    * Write a slice of chunks.
