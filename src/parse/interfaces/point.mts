@@ -3,7 +3,7 @@
  * @module fsm/parse/interfaces/Point
  */
 
-import type { Column, Line, Offset } from '@flex-development/unist-util-types'
+import type { Column, Line, Offset } from '@flex-development/fsm/parse'
 
 /**
  * One place in a piece of source content.

@@ -3,6 +3,7 @@
  * @module fsm/parse/types
  */
 
+export type { Column, Line, Offset } from '@flex-development/unist-util-types'
 export type {
   default as Attempt,
   default as Check,
