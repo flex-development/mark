@@ -9,5 +9,6 @@ declare module '@flex-development/fsm/parse' {
     eoc: 'eoc'
     fail: 'fail'
     succ: 'succ'
+    null: 'null'
   }
 }

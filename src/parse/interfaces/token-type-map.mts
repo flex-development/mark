@@ -15,6 +15,13 @@
  *    }
  *  }
  */
-interface TokenTypeMap {}
+interface TokenTypeMap {
+  /**
+   * Forbidden token type.
+   *
+   * The ecosystem uses the `null` key to support additional functionality.
+   */
+  null: never
+}
 
 export type { TokenTypeMap as default }

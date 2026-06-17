@@ -8,6 +8,9 @@ import type { TokenTypeMap } from '@flex-development/fsm/parse'
 /**
  * Union of registered token types.
  *
+ * The token type `null` is forbidden.
+ * The `fsm` ecosystem uses the `null` key to support additional functionality.
+ *
  * To register custom token types, augment {@linkcode TokenTypeMap}.
  * They will be added to this union automatically.
  */
