@@ -183,11 +183,12 @@ repository:
   squash_merge_commit_title: PR_TITLE
   topics:
     - compile
-    - mark
+    - fsm
     - parse
     - spec
-    - spec
     - state
+    - syntax
+    - tokenize
   visibility: public
   vulnerability_alerts: true
   web_commit_signoff_required: true
