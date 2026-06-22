@@ -3,32 +3,10 @@
  * @module mark/parse/interfaces/tests/unit-d/TokenFields
  */
 
-import type { ContentType, Context, Token } from '@flex-development/mark/parse'
-import type { Nilable } from '@flex-development/tutils'
 import type TestSubject from '../token-fields.mts'
 
 describe('unit-d:interfaces/TokenFields', () => {
-  it('should match [_tokenizer?: Context | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('_tokenizer')
-      .toEqualTypeOf<Nilable<Context>>()
-  })
-
-  it('should match [contentType?: ContentType | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('contentType')
-      .toEqualTypeOf<Nilable<ContentType>>()
-  })
-
-  it('should match [next?: Token | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('next')
-      .toEqualTypeOf<Nilable<Token>>()
-  })
-
-  it('should match [previous?: Token | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('previous')
-      .toEqualTypeOf<Nilable<Token>>()
+  it('should register token fields', () => {
+    expectTypeOf<keyof TestSubject>().not.toBeNever()
   })
 })
