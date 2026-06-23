@@ -3,7 +3,7 @@
  * @module mark/parse/types/tests/unit-d/SliceSerialize
  */
 
-import type { Range, SerializeOptions } from '@flex-development/mark/parse'
+import type { Position, SerializeOptions } from '@flex-development/mark/parse'
 import type TestSubject from '../slice-serialize.mts'
 
 describe('unit-d:types/SliceSerialize', () => {
@@ -12,12 +12,12 @@ describe('unit-d:types/SliceSerialize', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Range, (SerializeOptions | boolean | null | undefined)?]', () => {
+    it('should be callable with [Position, (SerializeOptions | boolean | null | undefined)?]', () => {
       // Arrange
-      type Params = [Range, (SerializeOptions | boolean | null | undefined)?]
+      type Expect = [Position, (SerializeOptions | boolean | null | undefined)?]
 
       // Expect
-      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Params>()
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Expect>()
     })
   })
 

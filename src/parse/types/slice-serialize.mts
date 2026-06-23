@@ -3,18 +3,18 @@
  * @module mark/parse/types/SliceSerialize
  */
 
-import type { Range, SerializeOptions } from '@flex-development/mark/parse'
+import type { Position, SerializeOptions } from '@flex-development/mark/parse'
 
 /**
  * Get the text spanning `range`.
  *
- * @see {@linkcode Range}
+ * @see {@linkcode Position}
  * @see {@linkcode SerializeOptions}
  *
  * @this {void}
  *
- * @param {Range} range
- *  The slice position
+ * @param {Position} range
+ *  The position in stream
  * @param {SerializeOptions | boolean | null | undefined} [options]
  *  Options for serializing or whether to expand tabs
  * @return {string}
@@ -22,7 +22,7 @@ import type { Range, SerializeOptions } from '@flex-development/mark/parse'
  */
 type SliceSerialize = (
   this: void,
-  range: Range,
+  range: Position,
   options?: SerializeOptions | boolean | null | undefined
 ) => string
 

@@ -6,7 +6,7 @@
 import type { Column, Line, Offset } from '@flex-development/mark/parse'
 
 /**
- * One place in a piece of source content.
+ * A location in the source content.
  */
 interface Point {
   /**
@@ -24,7 +24,7 @@ interface Point {
   line: Line
 
   /**
-   * The index of the character in the source content (`0`-indexed integer).
+   * The position in the source content (`0`-indexed integer).
    *
    * @see {@linkcode Offset}
    */

@@ -3,7 +3,7 @@
  * @module mark/parse/types/tests/unit-d/SliceStream
  */
 
-import type { Chunk, Range } from '@flex-development/mark/parse'
+import type { Chunk, Position } from '@flex-development/mark/parse'
 import type TestSubject from '../slice-stream.mts'
 
 describe('unit-d:types/SliceStream', () => {
@@ -12,8 +12,8 @@ describe('unit-d:types/SliceStream', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Range]', () => {
-      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[Range]>()
+    it('should be callable with [Position]', () => {
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[Position]>()
     })
   })
 

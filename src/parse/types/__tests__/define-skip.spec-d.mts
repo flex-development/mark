@@ -3,7 +3,7 @@
  * @module mark/parse/types/tests/unit-d/DefineSkip
  */
 
-import type { Point } from '@flex-development/mark/parse'
+import type { Place } from '@flex-development/mark/parse'
 import type TestSubject from '../define-skip.mts'
 
 describe('unit-d:types/DefineSkip', () => {
@@ -12,10 +12,8 @@ describe('unit-d:types/DefineSkip', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Pick<Point, "column" | "line">]', () => {
-      expectTypeOf<TestSubject>()
-        .parameters
-        .toEqualTypeOf<[Pick<Point, 'column' | 'line'>]>()
+    it('should be callable with [Place]', () => {
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[Place]>()
     })
   })
 

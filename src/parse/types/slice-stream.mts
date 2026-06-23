@@ -3,21 +3,21 @@
  * @module mark/parse/types/SliceStream
  */
 
-import type { Chunk, Range } from '@flex-development/mark/parse'
+import type { Chunk, Position } from '@flex-development/mark/parse'
 
 /**
  * Get the chunks spanning `range`.
  *
  * @see {@linkcode Chunk}
- * @see {@linkcode Range}
+ * @see {@linkcode Position}
  *
  * @this {void}
  *
- * @param {Range} range
+ * @param {Position} range
  *  The position in stream
  * @return {Chunk[]}
  *  The chunks in stream spanning `range`
  */
-type SliceStream = (this: void, range: Range) => Chunk[]
+type SliceStream = (this: void, range: Position) => Chunk[]
 
 export type { SliceStream as default }

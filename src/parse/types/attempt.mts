@@ -22,9 +22,9 @@ import type { Constructs, State } from '@flex-development/mark/parse'
  *
  * @param {Constructs} construct
  *  The construct(s) to try
- * @param {State} [ok]
+ * @param {State} ok
  *  The successful tokenization state
- * @param {State} [nok]
+ * @param {State | undefined} [nok]
  *  The failed tokenization state
  * @return {State}
  *  The next state
@@ -32,8 +32,8 @@ import type { Constructs, State } from '@flex-development/mark/parse'
 type Attempt = (
   this: void,
   construct: Constructs,
-  ok?: State,
-  nok?: State
+  ok: State,
+  nok?: State | undefined
 ) => State
 
 export type { Attempt as default }

@@ -12,12 +12,10 @@ describe('unit-d:types/Attempt', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [Constructs, State?, State?]', () => {
-      // Arrange
-      type Expect = [Constructs, (State | undefined)?, (State | undefined)?]
-
-      // Expect
-      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Expect>()
+    it('should be callable with [Constructs, State, (State | undefined)?]', () => {
+      expectTypeOf<TestSubject>()
+        .parameters
+        .toEqualTypeOf<[Constructs, State, (State | undefined)?]>()
     })
   })
 

@@ -3,17 +3,26 @@
  * @module mark/parse/interfaces/Place
  */
 
-import type { Point, RangeInfo } from '@flex-development/mark/parse'
+import type { Point } from '@flex-development/mark/parse'
 
 /**
- * One place in a file, with additional chunk metadata.
+ * A location in the source content (`line`/`column`/`offset`)
+ * and chunk (`_index`, `_bufferIndex`).
  *
  * @see {@linkcode Point}
- * @see {@linkcode RangeInfo}
  *
  * @extends {Point}
- * @extends {RangeInfo}
  */
-interface Place extends Point, RangeInfo {}
+interface Place extends Point {
+  /**
+   * The position in a string chunk (or `-1` when pointing to a numeric chunk).
+   */
+  _bufferIndex: number
+
+  /**
+   * The position in a list of chunks.
+   */
+  _index: number
+}
 
 export type { Place as default }
