@@ -10,6 +10,7 @@ export type {
   default as Interrupt
 } from './attempt.mts'
 export type { default as Chunk } from './chunk.mts'
+export type { default as CodeCheck } from './code-check.mts'
 export type { default as Code } from './code.mts'
 export type { default as ConstructPack } from './construct-pack.mts'
 export type { default as ConstructPosition } from './construct-position.mts'

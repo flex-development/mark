@@ -1,0 +1,25 @@
+/**
+ * @file Type Tests - CodeCheck
+ * @module mark/parse/types/tests/unit-d/CodeCheck
+ */
+
+import type { Code } from '@flex-development/mark/parse'
+import type TestSubject from '../code-check.mts'
+
+describe('unit-d:types/CodeCheck', () => {
+  it('should match [this: void]', () => {
+    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
+  })
+
+  describe('parameters', () => {
+    it('should be callable with [Code]', () => {
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[Code]>()
+    })
+  })
+
+  describe('returns', () => {
+    it('should return boolean', () => {
+      expectTypeOf<TestSubject>().returns.toEqualTypeOf<boolean>()
+    })
+  })
+})
