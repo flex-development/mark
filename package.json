@@ -84,8 +84,6 @@
     "clean:modules": "trash ./.yarn/{cache,*.gz} ./node_modules",
     "clean:pack": "trash \"./*.tgz\"",
     "clean:test": "trash ./coverage && trash __tests__/reports",
-    "codecov": "yarn test:cov && yarn test:cov:upload",
-    "codecov:validate": "cat .codecov.yml | curl --data-binary @- https://codecov.io/validate",
     "commitlint": "commitlint -V",
     "fix:cg": "yarn fix:format && yarn fix:lint",
     "fix:dedupe": "yarn dedupe --strategy=highest",
