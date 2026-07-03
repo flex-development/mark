@@ -17,6 +17,12 @@
   "homepage": "https://github.com/flex-development/mark",
   "repository": "https://github.com/flex-development/mark.git",
   "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
   "author": {
     "name": "Lexus Drumgold",
     "url": "https://github.com/unicornware"
