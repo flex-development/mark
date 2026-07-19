@@ -1,3 +1,25 @@
+## [1.0.0-alpha.2](https://github.com/flex-development/mark/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2026-07-19)
+
+### :package: Build
+
+- [[`167cbf0`](https://github.com/flex-development/mark/commit/167cbf0848880a7ad491f52fd406158a4057cd49)] **deps-dev:** Bump @arethetypeswrong/cli from 0.18.4 to 0.18.5 ([#21](https://github.com/flex-development/mark/issues/21))
+- [[`da640b1`](https://github.com/flex-development/mark/commit/da640b190542ddb69e68541b2ce282a8aaf65107)] **deps-dev:** Bump @commitlint/cli from 21.2.0 to 21.2.1 in the commitlint group ([#19](https://github.com/flex-development/mark/issues/19))
+- [[`1fac5e0`](https://github.com/flex-development/mark/commit/1fac5e0b64578917f5565d64d0209bdfd3cf6a9a)] **deps-dev:** Bump dprint from 0.55.1 to 0.55.2 ([#24](https://github.com/flex-development/mark/issues/24))
+- [[`e678f98`](https://github.com/flex-development/mark/commit/e678f989b546db91dcb65dac1a9e09d505c41581)] **deps-dev:** Bump sh-syntax from 0.5.8 to 0.6.0 ([#20](https://github.com/flex-development/mark/issues/20))
+- [[`4a30c4d`](https://github.com/flex-development/mark/commit/4a30c4d7c70a9646bb01e7b779751ac66b38b725)] **deps-dev:** Bump the vitest group with 3 updates ([#18](https://github.com/flex-development/mark/issues/18))
+
+### :robot: Continuous Integration
+
+- [[`68786f4`](https://github.com/flex-development/mark/commit/68786f457e0fcece85c4b20d5d4815e18c0ad41c)] **deps:** Bump actions/setup-node from 6.4.0 to 7.0.0 ([#23](https://github.com/flex-development/mark/issues/23))
+
+### :sparkles: Features
+
+- [[`f78ccbe`](https://github.com/flex-development/mark/commit/f78ccbe1ff7ebeebec6607f39dcbbcd125b976ce)] **parse:** [`TokenizeContext`] `noEmptyTokens`, `noPrevious`
+
+### :house_with_garden: Housekeeping
+
+- [[`45ec5c6`](https://github.com/flex-development/mark/commit/45ec5c6cbb12d18abe0b1327a2d81b26d8bbb5b8)] **pkg:** `funding`
+
 ## 1.0.0-alpha.1 (2026-07-02)
 
 ### ⚠ BREAKING CHANGES
@@ -58,5 +80,6 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
