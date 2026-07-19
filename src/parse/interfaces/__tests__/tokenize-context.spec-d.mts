@@ -65,6 +65,18 @@ describe('unit-d:interfaces/TokenizeContext', () => {
     expectTypeOf<TestSubject>().toHaveProperty('now').toEqualTypeOf<Now>()
   })
 
+  it('should match [noEmptyTokens?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('noEmptyTokens')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
+  it('should match [noPrevious?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('noPrevious')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
   it('should match [parser: ParseContext]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('parser')

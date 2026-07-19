@@ -16,6 +16,7 @@ import type {
   SerializeChunks,
   SliceSerialize,
   SliceStream,
+  State,
   Write
 } from '@flex-development/mark/parse'
 
@@ -85,6 +86,19 @@ interface TokenizeContext {
    * Whether a construct is interrupting another construct.
    */
   interrupt?: boolean | null | undefined
+
+  /**
+   * Whether empty tokens are allowed.
+   */
+  noEmptyTokens?: boolean | null | undefined
+
+  /**
+   * When trying a construct, whether {@linkcode Construct.previous}
+   * should **not** be called.
+   *
+   * If `false`, `previous` should be called via {@linkcode State} function.
+   */
+  noPrevious?: boolean | null | undefined
 
   /**
    * Get the current point in the file.
