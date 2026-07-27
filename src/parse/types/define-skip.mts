@@ -8,11 +8,11 @@ import type { Place } from '@flex-development/mark/parse'
 /**
  * Define a skip point.
  *
- * Where a line starts after a prefix can be defined here.
+ * This is useful for defining where a line starts after a prefix.
  *
- * When the tokenizer moves after consuming a line ending corresponding to
- * the line number in the given point, the tokenizer shifts past the prefix
- * based on the column in the shifted point.
+ * By default, when the tokenizer moves after consuming a line ending
+ * corresponding to the line number in the given point, the tokenizer shifts
+ * past the prefix based on the column in the shifted point.
  *
  * @see {@linkcode Place}
  *
