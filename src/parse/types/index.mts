@@ -4,6 +4,7 @@
  */
 
 export type { Column, Line, Offset } from '@flex-development/unist-util-types'
+export type { default as ApplySkip } from './apply-skip.mts'
 export type {
   default as Attempt,
   default as Check,
@@ -42,7 +43,6 @@ export type { default as Creators, default as Parsers } from './parsers.mts'
 export type { default as Previous } from './previous.mts'
 export type { default as Resolver } from './resolver.mts'
 export type { default as SerializeChunks } from './serialize-chunks.mts'
-export type { default as Skip } from './skip.mts'
 export type { default as SliceSerialize } from './slice-serialize.mts'
 export type { default as SliceStream } from './slice-stream.mts'
 export type { default as State } from './state.mts'
