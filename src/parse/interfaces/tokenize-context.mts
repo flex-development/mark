@@ -11,6 +11,7 @@ import type {
   CreateToken,
   DefineSkip,
   Event,
+  Hooks,
   Now,
   ParseContext,
   SerializeChunks,
@@ -81,6 +82,13 @@ interface TokenizeContext {
    * @see {@linkcode Event}
    */
   events: Event[]
+
+  /**
+   * The record of lifecycle hooks.
+   *
+   * @see {@linkcode Hooks}
+   */
+  hooks: Hooks
 
   /**
    * Whether a construct is interrupting another construct.

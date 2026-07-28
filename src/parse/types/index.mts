@@ -4,12 +4,20 @@
  */
 
 export type { Column, Line, Offset } from '@flex-development/unist-util-types'
+export type { default as AfterConsume } from './after-consume.mts'
+export type { default as AfterEnter } from './after-enter.mts'
+export type { default as AfterExit } from './after-exit.mts'
+export type { default as AfterRestore } from './after-restore.mts'
 export type { default as ApplySkip } from './apply-skip.mts'
 export type {
   default as Attempt,
   default as Check,
   default as Interrupt
 } from './attempt.mts'
+export type { default as BeforeConsume } from './before-consume.mts'
+export type { default as BeforeEnter } from './before-enter.mts'
+export type { default as BeforeExit } from './before-exit.mts'
+export type { default as BeforeRestore } from './before-restore.mts'
 export type { default as Chunk } from './chunk.mts'
 export type { default as CodeCheck } from './code-check.mts'
 export type { default as Code } from './code.mts'

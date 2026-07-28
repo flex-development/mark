@@ -11,6 +11,7 @@ import type {
   CreateToken,
   DefineSkip,
   Event,
+  Hooks,
   Now,
   ParseContext,
   SliceSerialize,
@@ -53,6 +54,10 @@ describe('unit-d:interfaces/TokenizeContext', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('events')
       .toEqualTypeOf<Event[]>()
+  })
+
+  it('should match [hooks: Hooks]', () => {
+    expectTypeOf<TestSubject>().toHaveProperty('hooks').toEqualTypeOf<Hooks>()
   })
 
   it('should match [interrupt?: boolean | null | undefined]', () => {
