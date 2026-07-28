@@ -61,6 +61,12 @@ describe('unit-d:interfaces/TokenizeContext', () => {
       .toEqualTypeOf<Nilable<boolean>>()
   })
 
+  it('should match [moveOnBreak?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('moveOnBreak')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
   it('should match [now: Now]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('now').toEqualTypeOf<Now>()
   })

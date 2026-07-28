@@ -88,6 +88,11 @@ interface TokenizeContext {
   interrupt?: boolean | null | undefined
 
   /**
+   * Whether the position of the tokenizer moves forward at stream breaks.
+   */
+  moveOnBreak?: boolean | null | undefined
+
+  /**
    * Whether empty tokens are allowed.
    */
   noEmptyTokens?: boolean | null | undefined
