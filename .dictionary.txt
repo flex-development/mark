@@ -10,6 +10,7 @@ hmarr
 jchen
 kaisugi
 nvmrc
+rollup
 shfmt
 succ
 vates
