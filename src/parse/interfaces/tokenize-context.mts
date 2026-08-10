@@ -4,6 +4,7 @@
  */
 
 import type {
+  Check,
   Code,
   Construct,
   ContainerState,
@@ -34,6 +35,13 @@ import type {
  *  }
  */
 interface TokenizeContext {
+  /**
+   * Whether a speculative check is being ran.
+   *
+   * @see {@linkcode Check}
+   */
+  check?: boolean | null | undefined
+
   /**
    * The current character code.
    *
@@ -119,6 +127,11 @@ interface TokenizeContext {
    * @see {@linkcode Now}
    */
   now: Now
+
+  /**
+   * The parent tokenizer.
+   */
+  parent?: TokenizeContext | null | undefined
 
   /**
    * The relevant parsing context.

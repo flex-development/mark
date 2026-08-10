@@ -22,6 +22,12 @@ import type { Nilable } from '@flex-development/tutils'
 import type TestSubject from '../tokenize-context.mts'
 
 describe('unit-d:interfaces/TokenizeContext', () => {
+  it('should match [check?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('check')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
   it('should match [code: Code]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('code').toEqualTypeOf<Code>()
   })
@@ -86,6 +92,12 @@ describe('unit-d:interfaces/TokenizeContext', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('noPrevious')
       .toEqualTypeOf<Nilable<boolean>>()
+  })
+
+  it('should match [parent?: TokenizeContext | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('parent')
+      .toEqualTypeOf<Nilable<TestSubject>>()
   })
 
   it('should match [parser: ParseContext]', () => {
