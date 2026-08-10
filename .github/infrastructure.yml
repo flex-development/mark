@@ -26,7 +26,7 @@ branches:
           - context: auto-merge
           - context: auto-review
           - context: commitlint
-          - context: dependabot-dedupe
+          - context: dependabot-packages
           - context: format
           - context: lint
           - context: spelling
