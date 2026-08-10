@@ -114,7 +114,7 @@ interface TokenizeContext {
   noPrevious?: boolean | null | undefined
 
   /**
-   * Get the current point in the file.
+   * Get the current place in the content.
    *
    * @see {@linkcode Now}
    */

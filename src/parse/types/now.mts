@@ -6,14 +6,14 @@
 import type { Place } from '@flex-development/mark/parse'
 
 /**
- * Get the current point in the file.
+ * Get the current place in the content.
  *
  * @see {@linkcode Place}
  *
  * @this {void}
  *
  * @return {Place}
- *  The current place in file
+ *  The current place in the content
  */
 type Now = (this: void) => Place
 
