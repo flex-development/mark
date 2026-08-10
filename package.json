@@ -132,6 +132,7 @@
     "@types/rollup": "0.54.0",
     "@vates/toggle-scripts": "1.0.0",
     "@vitest/coverage-v8": "4.1.10",
+    "@vitest/runner": "4.1.10",
     "@vitest/ui": "4.1.10",
     "concat-stream": "2.0.0",
     "cross-env": "10.1.0",
@@ -160,6 +161,6 @@
     "vfile": "6.0.3",
     "vitest": "4.1.10"
   },
-  "packageManager": "yarn@4.17.0",
+  "packageManager": "yarn@4.18.0",
   "sideEffects": false
 }
