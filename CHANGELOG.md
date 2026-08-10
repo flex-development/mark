@@ -1,3 +1,23 @@
+## [1.0.0-alpha.4](https://github.com/flex-development/mark/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2026-08-10)
+
+### :package: Build
+
+- [[`86d75c0`](https://github.com/flex-development/mark/commit/86d75c003fb2248e1887168a6f2eb556d790cfa4)] **deps-dev:** bump rollup packages
+- [[`109aa1c`](https://github.com/flex-development/mark/commit/109aa1cb7b5bef467478bc765dfc01a10d0b8869)] **yarn:** bump yarn from 4.17.0 to 4.18.0
+
+### :robot: Continuous Integration
+
+- [[`83abe7e`](https://github.com/flex-development/mark/commit/83abe7e9640f8015448042e7d6d53efc9b44273a)] **workflows:** `dependabot-dedupe` -> `dependabot-packages`
+
+### :pencil: Documentation
+
+- [[`e3e98a5`](https://github.com/flex-development/mark/commit/e3e98a5f26e055b111ea3b220ffee7af9ef7b835)] **parse:** [`Now`] update summary
+
+### :sparkles: Features
+
+- [[`7e23bd5`](https://github.com/flex-development/mark/commit/7e23bd562e41e5406e6315f6f7e86fa4305a8a2c)] **parse:** [`Hooks`] `afterStore`, `beforeStore`
+- [[`c06fdc8`](https://github.com/flex-development/mark/commit/c06fdc8e032bf148342bf33a4bd3ed8a7997788f)] **parse:** [`TokenizeContext`] `check`, `parent`
+
 ## [1.0.0-alpha.3](https://github.com/flex-development/mark/compare/1.0.0-alpha.2...1.0.0-alpha.3) (2026-07-27)
 
 ### :package: Build
@@ -108,6 +128,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
