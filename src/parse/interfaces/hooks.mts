@@ -8,10 +8,12 @@ import type {
   AfterEnter,
   AfterExit,
   AfterRestore,
+  AfterStore,
   BeforeConsume,
   BeforeEnter,
   BeforeExit,
-  BeforeRestore
+  BeforeRestore,
+  BeforeStore
 } from '@flex-development/mark/parse'
 
 /**
@@ -56,6 +58,13 @@ interface Hooks {
   afterRestore?: AfterRestore | null | undefined
 
   /**
+   * Do something after storing state.
+   *
+   * @see {@linkcode AfterStore}
+   */
+  afterStore?: AfterStore | null | undefined
+
+  /**
    * Do something before a character code is consumed.
    *
    * @see {@linkcode BeforeConsume}
@@ -82,6 +91,13 @@ interface Hooks {
    * @see {@linkcode BeforeRestore}
    */
   beforeRestore?: BeforeRestore | null | undefined
+
+  /**
+   * Do something before storing state.
+   *
+   * @see {@linkcode BeforeStore}
+   */
+  beforeStore?: BeforeStore | null | undefined
 }
 
 export type { Hooks as default }

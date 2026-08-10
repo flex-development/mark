@@ -8,10 +8,12 @@ import type {
   AfterEnter,
   AfterExit,
   AfterRestore,
+  AfterStore,
   BeforeConsume,
   BeforeEnter,
   BeforeExit,
-  BeforeRestore
+  BeforeRestore,
+  BeforeStore
 } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
 import type TestSubject from '../hooks.mts'
@@ -41,6 +43,12 @@ describe('unit-d:interfaces/Hooks', () => {
       .toEqualTypeOf<Nilable<AfterRestore>>()
   })
 
+  it('should match [afterStore?: AfterStore | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('afterStore')
+      .toEqualTypeOf<Nilable<AfterStore>>()
+  })
+
   it('should match [beforeConsume?: BeforeConsume | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('beforeConsume')
@@ -63,5 +71,11 @@ describe('unit-d:interfaces/Hooks', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('beforeRestore')
       .toEqualTypeOf<Nilable<BeforeRestore>>()
+  })
+
+  it('should match [beforeStore?: BeforeStore | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('beforeStore')
+      .toEqualTypeOf<Nilable<BeforeStore>>()
   })
 })
