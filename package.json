@@ -136,7 +136,7 @@
     "@vitest/ui": "4.1.11",
     "concat-stream": "2.0.0",
     "cross-env": "10.1.0",
-    "cspell": "10.1.1",
+    "cspell": "10.2.0",
     "delete-empty": "3.0.0",
     "devlop": "1.1.0",
     "dprint": "0.57.0",
