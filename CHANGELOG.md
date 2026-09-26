@@ -1,3 +1,56 @@
+## [1.0.0-alpha.5](https://github.com/flex-development/mark/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2026-09-26)
+
+### :package: Build
+
+- [[`963dbe8`](https://github.com/flex-development/mark/commit/963dbe8898d32373688a797555915e9b0cf51da5)] **deps-dev:** Bump @commitlint/cli from 21.2.1 to 21.2.2 in the commitlint group ([#51](https://github.com/flex-development/mark/issues/51))
+- [[`76ac12a`](https://github.com/flex-development/mark/commit/76ac12a86afb589ff5715563630bd8b7a19350e1)] **deps-dev:** Bump cspell from 10.0.1 to 10.1.0 ([#58](https://github.com/flex-development/mark/issues/58))
+- [[`b0ace84`](https://github.com/flex-development/mark/commit/b0ace8421d8b83e21d8907001e1965da6f6343c2)] **deps-dev:** Bump cspell from 10.1.0 to 10.1.1 ([#60](https://github.com/flex-development/mark/issues/60))
+- [[`50c796e`](https://github.com/flex-development/mark/commit/50c796e5be426f6d3bbe0fdda5253f36cb0fcfd6)] **deps-dev:** Bump cspell from 10.1.1 to 10.2.0 ([#68](https://github.com/flex-development/mark/issues/68))
+- [[`e22f12c`](https://github.com/flex-development/mark/commit/e22f12cae308029a768eb0743e0c0c86913c488e)] **deps-dev:** Bump cspell from 10.2.0 to 10.3.0 ([#78](https://github.com/flex-development/mark/issues/78))
+- [[`2b7cd39`](https://github.com/flex-development/mark/commit/2b7cd393f103e294619fcc58521f119832eed36b)] **deps-dev:** Bump cspell from 10.3.0 to 10.3.1 ([#82](https://github.com/flex-development/mark/issues/82))
+- [[`b753b19`](https://github.com/flex-development/mark/commit/b753b191115c4150fe29e6ac2e70109059b1c8e9)] **deps-dev:** Bump cspell from 10.3.1 to 10.3.2 ([#84](https://github.com/flex-development/mark/issues/84))
+- [[`79e4777`](https://github.com/flex-development/mark/commit/79e4777957ececd5dd72841f4ceaf84349470082)] **deps-dev:** Bump cspell from 10.3.2 to 10.3.3 ([#85](https://github.com/flex-development/mark/issues/85))
+- [[`a018831`](https://github.com/flex-development/mark/commit/a01883182303de896a7dcc8ed558592bd2e76fe9)] **deps-dev:** Bump dprint from 0.55.2 to 0.56.1 ([#57](https://github.com/flex-development/mark/issues/57))
+- [[`fb4b83c`](https://github.com/flex-development/mark/commit/fb4b83cf08bb204bf51f5bc75fb562de31af1ada)] **deps-dev:** Bump dprint from 0.56.1 to 0.57.0 ([#67](https://github.com/flex-development/mark/issues/67))
+- [[`0021b2d`](https://github.com/flex-development/mark/commit/0021b2de2d21cf508b6fe550e565ed5e081a3926)] **deps-dev:** Bump dprint from 0.57.0 to 0.57.4 ([#72](https://github.com/flex-development/mark/issues/72))
+- [[`2d33204`](https://github.com/flex-development/mark/commit/2d33204bd1f6a4d3936ec64ab1a9a2d24ccce0f0)] **deps-dev:** Bump happy-dom from 20.11.1 to 20.11.2 ([#48](https://github.com/flex-development/mark/issues/48))
+- [[`6e69da2`](https://github.com/flex-development/mark/commit/6e69da272364b51279ce022d6ac49926fd1ca9b7)] **deps-dev:** Bump happy-dom from 20.11.12 to 20.11.15 ([#63](https://github.com/flex-development/mark/issues/63))
+- [[`efb5535`](https://github.com/flex-development/mark/commit/efb5535fa90983383b2c7c0917e4b411d828ca26)] **deps-dev:** Bump happy-dom from 20.11.15 to 20.12.0 ([#64](https://github.com/flex-development/mark/issues/64))
+- [[`265b129`](https://github.com/flex-development/mark/commit/265b129be492b3a473e927ff206387724ebda773)] **deps-dev:** Bump happy-dom from 20.11.2 to 20.11.6 ([#55](https://github.com/flex-development/mark/issues/55))
+- [[`2770b5b`](https://github.com/flex-development/mark/commit/2770b5bc0a5e15104b1bf43b33ead1fa4a64d728)] **deps-dev:** Bump happy-dom from 20.11.6 to 20.11.12 ([#62](https://github.com/flex-development/mark/issues/62))
+- [[`989d6ca`](https://github.com/flex-development/mark/commit/989d6ca4d6593845219e87dacb4800f6ead82ce9)] **deps-dev:** Bump happy-dom from 20.12.0 to 20.14.0 ([#71](https://github.com/flex-development/mark/issues/71))
+- [[`ddc4790`](https://github.com/flex-development/mark/commit/ddc4790758143214dcd36d2fbabdecfcc6d41ea9)] **deps-dev:** Bump happy-dom from 20.14.0 to 20.14.3 ([#79](https://github.com/flex-development/mark/issues/79))
+- [[`926de30`](https://github.com/flex-development/mark/commit/926de3022dcbf00a2c120703fe984c6ef5def04d)] **deps-dev:** Bump happy-dom from 20.14.3 to 20.14.5 ([#81](https://github.com/flex-development/mark/issues/81))
+- [[`39627da`](https://github.com/flex-development/mark/commit/39627dad79c6cd1c282070f3999e900351776d5a)] **deps-dev:** Bump rollup from 4.62.4 to 4.62.5 in the rollup group ([#53](https://github.com/flex-development/mark/issues/53))
+- [[`ac288e7`](https://github.com/flex-development/mark/commit/ac288e7b420c7cad0ddc5cb1477c42b3b63e84b2)] **deps-dev:** Bump rollup from 4.62.5 to 4.63.1 in the rollup group across 1 directory ([#61](https://github.com/flex-development/mark/issues/61))
+- [[`69d0e13`](https://github.com/flex-development/mark/commit/69d0e13661b4fc13f230d0853ca9ffd248f4e9e0)] **deps-dev:** Bump rollup from 4.63.1 to 4.63.2 in the rollup group across 1 directory ([#80](https://github.com/flex-development/mark/issues/80))
+- [[`c3f7faf`](https://github.com/flex-development/mark/commit/c3f7fafde59b68c74198c5998b7ad3439a262fa9)] **deps-dev:** Bump rollup from 4.63.2 to 4.63.3 in the rollup group ([#83](https://github.com/flex-development/mark/issues/83))
+- [[`7a0d354`](https://github.com/flex-development/mark/commit/7a0d354a3b061f73ffa48c35de3d1b888e195a9d)] **deps-dev:** Bump rollup from 4.63.3 to 4.63.4 in the rollup group ([#86](https://github.com/flex-development/mark/issues/86))
+- [[`37aefb7`](https://github.com/flex-development/mark/commit/37aefb74bc8de2afc7c6496270977bc33d41c91e)] **deps-dev:** Bump the commitlint group with 2 updates ([#88](https://github.com/flex-development/mark/issues/88))
+- [[`24d9a62`](https://github.com/flex-development/mark/commit/24d9a6206aaded09a2c5043a2b905758d27946e3)] **deps-dev:** Bump the vitest group across 1 directory with 4 updates ([#54](https://github.com/flex-development/mark/issues/54))
+- [[`9fd570e`](https://github.com/flex-development/mark/commit/9fd570eeb69bc683ede6cb4c18fc140faa1e9cc4)] **deps:** Bump browserslist from 4.28.2 to 4.28.8 ([#65](https://github.com/flex-development/mark/issues/65))
+- [[`690beb2`](https://github.com/flex-development/mark/commit/690beb24e9653a6625652f44fb6465f31f1d9f12)] **deps:** Bump fast-uri from 3.1.4 to 3.1.5 ([#42](https://github.com/flex-development/mark/issues/42))
+- [[`477e410`](https://github.com/flex-development/mark/commit/477e410876796977b3fe86df465aea50eb275096)] **deps:** Bump fast-uri from 3.1.5 to 3.1.7 ([#66](https://github.com/flex-development/mark/issues/66))
+- [[`489bdb1`](https://github.com/flex-development/mark/commit/489bdb10cb776369f8e581111054d451bd10cb6c)] **deps:** Bump js-yaml from 4.3.0 to 4.3.1 ([#45](https://github.com/flex-development/mark/issues/45))
+- [[`2639671`](https://github.com/flex-development/mark/commit/26396718f074d0749a766bf2416a8acc3f848244)] **deps:** Bump js-yaml from 4.3.1 to 4.3.2 ([#74](https://github.com/flex-development/mark/issues/74))
+- [[`4aff6c9`](https://github.com/flex-development/mark/commit/4aff6c92dd54135a9f97f0954479c9929390ba65)] **deps:** Bump undici from 6.27.0 to 6.28.0 ([#41](https://github.com/flex-development/mark/issues/41))
+
+### :robot: Continuous Integration
+
+- [[`1877461`](https://github.com/flex-development/mark/commit/1877461ea0502b6b7fabf8e5936dd58fdb308326)] **deps:** Bump dprint/check from 2.3 to 2.4 ([#73](https://github.com/flex-development/mark/issues/73))
+- [[`09010e8`](https://github.com/flex-development/mark/commit/09010e8f301b9a04100bd9f988606709f9674ff5)] **deps:** Bump dprint/check from 2.4 to 2.5 ([#75](https://github.com/flex-development/mark/issues/75))
+- [[`7abf540`](https://github.com/flex-development/mark/commit/7abf5401d762d55ece8f7918e2366df9294c09f7)] **deps:** Bump streetsidesoftware/cspell-action from 8.4.0 to 9.0.1 ([#52](https://github.com/flex-development/mark/issues/52))
+- [[`609c70d`](https://github.com/flex-development/mark/commit/609c70d7aae97306772e654d31a55d24459d6007)] **deps:** Bump streetsidesoftware/cspell-action from 9.0.1 to 9.1.0 ([#69](https://github.com/flex-development/mark/issues/69))
+
+### :sparkles: Features
+
+- [[`39a8ff1`](https://github.com/flex-development/mark/commit/39a8ff1fff66a8d3df95f6f548951af0c8063376)] **parse:** `Extension#settings`
+
+### :house_with_garden: Housekeeping
+
+- [[`fcf6b4e`](https://github.com/flex-development/mark/commit/fcf6b4e16ca84d1065df1f3d87cb0f154afa3ce8)] update project architecture
+- [[`f5d930d`](https://github.com/flex-development/mark/commit/f5d930da39ab3f851767a9c4c806df006fe85d18)] **github:** fix required status checks
+
 ## [1.0.0-alpha.4](https://github.com/flex-development/mark/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2026-08-10)
 
 ### :package: Build
@@ -128,6 +181,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
