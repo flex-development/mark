@@ -5,7 +5,8 @@
 
 import type {
   ContentExtensions,
-  Disable
+  Disable,
+  Settings
 } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
@@ -20,5 +21,11 @@ describe('unit-d:interfaces/Extension', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('disable')
       .toEqualTypeOf<Nilable<Disable>>()
+  })
+
+  it('should match [settings?: Settings | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('settings')
+      .toEqualTypeOf<Nilable<Settings>>()
   })
 })

@@ -19,6 +19,15 @@ declare module '@flex-development/mark/parse' {
     mark: TokenizeContext
   }
 
+  interface Settings {
+    /**
+     * Sass language settings.
+     *
+     * @internal
+     */
+    sass?: { indent?: boolean | null | undefined }
+  }
+
   interface TokenFields {
     /**
      * The connected tokenizer.
@@ -27,6 +36,8 @@ declare module '@flex-development/mark/parse' {
      * usually needed to tokenize them.
      *
      * @see {@linkcode Context}
+     *
+     * @internal
      */
     _tokenizer?: Context | null | undefined
 
@@ -34,6 +45,8 @@ declare module '@flex-development/mark/parse' {
      * Declare the token as having content of a certain type.
      *
      * @see {@linkcode ContentType}
+     *
+     * @internal
      */
     contentType?: ContentType | null | undefined
 
@@ -41,6 +54,8 @@ declare module '@flex-development/mark/parse' {
      * The next token in a list of linked tokens.
      *
      * @see {@linkcode Token}
+     *
+     * @internal
      */
     next?: Token | null | undefined
 
@@ -48,6 +63,8 @@ declare module '@flex-development/mark/parse' {
      * The previous token in a list of linked tokens.
      *
      * @see {@linkcode Token}
+     *
+     * @internal
      */
     previous?: Token | null | undefined
   }

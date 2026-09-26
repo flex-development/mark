@@ -5,7 +5,8 @@
 
 import type {
   ContentExtensions,
-  Disable
+  Disable,
+  Settings
 } from '@flex-development/mark/parse'
 
 /**
@@ -35,6 +36,13 @@ interface Extension extends ContentExtensions {
    * @see {@linkcode Disable}
    */
   disable?: Disable | null | undefined
+
+  /**
+   * Additional settings.
+   *
+   * @see {@linkcode Settings}
+   */
+  settings?: Settings | null | undefined
 }
 
 export type { Extension as default }
