@@ -9,6 +9,7 @@ import type {
   Token,
   TokenTypeMap
 } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../event.mts'
 
 describe('unit-d:types/Event', () => {

@@ -5,6 +5,7 @@
 
 import type { Place } from '@flex-development/mark/parse'
 import type { EmptyArray } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../now.mts'
 
 describe('unit-d:types/Now', () => {

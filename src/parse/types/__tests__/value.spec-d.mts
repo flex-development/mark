@@ -3,6 +3,7 @@
  * @module mark/parse/types/tests/unit-d/Value
  */
 
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../value.mts'
 
 describe('unit-d:types/Value', () => {

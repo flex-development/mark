@@ -7,6 +7,7 @@ import type {
   ContentType,
   InitialConstruct
 } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../initial-constructs.mts'
 
 describe('unit-d:types/InitialConstructs', () => {

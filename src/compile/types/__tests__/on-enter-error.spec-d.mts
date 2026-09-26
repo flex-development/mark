@@ -5,6 +5,7 @@
 
 import type { CompileContext } from '@flex-development/mark/compile'
 import type { Token } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../on-enter-error.mts'
 
 describe('unit-d:types/OnEnterError', () => {

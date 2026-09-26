@@ -51,14 +51,15 @@ Follow the steps below to setup your local development environment:
    yarn
    ```
 
-   **Note**: This project uses [Yarn 2][yarn]. Consult [`.yarnrc.yml`](.yarnrc.yml) for an overview of configuration
-   options and required environment variables. Furthermore, if you already have a global Yarn configuration, or any
-   `YARN_*` environment variables set, an error will be thrown if any settings conflict with the project's Yarn
-   configuration, or the Yarn 2 API. Missing environment variables will also yield an error.
+   **Note**: This project uses [Yarn 2][yarn].
+   Consult [`.yarnrc.yml`](.yarnrc.yml) for an overview of configuration options and required environment variables.
+   Furthermore, if you already have a global Yarn configuration, or any `YARN_*` environment variables set, an error
+   will be thrown if any settings conflict with the project's Yarn configuration, or the Yarn 2 API.
+   Missing environment variables will also yield an error.
 
 7. [ZSH][ohmyzsh] setup
 
-8. Update `$ZDOTDIR/.zprofile`:
+8. Update `$ZDOTDIR/.zprofile` (or your shell equivalent):
 
    ```sh
    # PATH
@@ -119,7 +120,7 @@ See [`.github/.gitconfig`](.github/.gitconfig) for an exhaustive list.
 
 ## Contributing Code
 
-[Husky][] is used to locally enforce coding and commit message standards, as well as run tests pre-push.
+[Husky][] is used to locally enforce coding and commit message standards.
 
 Any code merged into the [trunk](#branching-model) must confront the following criteria:
 
@@ -130,8 +131,8 @@ Any code merged into the [trunk](#branching-model) must confront the following c
 
 ### Branching Model
 
-This project follows a [Trunk Based Development][tbd] workflow, specifically the [short-lived branch
-style][tbd-short-lived-feature-branches].
+This project follows a [Trunk Based Development][tbd] workflow,
+specifically the [short-lived branch style][tbd-short-lived-feature-branches].
 
 - Trunk Branch: `main`
 - Short-Lived Branches: `feat/*`, `hotfix/*`, `release/*`
@@ -154,8 +155,8 @@ When creating a new branch, the name should match the following format:
 
 ### Commit Messages
 
-This project follows [Conventional Commit][conventionalcommits] standards and uses [commitlint][] to enforce those
-standards.
+This project follows [Conventional Commit][conventionalcommits] standards
+and uses [commitlint][] to enforce those standards.
 
 This means every commit must conform to the following format:
 
@@ -209,7 +210,7 @@ See [`.commitlintrc.ts`](.commitlintrc.ts) to view all commit guidelines.
 
 ### Making Changes
 
-Source code is located in [`src`](src) directory.
+Source code is located in the [`src`](./src/) directory.
 
 ### Documentation
 
@@ -220,6 +221,8 @@ Before making a pull request, be sure your code is well documented, as it will b
 ### Testing
 
 This project uses [Vitest][] to run tests.
+
+Be sure to use [`it.skip`][vitest-test-skip] or [`it.todo`][vitest-test-todo] where appropriate.
 
 #### Running Tests
 
@@ -314,35 +317,35 @@ e.g:
 - `refactor: project architecture #21`
 - `release: 1.0.0 #13`
 
-## Deployment
+## Release Lifecycle
 
-> Note: Package and release publication is executed via GitHub workflow.\
+> 👉 **Note**: Release publication is executed via GitHub workflow.\
 > This is so invalid or malicious versions cannot be published without merging those changes into `main` first.
 
-1. Get a version bump recommendation
-   - `grease bump --recommend`
+1. [Create or update version manifest][yarn-version]
+   - `yarn version`
 2. Create release chore commit
-   - `yarn release <new-version>`
-   - `yarn release major`
-   - `yarn release minor`
-   - `yarn release patch`
-   - `yarn release premajor --preid <dist-tag>`
-   - `yarn release preminor --preid <dist-tag>`
-   - `yarn release prepatch --preid <dist-tag>`
-   - `yarn release prerelease --preid <dist-tag>`
+   - `yarn release`
 3. Push release chore commit
 4. Monitor workflows
    1. [`release-chore`](.github/workflows/release-chore.yml)
       - create release branch
-      - bump manifest version
-      - add changelog entry for new release
+      - [apply deferred version records][yarn-version-apply]
+      - update changelogs
       - create release pr
    2. [`release`](.github/workflows/release.yml)
-      - create and push new tag
-      - create and publish github release
-   3. [`publish`](.github/workflows/publish.yml)
-      - publish package to [github package registry][gpr]
-      - publish package to [npm][]
+      - create and push new tags
+      - create and publish github releases
+
+## Deployment
+
+> 👉 **Note**: Package publication is executed via GitHub workflow.\
+> This is so invalid or malicious versions cannot be published without merging those changes into `main` first.
+
+After a release is published, the [`publish`](.github/workflows/publish.yml) workflow will:
+
+- publish packages to [github package registry][gpr]
+- publish packages to [npm][]
 
 [commitlint]: https://github.com/conventional-changelog/commitlint
 
@@ -370,12 +373,20 @@ e.g:
 
 [ohmyzsh]: https://github.com/ohmyzsh/ohmyzsh
 
-[qa]: https://github.com/flex-development/mark/discussions/new?category=q-a
+[qa]: https://github.com/flex-development/docmark/discussions/new?category=q-a
 
 [tbd-short-lived-feature-branches]: https://trunkbaseddevelopment.com/styles/#short-lived-feature-branches
 
 [tbd]: https://trunkbaseddevelopment.com
 
+[vitest-test-skip]: https://vitest.dev/api/#test-skip
+
+[vitest-test-todo]: https://vitest.dev/api/#test-todo
+
 [vitest]: https://vitest.dev
 
 [yarn]: https://yarnpkg.com/getting-started
+
+[yarn-version]: https://yarnpkg.com/cli/version
+
+[yarn-version-apply]: https://yarnpkg.com/cli/version/apply

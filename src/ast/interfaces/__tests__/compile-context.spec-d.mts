@@ -16,6 +16,7 @@ import type {
 } from '@flex-development/mark/ast'
 import type * as compile from '@flex-development/mark/compile'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-context.mts'
 
 describe('unit-d:interfaces/CompileContext', () => {

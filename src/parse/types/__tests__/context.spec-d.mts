@@ -4,6 +4,7 @@
  */
 
 import type { ContextMap } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../context.mts'
 
 describe('unit-d:types/Context', () => {

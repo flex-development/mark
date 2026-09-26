@@ -4,6 +4,7 @@
  */
 
 import type { Code, Context } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../previous.mts'
 
 describe('unit-d:types/Previous', () => {

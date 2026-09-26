@@ -4,6 +4,7 @@
  */
 
 import type { Literal, Node, Parent } from 'unist'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../root.mts'
 
 describe('unit-d:interfaces/Root', () => {

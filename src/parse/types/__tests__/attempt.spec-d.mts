@@ -4,6 +4,7 @@
  */
 
 import type { Constructs, State } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../attempt.mts'
 
 describe('unit-d:types/Attempt', () => {

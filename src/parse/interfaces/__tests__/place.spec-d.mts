@@ -4,6 +4,7 @@
  */
 
 import type { Point } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../place.mts'
 
 describe('unit-d:interfaces/Place', () => {

@@ -25,6 +25,7 @@ branches:
           - context: artifacts
           - context: auto-merge
           - context: auto-review
+          - context: build
           - context: commitlint
           - context: dedupe
           - context: dprint
@@ -77,6 +78,9 @@ labels:
     color: 74cefc
   - name: scope:release
     description: package release
+    color: 74cefc
+  - name: scope:tests
+    description: testing
     color: 74cefc
   - name: scope:ts
     description: typescript support

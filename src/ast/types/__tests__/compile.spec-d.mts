@@ -6,6 +6,7 @@
 import type { Tree } from '@flex-development/mark/ast'
 import type { Event } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile.mts'
 
 describe('unit-d:types/Compile', () => {

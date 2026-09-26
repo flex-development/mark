@@ -5,6 +5,7 @@
 
 import type { CompileContext } from '@flex-development/mark/compile'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../resume.mts'
 
 describe('unit-d:types/Resume', () => {

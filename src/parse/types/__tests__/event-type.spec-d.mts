@@ -3,6 +3,7 @@
  * @module mark/parse/types/tests/unit-d/EventType
  */
 
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../event-type.mts'
 
 describe('unit-d:types/EventType', () => {

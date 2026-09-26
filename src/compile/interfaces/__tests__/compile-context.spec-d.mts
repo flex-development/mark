@@ -17,6 +17,7 @@ import type {
 } from '@flex-development/mark/compile'
 import type { Point, SliceSerialize } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-context.mts'
 
 describe('unit-d:interfaces/CompileContext', () => {

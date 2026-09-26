@@ -4,6 +4,7 @@
  */
 
 import type { Context, Event } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../resolver.mts'
 
 describe('unit-d:types/Resolver', () => {

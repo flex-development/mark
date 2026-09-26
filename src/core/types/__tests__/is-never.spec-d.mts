@@ -4,6 +4,7 @@
  */
 
 import type { Primitive } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../is-never.mts'
 
 describe('unit-d:types/IsNever', () => {

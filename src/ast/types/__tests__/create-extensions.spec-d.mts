@@ -10,6 +10,7 @@ import type {
   Opener
 } from '@flex-development/mark/ast'
 import type { List } from '@flex-development/mark/core'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../create-extensions.mts'
 
 describe('unit-d:types/CreateExtensions', () => {

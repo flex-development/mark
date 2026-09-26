@@ -5,6 +5,7 @@
 
 import type { Tree } from '@flex-development/mark/ast'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../transform.mts'
 
 describe('unit-d:types/Transform', () => {

@@ -11,7 +11,6 @@
     ".git/",
     ".husky/_/",
     ".yarn/",
-    "__fixtures__/markdown/*.md",
     "node_modules/",
     "yarn.lock"
   ],

@@ -4,6 +4,7 @@
  */
 
 import type { Context } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../before-store.mts'
 
 describe('unit-d:types/BeforeStore', () => {

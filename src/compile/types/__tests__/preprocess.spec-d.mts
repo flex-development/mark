@@ -8,6 +8,7 @@ import type {
   CompileResult
 } from '@flex-development/mark/compile'
 import type { Event } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../preprocess.mts'
 
 describe('unit-d:types/Preprocess', () => {

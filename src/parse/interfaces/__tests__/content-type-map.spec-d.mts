@@ -3,6 +3,7 @@
  * @module mark/parse/interfaces/tests/unit-d/ContentTypeMap
  */
 
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../content-type-map.mts'
 
 describe('unit-d:interfaces/ContentTypeMap', () => {

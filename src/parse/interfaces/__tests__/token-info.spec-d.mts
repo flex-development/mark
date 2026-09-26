@@ -4,6 +4,7 @@
  */
 
 import type { Position, TokenFields } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../token-info.mts'
 
 describe('unit-d:interfaces/TokenInfo', () => {

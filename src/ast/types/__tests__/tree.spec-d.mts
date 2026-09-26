@@ -4,6 +4,7 @@
  */
 
 import type { Node, Root } from '@flex-development/mark/ast'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../tree.mts'
 
 describe('unit-d:types/Tree', () => {

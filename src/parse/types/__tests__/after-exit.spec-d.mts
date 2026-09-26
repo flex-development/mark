@@ -4,6 +4,7 @@
  */
 
 import type { Context, Token } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../after-exit.mts'
 
 describe('unit-d:types/AfterExit', () => {

@@ -3,6 +3,7 @@
  * @module mark/parse/interfaces/tests/unit-d/ConstructPositionMap
  */
 
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../construct-position-map.mts'
 
 describe('unit-d:interfaces/ConstructPositionMap', () => {

@@ -4,6 +4,7 @@
  */
 
 import type { NodeMap } from '@flex-development/mark/ast'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../node.mts'
 
 describe('unit-d:types/Node', () => {

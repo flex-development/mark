@@ -4,6 +4,7 @@
  */
 
 import type { Code } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../apply-skip.mts'
 
 describe('unit-d:types/ApplySkip', () => {

@@ -4,6 +4,7 @@
  */
 
 import type { Chunk, SerializeOptions } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../serialize-chunks.mts'
 
 describe('unit-d:types/SerializeChunks', () => {

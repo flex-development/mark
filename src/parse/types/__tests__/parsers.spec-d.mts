@@ -4,6 +4,7 @@
  */
 
 import type { ContentType, Create } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../parsers.mts'
 
 describe('unit-d:types/Parsers', () => {

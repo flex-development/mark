@@ -3,6 +3,7 @@
  * @module mark/core/types/tests/unit-d/List
  */
 
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../list.mts'
 
 describe('unit-d:types/List', () => {

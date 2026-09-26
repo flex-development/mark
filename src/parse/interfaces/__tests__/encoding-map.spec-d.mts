@@ -3,6 +3,7 @@
  * @module mark/parse/interfaces/tests/unit-d/EncodingMap
  */
 
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../encoding-map.mts'
 
 describe('unit-d:interfaces/EncodingMap', () => {

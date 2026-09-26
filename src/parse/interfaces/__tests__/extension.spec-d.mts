@@ -8,6 +8,7 @@ import type {
   Disable
 } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extension.mts'
 
 describe('unit-d:interfaces/Extension', () => {

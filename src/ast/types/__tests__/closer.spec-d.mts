@@ -4,6 +4,7 @@
  */
 
 import type { Handle } from '@flex-development/mark/ast'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../closer.mts'
 
 describe('unit-d:types/Closer', () => {

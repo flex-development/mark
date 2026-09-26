@@ -7,6 +7,7 @@ import type {
   FullNormalizedExtension,
   Parsers
 } from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../parse-context.mts'
 
 describe('unit-d:interfaces/ParseContext', () => {
