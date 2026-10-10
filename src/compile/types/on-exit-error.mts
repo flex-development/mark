@@ -3,14 +3,14 @@
  * @module mark/compile/types/OnExitError
  */
 
-import type { CompileContext } from '@flex-development/mark/compile'
+import type { Context } from '@flex-development/mark/compile'
 import type { Token, TokenType } from '@flex-development/mark/parse'
 
 /**
  * Handle the case where the `right` token is open,
  * but is closed by exiting the `left` token.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode TokenType}
  * @see {@linkcode Token}
  *
@@ -19,7 +19,7 @@ import type { Token, TokenType } from '@flex-development/mark/parse'
  * @template {TokenType} [R]
  *  The open token type
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Token<L>} left
  *  The exiting token
@@ -31,7 +31,7 @@ type OnExitError<
   L extends TokenType = TokenType,
   R extends TokenType = TokenType
 > = (
-  this: CompileContext,
+  this: Context,
   left: Token<L>,
   right: Token<R>
 ) => undefined

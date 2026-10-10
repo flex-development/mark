@@ -1,12 +1,12 @@
 /**
  * @file Type Aliases - Context
- * @module mark/parse/types/Context
+ * @module mark/compile/types/Context
  */
 
-import type { ContextMap } from '@flex-development/mark/parse'
+import type { ContextMap } from '@flex-development/mark/compile'
 
 /**
- * Union of registered tokenization contexts.
+ * Union of registered compilation contexts.
  *
  * To register custom contexts, augment {@linkcode ContextMap}.\
  * They will be added to this union automatically.

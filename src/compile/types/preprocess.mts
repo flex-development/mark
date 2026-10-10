@@ -3,10 +3,7 @@
  * @module mark/compile/types/Preprocess
  */
 
-import type {
-  CompileContext,
-  CompileResult
-} from '@flex-development/mark/compile'
+import type { CompileResult, Context } from '@flex-development/mark/compile'
 import type { Event } from '@flex-development/mark/parse'
 
 /**
@@ -15,11 +12,11 @@ import type { Event } from '@flex-development/mark/parse'
  * This hook can inspect or mutate `events`, initialize compiler data,
  * or manipulate the initial `result` before event handlers run.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode CompileResult}
  * @see {@linkcode Event}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Event[]} events
  *  The current list of events
@@ -28,7 +25,7 @@ import type { Event } from '@flex-development/mark/parse'
  * @return {null | undefined}
  */
 type Preprocess = (
-  this: CompileContext,
+  this: Context,
   events: Event[],
   result: CompileResult
 ) => null | undefined

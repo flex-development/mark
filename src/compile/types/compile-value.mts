@@ -11,7 +11,7 @@ import type { CompileValueMap } from '@flex-development/mark/compile'
  * Compilation values are intermediate values
  * entered and exited during compilation.
  *
- * To register custom values, augment {@linkcode CompileValueMap}.
+ * To register custom values, augment {@linkcode CompileValueMap}.\
  * They will be added to this union automatically.
  */
 type CompileValue = CompileValueMap[keyof CompileValueMap]

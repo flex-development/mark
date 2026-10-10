@@ -3,17 +3,14 @@
  * @module mark/compile/types/tests/unit-d/Preprocess
  */
 
-import type {
-  CompileContext,
-  CompileResult
-} from '@flex-development/mark/compile'
+import type { CompileResult, Context } from '@flex-development/mark/compile'
 import type { Event } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../preprocess.mts'
 
 describe('unit-d:types/Preprocess', () => {
-  it('should match [this: CompileContext]', () => {
-    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<CompileContext>()
+  it('should match [this: Context]', () => {
+    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })
 
   describe('parameters', () => {

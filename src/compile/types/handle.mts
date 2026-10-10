@@ -3,27 +3,27 @@
  * @module mark/compile/types/Handle
  */
 
-import type { CompileContext } from '@flex-development/mark/compile'
+import type { Context } from '@flex-development/mark/compile'
 import type { Token, TokenType } from '@flex-development/mark/parse'
 
 /**
  * Handle an event token.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode TokenType}
  * @see {@linkcode Token}
  *
  * @template {TokenType} [T]
  *  The event token type
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Token<T>} token
  *  The event token
  * @return {undefined}
  */
 type Handle<T extends TokenType = TokenType> = (
-  this: CompileContext,
+  this: Context,
   token: Token<T>
 ) => undefined
 

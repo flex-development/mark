@@ -3,18 +3,18 @@
  * @module mark/compile/types/Resume
  */
 
-import type { CompileContext } from '@flex-development/mark/compile'
+import type { Context } from '@flex-development/mark/compile'
 
 /**
  * Stop capturing output and serialize the captured value.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @return {string | null | undefined}
  *  The serialized output
  */
-type Resume = (this: CompileContext) => string | null | undefined
+type Resume = (this: Context) => string | null | undefined
 
 export type { Resume as default }

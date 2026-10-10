@@ -3,19 +3,19 @@
  * @module mark/compile/types/Buffer
  */
 
-import type { CompileContext, Resume } from '@flex-development/mark/compile'
+import type { Context, Resume } from '@flex-development/mark/compile'
 
 /**
  * Start capturing output into a temporary compilation value.
  *
  * Captured values can later be serialized with {@linkcode Resume}.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @return {undefined}
  */
-type Buffer = (this: CompileContext) => undefined
+type Buffer = (this: Context) => undefined
 
 export type { Buffer as default }

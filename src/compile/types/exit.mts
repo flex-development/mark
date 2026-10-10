@@ -3,20 +3,17 @@
  * @module mark/compile/types/Exit
  */
 
-import type {
-  CompileContext,
-  OnExitError
-} from '@flex-development/mark/compile'
+import type { Context, OnExitError } from '@flex-development/mark/compile'
 import type { Token } from '@flex-development/mark/parse'
 
 /**
  * Exit a compilation value.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode OnExitError}
  * @see {@linkcode Token}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Token} token
  *  The token associated with the compilation value
@@ -25,7 +22,7 @@ import type { Token } from '@flex-development/mark/parse'
  * @return {undefined}
  */
 type Exit = (
-  this: CompileContext,
+  this: Context,
   token: Token,
   onError?: OnExitError | null | undefined
 ) => undefined

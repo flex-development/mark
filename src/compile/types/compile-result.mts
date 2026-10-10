@@ -10,7 +10,7 @@ import type { Compile, CompileResultMap } from '@flex-development/mark/compile'
  *
  * Compilation results are the values returned from {@linkcode Compile}.
  *
- * To register custom results, augment {@linkcode CompileResultMap}.
+ * To register custom results, augment {@linkcode CompileResultMap}.\
  * They will be added to this union automatically.
  */
 type CompileResult = CompileResultMap[keyof CompileResultMap]
