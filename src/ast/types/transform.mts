@@ -16,9 +16,9 @@ import type { Tree } from '@flex-development/mark/ast'
  *
  * @param {Tree} tree
  *  The tree to transform
- * @return {Tree | null | undefined}
+ * @return {Tree | null | undefined | void}
  *  The new or transformed tree, or nothing (in which case `tree` is used)
  */
-type Transform = (this: void, tree: Tree) => Tree | null | undefined
+type Transform = (this: void, tree: Tree) => Tree | null | undefined | void
 
 export type { Transform as default }

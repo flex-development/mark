@@ -16,12 +16,12 @@ import type { CompileResult } from '@flex-development/mark/compile'
  *
  * @param {CompileResult} result
  *  The compilation result to transform
- * @return {CompileResult | null | undefined}
+ * @return {CompileResult | null | undefined | void}
  *  The new or transformed result, or nothing (in which case `result` is used)
  */
 type Transform = (
   this: void,
   result: CompileResult
-) => CompileResult | null | undefined
+) => CompileResult | null | undefined | void
 
 export type { Transform as default }

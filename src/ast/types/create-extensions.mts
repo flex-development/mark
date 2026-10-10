@@ -28,7 +28,7 @@ import type { List } from '@flex-development/mark/core'
  *  Create an `exit` event handler
  * @param {Buffer} buffer
  *  Start capturing output into a fragment
- * @return {Extension | List<Extension>}
+ * @return {Extension | List<Extension | List<Extension>>}
  *  The extension, or the list of extensions
  */
 type CreateExtensions = (
@@ -36,6 +36,6 @@ type CreateExtensions = (
   opener: Opener,
   closer: Closer,
   buffer: Buffer
-) => Extension | List<Extension>
+) => Extension | List<Extension | List<Extension>>
 
 export type { CreateExtensions as default }

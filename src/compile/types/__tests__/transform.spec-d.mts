@@ -20,10 +20,10 @@ describe('unit-d:types/Transform', () => {
   })
 
   describe('returns', () => {
-    it('should return CompileResult | null | undefined', () => {
+    it('should return CompileResult | null | undefined | void', () => {
       expectTypeOf<TestSubject>()
         .returns
-        .toEqualTypeOf<Nilable<CompileResult>>()
+        .toEqualTypeOf<Nilable<CompileResult | void>>()
     })
   })
 })

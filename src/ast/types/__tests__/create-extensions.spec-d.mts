@@ -27,10 +27,10 @@ describe('unit-d:types/CreateExtensions', () => {
   })
 
   describe('returns', () => {
-    it('should return Extension | List<Extension>', () => {
+    it('should return Extension | List<Extension | List<Extension>>', () => {
       expectTypeOf<TestSubject>()
         .returns
-        .toEqualTypeOf<Extension | List<Extension>>()
+        .toEqualTypeOf<Extension | List<Extension | List<Extension>>>()
     })
   })
 })

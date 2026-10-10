@@ -20,8 +20,8 @@ describe('unit-d:types/Transform', () => {
   })
 
   describe('returns', () => {
-    it('should return Tree | null | undefined', () => {
-      expectTypeOf<TestSubject>().returns.toEqualTypeOf<Nilable<Tree>>()
+    it('should return Tree | null | undefined | void', () => {
+      expectTypeOf<TestSubject>().returns.toEqualTypeOf<Nilable<Tree | void>>()
     })
   })
 })

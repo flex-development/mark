@@ -36,6 +36,6 @@ type CreateExtensions = (
   opener: Opener,
   closer: Closer,
   buffer: Buffer
-) => Extension | List<Extension>
+) => Extension | List<Extension | List<Extension>>
 
 export type { CreateExtensions as default }
