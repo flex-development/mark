@@ -1,3 +1,10 @@
+## [1.0.0-alpha.7](https://github.com/flex-development/mark/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2026-10-10)
+
+### :sparkles: Features
+
+- [[`4b87213`](https://github.com/flex-development/mark/commit/4b872133f61892bf1c09d8d1bf97b1b07977c46a)] **ast:** `Context`, `ContextMap`
+- [[`65edb6e`](https://github.com/flex-development/mark/commit/65edb6e3db78c78dc2463dcaf54b8cf5abd79989)] **compile:** `Context`, `ContextMap`
+
 ## [1.0.0-alpha.6](https://github.com/flex-development/mark/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2026-10-09)
 
 ### ⚠ BREAKING CHANGES
@@ -210,6 +217,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
