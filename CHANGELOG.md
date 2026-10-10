@@ -1,3 +1,32 @@
+## [1.0.0-alpha.6](https://github.com/flex-development/mark/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2026-10-09)
+
+### ⚠ BREAKING CHANGES
+
+- api improvements
+
+### :package: Build
+
+- [[`35561a6`](https://github.com/flex-development/mark/commit/35561a6fc2c2f96e9fdf11c699d88752a6697158)] **deps-dev:** Bump cspell from 10.3.4 to 10.3.5 ([#92](https://github.com/flex-development/mark/issues/92))
+- [[`6b8fe10`](https://github.com/flex-development/mark/commit/6b8fe10674c47423031bbd022207689a64d16767)] **deps-dev:** Bump cspell from 10.3.5 to 10.3.6 ([#97](https://github.com/flex-development/mark/issues/97))
+- [[`9ba7844`](https://github.com/flex-development/mark/commit/9ba7844f65f016dd00538c9b908f25d0900354b3)] **deps-dev:** bump dprint from 0.57.4 to 0.60.1
+- [[`ac8645e`](https://github.com/flex-development/mark/commit/ac8645ee1d264a7c26b231f621fe5f14aa88d537)] **deps-dev:** Bump rollup from 4.63.5 to 4.63.6 in the rollup group ([#94](https://github.com/flex-development/mark/issues/94))
+- [[`f86dfb5`](https://github.com/flex-development/mark/commit/f86dfb58c8b3558c2bac4a575a193d604dfcb71a)] **deps-dev:** Bump rollup from 4.63.6 to 4.64.0 in the rollup group ([#99](https://github.com/flex-development/mark/issues/99))
+- [[`b99986d`](https://github.com/flex-development/mark/commit/b99986dfe9044793cfe83a8dddecee831322d03f)] **deps-dev:** Bump the vitest group across 1 directory with 2 updates ([#95](https://github.com/flex-development/mark/issues/95))
+- [[`98ff26e`](https://github.com/flex-development/mark/commit/98ff26e618db2bb6e215911e9eadf89f15170ac4)] **deps-dev:** Bump vite from 8.3.1 to 8.3.2 ([#98](https://github.com/flex-development/mark/issues/98))
+- [[`0d5d96b`](https://github.com/flex-development/mark/commit/0d5d96b6b9fe8e3e7818131c76aa42bd1d479a6f)] **deps-dev:** Bump vite from 8.3.2 to 8.3.3 ([#105](https://github.com/flex-development/mark/issues/105))
+- [[`6b99b79`](https://github.com/flex-development/mark/commit/6b99b79240663341b07250ac4c9fa374f772eea0)] **deps:** Bump brace-expansion from 1.1.16 to 1.1.21 ([#93](https://github.com/flex-development/mark/issues/93))
+- [[`65dbb78`](https://github.com/flex-development/mark/commit/65dbb78b364ff9a8dd038736d8e6b8459d2962be)] **deps:** Bump smol-toml from 1.8.0 to 1.9.0 ([#102](https://github.com/flex-development/mark/issues/102))
+- [[`59da49b`](https://github.com/flex-development/mark/commit/59da49b395d5b4988842b93021470dcc28411e5f)] **deps:** Bump source-map-js from 1.2.1 to 1.2.2 ([#103](https://github.com/flex-development/mark/issues/103))
+- [[`31957d2`](https://github.com/flex-development/mark/commit/31957d29982ece9a51dc455a4545a18aec4d4ca5)] **deps:** Bump undici from 6.28.0 to 6.29.0 ([#91](https://github.com/flex-development/mark/issues/91))
+
+### :pencil: Documentation
+
+- [[`55a9173`](https://github.com/flex-development/mark/commit/55a9173c2e41e0fbef410cf5a75d0614553ecbbd)] fix link to q&a discussion category
+
+### :mechanical_arm: Refactors
+
+- [[`c810342`](https://github.com/flex-development/mark/commit/c810342ac2debd92fec7b7ecc085b9efedcd3b76)] api improvements
+
 ## [1.0.0-alpha.5](https://github.com/flex-development/mark/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2026-09-26)
 
 ### :package: Build
@@ -181,6 +210,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
