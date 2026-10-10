@@ -3,18 +3,18 @@
  * @module mark/ast/types/Resume
  */
 
-import type { CompileContext } from '@flex-development/mark/ast'
+import type { Context } from '@flex-development/mark/ast'
 
 /**
  * Stop capturing output and serialize the captured node.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @return {string | null | undefined}
  *  The serialized node
  */
-type Resume = (this: CompileContext) => string | null | undefined
+type Resume = (this: Context) => string | null | undefined
 
 export type { Resume as default }

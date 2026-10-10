@@ -3,17 +3,14 @@
  * @module mark/ast/types/tests/unit-d/Exit
  */
 
-import type {
-  CompileContext,
-  OnExitError
-} from '@flex-development/mark/ast'
+import type { Context, OnExitError } from '@flex-development/mark/ast'
 import type { Token } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../exit.mts'
 
 describe('unit-d:types/Exit', () => {
-  it('should match [this: CompileContext]', () => {
-    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<CompileContext>()
+  it('should match [this: Context]', () => {
+    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })
 
   describe('parameters', () => {

@@ -3,7 +3,7 @@
  * @module mark/ast/types/Preprocess
  */
 
-import type { CompileContext, Tree } from '@flex-development/mark/ast'
+import type { Context, Tree } from '@flex-development/mark/ast'
 import type { Event } from '@flex-development/mark/parse'
 
 /**
@@ -12,11 +12,11 @@ import type { Event } from '@flex-development/mark/parse'
  * This hook can inspect or mutate `events`, initialize compiler data,
  * or manipulate the initial `tree` before event handlers run.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode Event}
  * @see {@linkcode Tree}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Event[]} events
  *  The current list of events
@@ -25,7 +25,7 @@ import type { Event } from '@flex-development/mark/parse'
  * @return {null | undefined}
  */
 type Preprocess = (
-  this: CompileContext,
+  this: Context,
   events: Event[],
   tree: Tree
 ) => null | undefined

@@ -4,7 +4,7 @@
  */
 
 import type {
-  CompileContext,
+  Context,
   Node,
   OnEnterError
 } from '@flex-development/mark/ast'
@@ -13,8 +13,8 @@ import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../enter.mts'
 
 describe('unit-d:types/Enter', () => {
-  it('should match [this: CompileContext]', () => {
-    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<CompileContext>()
+  it('should match [this: Context]', () => {
+    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })
 
   describe('parameters', () => {

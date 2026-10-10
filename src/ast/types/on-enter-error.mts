@@ -3,14 +3,14 @@
  * @module mark/ast/types/OnEnterError
  */
 
-import type { CompileContext } from '@flex-development/mark/ast'
+import type { Context } from '@flex-development/mark/ast'
 import type { Token, TokenType } from '@flex-development/mark/parse'
 
 /**
  * Handle the case where the `right` token is open,
  * but is closed by the `left` token, or because end of content was reached.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode TokenType}
  * @see {@linkcode Token}
  *
@@ -19,7 +19,7 @@ import type { Token, TokenType } from '@flex-development/mark/parse'
  * @template {TokenType} [R]
  *  The open token type
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Token<L> | undefined} left
  *  The exiting token
@@ -31,7 +31,7 @@ type OnEnterError<
   L extends TokenType = TokenType,
   R extends TokenType = TokenType
 > = (
-  this: CompileContext,
+  this: Context,
   left: Token<L> | undefined,
   right: Token<R>
 ) => undefined

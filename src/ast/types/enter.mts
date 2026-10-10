@@ -4,7 +4,7 @@
  */
 
 import type {
-  CompileContext,
+  Context,
   Node,
   OnEnterError
 } from '@flex-development/mark/ast'
@@ -13,12 +13,12 @@ import type { Token } from '@flex-development/mark/parse'
 /**
  * Enter a node.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode Node}
  * @see {@linkcode OnEnterError}
  * @see {@linkcode Token}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @param {Node} node
  *  The node to enter
@@ -29,7 +29,7 @@ import type { Token } from '@flex-development/mark/parse'
  * @return {undefined}
  */
 type Enter = (
-  this: CompileContext,
+  this: Context,
   node: Node,
   token: Token,
   onError?: OnEnterError | null | undefined

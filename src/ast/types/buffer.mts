@@ -3,17 +3,17 @@
  * @module mark/ast/types/Buffer
  */
 
-import type { CompileContext } from '@flex-development/mark/ast'
+import type { Context } from '@flex-development/mark/ast'
 
 /**
  * Capture some of the output data.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  *
- * @this {CompileContext}
+ * @this {Context}
  *
  * @return {undefined}
  */
-type Buffer = (this: CompileContext) => undefined
+type Buffer = (this: Context) => undefined
 
 export type { Buffer as default }

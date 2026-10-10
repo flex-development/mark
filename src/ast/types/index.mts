@@ -6,6 +6,7 @@
 export type { default as Buffer } from './buffer.mts'
 export type { default as Closer } from './closer.mts'
 export type { default as Compile } from './compile.mts'
+export type { default as Context } from './context.mts'
 export type { default as CreateExtensions } from './create-extensions.mts'
 export type { default as CreateNode } from './create-node.mts'
 export type { default as Enter } from './enter.mts'
