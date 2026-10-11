@@ -20,8 +20,8 @@ describe('unit-d:types/Handle', () => {
   })
 
   describe('returns', () => {
-    it('should return undefined', () => {
-      expectTypeOf<TestSubject>().returns.toEqualTypeOf<undefined>()
+    it('should return undefined | void', () => {
+      expectTypeOf<TestSubject>().returns.toEqualTypeOf<undefined | void>()
     })
   })
 })

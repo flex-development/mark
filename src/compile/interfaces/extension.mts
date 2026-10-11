@@ -3,7 +3,7 @@
  * @module mark/compile/interfaces/Extension
  */
 
-import type { Handles, Transform } from '@flex-development/mark/compile'
+import type { Handle, Handles, Transform } from '@flex-development/mark/compile'
 import type { List } from '@flex-development/mark/core'
 
 /**
@@ -19,6 +19,38 @@ import type { List } from '@flex-development/mark/core'
  *  }
  */
 interface Extension {
+  /**
+   * The listener, or listeners, to call after an {@linkcode enter} handler.
+   *
+   * @see {@linkcode Handle}
+   * @see {@linkcode List}
+   */
+  afterEnter?: Handle | List<Handle> | null | undefined
+
+  /**
+   * The listener, or listeners, to call after an {@linkcode exit} handler.
+   *
+   * @see {@linkcode Handle}
+   * @see {@linkcode List}
+   */
+  afterExit?: Handle | List<Handle> | null | undefined
+
+  /**
+   * The listener, or listeners, to call before an {@linkcode enter} handler.
+   *
+   * @see {@linkcode Handle}
+   * @see {@linkcode List}
+   */
+  beforeEnter?: Handle | List<Handle> | null | undefined
+
+  /**
+   * The listener, or listeners, to call before an {@linkcode exit} handler.
+   *
+   * @see {@linkcode Handle}
+   * @see {@linkcode List}
+   */
+  beforeExit?: Handle | List<Handle> | null | undefined
+
   /**
    * Record, where each key is a token type
    * and each value is the handler to call when entering a token.

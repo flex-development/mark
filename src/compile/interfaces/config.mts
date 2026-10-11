@@ -5,6 +5,7 @@
 
 import type {
   Extension,
+  Handle,
   Handles,
   Transform
 } from '@flex-development/mark/compile'
@@ -24,6 +25,42 @@ import type {
  * @extends {Extension}
  */
 interface Config extends Extension {
+  /**
+   * The list of listeners to call after an {@linkcode enter} handler.
+   *
+   * @see {@linkcode Handle}
+   *
+   * @override
+   */
+  afterEnter: Handle[]
+
+  /**
+   * The list of listeners to call after an {@linkcode exit} handler.
+   *
+   * @see {@linkcode Handle}
+   *
+   * @override
+   */
+  afterExit: Handle[]
+
+  /**
+   * The list of listeners to call before an {@linkcode enter} handler.
+   *
+   * @see {@linkcode Handle}
+   *
+   * @override
+   */
+  beforeEnter: Handle[]
+
+  /**
+   * The list of listeners to call before an {@linkcode exit} handler.
+   *
+   * @see {@linkcode Handle}
+   *
+   * @override
+   */
+  beforeExit: Handle[]
+
   /**
    * Record, where each key is a token type
    * and each value is the handler to call when entering a token.
