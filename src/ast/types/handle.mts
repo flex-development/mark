@@ -20,11 +20,12 @@ import type { Token, TokenType } from '@flex-development/mark/parse'
  *
  * @param {Token<T>} token
  *  The event token
- * @return {undefined}
+ * @return {undefined | void}
+ *  Nothing
  */
 type Handle<T extends TokenType = TokenType> = (
   this: Context,
   token: Token<T>
-) => undefined
+) => undefined | void
 
 export type { Handle as default }

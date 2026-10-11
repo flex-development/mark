@@ -5,6 +5,7 @@
 
 import type {
   Extension,
+  Handle,
   Handles,
   Transform
 } from '@flex-development/mark/ast'
@@ -14,6 +15,30 @@ import type TestSubject from '../config.mts'
 describe('unit-d:interfaces/Config', () => {
   it('should extend Extension', () => {
     expectTypeOf<TestSubject>().toExtend<Extension>()
+  })
+
+  it('should match [afterEnter: Handle[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('afterEnter')
+      .toEqualTypeOf<Handle[]>()
+  })
+
+  it('should match [afterExit: Handle[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('afterExit')
+      .toEqualTypeOf<Handle[]>()
+  })
+
+  it('should match [beforeEnter: Handle[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('beforeEnter')
+      .toEqualTypeOf<Handle[]>()
+  })
+
+  it('should match [beforeExit: Handle[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('beforeExit')
+      .toEqualTypeOf<Handle[]>()
   })
 
   it('should match [enter: Handles]', () => {
