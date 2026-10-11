@@ -1,3 +1,13 @@
+## [1.0.0-alpha.8](https://github.com/flex-development/mark/compare/1.0.0-alpha.7...1.0.0-alpha.8) (2026-10-11)
+
+### ⚠ BREAKING CHANGES
+
+- **ast:** `FragmentChild`, `FragmentChildMap`
+
+### :sparkles: Features
+
+- [[`83a492d`](https://github.com/flex-development/mark/commit/83a492ded5590a36e9ba73ea7b1a7b0e06f7bf43)] **ast:** `FragmentChild`, `FragmentChildMap`
+
 ## [1.0.0-alpha.7](https://github.com/flex-development/mark/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2026-10-10)
 
 ### :sparkles: Features
@@ -217,6 +227,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
