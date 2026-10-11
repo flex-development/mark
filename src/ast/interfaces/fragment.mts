@@ -3,26 +3,25 @@
  * @module mark/ast/interfaces/Fragment
  */
 
+import type { FragmentChild } from '@flex-development/mark/ast'
 import type unist from 'unist'
 
 /**
  * A temporary node.
  *
- * @see {@linkcode unist.Node}
  * @see {@linkcode unist.Parent}
- *
- * @template {unist.Node} [Child]
- *  The union of child nodes
  *
  * @extends {unist.Parent}
  */
-interface Fragment<Child extends unist.Node = unist.Node> extends unist.Parent {
+interface Fragment extends unist.Parent {
   /**
    * The list of children.
    *
+   * @see {@linkcode FragmentChild}
+   *
    * @override
    */
-  children: Child[]
+  children: FragmentChild[]
 
   /**
    * The node type.

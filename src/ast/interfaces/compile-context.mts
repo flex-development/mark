@@ -67,24 +67,6 @@ interface CompileContext extends compile.CompileContext {
   compile: Compile
 
   /**
-   * Enter a node.
-   *
-   * @see {@linkcode Enter}
-   *
-   * @override
-   */
-  enter: Enter
-
-  /**
-   * Exit a node.
-   *
-   * @see {@linkcode Exit}
-   *
-   * @override
-   */
-  exit: Exit
-
-  /**
    * The compilation configuration.
    *
    * @see {@linkcode Config}
@@ -101,6 +83,24 @@ interface CompileContext extends compile.CompileContext {
    * @override
    */
   data: CompileData
+
+  /**
+   * Enter a node.
+   *
+   * @see {@linkcode Enter}
+   *
+   * @override
+   */
+  enter: Enter
+
+  /**
+   * Exit a node.
+   *
+   * @see {@linkcode Exit}
+   *
+   * @override
+   */
+  exit: Exit
 
   /**
    * Preprocess events before turning them into a syntax tree.

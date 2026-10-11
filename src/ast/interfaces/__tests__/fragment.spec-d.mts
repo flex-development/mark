@@ -3,7 +3,8 @@
  * @module mark/ast/interfaces/tests/unit-d/Fragment
  */
 
-import type { Literal, Node, Parent } from 'unist'
+import type { FragmentChild } from '@flex-development/mark/ast'
+import type { Parent } from 'unist'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../fragment.mts'
 
@@ -12,14 +13,10 @@ describe('unit-d:interfaces/Fragment', () => {
     expectTypeOf<TestSubject>().toExtend<Parent>()
   })
 
-  it('should match [children: Child[]]', () => {
-    // Arrange
-    type Child = Literal | Node | Parent
-
-    // Expect
-    expectTypeOf<TestSubject<Child>>()
+  it('should match [children: FragmentChild[]]', () => {
+    expectTypeOf<TestSubject>()
       .toHaveProperty('children')
-      .toEqualTypeOf<Child[]>()
+      .toEqualTypeOf<FragmentChild[]>()
   })
 
   it('should match [type: "fragment"]', () => {
