@@ -234,7 +234,7 @@ jobs:
         run: yarn typecheck
       - id: report
         name: Upload report
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ format('{0}.typecheck.blob.json', env.SHA) }}
           path: ./.vitest-reports/typecheck.blob.json
@@ -354,7 +354,7 @@ jobs:
         working-directory: ${{ steps.directory.outputs.result }}
       - id: archive
         name: Archive production artifact
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ steps.tarball.outputs.result }}
           path: ${{ steps.tarball.outputs.result }}
