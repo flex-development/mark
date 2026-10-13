@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark",
   "description": "core types and interfaces for mark",
-  "version": "1.0.0-alpha.9",
+  "version": "1.0.0-alpha.10",
   "keywords": [
     "compile",
     "finite",
