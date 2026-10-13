@@ -14,6 +14,6 @@ import type { CompileValueMap } from '@flex-development/mark/compile'
  * To register custom values, augment {@linkcode CompileValueMap}.\
  * They will be added to this union automatically.
  */
-type CompileValue = CompileValueMap[keyof CompileValueMap]
+type CompileValue = Exclude<CompileValueMap[keyof CompileValueMap], undefined>
 
 export type { CompileValue as default }

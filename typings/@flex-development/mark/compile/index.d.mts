@@ -5,6 +5,10 @@ declare module '@flex-development/mark/compile' {
     flowCodeInside?: boolean | null | undefined
   }
 
+  interface CompileValueMap {
+    undefined: undefined
+  }
+
   interface ContextMap {
     mark: CompileContext
   }

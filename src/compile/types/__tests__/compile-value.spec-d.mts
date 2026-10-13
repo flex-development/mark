@@ -8,11 +8,15 @@ import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-value.mts'
 
 describe('unit-d:types/CompileValue', () => {
-  it('should equal CompileValueMap[keyof CompileValueMap]', () => {
+  it('should exclude undefined', () => {
+    expectTypeOf<TestSubject>().extract<undefined>().toBeNever()
+  })
+
+  it('should match CompileValueMap[keyof CompileValueMap]', () => {
     // Arrange
     type Expect = CompileValueMap[keyof CompileValueMap]
 
     // Expect
-    expectTypeOf<TestSubject>().toEqualTypeOf<Expect>()
+    expectTypeOf<TestSubject>().toExtend<Expect>()
   })
 })
