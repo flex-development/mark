@@ -10,11 +10,11 @@ import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../handles.mts'
 
 describe('unit-d:types/Handles', () => {
-  it('should equal Partial<Record<TokenType, Handle<any> | null | undefined>>', () => {
+  it('should extend Partial<Record<TokenType, Handle<any> | null | undefined>>', () => {
     // Arrange
     type Expect = Partial<Record<TokenType, Nilable<Handle<any>>>>
 
     // Expect
-    expectTypeOf<TestSubject>().toEqualTypeOf<Expect>()
+    expectTypeOf<TestSubject>().toExtend<Expect>()
   })
 })

@@ -13,6 +13,7 @@ import type {
   Node,
   Preprocess,
   Resume,
+  StackedToken,
   Transform,
   Tree
 } from '@flex-development/mark/ast'
@@ -34,8 +35,8 @@ import type { Event, Token } from '@flex-development/mark/parse'
  * After the initial compilation, {@linkcode Transform}s can be applied to
  * manipulate the final compilation result.
  *
- * This compile context API is optimized for producing syntax trees.
- * Compilation results are syntax trees and intermediate values are nodes.
+ * This compile context API is optimized for producing syntax trees.\
+ * Compilation results are syntax trees and intermediate values are nodes.\
  * {@linkcode NodeMap} can be augmented to support custom libraries.
  *
  * > 👉 **Note**: Import `@flex-development/mark/ast/compile` to register nodes
@@ -47,9 +48,9 @@ import type { Event, Token } from '@flex-development/mark/parse'
  */
 interface CompileContext extends compile.CompileContext {
   /**
-   * Start capturing output into a temporary compilation value.
+   * Start capturing output into a temporary node.
    *
-   * Captured values can later be serialized with {@linkcode resume}.
+   * Captured nodes can be later serialized with {@linkcode resume}.
    *
    * @see {@linkcode Buffer}
    *
@@ -128,6 +129,15 @@ interface CompileContext extends compile.CompileContext {
    * @override
    */
   stack: Node[]
+
+  /**
+   * The stack of tokens.
+   *
+   * @see {@linkcode StackedToken}
+   *
+   * @override
+   */
+  tokenStack: StackedToken[]
 }
 
 export type { CompileContext as default }

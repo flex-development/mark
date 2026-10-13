@@ -12,7 +12,8 @@ import type {
   Exit,
   Node,
   Preprocess,
-  Resume
+  Resume,
+  StackedToken
 } from '@flex-development/mark/ast'
 import type * as compile from '@flex-development/mark/compile'
 import type { Nilable } from '@flex-development/tutils'
@@ -64,5 +65,11 @@ describe('unit-d:interfaces/CompileContext', () => {
 
   it('should match [stack: Node[]]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('stack').toEqualTypeOf<Node[]>()
+  })
+
+  it('should match [tokenStack: StackedToken[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('tokenStack')
+      .toEqualTypeOf<StackedToken[]>()
   })
 })
