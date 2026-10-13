@@ -1,3 +1,23 @@
+## [1.0.0-alpha.10](https://github.com/flex-development/mark/compare/1.0.0-alpha.9...1.0.0-alpha.10) (2026-10-13)
+
+### :robot: Continuous Integration
+
+- [[`67bd900`](https://github.com/flex-development/mark/commit/67bd90025bc74f9b8b9e9ac9ca9ef93f55383469)] **deps:** Bump actions/setup-node from 7.0.0 to 7.1.0 ([#114](https://github.com/flex-development/mark/issues/114))
+- [[`9e53869`](https://github.com/flex-development/mark/commit/9e53869ba59f1d8c1a6396e58d32a223d8b85647)] **deps:** Bump actions/upload-artifact from 7.0.1 to 7.0.2 ([#115](https://github.com/flex-development/mark/issues/115))
+
+### :sparkles: Features
+
+- [[`cf4c939`](https://github.com/flex-development/mark/commit/cf4c939fb00d5f697e065b196f589d1194da5272)] **ast:** `Extensions`
+- [[`4fa6770`](https://github.com/flex-development/mark/commit/4fa677092f2c365738378b9785ba9c51cccfd435)] **compile:** `Extensions`
+- [[`3313364`](https://github.com/flex-development/mark/commit/3313364d2685d994adb0a0267c98ba324747fe94)] **compile:** `InitializeResult`
+- [[`f9fad72`](https://github.com/flex-development/mark/commit/f9fad72f4f0f1fd7dbd9015eaea728765cdcb845)] **compile:** `Postprocess`
+
+### :mechanical_arm: Refactors
+
+- [[`920c7b5`](https://github.com/flex-development/mark/commit/920c7b585b06cb7910827e79dbb92f740276eb3f)] **ast:** [`Handles`] convert to mapped type
+- [[`c314e54`](https://github.com/flex-development/mark/commit/c314e540194cc9046d81ff392c95000a9b1cc4d5)] **compile:** [`CompileValue`] exclude `undefined`
+- [[`0540c6e`](https://github.com/flex-development/mark/commit/0540c6e6b722d70548a98a7ae56bd4987808d8c8)] **compile:** [`Handles`] convert to mapped type
+
 ## [1.0.0-alpha.9](https://github.com/flex-development/mark/compare/1.0.0-alpha.8...1.0.0-alpha.9) (2026-10-11)
 
 ### :sparkles: Features
@@ -234,6 +254,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
