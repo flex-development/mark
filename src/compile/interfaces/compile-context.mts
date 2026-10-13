@@ -113,7 +113,7 @@ interface CompileContext {
   resume: Resume
 
   /**
-   * Get the text spanning the specified range.
+   * Get the string value of a token.
    *
    * > 👉 **Note**: Returns an empty string by default.
    * > If a custom serializer has not been defined prior to event compilation,

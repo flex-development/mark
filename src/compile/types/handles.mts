@@ -12,6 +12,6 @@ import type { TokenType } from '@flex-development/mark/parse'
  * @see {@linkcode Handle}
  * @see {@linkcode TokenType}
  */
-type Handles = Partial<Record<TokenType, Handle<any> | null | undefined>>
+type Handles = { [K in TokenType]?: Handle<K> | null | undefined }
 
 export type { Handles as default }
