@@ -1,3 +1,20 @@
+## [1.0.0-alpha.11](https://github.com/flex-development/mark/compare/1.0.0-alpha.10...1.0.0-alpha.11) (2026-10-14)
+
+### ⚠ BREAKING CHANGES
+
+- **ast:** `Postprocess`
+- **ast:** [`CompileContext`] remove `preprocess`
+- **compile:** [`CompileContext`] remove `preprocess`
+
+### :sparkles: Features
+
+- [[`711302f`](https://github.com/flex-development/mark/commit/711302f71ef32750734c9e6ed4414fd39366d5ca)] **ast:** `Postprocess`
+
+### :mechanical_arm: Refactors
+
+- [[`07ea6d4`](https://github.com/flex-development/mark/commit/07ea6d40eddd805681bf8c2089a4ccd42c2995c9)] **ast:** [`CompileContext`] remove `preprocess`
+- [[`4bb7cd3`](https://github.com/flex-development/mark/commit/4bb7cd34efd48e7d0e08edb7416c5d04bc305334)] **compile:** [`CompileContext`] remove `preprocess`
+
 ## [1.0.0-alpha.10](https://github.com/flex-development/mark/compare/1.0.0-alpha.9...1.0.0-alpha.10) (2026-10-13)
 
 ### :robot: Continuous Integration
@@ -254,6 +271,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
