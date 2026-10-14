@@ -22,12 +22,13 @@ import type { Event } from '@flex-development/mark/parse'
  *  The current list of events
  * @param {Tree} tree
  *  The current syntax tree
- * @return {null | undefined}
+ * @return {null | undefined | void}
+ *  Nothing
  */
 type Preprocess = (
   this: Context,
   events: Event[],
   tree: Tree
-) => null | undefined
+) => null | undefined | void
 
 export type { Preprocess as default }

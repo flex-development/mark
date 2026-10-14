@@ -20,8 +20,10 @@ describe('unit-d:types/Preprocess', () => {
   })
 
   describe('returns', () => {
-    it('should return null | undefined', () => {
-      expectTypeOf<TestSubject>().returns.toEqualTypeOf<null | undefined>()
+    it('should return null | undefined | void', () => {
+      expectTypeOf<TestSubject>()
+        .returns
+        .toEqualTypeOf<null | undefined | void>()
     })
   })
 })
