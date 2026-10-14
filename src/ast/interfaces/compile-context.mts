@@ -11,7 +11,6 @@ import type {
   Enter,
   Exit,
   Node,
-  Preprocess,
   Resume,
   StackedToken,
   Transform,
@@ -102,15 +101,6 @@ interface CompileContext extends compile.CompileContext {
    * @override
    */
   exit: Exit
-
-  /**
-   * Preprocess events before turning them into a syntax tree.
-   *
-   * @see {@linkcode Preprocess}
-   *
-   * @override
-   */
-  preprocess?: Preprocess | null | undefined
 
   /**
    * Stop {@linkcode buffer}ing and serialize the captured value.

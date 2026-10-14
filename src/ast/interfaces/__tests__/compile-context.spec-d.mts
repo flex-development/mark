@@ -11,12 +11,10 @@ import type {
   Enter,
   Exit,
   Node,
-  Preprocess,
   Resume,
   StackedToken
 } from '@flex-development/mark/ast'
 import type * as compile from '@flex-development/mark/compile'
-import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-context.mts'
 
@@ -51,12 +49,6 @@ describe('unit-d:interfaces/CompileContext', () => {
 
   it('should match [exit: Exit]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('exit').toEqualTypeOf<Exit>()
-  })
-
-  it('should match [preprocess?: Preprocess | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('preprocess')
-      .toEqualTypeOf<Nilable<Preprocess>>()
   })
 
   it('should match [resume: Resume]', () => {
