@@ -22,12 +22,12 @@ import type { Event } from '@flex-development/mark/parse'
  *  The current list of events
  * @param {CompileResult} result
  *  The current compilation result
- * @return {null | undefined}
+ * @return {null | undefined | void}
  */
 type Preprocess = (
   this: Context,
   events: Event[],
   result: CompileResult
-) => null | undefined
+) => null | undefined | void
 
 export type { Preprocess as default }
