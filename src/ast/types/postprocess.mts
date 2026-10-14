@@ -3,8 +3,7 @@
  * @module mark/ast/types/Postprocess
  */
 
-import type { Tree } from '@flex-development/mark/ast'
-import type { Context } from '@flex-development/mark/compile'
+import type { Context, Tree } from '@flex-development/mark/ast'
 import type { Event } from '@flex-development/mark/parse'
 
 /**
