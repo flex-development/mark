@@ -11,12 +11,10 @@ import type {
   Config,
   Enter,
   Exit,
-  Preprocess,
   Resume,
   StackedToken
 } from '@flex-development/mark/compile'
 import type { Point, SliceSerialize } from '@flex-development/mark/parse'
-import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-context.mts'
 
@@ -51,12 +49,6 @@ describe('unit-d:interfaces/CompileContext', () => {
 
   it('should match [from: Point]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('from').toEqualTypeOf<Point>()
-  })
-
-  it('should match [preprocess?: Preprocess | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('preprocess')
-      .toEqualTypeOf<Nilable<Preprocess>>()
   })
 
   it('should match [resume: Resume]', () => {

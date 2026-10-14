@@ -14,7 +14,6 @@ import type {
   Config,
   Enter,
   Exit,
-  Preprocess,
   Resume,
   StackedToken
 } from '@flex-development/mark/compile'
@@ -50,7 +49,7 @@ interface CompileContext {
   /**
    * Start capturing output into a temporary compilation value.
    *
-   * Captured values can later be serialized with {@linkcode resume}.
+   * Captured values can be later serialized with {@linkcode resume}.
    *
    * @see {@linkcode Buffer}
    */
@@ -97,13 +96,6 @@ interface CompileContext {
    * @see {@linkcode Point}
    */
   from: Point
-
-  /**
-   * Prepare events and the initial result before compilation begins.
-   *
-   * @see {@linkcode Preprocess}
-   */
-  preprocess?: Preprocess | null | undefined
 
   /**
    * Stop {@linkcode buffer}ing and serialize the captured value.
