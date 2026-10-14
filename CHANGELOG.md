@@ -1,3 +1,18 @@
+## [1.0.0-alpha.12](https://github.com/flex-development/mark/compare/1.0.0-alpha.11...1.0.0-alpha.12) (2026-10-14)
+
+### ⚠ BREAKING CHANGES
+
+- **compile:** [`Preprocess`] allow `void` return
+
+### :bug: Fixes
+
+- [[`c3fc256`](https://github.com/flex-development/mark/commit/c3fc256412b45319108ebe8754543b8c1f3f1a47)] **ast:** [`Postprocess`] `Context` import
+- [[`c24d82e`](https://github.com/flex-development/mark/commit/c24d82ecf9737459fa0ec335c6a17607b4268a80)] **ast:** export `Postprocess`
+
+### :mechanical_arm: Refactors
+
+- [[`8367acc`](https://github.com/flex-development/mark/commit/8367acc2c962a576768d9202343ce8cac7259b6d)] **compile:** [`Preprocess`] allow `void` return
+
 ## [1.0.0-alpha.11](https://github.com/flex-development/mark/compare/1.0.0-alpha.10...1.0.0-alpha.11) (2026-10-14)
 
 ### ⚠ BREAKING CHANGES
@@ -271,6 +286,7 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 
 
