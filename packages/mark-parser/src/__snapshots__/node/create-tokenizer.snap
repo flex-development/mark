@@ -1,0 +1,119 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:createTokenizer > #effects.enter > should return open token 1`] = `
+{
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 0,
+    "column": 1,
+    "line": 1,
+    "offset": 0,
+  },
+  "type": "succ",
+  "value": "ok",
+}
+`;
+
+exports[`unit:createTokenizer > #effects.exit > should return closed token 1`] = `
+{
+  "end": {
+    "_bufferIndex": -1,
+    "_index": 0,
+    "column": 1,
+    "line": 1,
+    "offset": 0,
+  },
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 0,
+    "column": 1,
+    "line": 1,
+    "offset": 0,
+  },
+  "type": "eoc",
+}
+`;
+
+exports[`unit:createTokenizer > #sliceStream > should return list of chunks spanning \`range\` (0) 1`] = `
+[
+  "",
+]
+`;
+
+exports[`unit:createTokenizer > #sliceStream > should return list of chunks spanning \`range\` (1) 1`] = `
+[
+  "",
+]
+`;
+
+exports[`unit:createTokenizer > #sliceStream > should return list of chunks spanning \`range\` (2) 1`] = `
+[
+  "b",
+]
+`;
+
+exports[`unit:createTokenizer > #sliceStream > should return list of chunks spanning \`range\` (3) 1`] = `
+[
+  -4,
+]
+`;
+
+exports[`unit:createTokenizer > #sliceStream > should return list of chunks spanning \`range\` (4) 1`] = `
+[
+  "***c***",
+  -4,
+  "****d****",
+]
+`;
+
+exports[`unit:createTokenizer > #sliceStream > should return list of chunks spanning \`range\` (5) 1`] = `
+[
+  "**e*",
+  -4,
+  "*f**",
+]
+`;
+
+exports[`unit:createTokenizer > should create tokenize context (0) 1`] = `
+{
+  "code": -1000,
+  "currentConstruct": undefined,
+  "defineSkip": [Function defineSkip],
+  "events": [],
+  "now": [Function now],
+  "parser": {
+    "constructs": {
+      "disable": {
+        "null": [],
+      },
+    },
+  },
+  "previous": null,
+  "sliceSerialize": [Function sliceSerialize],
+  "sliceStream": [Function sliceStream],
+  "token": [Function token],
+  "write": [Function write],
+}
+`;
+
+exports[`unit:createTokenizer > should create tokenize context (1) 1`] = `
+{
+  "code": -1000,
+  "currentConstruct": undefined,
+  "defineSkip": [Function defineSkip],
+  "events": [],
+  "now": [Function now],
+  "parser": {
+    "constructs": {
+      "disable": {
+        "null": [],
+      },
+    },
+  },
+  "previous": null,
+  "sliceSerialize": [Function sliceSerialize],
+  "sliceStream": [Function sliceStream],
+  "token": [Function token],
+  "write": [Function write],
+}
+`;

@@ -1,0 +1,24 @@
+import type { CompileContext, Root } from '@flex-development/mark/ast'
+import type {} from '@flex-development/mark/ast/compile'
+import type unist from 'unist'
+
+declare module '@flex-development/mark/ast' {
+  interface ContextMap {
+    mark: CompileContext
+  }
+
+  interface Extension {
+    canContainEols?: string[] | null | undefined
+  }
+
+  interface FragmentChildMap {
+    mark: unist.Node
+  }
+
+  interface NodeMap {
+    literal: unist.Literal
+    node: unist.Node
+    parent: unist.Parent
+    root: Root
+  }
+}

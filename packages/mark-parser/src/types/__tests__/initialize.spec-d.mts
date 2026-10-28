@@ -1,0 +1,28 @@
+/**
+ * @file Type Tests - Initialize
+ * @module mark-parser/types/tests/unit-d/Initialize
+ */
+
+import type { CreateInitial } from '@flex-development/mark-parser'
+import type {
+  InitialConstruct,
+  InitialConstructs
+} from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
+import type TestSubject from '../initialize.mts'
+
+describe('unit-d:types/Initialize', () => {
+  it('should extract CreateInitial', () => {
+    expectTypeOf<TestSubject>().extract<CreateInitial>().not.toBeNever()
+  })
+
+  it('should extract InitialConstruct', () => {
+    expectTypeOf<TestSubject>().extract<InitialConstruct>().not.toBeNever()
+  })
+
+  it('should extract Partial<InitialConstructs>', () => {
+    expectTypeOf<TestSubject>()
+      .extract<Partial<InitialConstructs>>()
+      .not.toBeNever()
+  })
+})

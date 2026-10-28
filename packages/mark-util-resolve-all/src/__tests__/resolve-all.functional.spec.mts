@@ -1,0 +1,45 @@
+/**
+ * @file Functional Tests - resolveAll
+ * @module mark-util-resolve-all/utils/tests/functional/resolveAll
+ */
+
+import { ev } from '@flex-development/mark-util-symbol'
+import type {
+  Construct,
+  Event,
+  Place,
+  Resolver,
+  Token,
+  TokenizeContext
+} from '@flex-development/mark/parse'
+import { beforeEach, describe, expect, it, vi, type MockInstance } from 'vitest'
+import testSubject from '../resolve-all.mts'
+
+describe('functional:resolveAll', () => {
+  let constructs: { resolveAll: MockInstance<Resolver> }[]
+  let context: TokenizeContext
+  let events: Event[]
+  let point: Place
+  let resolveAll: MockInstance<Resolver>
+  let token: Token
+
+  beforeEach(() => {
+    point = { _bufferIndex: -1, _index: 0, column: 1, line: 1, offset: 0 }
+    token = { end: point, start: point, type: 'eoc' }
+
+    context = {} as unknown as TokenizeContext
+    events = [[ev.enter, token, context], [ev.exit, token, context]]
+
+    resolveAll = vi.fn<Resolver>(() => events)
+    constructs = [{ resolveAll }, { resolveAll }]
+  })
+
+  it('should call `resolveAll` resolvers', () => {
+    // Act
+    testSubject(constructs as unknown as Construct[], events, context)
+
+    // Expect
+    expect(resolveAll).toHaveBeenCalledOnce()
+    expect(resolveAll).toHaveBeenCalledWith(events, context)
+  })
+})

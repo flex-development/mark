@@ -1,0 +1,66 @@
+{
+  "name": "@flex-development/mark-util-decode",
+  "description": "mark utility to decode chunks",
+  "version": "0.0.0",
+  "keywords": [
+    "chunk",
+    "decode",
+    "fsm",
+    "lexer",
+    "mark",
+    "parse"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark-util-decode",
+  "repository": {
+    "directory": "packages/mark-util-decode",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark-util-decode",
+    "diff-src-prefix": "mark-util-decode",
+    "directory": "./",
+    "executableFiles": [],
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark-util-decode@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "mark": "./src/index.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.12",
+    "@flex-development/mark-util-character": "workspace:1.1.0",
+    "@flex-development/mark-util-chunked": "workspace:1.0.0",
+    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+  },
+  "sideEffects": false
+}

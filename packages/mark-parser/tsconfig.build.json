@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "extends": "../../tsconfig.build.json",
+  "files": [
+    "typings/@flex-development/mark/parse/index.d.mts",
+    "typings/typescript/lib.es5.d.ts"
+  ],
+  "include": ["src/**/**.mts"],
+  "references": [
+    {
+      "path": "../mark/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-character/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-chunked/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-combine-extensions/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-decode/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-serialize/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-symbol/tsconfig.build.json"
+    },
+    {
+      "path": "../mark-util-resolve-all/tsconfig.build.json"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "@flex-development/mark-util-character",
+  "description": "mark utility to handle character codes",
+  "version": "1.1.0",
+  "keywords": [
+    "character",
+    "charcode",
+    "codepoint",
+    "mark",
+    "util",
+    "utility"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark-util-character",
+  "repository": {
+    "directory": "packages/mark-util-character",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark-util-character",
+    "diff-src-prefix": "mark-util-character",
+    "directory": "./",
+    "executableFiles": [],
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark-util-character@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "mark": "./src/index.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "imports": {
+    "#fixtures/*": "./__fixtures__/*.mts",
+    "#internal/*": {
+      "mark": "./src/internal/*.mts",
+      "default": "./dist/internal/*.mjs"
+    },
+    "#tests/*": "./__tests__/*.mts"
+  },
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.12",
+    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+  },
+  "sideEffects": false
+}

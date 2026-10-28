@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "extends": "../../tsconfig.json",
+  "files": ["typings/@flex-development/mark/parse/index.d.mts"]
+}

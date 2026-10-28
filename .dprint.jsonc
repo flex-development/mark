@@ -12,6 +12,7 @@
     ".husky/_/",
     ".yarn/",
     "node_modules/",
+    "packages/**/__fixtures__/markdown/",
     "yarn.lock"
   ],
   "exec": {

@@ -1,0 +1,83 @@
+{
+  "name": "@flex-development/mark",
+  "description": "core types and interfaces for mark",
+  "version": "1.0.0-alpha.12",
+  "keywords": [
+    "compile",
+    "finite",
+    "fsm",
+    "lexer",
+    "parse",
+    "spec",
+    "state",
+    "syntax",
+    "tokenize"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark",
+  "repository": {
+    "directory": "packages/mark",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark",
+    "diff-src-prefix": "mark",
+    "directory": "./",
+    "executableFiles": [],
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    "./ast": {
+      "mark": "./src/ast/index.mts",
+      "default": "./dist/ast/index.d.mts"
+    },
+    "./ast/compile": {
+      "mark": "./src/ast/compile.mts",
+      "default": "./dist/ast/compile.d.mts"
+    },
+    "./compile": {
+      "mark": "./src/compile/index.mts",
+      "default": "./dist/compile/index.d.mts"
+    },
+    "./core": {
+      "mark": "./src/core/index.mts",
+      "default": "./dist/core/index.d.mts"
+    },
+    "./package.json": "./package.json",
+    "./parse": {
+      "mark": "./src/parse/index.mts",
+      "default": "./dist/parse/index.d.mts"
+    }
+  },
+  "imports": {
+    "#tests/*": "./__tests__/*.mts"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "@flex-development/remark-preset"
+    ]
+  },
+  "dependencies": {
+    "@flex-development/unist-util-types": "1.6.1",
+    "@types/unist": "3.0.3"
+  },
+  "sideEffects": false
+}

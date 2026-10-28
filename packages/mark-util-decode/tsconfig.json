@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "extends": "../../tsconfig.json",
+  "files": ["typings/typescript/lib.es5.d.ts"]
+}

@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:chars > should be event type dictionary 1`] = `
+{
+  "enter": "enter",
+  "exit": "exit",
+}
+`;

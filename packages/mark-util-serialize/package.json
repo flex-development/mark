@@ -1,0 +1,65 @@
+{
+  "name": "@flex-development/mark-util-serialize",
+  "description": "mark serialization utilities",
+  "version": "0.0.0",
+  "keywords": [
+    "fsm",
+    "lexer",
+    "parse",
+    "serialize",
+    "state",
+    "tokenize"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark-util-serialize",
+  "repository": {
+    "directory": "packages/mark-util-serialize",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark-util-serialize",
+    "diff-src-prefix": "mark-util-serialize",
+    "directory": "./",
+    "executableFiles": [],
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark-util-serialize@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "mark": "./src/index.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.12",
+    "@flex-development/mark-util-symbol": "workspace:3.1.0",
+    "devlop": "1.1.0"
+  },
+  "sideEffects": false
+}

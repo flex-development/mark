@@ -1,0 +1,83 @@
+{
+  "name": "@flex-development/mark-compiler",
+  "description": "finite state machine compiler",
+  "version": "1.0.0-alpha.10",
+  "keywords": [
+    "compile",
+    "compiler",
+    "finite",
+    "fsm",
+    "lexer",
+    "parse",
+    "state"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark-compiler",
+  "repository": {
+    "directory": "packages/mark-compiler",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark-compiler",
+    "diff-src-prefix": "mark-compiler",
+    "directory": "./",
+    "executableFiles": [],
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark-compiler@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    "./ast": {
+      "mark": "./src/ast/index.mts",
+      "default": "./dist/ast/index.mjs"
+    },
+    "./compile": {
+      "mark": "./src/compile/index.mts",
+      "default": "./dist/compile/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "imports": {
+    "#fixtures/*": "./__fixtures__/*.mts",
+    "#internal/*": {
+      "mark": "./src/internal/*.mts",
+      "default": "./dist/internal/*.mjs"
+    },
+    "#tests/*": "./__tests__/*.mts"
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.12",
+    "@flex-development/mark-util-symbol": "workspace:3.1.0",
+    "@flex-development/unist-util-builder": "2.0.0",
+    "@flex-development/unist-util-stringify-position": "1.0.1",
+    "devlop": "1.1.0"
+  },
+  "devDependencies": {
+    "@types/unist": "3.0.3"
+  },
+  "sideEffects": false
+}

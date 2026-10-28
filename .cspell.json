@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "allowCompoundWords": true,
   "caseSensitive": false,
-  "dictionaries": ["@flex-development/mark"],
+  "dictionaries": ["mark"],
   "dictionaryDefinitions": [
     {
-      "name": "@flex-development/mark",
+      "name": "mark",
       "path": "./.dictionary.txt"
     }
   ],
@@ -27,6 +27,7 @@
     ".husky/_/",
     ".vscode/settings.json",
     ".yarn/",
+    "packages/**/__fixtures__/markdown/",
     "patches/",
     "yarn.lock"
   ],

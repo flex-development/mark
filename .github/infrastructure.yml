@@ -22,16 +22,42 @@ branches:
       required_status_checks:
         checks:
           - context: add-to-project
-          - context: artifacts
+          - context: artifacts (@flex-development/mark)
+          - context: artifacts (@flex-development/mark-compiler)
+          - context: artifacts (@flex-development/mark-parser)
+          - context: artifacts (@flex-development/mark-util-character)
+          - context: artifacts (@flex-development/mark-util-chunked)
+          - context: artifacts (@flex-development/mark-util-combine-extensions)
+          - context: artifacts (@flex-development/mark-util-decode)
+          - context: artifacts (@flex-development/mark-util-resolve-all)
+          - context: artifacts (@flex-development/mark-util-serialize)
+          - context: artifacts (@flex-development/mark-util-symbol)
           - context: auto-merge
           - context: auto-review
-          - context: build
+          - context: codecov/changes
+          - context: codecov/patch
+          - context: codecov/project
+          - context: codecov/project/mark-compiler
+          - context: codecov/project/mark-parser
+          - context: codecov/project/mark-util-character
+          - context: codecov/project/mark-util-chunked
+          - context: codecov/project/mark-util-combine-extensions
+          - context: codecov/project/mark-util-decode
+          - context: codecov/project/mark-util-resolve-all
+          - context: codecov/project/mark-util-serialize
+          - context: codecov/project/mark-util-symbol
           - context: commitlint
           - context: dedupe
           - context: dprint
           - context: format
           - context: lint
           - context: spelling
+          - context: test (26)
+          - context: test (25)
+          - context: test (24)
+          - context: test (22)
+          - context: test-bun (canary)
+          - context: test-bun (latest)
           - context: typescript
         strict: true
       restrictions: null
@@ -76,6 +102,36 @@ labels:
   - name: scope:parse
     description: '@flex-development/mark/parse'
     color: 74cefc
+  - name: package:mark
+    description: '@flex-development/mark'
+    color: c6cde1
+  - name: package:mark-compiler
+    description: '@flex-development/mark-compiler'
+    color: c6cde1
+  - name: package:mark-parser
+    description: '@flex-development/mark-parser'
+    color: c6cde1
+  - name: package:mark-util-character
+    description: '@flex-development/mark-util-character'
+    color: c6cde1
+  - name: package:mark-util-chunked
+    description: '@flex-development/mark-util-chunked'
+    color: c6cde1
+  - name: package:mark-util-combine-extensions
+    description: '@flex-development/mark-util-combine-extensions'
+    color: c6cde1
+  - name: package:mark-util-decode
+    description: '@flex-development/mark-util-decode'
+    color: c6cde1
+  - name: package:mark-util-resolve-all
+    description: '@flex-development/mark-util-resolve-all'
+    color: c6cde1
+  - name: package:mark-util-serialize
+    description: '@flex-development/mark-util-serialize'
+    color: c6cde1
+  - name: package:mark-util-symbol
+    description: '@flex-development/mark-util-symbol'
+    color: c6cde1
   - name: scope:release
     description: package release
     color: 74cefc
@@ -177,7 +233,7 @@ repository:
   default_branch: main
   delete_branch_on_merge: true
   description:
-    'a specification for building syntax-aware parsers, compilers, and text processing systems'
+    'an ecosystem for building syntax-aware parsers, compilers, and text processing systems'
   has_issues: true
   has_projects: true
   has_wiki: false

@@ -1,0 +1,34 @@
+/**
+ * @file Type Tests - PreprocessOptions
+ * @module mark/parse/interfaces/tests/unit-d/PreprocessOptions
+ */
+
+import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
+import type TestSubject from '../preprocess-options.mts'
+
+describe('unit-d:interfaces/PreprocessOptions', () => {
+  it('should match [allowEmptyChunk?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('allowEmptyChunk')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
+  it('should match [ignoreBOM?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('ignoreBOM')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
+  it('should match [nul?: boolean | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('nul')
+      .toEqualTypeOf<Nilable<boolean>>()
+  })
+
+  it('should match [tabSize?: number | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('tabSize')
+      .toEqualTypeOf<Nilable<number>>()
+  })
+})

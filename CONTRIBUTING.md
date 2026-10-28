@@ -105,7 +105,9 @@ Follow the steps below to setup your local development environment:
 
 | name                |
 | ------------------- |
+| `CODECOV_TOKEN`     |
 | `HOMEBREW_BREWFILE` |
+| `NODE_NO_WARNINGS`  |
 | `ZSH_DOTENV_FILE`   |
 
 #### GitHub Actions
@@ -210,7 +212,9 @@ See [`.commitlintrc.ts`](.commitlintrc.ts) to view all commit guidelines.
 
 ### Making Changes
 
-Source code is located in the [`src`](./src/) directory.
+This repository is formatted as a monorepo.
+
+The source code for each package is located in its `src` directory.
 
 ### Documentation
 
@@ -228,11 +232,37 @@ Be sure to use [`it.skip`][vitest-test-skip] or [`it.todo`][vitest-test-todo] wh
 
 - `yarn test`
 - `yarn test:reports`
+- `yarn test:ui`
+- `yarn test:cov`
+- `yarn test:cov:reports`
+- `yarn test:cov:ui`
 - `yarn typecheck`
+- `yarn typecheck:ui`
+
+#### Code Coverage
+
+Code coverage is reported using [Codecov][].
+
+To manually upload coverage reports:
+
+1. Retrieve `CODECOV_TOKEN` from a maintainer
+
+2. Add `CODECOV_TOKEN` to `.env.repo`
+
+3. Reload shell
+
+   ```sh
+   exec $SHELL
+   ```
+
+4. Install [Codecov Uploader][codecov-uploader]
+
+5. Run `yarn codecov`
 
 ### Getting Help
 
 If you need help, make note of any issues in their respective files in the form of a [JSDoc comment][jsdoc].
+If you need help with a test, don't forget to use [`it.skip`][vitest-test-skip] and/or [`it.todo`][vitest-test-todo].
 Afterwards, [start a discussion in the Q\&A category][qa].
 
 ## Labels
@@ -322,12 +352,15 @@ e.g:
 > 👉 **Note**: Release publication is executed via GitHub workflow.\
 > This is so invalid or malicious versions cannot be published without merging those changes into `main` first.
 
-1. [Create or update version manifest][yarn-version]
+1. Check which packages need a bump
+   - [`yarn version check`][yarn-version-check]
+2. [Create or update version manifest][yarn-version]
    - `yarn version`
-2. Create release chore commit
+   - `yarn workspace <workspace> version <version>`
+3. Create release chore commit
    - `yarn release`
-3. Push release chore commit
-4. Monitor workflows
+4. Push release chore commit
+5. Monitor workflows
    1. [`release-chore`](.github/workflows/release-chore.yml)
       - create release branch
       - [apply deferred version records][yarn-version-apply]
@@ -346,6 +379,10 @@ After a release is published, the [`publish`](.github/workflows/publish.yml) wor
 
 - publish packages to [github package registry][gpr]
 - publish packages to [npm][]
+
+[codecov-uploader]: https://docs.codecov.com/docs/codecov-uploader
+
+[codecov]: https://codecov.io
 
 [commitlint]: https://github.com/conventional-changelog/commitlint
 
@@ -390,3 +427,5 @@ After a release is published, the [`publish`](.github/workflows/publish.yml) wor
 [yarn-version]: https://yarnpkg.com/cli/version
 
 [yarn-version-apply]: https://yarnpkg.com/cli/version/apply
+
+[yarn-version-check]: https://yarnpkg.com/cli/version/check

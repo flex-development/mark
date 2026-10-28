@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "lib": ["es2024", "dom"]
+  },
+  "extends": "./tsconfig.json",
+  "include": ["**/**.json", "**/**.mjs", "**/**.mts", "**/**.ts"]
+}

@@ -1,0 +1,95 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:ast/create > #exit > should error on empty token stack 1`] = `
+{
+  "cause": {
+    "open": undefined,
+    "token": {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "fail",
+    },
+  },
+  "message": "Cannot close \`fail\` (1:1-1:12): it's not open",
+}
+`;
+
+exports[`unit:ast/create > should create compile context 1`] = `
+{
+  "buffer": [Function buffer],
+  "compile": [Function compile],
+  "config": {
+    "afterEnter": [],
+    "afterExit": [],
+    "beforeEnter": [],
+    "beforeExit": [],
+    "enter": {},
+    "exit": {},
+    "transforms": [],
+  },
+  "data": {},
+  "enter": [Function enter],
+  "exit": [Function exit],
+  "from": {
+    "column": 1,
+    "line": 1,
+    "offset": 0,
+  },
+  "resume": [Function resume],
+  "sliceSerialize": [Function sliceSerialize],
+  "stack": [],
+  "tokenStack": [],
+}
+`;
+
+exports[`unit:ast/create > should merge extensions into \`config\` (0) 1`] = `
+{
+  "afterEnter": [],
+  "afterExit": [],
+  "beforeEnter": [],
+  "beforeExit": [],
+  "enter": {},
+  "exit": {},
+  "transforms": [],
+}
+`;
+
+exports[`unit:ast/create > should merge extensions into \`config\` (1) 1`] = `
+{
+  "afterEnter": [
+    [MockFunction],
+  ],
+  "afterExit": [
+    [MockFunction],
+  ],
+  "beforeEnter": [
+    [MockFunction],
+  ],
+  "beforeExit": [
+    [MockFunction],
+  ],
+  "enter": {
+    "eoc": [MockFunction],
+    "succ": [MockFunction],
+  },
+  "exit": {
+    "eoc": [MockFunction],
+    "succ": [MockFunction],
+  },
+  "transforms": [
+    [MockFunction],
+  ],
+}
+`;

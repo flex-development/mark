@@ -1,0 +1,114 @@
+# CODECOV CONFIGURATION
+# https://docs.codecov.com/docs/codecovyml-reference
+
+---
+codecov:
+  notify:
+    after_n_builds: 6
+    wait_for_ci: true
+  require_ci_to_pass: true
+
+comment:
+  after_n_builds: 6
+  behavior: default
+  layout: header,diff,flags,components,tree,footer
+  require_base: false
+  require_changes: false
+  require_head: true
+  show_carryforward_flags: true
+  show_critical_paths: true
+
+component_management:
+  default_rules:
+    statuses:
+      - type: project
+        target: 100%
+  individual_components:
+    - component_id: mark-compiler
+      name: mark-compiler
+      paths:
+        - packages/mark-compiler/**/*.mts
+    - component_id: mark-parser
+      name: mark-parser
+      paths:
+        - packages/mark-parser/**/*.mts
+    - component_id: mark-util-character
+      name: mark-util-character
+      paths:
+        - packages/mark-util-character/**/*.mts
+    - component_id: mark-util-chunked
+      name: mark-util-chunked
+      paths:
+        - packages/mark-util-chunked/**/*.mts
+    - component_id: mark-util-symbol
+      name: mark-util-symbol
+      paths:
+        - packages/mark-util-symbol/**/*.mts
+
+coverage:
+  precision: 2
+  range: 90..100
+  round: nearest
+  status:
+    changes:
+      default:
+        branches:
+          - dependabot/*
+          - feat/*
+          - hotfix/*
+          - main
+          - release/*
+        if_ci_failed: error
+        if_not_found: success
+        informational: false
+        only_pulls: false
+    patch:
+      default:
+        branches:
+          - dependabot/*
+          - feat/*
+          - hotfix/*
+          - main
+          - release/*
+        if_ci_failed: error
+        if_not_found: success
+        informational: false
+        only_pulls: false
+        target: 100%
+        threshold: 0%
+    project:
+      default:
+        branches:
+          - dependabot/*
+          - feat/*
+          - hotfix/*
+          - main
+          - release/*
+        if_ci_failed: error
+        if_not_found: success
+        informational: false
+        only_pulls: false
+        target: 100%
+        threshold: 0%
+
+flags:
+  bun-canary: {}
+  bun-latest: {}
+  node26: {}
+  node25: {}
+  node24: {}
+  node22: {}
+
+github_checks:
+  annotations: true
+
+ignore:
+  - '**/*.d.mts'
+  - '**/__mocks__/**'
+  - '**/__tests__/**'
+  - '**/interfaces/**'
+  - '**/types/**'
+  - packages/mark/**
+
+profiling:
+  critical_files_paths: []

@@ -4,7 +4,10 @@
  * @see https://commitlint.js.org
  */
 
-import { RuleConfigSeverity, type UserConfig } from '@commitlint/types'
+import {
+  RuleConfigSeverity as Severity,
+  type UserConfig
+} from '@commitlint/types'
 import { scopes } from '@flex-development/commitlint-config'
 
 /**
@@ -15,13 +18,21 @@ import { scopes } from '@flex-development/commitlint-config'
 const config: UserConfig = {
   extends: ['@flex-development'],
   rules: {
-    'scope-enum': [RuleConfigSeverity.Error, 'always', scopes([
+    'scope-enum': [Severity.Error, 'always', scopes([
       'ast',
+      'character',
       'chore',
+      'chunked',
+      'combine-extensions',
       'compile',
       'core',
-      'parse'
-    ])]
+      'decode',
+      'parse',
+      'resolve-all',
+      'serialize',
+      'symbol'
+    ])],
+    'scope-max-length': [Severity.Error, 'always', Number.POSITIVE_INFINITY]
   }
 }
 

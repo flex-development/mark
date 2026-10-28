@@ -1,0 +1,66 @@
+{
+  "name": "@flex-development/mark-util-chunked",
+  "description": "mark utility to splice and push into giant arrays",
+  "version": "1.0.0",
+  "keywords": [
+    "chunk",
+    "mark",
+    "push",
+    "splice",
+    "util",
+    "utility"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark-util-chunked",
+  "repository": {
+    "directory": "packages/mark-util-chunked",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark-util-chunked",
+    "diff-src-prefix": "mark-util-chunked",
+    "directory": "./",
+    "executableFiles": [],
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark-util-chunked@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "mark": "./src/index.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "imports": {
+    "#fixtures/*": "./__fixtures__/*.mts"
+  },
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.12",
+    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+  },
+  "sideEffects": false
+}

@@ -31,8 +31,8 @@ updates:
           - '@flex-development/*'
       remark:
         patterns:
-          - 'remark-*'
           - remark
+          - 'remark-*'
       rollup:
         patterns:
           - '@rollup/*'

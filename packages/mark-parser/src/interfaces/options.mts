@@ -1,0 +1,92 @@
+/**
+ * @file Interfaces - Options
+ * @module mark-parser/interfaces/Options
+ */
+
+import type {
+  CreateExtensions,
+  FinalizeContext,
+  Initialize
+} from '@flex-development/mark-parser'
+import type { List } from '@flex-development/mark/core'
+import type {
+  CodeCheck,
+  CreateToken,
+  Extensions,
+  Point
+} from '@flex-development/mark/parse'
+import type { u } from '@flex-development/unist-util-builder'
+
+/**
+ * Options for configuring a tokenizer.
+ */
+interface Options {
+  /**
+   * The name of the debug logger.
+   *
+   * @default 'mark-parser'
+   */
+  debug?: string | null | undefined
+
+  /**
+   * The list of disabled construct names.
+   *
+   * > 👉 **Note**: This is a shortcut for `Extension.disable.null` when using
+   * > content types.
+   *
+   * @see {@linkcode List}
+   */
+  disable?: List<string> | null | undefined
+
+  /**
+   * Check if a character code represents a line ending.
+   *
+   * @see {@linkcode CodeCheck}
+   */
+  eol?: CodeCheck | null | undefined
+
+  /**
+   * A syntax extension, a list of syntax extensions, or a factory function.
+   *
+   * @see {@linkcode CreateExtensions}
+   * @see {@linkcode Extensions}
+   */
+  extensions?: CreateExtensions | Extensions | null | undefined
+
+  /**
+   * Finalize the tokenization context.
+   *
+   * @see {@linkcode FinalizeContext}
+   */
+  finalizeContext?: FinalizeContext | null | undefined
+
+  /**
+   * The point before the first character in the content.
+   *
+   * @see {@linkcode Point}
+   *
+   * @default
+   *  { column: 1, line: 1, offset: 0 }
+   */
+  from?: Point | null | undefined
+
+  /**
+   * The initial construct, a record of initial constructs,
+   * or a function that returns the initial construct or record.
+   *
+   * @see {@linkcode Initialize}
+   */
+  initialize: Initialize
+
+  /**
+   * Create a new token.
+   *
+   * @see {@linkcode CreateToken}
+   * @see {@linkcode u}
+   *
+   * @default u
+   */
+  token?: CreateToken | null | undefined
+}
+
+export type { Options as default }

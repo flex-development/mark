@@ -1,11 +1,8 @@
 # mark
 
-[![github release](https://img.shields.io/github/v/release/flex-development/mark.svg?include_prereleases\&sort=semver)](https://github.com/flex-development/mark/releases/latest)
-[![npm](https://img.shields.io/npm/v/@flex-development/mark.svg)](https://npmjs.com/package/@flex-development/mark)
-[![npm downloads](https://img.shields.io/npm/dm/@flex-development/mark.svg)](https://www.npmcharts.com/compare/@flex-development/mark?interval=30)
-[![install size](https://packagephobia.now.sh/badge?p=@flex-development/mark)](https://packagephobia.now.sh/result?p=@flex-development/mark)
-[![minified bundle size](https://badgen.net/bundlephobia/min/@flex-development/mark?cache)](https://bundlephobia.com/package/@flex-development/mark)
-[![license](https://img.shields.io/github/license/flex-development/mark.svg)](LICENSE.md)
+[![github tag](https://img.shields.io/github/v/tag/flex-development/mark.svg?include_prereleases\&sort=date\&filter=!^mark*)](https://github.com/flex-development/mark/releases/latest)
+[![codecov](https://codecov.io/gh/flex-development/mark/graph/badge.svg?token=EkkcZnDMiA)](https://codecov.io/gh/flex-development/mark)
+[![module type: esm](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![conventional commits](https://img.shields.io/badge/-conventional%20commits-fe5196?logo=conventional-commits\&logoColor=ffffff)](https://conventionalcommits.org)
 [![typescript](https://img.shields.io/badge/-typescript-3178c6?logo=typescript\&logoColor=ffffff)](https://typescriptlang.org)
 [![vitest](https://img.shields.io/badge/-vitest-6e9f18?style=flat\&logo=vitest\&logoColor=ffffff)](https://vitest.dev)
@@ -17,11 +14,12 @@
 - [When should I use this?](#when-should-i-use-this)
 - [Install](#install)
 - [Use](#use)
+- [API](#api)
 - [Project](#project)
   - [Version](#version)
   - [Contribute](#contribute)
   - [Sponsor](#sponsor)
-- [Related](#related)
+- [Origin](#origin)
 
 ## What is this?
 
@@ -29,11 +27,13 @@
 
 ## When should I use this?
 
-**TODO**: when should I use this?
+**TODO**: when should i use this?
 
 ## Install
 
-In Node.js with [yarn][]:
+This package is [ESM only][esm].
+
+In Node.js (version 22+) with [yarn][]:
 
 ```sh
 yarn add @flex-development/mark
@@ -46,11 +46,27 @@ yarn add @flex-development/mark
   </small>
 </blockquote>
 
+In Deno with [`esm.sh`][esmsh]:
+
+```ts
+import { } from 'https://esm.sh/@flex-development/mark'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import { } from 'https://esm.sh/@flex-development/mark'
+</script>
+```
+
 ## Use
 
 **TODO**: use
 
-> Please refer to the [source code](./src/) for documentation.
+## API
+
+**TODO**: api
 
 ## Project
 
@@ -62,24 +78,21 @@ mark adheres to [semver][].
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-This project has a [code of conduct](CODE_OF_CONDUCT.md).
+This project has a [code of conduct](./CODE_OF_CONDUCT.md).\
 By interacting with this repository, organization, or community you agree to abide by its terms.
 
 ### Sponsor
 
-Support long-term stability by sponsoring Flex Development!
+Consider sponsoring to support maintenance, tests, and long-term stability!
 
-## Related
+### Origin
 
-- [`@flex-development/mark-compiler`][mark-compiler] — fsm event compiler
-- [`@flex-development/mark-parser`][mark-parser] — fsm parser
+**TODO**: origin
 
-[mark-compiler]: https://github.com/flex-development/mark-compiler
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 
-[mark-parser]: https://github.com/flex-development/mark-parser
+[esmsh]: https://esm.sh
 
 [semver]: https://semver.org
-
-<!-- [typescript]: https://www.typescriptlang.org -->
 
 [yarn]: https://yarnpkg.com

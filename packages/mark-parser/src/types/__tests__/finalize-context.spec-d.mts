@@ -1,0 +1,34 @@
+/**
+ * @file Type Tests - FinalizeContext
+ * @module mark-parser/types/tests/unit-d/FinalizeContext
+ */
+
+import type {
+  Context,
+  InitialConstruct,
+  InitialConstructs
+} from '@flex-development/mark/parse'
+import { describe, expectTypeOf, it } from 'vitest'
+import type TestSubject from '../finalize-context.mts'
+
+describe('unit-d:types/FinalizeContext', () => {
+  it('should match [this: void]', () => {
+    expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
+  })
+
+  describe('parameters', () => {
+    it('should be callable with [Context, InitialConstruct | Partial<InitialConstructs>]', () => {
+      // Arrange
+      type Expect = [Context, InitialConstruct | Partial<InitialConstructs>]
+
+      // Expect
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Expect>()
+    })
+  })
+
+  describe('returns', () => {
+    it('should return null | undefined', () => {
+      expectTypeOf<TestSubject>().returns.toEqualTypeOf<null | undefined>()
+    })
+  })
+})

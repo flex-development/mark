@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:internal/error > should throw error (0) 1`] = `
+{
+  "cause": {
+    "close": undefined,
+    "open": {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  },
+  "message": "Cannot close, a token (\`eoc\`, 1:3-1:3) is still open",
+}
+`;
+
+exports[`unit:internal/error > should throw error (1) 1`] = `
+{
+  "cause": {
+    "close": {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "fail",
+    },
+    "open": {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "succ",
+    },
+  },
+  "message": "Cannot close \`fail\` (1:1-1:12); a different token (\`succ\`, 1:2-1:11) is open",
+}
+`;

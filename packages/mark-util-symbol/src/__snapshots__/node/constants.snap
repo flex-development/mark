@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:constants > should be constants dictionary 1`] = `
+{
+  "tabSize": 2,
+  "v8MaxSafeChunkSize": 10000,
+}
+`;
