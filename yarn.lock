@@ -1922,8 +1922,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-compiler@workspace:packages/mark-compiler"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
     "@flex-development/unist-util-builder": "npm:2.0.0"
     "@flex-development/unist-util-stringify-position": "npm:1.0.1"
     "@types/unist": "npm:3.0.3"
@@ -1935,14 +1935,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-parser@workspace:packages/mark-parser"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-character": "workspace:1.1.0"
-    "@flex-development/mark-util-chunked": "workspace:1.0.0"
-    "@flex-development/mark-util-combine-extensions": "workspace:0.0.0"
-    "@flex-development/mark-util-decode": "workspace:0.0.0"
-    "@flex-development/mark-util-resolve-all": "workspace:0.0.0"
-    "@flex-development/mark-util-serialize": "workspace:0.0.0"
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-character": "workspace:1.1.1"
+    "@flex-development/mark-util-chunked": "workspace:1.1.1"
+    "@flex-development/mark-util-combine-extensions": "workspace:1.0.0-alpha.1"
+    "@flex-development/mark-util-decode": "workspace:1.0.0-alpha.1"
+    "@flex-development/mark-util-resolve-all": "workspace:1.0.0-alpha.1"
+    "@flex-development/mark-util-serialize": "workspace:1.0.0-alpha.1"
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
     "@flex-development/unist-util-builder": "npm:2.0.0"
     "@types/debug": "npm:4.1.13"
     debug: "npm:4.4.3"
@@ -1955,66 +1955,66 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-character@workspace:1.1.0, @flex-development/mark-util-character@workspace:packages/mark-util-character":
+"@flex-development/mark-util-character@workspace:1.1.1, @flex-development/mark-util-character@workspace:packages/mark-util-character":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-character@workspace:packages/mark-util-character"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-chunked@workspace:1.0.0, @flex-development/mark-util-chunked@workspace:packages/mark-util-chunked":
+"@flex-development/mark-util-chunked@workspace:1.1.1, @flex-development/mark-util-chunked@workspace:packages/mark-util-chunked":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-chunked@workspace:packages/mark-util-chunked"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-combine-extensions@workspace:0.0.0, @flex-development/mark-util-combine-extensions@workspace:packages/mark-util-combine-extensions":
+"@flex-development/mark-util-combine-extensions@workspace:1.0.0-alpha.1, @flex-development/mark-util-combine-extensions@workspace:packages/mark-util-combine-extensions":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-combine-extensions@workspace:packages/mark-util-combine-extensions"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-chunked": "workspace:1.0.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-chunked": "workspace:1.1.1"
     "@flex-development/mark-util-symbol": "workspace:*"
     devlop: "npm:1.1.0"
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-decode@workspace:0.0.0, @flex-development/mark-util-decode@workspace:packages/mark-util-decode":
+"@flex-development/mark-util-decode@workspace:1.0.0-alpha.1, @flex-development/mark-util-decode@workspace:packages/mark-util-decode":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-decode@workspace:packages/mark-util-decode"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-character": "workspace:1.1.0"
-    "@flex-development/mark-util-chunked": "workspace:1.0.0"
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-character": "workspace:1.1.1"
+    "@flex-development/mark-util-chunked": "workspace:1.1.1"
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-resolve-all@workspace:0.0.0, @flex-development/mark-util-resolve-all@workspace:packages/mark-util-resolve-all":
+"@flex-development/mark-util-resolve-all@workspace:1.0.0-alpha.1, @flex-development/mark-util-resolve-all@workspace:packages/mark-util-resolve-all":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-resolve-all@workspace:packages/mark-util-resolve-all"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
     "@flex-development/mark-util-symbol": "workspace:*"
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-serialize@workspace:0.0.0, @flex-development/mark-util-serialize@workspace:packages/mark-util-serialize":
+"@flex-development/mark-util-serialize@workspace:1.0.0-alpha.1, @flex-development/mark-util-serialize@workspace:packages/mark-util-serialize":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-serialize@workspace:packages/mark-util-serialize"
   dependencies:
-    "@flex-development/mark": "workspace:1.0.0-alpha.12"
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13"
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
     devlop: "npm:1.1.0"
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark-util-symbol@workspace:*, @flex-development/mark-util-symbol@workspace:3.1.0, @flex-development/mark-util-symbol@workspace:packages/mark-util-symbol":
+"@flex-development/mark-util-symbol@workspace:*, @flex-development/mark-util-symbol@workspace:1.0.0-alpha.13, @flex-development/mark-util-symbol@workspace:packages/mark-util-symbol":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark-util-symbol@workspace:packages/mark-util-symbol"
   dependencies:
@@ -2022,7 +2022,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@flex-development/mark@workspace:1.0.0-alpha.12, @flex-development/mark@workspace:packages/mark":
+"@flex-development/mark@workspace:1.0.0-alpha.13, @flex-development/mark@workspace:packages/mark":
   version: 0.0.0-use.local
   resolution: "@flex-development/mark@workspace:packages/mark"
   dependencies:

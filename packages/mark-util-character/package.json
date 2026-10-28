@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-util-character",
   "description": "mark utility to handle character codes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": [
     "character",
     "charcode",
@@ -64,8 +64,8 @@
   },
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.12",
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
   },
   "sideEffects": false
 }

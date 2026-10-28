@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-util-chunked",
   "description": "mark utility to splice and push into giant arrays",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "keywords": [
     "chunk",
     "mark",
@@ -59,8 +59,8 @@
   },
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.12",
-    "@flex-development/mark-util-symbol": "workspace:3.1.0"
+    "@flex-development/mark": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13"
   },
   "sideEffects": false
 }
