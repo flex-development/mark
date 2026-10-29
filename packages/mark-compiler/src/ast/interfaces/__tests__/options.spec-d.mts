@@ -6,8 +6,6 @@
 import type { FinalizeContext } from '@flex-development/mark-compiler/ast'
 import type {
   Extensions,
-  Postprocess,
-  Preprocess,
   SerializeNode,
   TakeExtension
 } from '@flex-development/mark/ast'
@@ -33,18 +31,6 @@ describe('unit-d:ast/interfaces/Options', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('from')
       .toEqualTypeOf<Nilable<Point>>()
-  })
-
-  it('should match [postprocess?: Postprocess | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('postprocess')
-      .toEqualTypeOf<Nilable<Postprocess>>()
-  })
-
-  it('should match [preprocess?: Preprocess | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('preprocess')
-      .toEqualTypeOf<Nilable<Preprocess>>()
   })
 
   it('should match [serializeNode?: SerializeNode | null | undefined]', () => {

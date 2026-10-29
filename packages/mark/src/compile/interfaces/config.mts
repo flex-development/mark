@@ -7,6 +7,8 @@ import type {
   Extension,
   Handle,
   Handles,
+  Postprocess,
+  Preprocess,
   Transform
 } from '@flex-development/mark/compile'
 
@@ -80,6 +82,20 @@ interface Config extends Extension {
    * @override
    */
   exit: Handles
+
+  /**
+   * Handle the compilation result before {@linkcode transform}s are applied.
+   *
+   * @see {@linkcode Postprocess}
+   */
+  postprocess: Postprocess[]
+
+  /**
+   * Prepare events and the initial result before compilation begins.
+   *
+   * @see {@linkcode Preprocess}
+   */
+  preprocess: Preprocess[]
 
   /**
    * The list of transforms to apply.

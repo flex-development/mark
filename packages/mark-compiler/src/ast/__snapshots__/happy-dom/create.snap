@@ -37,6 +37,8 @@ exports[`unit:ast/create > should create compile context 1`] = `
     "beforeExit": [],
     "enter": {},
     "exit": {},
+    "postprocess": [],
+    "preprocess": [],
     "transforms": [],
   },
   "data": {},
@@ -62,6 +64,8 @@ exports[`unit:ast/create > should merge extensions into \`config\` (0) 1`] = `
   "beforeExit": [],
   "enter": {},
   "exit": {},
+  "postprocess": [],
+  "preprocess": [],
   "transforms": [],
 }
 `;
@@ -88,6 +92,8 @@ exports[`unit:ast/create > should merge extensions into \`config\` (1) 1`] = `
     "eoc": [MockFunction],
     "succ": [MockFunction],
   },
+  "postprocess": [],
+  "preprocess": [],
   "transforms": [
     [MockFunction],
   ],

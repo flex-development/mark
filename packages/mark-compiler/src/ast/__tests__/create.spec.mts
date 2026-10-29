@@ -299,13 +299,13 @@ describe('unit:ast/create', () => {
               [
                 {
                   canContainEols: [],
+                  preprocess,
                   transforms: [transform1, transform2, transform3]
                 }
               ]
             ]
           },
           finalizeContext,
-          preprocess,
           takeExtension
         })
 
@@ -371,9 +371,13 @@ describe('unit:ast/create', () => {
         expect(takeExtension).toHaveBeenCalledWith(config, extension, field)
       })
 
-      it('should position tree based on `events`', () => {
+      it('should postprocess `events` after compilation', () => {
         expect(positionTree).toHaveBeenCalledOnce()
         expect(positionTree).toHaveBeenCalledWith(tree, tokenizer.events)
+        expect(vi.mocked(positionTree).mock.contexts[0]).eq(subject)
+        expect(positionTree).toHaveBeenCalledAfter(preprocess)
+        expect(positionTree).toHaveBeenCalledAfter(bracketExpression)
+        expect(positionTree).toHaveBeenCalledAfter(text)
       })
 
       it('should preprocess `events` before compilation', () => {

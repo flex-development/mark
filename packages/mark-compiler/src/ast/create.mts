@@ -14,7 +14,7 @@ import type {
   Tree
 } from '@flex-development/mark/ast'
 import type { IfNever } from '@flex-development/mark/core'
-import type { Event, Position, Token } from '@flex-development/mark/parse'
+import type { Position, Token } from '@flex-development/mark/parse'
 import { u } from '@flex-development/unist-util-builder'
 import { ok } from 'devlop'
 
@@ -48,7 +48,6 @@ function create(
     // `Options` from `/ast` does not extend `Options` from `/compile`.
     finalizeContext: options?.finalizeContext,
     initialize,
-    postprocess,
     serializeValue: options?.serializeNode
   })
 
@@ -120,29 +119,13 @@ function create(
    *  The initial syntax tree
    */
   function initialize(this: CompileContext): Tree {
+    // position the tree before transforms are applied.
+    this.config.postprocess.unshift(positionTree)
+
+    // create the initial tree.
     return u('root', {
       children: [],
       position: { end: point(this.from), start: point(this.from) }
     })
-  }
-
-  /**
-   * Handle the `tree` before transforms are applied.
-   *
-   * @this {CompileContext}
-   *
-   * @param {Tree} tree
-   *  The syntax tree
-   * @param {Event[]} events
-   *  The list of events
-   * @return {undefined}
-   */
-  function postprocess(
-    this: CompileContext,
-    tree: Tree,
-    events: Event[]
-  ): undefined {
-    positionTree(tree, events)
-    return void options?.postprocess?.call(this, tree, events)
   }
 }

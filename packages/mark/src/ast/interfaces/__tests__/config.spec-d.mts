@@ -7,6 +7,8 @@ import type {
   Extension,
   Handle,
   Handles,
+  Postprocess,
+  Preprocess,
   Transform
 } from '@flex-development/mark/ast'
 import { describe, expectTypeOf, it } from 'vitest'
@@ -47,6 +49,18 @@ describe('unit-d:interfaces/Config', () => {
 
   it('should match [exit: Handles]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('exit').toEqualTypeOf<Handles>()
+  })
+
+  it('should match [postprocess: Postprocess[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('postprocess')
+      .toEqualTypeOf<Postprocess[]>()
+  })
+
+  it('should match [preprocess: Preprocess[]]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('preprocess')
+      .toEqualTypeOf<Preprocess[]>()
   })
 
   it('should match [transforms: Transform[]]', () => {

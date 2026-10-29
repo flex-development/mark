@@ -3,7 +3,13 @@
  * @module mark/compile/interfaces/Extension
  */
 
-import type { Handle, Handles, Transform } from '@flex-development/mark/compile'
+import type {
+  Handle,
+  Handles,
+  Postprocess,
+  Preprocess,
+  Transform
+} from '@flex-development/mark/compile'
 import type { List } from '@flex-development/mark/core'
 
 /**
@@ -68,6 +74,22 @@ interface Extension {
   exit?: Handles | null | undefined
 
   /**
+   * Handle the compilation result before {@linkcode transform}s are applied.
+   *
+   * @see {@linkcode List}
+   * @see {@linkcode Postprocess}
+   */
+  postprocess?: Postprocess | List<Postprocess> | null | undefined
+
+  /**
+   * Prepare events and the initial result before compilation begins.
+   *
+   * @see {@linkcode List}
+   * @see {@linkcode Preprocess}
+   */
+  preprocess?: Preprocess | List<Preprocess> | null | undefined
+
+  /**
    * The list of transforms to apply.
    *
    * Transforms are applied to the final compilation result.
@@ -75,7 +97,7 @@ interface Extension {
    * @see {@linkcode List}
    * @see {@linkcode Transform}
    */
-  transforms?: List<Transform> | null | undefined
+  transforms?: List<Transform> | Transform | null | undefined
 }
 
 export type { Extension as default }

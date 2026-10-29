@@ -3,7 +3,13 @@
  * @module mark/ast/interfaces/tests/unit-d/Extension
  */
 
-import type { Handle, Handles, Transform } from '@flex-development/mark/ast'
+import type {
+  Handle,
+  Handles,
+  Postprocess,
+  Preprocess,
+  Transform
+} from '@flex-development/mark/ast'
 import type * as compile from '@flex-development/mark/compile'
 import type { List } from '@flex-development/mark/core'
 import type { Nilable } from '@flex-development/tutils'
@@ -51,9 +57,21 @@ describe('unit-d:interfaces/Extension', () => {
       .toEqualTypeOf<Nilable<Handles>>()
   })
 
-  it('should match [transforms?: List<Transform> | null | undefined]', () => {
+  it('should match [postprocess?: Postprocess | List<Postprocess> | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('postprocess')
+      .toEqualTypeOf<Nilable<Postprocess | List<Postprocess>>>()
+  })
+
+  it('should match [preprocess?: Preprocess | List<Preprocess> | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('preprocess')
+      .toEqualTypeOf<Nilable<Preprocess | List<Preprocess>>>()
+  })
+
+  it('should match [transforms?: List<Transform> | Transform | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('transforms')
-      .toEqualTypeOf<Nilable<List<Transform>>>()
+      .toEqualTypeOf<Nilable<List<Transform> | Transform>>()
   })
 })

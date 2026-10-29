@@ -20,8 +20,7 @@ import type {
   OnEnterError,
   OnExitError,
   StackedToken,
-  TakeExtension,
-  Transform
+  TakeExtension
 } from '@flex-development/mark/compile'
 import type { IfNever, List } from '@flex-development/mark/core'
 import type {
@@ -72,6 +71,8 @@ function create(
       beforeExit: [],
       enter: {},
       exit: {},
+      postprocess: [],
+      preprocess: [],
       transforms: []
     },
     data: {},
@@ -168,7 +169,7 @@ function create(
     }
 
     // handle events before compilation.
-    options.preprocess?.call(context, events, result)
+    preprocess.call(context, events, result)
 
     // call token handlers.
     while (++index < events.length) {
@@ -203,7 +204,7 @@ function create(
     }
 
     // handle result after compilation.
-    options.postprocess?.call(context, result, events)
+    postprocess.call(context, result, events)
 
     // apply transforms.
     return context.config.transforms.reduce((result, transform) => {
@@ -435,6 +436,70 @@ function create(
   }
 
   /**
+   * Handle a compilation `result` before transforms are applied.
+   *
+   * @this {CompileContext}
+   *
+   * @param {CompileResult} result
+   *  The current compilation result
+   * @param {Event[]} events
+   *  The current list of events
+   * @return {undefined}
+   */
+  function postprocess(
+    this: CompileContext,
+    result: CompileResult,
+    events: Event[]
+  ): undefined {
+    /**
+     * The index of the current hook.
+     *
+     * @var {number} index
+     */
+    let index: number = -1
+
+    // call hooks.
+    while (++index < this.config.postprocess.length) {
+      ok(this.config.postprocess[index], 'expected `config.postprocess[index]`')
+      this.config.postprocess[index]!.call(this, result, events)
+    }
+
+    return void undefined
+  }
+
+  /**
+   * Prepare `events` and the initial `result` before compilation begins.
+   *
+   * @this {CompileContext}
+   *
+   * @param {Event[]} events
+   *  The list of events
+   * @param {CompileResult} result
+   *  The compilation result
+   * @return {undefined}
+   */
+  function preprocess(
+    this: CompileContext,
+    events: Event[],
+    result: CompileResult
+  ): undefined {
+    /**
+     * The index of the current hook.
+     *
+     * @var {number} index
+     */
+    let index: number = -1
+
+    // call hooks.
+    while (++index < this.config.preprocess.length) {
+      ok(this.config.preprocess[index], 'expected `config.preprocess[index]`')
+      this.config.preprocess[index]!.call(this, events, result)
+    }
+
+    return void undefined
+  }
+
+  /**
    * Stop capturing output and serialize the captured value.
    *
    * @see {@linkcode CompileContext}
@@ -542,17 +607,16 @@ function create(
             case 'afterExit':
             case 'beforeEnter':
             case 'beforeExit':
+            case 'postprocess':
+            case 'preprocess':
+            case 'transforms':
               right = extension[field]
               if (right && !isList(right)) right = [right]
-              if (right) context.config[field].push(...right as List<Handle>)
+              if (right) context.config[field].push(...right as List<any>)
               break
             case 'enter':
             case 'exit':
               Object.assign(context.config[field], extension[field])
-              break
-            case 'transforms':
-              right = extension[field]
-              if (right) context.config[field].push(...right as List<Transform>)
               break
             default:
               take?.(context.config, extension, field)

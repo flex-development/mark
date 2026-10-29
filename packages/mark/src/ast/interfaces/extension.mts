@@ -3,8 +3,13 @@
  * @module mark/ast/interfaces/Extension
  */
 
-import type { Handle, Handles, Transform } from '@flex-development/mark/ast'
-import type * as compile from '@flex-development/mark/compile'
+import type {
+  Handle,
+  Handles,
+  Postprocess,
+  Preprocess,
+  Transform
+} from '@flex-development/mark/ast'
 import type { List } from '@flex-development/mark/core'
 
 /**
@@ -18,12 +23,8 @@ import type { List } from '@flex-development/mark/core'
  *      canContainEols?: string[] | null | undefined
  *    }
  *  }
- *
- * @see {@linkcode compile.Extension}
- *
- * @extends {compile.Extension}
  */
-interface Extension extends compile.Extension {
+interface Extension {
   /**
    * The listener, or listeners, to call after an {@linkcode enter} handler.
    *
@@ -77,6 +78,22 @@ interface Extension extends compile.Extension {
   exit?: Handles | null | undefined
 
   /**
+   * Handle the syntax tree before {@linkcode transform}s are applied.
+   *
+   * @see {@linkcode List}
+   * @see {@linkcode Postprocess}
+   */
+  postprocess?: Postprocess | List<Postprocess> | null | undefined
+
+  /**
+   * Prepare events and the initial syntax tree before event compilation begins.
+   *
+   * @see {@linkcode List}
+   * @see {@linkcode Preprocess}
+   */
+  preprocess?: Preprocess | List<Preprocess> | null | undefined
+
+  /**
    * The list of transforms to apply.
    *
    * Transforms are applied to the final compilation result.
@@ -86,7 +103,7 @@ interface Extension extends compile.Extension {
    *
    * @override
    */
-  transforms?: List<Transform> | null | undefined
+  transforms?: List<Transform> | Transform | null | undefined
 }
 
 export type { Extension as default }

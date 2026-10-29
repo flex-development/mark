@@ -6,8 +6,6 @@
 import type { FinalizeContext } from '@flex-development/mark-compiler/ast'
 import type {
   Extensions,
-  Postprocess,
-  Preprocess,
   SerializeNode,
   TakeExtension
 } from '@flex-development/mark/ast'
@@ -41,20 +39,6 @@ interface Options {
    *  { column: 1, line: 1, offset: 0 }
    */
   from?: Point | null | undefined
-
-  /**
-   * Handle the syntax tree before transforms are applied.
-   *
-   * @see {@linkcode Postprocess}
-   */
-  postprocess?: Postprocess | null | undefined
-
-  /**
-   * Prepare events and the initial tree before compilation begins.
-   *
-   * @see {@linkcode Preprocess}
-   */
-  preprocess?: Preprocess | null | undefined
 
   /**
    * Stringify a node.

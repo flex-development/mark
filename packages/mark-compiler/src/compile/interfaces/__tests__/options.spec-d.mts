@@ -7,8 +7,6 @@ import type { FinalizeContext } from '@flex-development/mark-compiler/compile'
 import type {
   Buffer,
   Extensions,
-  Postprocess,
-  Preprocess,
   SerializeValue,
   TakeExtension
 } from '@flex-development/mark/compile'
@@ -49,20 +47,6 @@ describe('unit-d:compile/interfaces/Options', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('from')
       .toEqualTypeOf<Nilable<Point>>()
-  })
-
-  it('should match [postprocess?: Postprocess | null | undefined]', () => {
-    expectTypeOf<Optional>().extract<'postprocess'>().not.toBeNever()
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('postprocess')
-      .toEqualTypeOf<Nilable<Postprocess>>()
-  })
-
-  it('should match [preprocess?: Preprocess | null | undefined]', () => {
-    expectTypeOf<Optional>().extract<'preprocess'>().not.toBeNever()
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('preprocess')
-      .toEqualTypeOf<Nilable<Preprocess>>()
   })
 
   it('should match [serializeValue?: SerializeValue | null | undefined]', () => {

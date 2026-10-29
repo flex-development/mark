@@ -12,8 +12,6 @@ import type {
   Buffer,
   Extensions,
   InitializeResult,
-  Postprocess,
-  Preprocess,
   SerializeValue,
   TakeExtension
 } from '@flex-development/mark/compile'
@@ -79,20 +77,6 @@ interface Options {
    * @see {@linkcode InitializeResult}
    */
   initialize: InitializeResult
-
-  /**
-   * Handle the compilation result before transforms are applied.
-   *
-   * @see {@linkcode Postprocess}
-   */
-  postprocess?: Postprocess | null | undefined
-
-  /**
-   * Prepare events and the initial result before compilation begins.
-   *
-   * @see {@linkcode Preprocess}
-   */
-  preprocess?: Preprocess | null | undefined
 
   /**
    * Stringify a compilation value.

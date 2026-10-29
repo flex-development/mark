@@ -7,6 +7,8 @@ import type {
   Extension,
   Handle,
   Handles,
+  Postprocess,
+  Preprocess,
   Transform
 } from '@flex-development/mark/ast'
 
@@ -18,7 +20,7 @@ import type {
  * @example
  *  declare module '@flex-development/mark/ast' {
  *    interface Extension {
- *      canContainEols: string[]
+ *      canContainEols: Node['type'][]
  *    }
  *  }
  *
@@ -80,6 +82,20 @@ interface Config extends Extension {
    * @override
    */
   exit: Handles
+
+  /**
+   * Handle the final syntax tree before {@linkcode transform}s are applied.
+   *
+   * @see {@linkcode Postprocess}
+   */
+  postprocess: Postprocess[]
+
+  /**
+   * Prepare events and the initial syntax tree before event compilation begins.
+   *
+   * @see {@linkcode Preprocess}
+   */
+  preprocess: Preprocess[]
 
   /**
    * The list of transforms to apply.
