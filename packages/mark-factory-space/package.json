@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-factory-space",
   "description": "mark factory to parse whitespace",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "keywords": [
     "mark",
     "factory",
@@ -53,8 +53,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.14",
-    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.1"
+    "@flex-development/mark": "workspace:1.0.0-alpha.15",
+    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.2"
   },
   "sideEffects": false
 }

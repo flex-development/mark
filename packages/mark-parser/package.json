@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-parser",
   "description": "finite state machine tokenizer",
-  "version": "1.0.0-alpha.22",
+  "version": "1.0.0-alpha.23",
   "keywords": [
     "fsm",
     "lexer",
@@ -66,14 +66,14 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.14",
-    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.1",
-    "@flex-development/mark-util-chunked": "workspace:2.0.0-alpha.1",
-    "@flex-development/mark-util-combine-extensions": "workspace:1.0.0-alpha.2",
-    "@flex-development/mark-util-decode": "workspace:1.0.0-alpha.2",
-    "@flex-development/mark-util-resolve-all": "workspace:1.0.0-alpha.2",
-    "@flex-development/mark-util-serialize": "workspace:1.0.0-alpha.2",
-    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.14",
+    "@flex-development/mark": "workspace:1.0.0-alpha.15",
+    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.2",
+    "@flex-development/mark-util-chunked": "workspace:2.0.0-alpha.2",
+    "@flex-development/mark-util-combine-extensions": "workspace:1.0.0-alpha.3",
+    "@flex-development/mark-util-decode": "workspace:1.0.0-alpha.3",
+    "@flex-development/mark-util-resolve-all": "workspace:1.0.0-alpha.3",
+    "@flex-development/mark-util-serialize": "workspace:1.0.0-alpha.3",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.15",
     "@flex-development/unist-util-builder": "2.0.0",
     "debug": "4.4.3",
     "devlop": "1.1.0"

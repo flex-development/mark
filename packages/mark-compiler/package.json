@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-compiler",
   "description": "finite state machine compiler",
-  "version": "1.0.0-alpha.12",
+  "version": "1.0.0-alpha.13",
   "keywords": [
     "compile",
     "compiler",
@@ -68,8 +68,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.14",
-    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.14",
+    "@flex-development/mark": "workspace:1.0.0-alpha.15",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.15",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-stringify-position": "1.0.1",
     "devlop": "1.1.0"

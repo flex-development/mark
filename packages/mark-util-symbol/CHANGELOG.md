@@ -1,3 +1,9 @@
+## [mark-util-symbol@1.0.0-alpha.15](https://github.com/flex-development/mark/compare/mark-util-symbol@1.0.0-alpha.14...mark-util-symbol@1.0.0-alpha.15) (2026-11-07)
+
+### :robot: Continuous Integration
+
+- [[`8ed9078`](https://github.com/flex-development/mark/commit/8ed907858b7ba75c4ec2a06536ae6dbafae07e6b)] **workflows:** [`publish`] fix remove URL dependency resolution
+
 ## [mark-util-symbol@1.0.0-alpha.14](https://github.com/flex-development/mark/compare/mark-util-symbol@1.0.0-alpha.13...mark-util-symbol@1.0.0-alpha.14) (2026-11-07)
 
 ### ⚠ BREAKING CHANGES
@@ -293,6 +299,7 @@
 ### :mechanical_arm: Refactors
 
 - [[`4e6bfa1`](https://github.com/flex-development/mark-util-symbol/commit/4e6bfa1eba5ca91f7e41fbe351ea84b40962cf39)] project rename
+
 
 
 
