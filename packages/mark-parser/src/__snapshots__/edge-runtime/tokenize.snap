@@ -4,12 +4,12 @@ exports[`unit:tokenize > list values > should write chunks after chunking decode
 [
   "hello",
   [
-    32,
+    " ",
   ],
   "world",
   "🌎",
   [
-    32,
+    " ",
   ],
   "👋",
   null,
@@ -19,17 +19,17 @@ exports[`unit:tokenize > list values > should write chunks after chunking decode
 exports[`unit:tokenize > list values > should write chunks after chunking decoded item w/ chunker (1) 1`] = `
 [
   [
-    32,
+    " ",
   ],
   "🌎",
   [
-    32,
+    " ",
   ],
   "👋",
   -13,
   "hello",
   [
-    32,
+    " ",
   ],
   "world!",
   null,
@@ -57,7 +57,7 @@ exports[`unit:tokenize > non-list values > should write chunks after chunking de
 [
   "a",
   [
-    32,
+    " ",
   ],
   "b",
   null,

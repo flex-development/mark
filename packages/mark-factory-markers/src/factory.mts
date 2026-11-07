@@ -1,0 +1,111 @@
+/**
+ * @file factoryMarkers
+ * @module mark-factory-markers/factory
+ */
+
+import type {
+  Code,
+  CodeCheck,
+  Effects,
+  MarkerInfo,
+  Markers,
+  State
+} from '@flex-development/mark/parse'
+import { ok as assert } from 'devlop'
+import normalize from './internal/normalize.mts'
+import terminate from './internal/terminate.mts'
+
+/**
+ * Create a state that tokenizes a sequence of markers.
+ *
+ * The returned state consumes each marker in `markers` in order.\
+ * Each marker produces a token using the specified token type.
+ *
+ * If the input does not match the expected sequence,
+ * tokenization fails without consuming the mismatching character.
+ *
+ * @see {@linkcode CodeCheck}
+ * @see {@linkcode Effects}
+ * @see {@linkcode Markers}
+ * @see {@linkcode State}
+ *
+ * @this {void}
+ *
+ * @param {Effects} effects
+ *  The context object used to transition the state machine
+ * @param {State} ok
+ *  The successful tokenization state
+ * @param {State} nok
+ *  The failed tokenization state
+ * @param {CodeCheck | Markers} markers
+ *  The marker matcher, info object, code, or sequence
+ * @return {State}
+ *  The initial state
+ */
+function factoryMarkers(
+  this: void,
+  effects: Effects,
+  ok: State,
+  nok: State,
+  markers: CodeCheck | Markers
+): State {
+  /**
+   * The normalized marker sequence.
+   *
+   * @const {MarkerInfo[]} seq
+   */
+  const seq: MarkerInfo[] = [markers].flat().map(normalize)
+
+  /**
+   * The index of the current marker.
+   *
+   * @var {number} index
+   */
+  let index: number = 0
+
+  // try capturing the marker sequence.
+  return assert(seq.length, 'expected non-empty marker sequence'), maybeMarker
+
+  /**
+   * Attempt to tokenize the next marker in the sequence.
+   *
+   * @this {void}
+   *
+   * @param {Code} code
+   *  The current character code
+   * @return {State | undefined}
+   *  The next state
+   */
+  function maybeMarker(this: void, code: Code): State | undefined {
+    if (index === seq.length) return ok(code) // sequence complete.
+
+    /**
+     * The marker info.
+     *
+     * @const {MarkerInfo} info
+     */
+    const info: MarkerInfo = Object.assign({}, seq[index++])
+
+    /**
+     * Whether {@linkcode code} matches the expected marker.
+     *
+     * @const {boolean} matches
+     */
+    const matches: boolean = typeof info.code === 'function'
+      ? info.code(code)
+      : info.code === true || info.code === code
+
+    // unexpected code.
+    if (!matches) return terminate(info.optional, ok, nok)(code)
+
+    // capture the current marker.
+    info.type && effects.enter(info.type, { ...info.fields })
+    effects.consume(code)
+    info.type && effects.exit(info.type)
+
+    // try capturing the next marker.
+    return maybeMarker
+  }
+}
+
+export default factoryMarkers

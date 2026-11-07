@@ -16,7 +16,7 @@ import { codes } from '@flex-development/mark-util-symbol'
  * @param {unknown} code
  *  The character code to check
  * @return {code is Space}
- *  `true` if `code` is space code, `false` otherwise
+ *  Whether `code` is a space code
  */
 function space(this: void, code: unknown): code is Space {
   return code === codes.space || code === codes.virtualSpace

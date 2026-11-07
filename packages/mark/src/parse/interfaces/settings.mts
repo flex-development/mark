@@ -9,7 +9,7 @@
  * This interface can be augmented to register custom settings.
  *
  * @example
- *  declare module '@flex-development/docmark-util-types' {
+ *  declare module '@flex-development/mark/parse' {
  *    interface Settings {
  *      mode?: string | null | undefined
  *    }

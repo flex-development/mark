@@ -11,7 +11,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../enter.mts'
 
-describe('unit-d:types/Enter', () => {
+describe('unit-d:parse/types/Enter', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

@@ -6,8 +6,8 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../content-type-map.mts'
 
-describe('unit-d:interfaces/ContentTypeMap', () => {
+describe('unit-d:parse/interfaces/ContentTypeMap', () => {
   it('should register content types', () => {
-    expectTypeOf<keyof TestSubject>().toEqualTypeOf<never>()
+    expectTypeOf<keyof TestSubject>().not.toEqualTypeOf<never>()
   })
 })

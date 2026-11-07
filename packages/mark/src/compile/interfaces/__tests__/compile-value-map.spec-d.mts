@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-value-map.mts'
 
-describe('unit-d:interfaces/CompileValueMap', () => {
+describe('unit-d:compile/interfaces/CompileValueMap', () => {
   it('should register event compilation values', () => {
     expectTypeOf<keyof TestSubject>().not.toBeNever()
   })

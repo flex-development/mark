@@ -18,11 +18,10 @@ interface PreprocessOptions {
   ignoreBOM?: boolean | null | undefined
 
   /**
-   * Whether the `nul` character should be kept
-   * or substituted with the replacement character.
+   * Whether the `nul` character should be kept or replaced.
    *
-   * If `true`, `nul` will not be replaced.\
-   * If `false`, `null`, or `undefined`, `nul` will be replaced.
+   * - `false`: substitute `codes.nul` with `codes.replacementCharacter`
+   * - `true` / `null` / `undefined`: `codes.nul` will **not** be replaced
    */
   nul?: boolean | null | undefined
 

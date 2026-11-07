@@ -21,6 +21,6 @@ describe('unit:lib/htab', () => {
   })
 
   it('should return `true` if `code` is `codes.vht`', () => {
-    expect(testSubject(codes.vht)).to.be.true
+    expect(testSubject(codes.horizontalTab)).to.be.true
   })
 })

@@ -3,7 +3,7 @@
  * @module config/rollup
  */
 
-import workspaces, { type Workspace } from '#utils/list-workspaces'
+import workspaces, { type Workspace } from '#utils/workspaces'
 import { codecovRollupPlugin as codecov } from '@codecov/rollup-plugin'
 import { EXPORT_AGGREGATE_REGEX } from '@flex-development/export-regex'
 import { STATIC_IMPORT_REGEX } from '@flex-development/import-regex'
@@ -35,7 +35,7 @@ export default options
  *  The list of options
  */
 function options(this: void): RollupOptions[] {
-  return workspaces().flatMap((
+  return workspaces({ topological: true }).flatMap((
     workspace: Workspace,
     index: number,
     workspaces: Workspace[]

@@ -6,7 +6,6 @@
 
 import ci from 'is-ci'
 import notifier from 'node-notifier'
-import type { Notification } from 'node-notifier/notifiers/notificationcenter'
 import { performance } from 'node:perf_hooks'
 import { promisify } from 'node:util'
 import type { SerializedError } from 'vitest'
@@ -141,7 +140,7 @@ class Notifier implements Reporter {
       title = '\u2705 Passed'
     }
 
-    return void await promisify<Notification>(notifier.notify.bind(notifier))({
+    return void await promisify(notifier.notify.bind(notifier))({
       message,
       sound: true,
       timeout: 15,

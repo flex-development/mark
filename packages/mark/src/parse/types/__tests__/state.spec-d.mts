@@ -8,7 +8,7 @@ import type { Optional } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../state.mts'
 
-describe('unit-d:types/State', () => {
+describe('unit-d:parse/types/State', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

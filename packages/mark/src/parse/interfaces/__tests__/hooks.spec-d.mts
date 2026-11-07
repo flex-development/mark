@@ -19,7 +19,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../hooks.mts'
 
-describe('unit-d:interfaces/Hooks', () => {
+describe('unit-d:parse/interfaces/Hooks', () => {
   it('should match [afterConsume?: AfterConsume | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('afterConsume')

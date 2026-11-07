@@ -12,6 +12,7 @@ import type {
  * Create an initial construct, a record of initial constructs.
  *
  * @see {@linkcode InitialConstruct}
+ * @see {@linkcode InitialConstructs}
  *
  * @this {void}
  *

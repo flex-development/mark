@@ -5,10 +5,10 @@
 
 import { chars, codes } from '@flex-development/mark-util-symbol'
 import type { Chunk, SerializeOptions } from '@flex-development/mark/parse'
-import { ok as assert } from 'devlop'
+import { ok } from 'devlop'
 
 /**
- * Get the string value of a slice of `chunks`.
+ * Stringify a slice of `chunks`.
  *
  * @see {@linkcode Chunk}
  * @see {@linkcode SerializeOptions}
@@ -67,7 +67,7 @@ function serializeChunks(
      */
     let value: string
 
-    assert(typeof chunk !== 'undefined', 'expected `chunk`')
+    ok(typeof chunk !== 'undefined', 'expected `chunk`')
 
     if (typeof chunk === 'string') {
       value = chunk
@@ -81,33 +81,33 @@ function serializeChunks(
           }
 
           break
-        case chunk === codes.crlf:
+        case chunk === codes.carriageReturnLineFeed:
           value = chars.crlf
           break
         case chunk === codes.bos:
         case chunk === codes.empty:
           value = chars.empty
           break
-        case chunk === codes.vcr:
+        case chunk === codes.carriageReturn:
           value = chars.cr
           break
-        case chunk === codes.vht:
+        case chunk === codes.horizontalTab:
           value = options.expandTabs ? chars.space : chars.ht
           break
-        case chunk === codes.vlf:
+        case chunk === codes.lineFeed:
           value = chars.lf
           break
-        case chunk === codes.vs:
+        case chunk === codes.virtualSpace:
           if (!options.expandTabs && tab) continue
           value = chars.space
           break
         default:
-          assert(typeof chunk === 'number', 'expected code point')
+          ok(typeof chunk === 'number', 'expected code point')
           value = String.fromCodePoint(chunk)
       }
     }
 
-    tab = chunk === codes.vht
+    tab = chunk === codes.horizontalTab
     result.push(value)
   }
 

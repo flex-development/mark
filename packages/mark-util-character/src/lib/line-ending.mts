@@ -1,6 +1,6 @@
 /**
- * @file eol
- * @module mark-util-character/lib/eol
+ * @file lineEnding
+ * @module mark-util-character/lib/lineEnding
  */
 
 import type { LineEnding } from '@flex-development/mark-util-character'
@@ -16,21 +16,21 @@ import { codes } from '@flex-development/mark-util-symbol'
  * @param {unknown} code
  *  The character code to check
  * @return {code is LineEnding}
- *  `true` if `code` is line ending code, `false` otherwise
+ *  Whether `code` is a line ending code
  */
-function eol(this: void, code: unknown): code is LineEnding {
+function lineEnding(this: void, code: unknown): code is LineEnding {
   switch (code) {
+    case codes.carriageReturn:
+    case codes.carriageReturnLineFeed:
     case codes.cr:
-    case codes.crlf:
     case codes.lf:
+    case codes.lineFeed:
     case codes.ls:
     case codes.ps:
-    case codes.vcr:
-    case codes.vlf:
       return true
     default:
       return false
   }
 }
 
-export default eol
+export default lineEnding

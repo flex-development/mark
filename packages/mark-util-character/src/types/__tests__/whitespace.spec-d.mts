@@ -14,11 +14,9 @@ describe('unit-d:types/Whitespace', () => {
   })
 
   it('should extract typeof codes.horizontalTab', () => {
-    // Arrange
-    type Extract = typeof codes.horizontalTab | typeof codes.vht
-
-    // Expect
-    expectTypeOf<TestSubject>().extract<Extract>().not.toBeNever()
+    expectTypeOf<TestSubject>()
+      .extract<typeof codes.horizontalTab>()
+      .not.toBeNever()
   })
 
   it('should extract typeof codes.ht', () => {

@@ -9,7 +9,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../handles.mts'
 
-describe('unit-d:types/Handles', () => {
+describe('unit-d:compile/types/Handles', () => {
   it('should extend Partial<Record<TokenType, Handle<any> | null | undefined>>', () => {
     // Arrange
     type Expect = Partial<Record<TokenType, Nilable<Handle<any>>>>

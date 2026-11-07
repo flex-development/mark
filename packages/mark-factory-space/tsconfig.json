@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "dist"
+  },
+  "exclude": ["dist/", "node_modules/"],
+  "extends": "../../tsconfig.json",
+  "files": ["typings/@flex-development/mark/parse/index.d.mts"],
+  "include": ["**/*.mts"],
+  "references": [
+    {
+      "path": "../mark/tsconfig.json"
+    },
+    {
+      "path": "../mark-util-character/tsconfig.json"
+    }
+  ]
+}

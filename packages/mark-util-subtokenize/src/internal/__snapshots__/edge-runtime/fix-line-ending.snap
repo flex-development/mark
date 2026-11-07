@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:internal/fixLineEnding > fix > should fix end position of \`token\` (-3) 1`] = `
+{
+  "end": {
+    "_bufferIndex": -1,
+    "_index": 2,
+    "column": 1,
+    "line": 2,
+    "offset": 3,
+  },
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 1,
+    "column": 2,
+    "line": 1,
+    "offset": 1,
+  },
+  "type": "lineEnding",
+}
+`;
+
+exports[`unit:internal/fixLineEnding > fix > should fix end position of \`token\` (-4) 1`] = `
+{
+  "end": {
+    "_bufferIndex": -1,
+    "_index": 2,
+    "column": 1,
+    "line": 2,
+    "offset": 2,
+  },
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 1,
+    "column": 2,
+    "line": 1,
+    "offset": 1,
+  },
+  "type": "lineEnding",
+}
+`;
+
+exports[`unit:internal/fixLineEnding > fix > should fix end position of \`token\` (-5) 1`] = `
+{
+  "end": {
+    "_bufferIndex": -1,
+    "_index": 2,
+    "column": 1,
+    "line": 2,
+    "offset": 2,
+  },
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 1,
+    "column": 2,
+    "line": 1,
+    "offset": 1,
+  },
+  "type": "lineEnding",
+}
+`;
+
+exports[`unit:internal/fixLineEnding > noop > should do nothing if \`token\` does not represent line ending 1`] = `
+{
+  "end": {
+    "_bufferIndex": -1,
+    "_index": 8,
+    "column": 3,
+    "line": 5,
+    "offset": 122,
+  },
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 8,
+    "column": 3,
+    "line": 5,
+    "offset": 122,
+  },
+  "type": "eoc",
+}
+`;
+
+exports[`unit:internal/fixLineEnding > noop > should do nothing if \`token\` ends at column \`1\` 1`] = `
+{
+  "end": {
+    "_bufferIndex": -1,
+    "_index": 2,
+    "column": 1,
+    "line": 2,
+    "offset": 3,
+  },
+  "start": {
+    "_bufferIndex": -1,
+    "_index": 1,
+    "column": 2,
+    "line": 1,
+    "offset": 1,
+  },
+  "type": "lineEnding",
+}
+`;

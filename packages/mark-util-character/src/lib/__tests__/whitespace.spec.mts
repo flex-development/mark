@@ -16,9 +16,7 @@ describe('unit:lib/space', () => {
     ['horizontalTab'],
     ['ht'],
     ['space'],
-    ['vht'],
-    ['virtualSpace'],
-    ['vs']
+    ['virtualSpace']
   ])('should return `true` if `code` is whitespace code (`codes.%s`)', key => {
     expect(testSubject(codes[key])).to.be.true
   })

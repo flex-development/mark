@@ -308,9 +308,10 @@ function create(
       // build full error message.
       reason += chars.space
       reason += chars.graveAccent + token.type + chars.graveAccent
-      reason += chars.space + chars.leftParen
+      reason += chars.space + chars.leftParenthesis
       reason += stringifyPosition([token.start, token.end])
-      reason += chars.rightParen + chars.colon + chars.space + 'it\'s not open'
+      reason += chars.rightParenthesis
+      reason += chars.colon + chars.space + 'it\'s not open'
 
       throw new Error(reason, { cause: { open: stacked, token } })
     }

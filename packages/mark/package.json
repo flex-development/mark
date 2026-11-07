@@ -29,8 +29,6 @@
     "access": "public",
     "diff-dst-prefix": "mark",
     "diff-src-prefix": "mark",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,
@@ -77,6 +75,7 @@
   },
   "dependencies": {
     "@flex-development/unist-util-types": "1.6.1",
+    "@types/debug": "4.1.13",
     "@types/unist": "3.0.3"
   },
   "sideEffects": false

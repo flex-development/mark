@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../numeric.mts'
 
-describe('unit-d:types/Numeric', () => {
+describe('unit-d:core/types/Numeric', () => {
   it('should equal `${number}`', () => {
     expectTypeOf<TestSubject>().toEqualTypeOf<`${number}`>()
   })

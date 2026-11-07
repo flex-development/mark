@@ -9,19 +9,15 @@ import type TestSubject from '../line-ending.mts'
 
 describe('unit-d:types/LineEnding', () => {
   it('should extract typeof codes.carriageReturn', () => {
-    // Arrange
-    type Extract = typeof codes.carriageReturn | typeof codes.vcr
-
-    // Expect
-    expectTypeOf<TestSubject>().extract<Extract>().not.toBeNever()
+    expectTypeOf<TestSubject>()
+      .extract<typeof codes.carriageReturn>()
+      .not.toBeNever()
   })
 
   it('should extract typeof codes.carriageReturnLineFeed', () => {
-    // Arrange
-    type Extract = typeof codes.carriageReturnLineFeed | typeof codes.crlf
-
-    // Expect
-    expectTypeOf<TestSubject>().extract<Extract>().not.toBeNever()
+    expectTypeOf<TestSubject>()
+      .extract<typeof codes.carriageReturnLineFeed>()
+      .not.toBeNever()
   })
 
   it('should extract typeof codes.cr', () => {
@@ -33,11 +29,7 @@ describe('unit-d:types/LineEnding', () => {
   })
 
   it('should extract typeof codes.lineFeed', () => {
-    // Arrange
-    type Extract = typeof codes.lineFeed | typeof codes.vlf
-
-    // Expect
-    expectTypeOf<TestSubject>().extract<Extract>().not.toBeNever()
+    expectTypeOf<TestSubject>().extract<typeof codes.lineFeed>().not.toBeNever()
   })
 
   it('should extract typeof codes.ls', () => {

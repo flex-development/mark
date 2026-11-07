@@ -8,7 +8,7 @@ import type { List } from '@flex-development/mark/core'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extensions.mts'
 
-describe('unit-d:types/Extensions', () => {
+describe('unit-d:ast/types/Extensions', () => {
   it('should allow CreateExtensions', () => {
     expectTypeOf<TestSubject>().extract<CreateExtensions>().not.toBeNever()
   })

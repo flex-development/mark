@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../context-map.mts'
 
-describe('unit-d:interfaces/ContextMap', () => {
+describe('unit-d:parse/interfaces/ContextMap', () => {
   it('should register tokenization contexts', () => {
     expectTypeOf<keyof TestSubject>().not.toBeNever()
   })

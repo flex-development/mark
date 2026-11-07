@@ -37,13 +37,15 @@ describe('unit:preprocess', () => {
       options?: PreprocessOptions | null | undefined
     ]>([
       [codes.break],
+      [codes.empty],
+      [codes.empty, true, { allowEmptyChunk: true }],
       [codes.eos, true],
-      [chars.empty, true],
+      [chars.empty],
       [chars.empty, true, { allowEmptyChunk: true }],
       [chars.bom, true],
       [chars.bom, true, { ignoreBOM: true }],
       [chars.nul, true],
-      [chars.nul, true, { nul: true }],
+      [chars.nul, true, { nul: false }],
       [chars.lf + chars.cr, true],
       [chars.cr + chars.lowercaseH],
       [chars.cr + chars.lf + chars.lowercaseA + chars.lowercaseB],

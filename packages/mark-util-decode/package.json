@@ -32,8 +32,6 @@
     "access": "public",
     "diff-dst-prefix": "mark-util-decode",
     "diff-src-prefix": "mark-util-decode",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,

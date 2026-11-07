@@ -7,7 +7,7 @@ import type { ContentType, Create } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../parsers.mts'
 
-describe('unit-d:types/Parsers', () => {
+describe('unit-d:parse/types/Parsers', () => {
   it('should match Record<ContentType, Create>', () => {
     // Arrange
     type Expect = Record<ContentType, Create>

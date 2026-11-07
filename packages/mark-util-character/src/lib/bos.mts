@@ -13,7 +13,7 @@ import { codes } from '@flex-development/mark-util-symbol'
  * @param {unknown} code
  *  The character code to check
  * @return {code is typeof codes.bos}
- *  `true` if `code` is {@linkcode codes.bos}, `false` otherwise
+ *  Whether `code` is {@linkcode codes.bos}
  */
 function bos(this: void, code: unknown): code is typeof codes.bos {
   return code === codes.bos

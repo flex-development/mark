@@ -8,7 +8,7 @@ import type { Event } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../preprocess.mts'
 
-describe('unit-d:types/Preprocess', () => {
+describe('unit-d:ast/types/Preprocess', () => {
   it('should match [this: Context]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })

@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "types": ["node"]
+  },
+  "exclude": ["dist/", "node_modules/"],
+  "extends": "../../tsconfig.json",
+  "files": [
+    "../../typings/chai/index.d.mts",
+    "typings/@flex-development/mark/parse/index.d.mts"
+  ],
+  "include": ["**/*.mts"],
+  "references": [
+    {
+      "path": "../../packages/mark/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-factory-markers/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-factory-space/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-parser/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-util-character/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-util-chunked/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-util-combine-extensions/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-util-subtokenize/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-util-symbol/tsconfig.json"
+    }
+  ]
+}

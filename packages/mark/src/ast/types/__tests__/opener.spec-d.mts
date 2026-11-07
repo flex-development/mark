@@ -7,7 +7,7 @@ import type { CreateNode, Handle } from '@flex-development/mark/ast'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../opener.mts'
 
-describe('unit-d:types/Opener', () => {
+describe('unit-d:ast/types/Opener', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

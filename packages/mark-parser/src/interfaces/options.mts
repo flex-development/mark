@@ -4,13 +4,12 @@
  */
 
 import type {
-  CreateExtensions,
   FinalizeContext,
   Initialize
 } from '@flex-development/mark-parser'
-import type { List } from '@flex-development/mark/core'
 import type {
   CodeCheck,
+  CreateExtensions,
   CreateToken,
   Extensions,
   Point
@@ -27,16 +26,6 @@ interface Options {
    * @default 'mark-parser'
    */
   debug?: string | null | undefined
-
-  /**
-   * The list of disabled construct names.
-   *
-   * > 👉 **Note**: This is a shortcut for `Extension.disable.null` when using
-   * > content types.
-   *
-   * @see {@linkcode List}
-   */
-  disable?: List<string> | null | undefined
 
   /**
    * Check if a character code represents a line ending.

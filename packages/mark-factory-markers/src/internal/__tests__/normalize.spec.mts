@@ -1,0 +1,51 @@
+/**
+ * @file Unit Tests - normalize
+ * @module mark-factory-markers/utils/tests/unit/normalize
+ */
+
+import { codes } from '@flex-development/mark-util-symbol'
+import type {
+  CodeCheck,
+  Marker,
+  MarkerInfo
+} from '@flex-development/mark/parse'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
+import testSubject from '../normalize.mts'
+
+describe('unit:internal/normalize', () => {
+  let code: Marker
+  let check: CodeCheck
+
+  beforeAll(() => {
+    code = codes.asterisk
+    check = vi.fn(candidate => candidate === code).mockName('marker')
+  })
+
+  it('should return `marker` if `marker` is an `MarkerInfo` object', () => {
+    // Arrange
+    const marker: MarkerInfo = { code: codes.asterisk }
+
+    // Act + Expect
+    expect(testSubject(marker)).to.eq(marker)
+  })
+
+  it('should return new info object if `marker` is a `CodeCheck`', () => {
+    // Act
+    const result = testSubject(check)
+
+    // Expect
+    expect(result).not.eq(check)
+    expect(result).to.have.property('code', check)
+    expect(result).toMatchSnapshot()
+  })
+
+  it('should return new info object if `marker` is a `Marker`', () => {
+    // Act
+    const result = testSubject(code)
+
+    // Expect
+    expect(result).not.eq(code)
+    expect(result).to.have.property('code', code)
+    expect(result).toMatchSnapshot()
+  })
+})

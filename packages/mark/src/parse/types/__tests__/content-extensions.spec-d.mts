@@ -10,7 +10,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../content-extensions.mts'
 
-describe('unit-d:types/ContentExtensions', () => {
+describe('unit-d:parse/types/ContentExtensions', () => {
   it('should match Partial<Record<ContentType, ConstructRecord | null | undefined>>', () => {
     // Arrange
     type Expect = Partial<Record<

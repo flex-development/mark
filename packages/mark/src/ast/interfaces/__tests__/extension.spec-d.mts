@@ -16,7 +16,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extension.mts'
 
-describe('unit-d:interfaces/Extension', () => {
+describe('unit-d:ast/interfaces/Extension', () => {
   it('should extend compile.Extension', () => {
     expectTypeOf<TestSubject>().toExtend<compile.Extension>()
   })

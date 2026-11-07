@@ -2,7 +2,7 @@
 
 exports[`e2e:mark-util-serialize > should expose public api 1`] = `
 [
-  "default",
   "serializeChunks",
+  "sliceChunks",
 ]
 `;

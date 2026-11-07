@@ -8,7 +8,7 @@ import type { Extension } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extensions.mts'
 
-describe('unit-d:types/Extensions', () => {
+describe('unit-d:parse/types/Extensions', () => {
   it('should extract Extension', () => {
     expectTypeOf<TestSubject>().extract<Extension>().not.toBeNever()
   })

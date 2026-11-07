@@ -7,7 +7,7 @@ import type { Value } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../file-like.mts'
 
-describe('unit-d:types/FileLike', () => {
+describe('unit-d:parse/types/FileLike', () => {
   it('should match [value: Value]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('value').toEqualTypeOf<Value>()
   })

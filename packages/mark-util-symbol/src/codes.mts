@@ -27,15 +27,10 @@ const codes = {
   sof: -1000, // start of file; alias for `bos`
   empty: -999, // empty string chunk
   break: -13, // stream break
-  vcr: -5, // virtual carriage return (\r)
   carriageReturn: -5, // virtual carriage return (\r)
-  vlf: -4, // virtual line feed (\n)
   lineFeed: -4, // virtual line feed (\n)
-  crlf: -3, // carriage return + line feed (\r + \n)
   carriageReturnLineFeed: -3, // carriage return + line feed (\r + \n)
-  vht: -2, // virtual horizontal tab (\t)
   horizontalTab: -2, // virtual horizontal tab (\t)
-  vs: -1, // virtual space
   virtualSpace: -1, // virtual space
   nul: 0,
   soh: 1,
@@ -70,29 +65,19 @@ const codes = {
   rs: 30,
   us: 31,
   space: 32,
-  exclamation: 33, // !
   exclamationMark: 33, // !
-  quotation: 34, // "
   quotationMark: 34, // "
-  hash: 35, // #
   numberSign: 35, // #
-  dollar: 36, // $
   dollarSign: 36, // $
-  percent: 37, // %
   percentSign: 37, // %
   ampersand: 38, // &
   apostrophe: 39, // '
-  leftParen: 40, // (
   leftParenthesis: 40, // (
-  rightParen: 41, // )
   rightParenthesis: 41, // )
   asterisk: 42, // *
-  plus: 43, // +
   plusSign: 43, // +
   comma: 44, // ,
-  hyphen: 45, // -
   dash: 45, // -
-  minus: 45, // -
   dot: 46, // .
   slash: 47, // /
   digit0: 48, // 0
@@ -107,16 +92,10 @@ const codes = {
   digit9: 57, // 9
   colon: 58, // :
   semicolon: 59, // ;
-  leftAngleBracket: 60, // <
-  lt: 60, // <
   lessThan: 60, // <
-  equal: 61, // =
   equalsTo: 61, // =
-  rightAngleBracket: 62, // >
-  gt: 62, // >
   greaterThan: 62, // >
   questionMark: 63, // ?
-  at: 64, // @
   atSign: 64, // @
   uppercaseA: 65, // A
   uppercaseB: 66, // B
@@ -144,10 +123,8 @@ const codes = {
   uppercaseX: 88, // X
   uppercaseY: 89, // Y
   uppercaseZ: 90, // Z
-  leftBracket: 91, // [
   leftSquareBracket: 91, // [
   backslash: 92, // \
-  rightBracket: 93, // ]
   rightSquareBracket: 93, // ]
   caret: 94, // ^
   underscore: 95, // _
@@ -178,11 +155,8 @@ const codes = {
   lowercaseX: 120, // x
   lowercaseY: 121, // y
   lowercaseZ: 122, // z
-  leftBrace: 123, // {
   leftCurlyBrace: 123, // {
-  bar: 124, // |
   verticalBar: 124, // |
-  rightBrace: 125, // }
   rightCurlyBrace: 125, // }
   tilde: 126, // ~
   del: 127,
@@ -191,9 +165,8 @@ const codes = {
   zwj: 8205, // \u200D
   ls: 8232, // \u2028
   ps: 8233, // \u2029
-  bom: 65_279, // byte order marker
+  bom: 65_279, // byte order marker, alias for `byteOrderMarker`
   byteOrderMarker: 65_279, // byte order marker
-  replacement: 65_533, // �
   replacementCharacter: 65_533 // �
 } as const
 

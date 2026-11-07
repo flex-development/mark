@@ -6,7 +6,7 @@
     "rootDir": "src"
   },
   "extends": "../../tsconfig.build.json",
-  "files": ["typings/typescript/lib.es5.d.ts"],
+  "files": ["../../typings/typescript/lib.es5.d.mts"],
   "include": ["src/**/**.mts"],
   "references": [
     {

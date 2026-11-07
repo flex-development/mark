@@ -8,4 +8,6 @@ set -e
 #
 # - https://www.typescriptlang.org/docs/handbook/compiler-options.html
 
-tsc -p $INIT_CWD/$([[ -f tsconfig.root.json ]] && echo tsconfig.root.json || echo tsconfig.json)
+echo $npm_package_name@$npm_package_version
+echo $INIT_CWD
+tsc -p $INIT_CWD/tsconfig.json

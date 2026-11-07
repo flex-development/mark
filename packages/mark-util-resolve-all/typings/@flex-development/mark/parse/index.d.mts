@@ -1,6 +1,10 @@
-import type {} from '@flex-development/mark/parse'
+import type { TokenizeContext } from '@flex-development/mark/parse'
 
 declare module '@flex-development/mark/parse' {
+  interface ContextMap {
+    mark: TokenizeContext
+  }
+
   interface TokenTypeMap {
     eoc: 'eoc'
   }

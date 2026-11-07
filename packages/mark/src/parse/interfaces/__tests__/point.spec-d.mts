@@ -7,7 +7,7 @@ import type { Column, Line, Offset } from '@flex-development/unist-util-types'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../point.mts'
 
-describe('unit-d:interfaces/Point', () => {
+describe('unit-d:parse/interfaces/Point', () => {
   it('should match [column: Column]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('column').toEqualTypeOf<Column>()
   })

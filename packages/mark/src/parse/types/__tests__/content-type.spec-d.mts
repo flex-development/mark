@@ -7,7 +7,7 @@ import type { ContentTypeMap } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../content-type.mts'
 
-describe('unit-d:types/ContentType', () => {
+describe('unit-d:parse/types/ContentType', () => {
   it('should equal ContentTypeMap[keyof ContentTypeMap]', () => {
     // Arrange
     type Expect = ContentTypeMap[keyof ContentTypeMap]

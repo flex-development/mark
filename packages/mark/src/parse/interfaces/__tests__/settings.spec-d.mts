@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../settings.mts'
 
-describe('unit-d:interfaces/Settings', () => {
+describe('unit-d:parse/interfaces/Settings', () => {
   it('should register custom settings', () => {
     expectTypeOf<keyof TestSubject>().toEqualTypeOf<never>()
   })

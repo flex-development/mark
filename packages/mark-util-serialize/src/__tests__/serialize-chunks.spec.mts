@@ -10,9 +10,9 @@ import testSubject from '../serialize-chunks.mts'
 describe('unit:utils/serializeChunks', () => {
   it.each<Parameters<typeof testSubject>>([
     [[codes.bos, codes.sof, codes.empty]],
-    [[codes.vlf, codes.vcr, codes.crlf]],
-    [[codes.vht, codes.vs, codes.digit1]],
-    [[codes.vht, codes.vs, codes.digit3], true],
+    [[codes.lineFeed, codes.carriageReturn, codes.carriageReturnLineFeed]],
+    [[codes.horizontalTab, codes.virtualSpace, codes.digit1]],
+    [[codes.horizontalTab, codes.virtualSpace, codes.digit3], true],
     [[codes.digit3, codes.break, '13'], { breaks: chars.slash }],
     [[codes.lowercaseH, codes.break, codes.lowercaseI]],
     [['hello', codes.break, 'world'], { breaks: true }]

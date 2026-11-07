@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../list.mts'
 
-describe('unit-d:types/List', () => {
+describe('unit-d:core/types/List', () => {
   type T = string
   type Subject = TestSubject<T>
 

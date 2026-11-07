@@ -16,7 +16,7 @@ import { codes } from '@flex-development/mark-util-symbol'
  * @param {unknown} code
  *  The character code to check
  * @return {code is typeof codes.break}
- *  `true` if `code` is break code, `false` otherwise
+ *  Whether `code` is the stream break code
  */
 function streamBreak(this: void, code: unknown): code is typeof codes.break {
   return code === codes.break

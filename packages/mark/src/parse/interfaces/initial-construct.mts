@@ -19,6 +19,8 @@ interface InitialConstruct extends Construct {
    * Set up a state machine to handle character codes streaming in.
    *
    * @see {@linkcode Initializer}
+   *
+   * @override
    */
   tokenize: Initializer
 }

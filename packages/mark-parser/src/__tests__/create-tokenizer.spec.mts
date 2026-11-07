@@ -58,7 +58,7 @@ describe('unit:createTokenizer', () => {
        * @this {TokenizeContext}
        *
        * @param {Effects} effects
-       *  The context object to transition the state machine
+       *  The context object used to transition the state machine
        * @return {State}
        *  The initial state
        */
@@ -112,14 +112,12 @@ describe('unit:createTokenizer', () => {
     const context: TokenizeContext = testSubject(options)
 
     // Act
-    const result1 = context.parser.document(from)
-    const result2 = context.parser.flow(from)
-    const result3 = context.parser.content(from)
-    const result4 = context.parser.string(from)
-    const result5 = context.parser.text(from)
+    const result1 = context.parser.source(from)
+    const result2 = context.parser.comments(from)
+    const result3 = context.parser.language(from)
 
     // Expect
-    expect(finalizeContext).toHaveBeenCalledTimes(6)
+    expect(finalizeContext).toHaveBeenCalledTimes(4)
     expect(vi.mocked(finalizeContext).mock.calls[0]).to.have.length(2)
     expect(vi.mocked(finalizeContext).mock.calls[0]![0]).to.eq(context)
     expect(vi.mocked(finalizeContext).mock.calls[1]).to.have.length(2)
@@ -128,67 +126,39 @@ describe('unit:createTokenizer', () => {
     expect(vi.mocked(finalizeContext).mock.calls[2]![0]).to.eq(result2)
     expect(vi.mocked(finalizeContext).mock.calls[3]).to.have.length(2)
     expect(vi.mocked(finalizeContext).mock.calls[3]![0]).to.eq(result3)
-    expect(vi.mocked(finalizeContext).mock.calls[4]).to.have.length(2)
-    expect(vi.mocked(finalizeContext).mock.calls[4]![0]).to.eq(result4)
-    expect(vi.mocked(finalizeContext).mock.calls[5]).to.have.length(2)
-    expect(vi.mocked(finalizeContext).mock.calls[5]![0]).to.eq(result5)
     expect(result1).to.not.eq(context)
     expect(result1).to.not.eq(result2)
     expect(result1).to.not.eq(result3)
-    expect(result1).to.not.eq(result4)
-    expect(result1).to.not.eq(result5)
     expect(result2).to.not.eq(context)
     expect(result2).to.not.eq(result3)
-    expect(result2).to.not.eq(result4)
-    expect(result2).to.not.eq(result5)
     expect(result3).to.not.eq(context)
-    expect(result3).to.not.eq(result4)
-    expect(result3).to.not.eq(result5)
-    expect(result4).to.not.eq(context)
-    expect(result4).to.not.eq(result5)
-    expect(result5).to.not.eq(context)
     expect(result1.hooks).to.eq(context.hooks)
     expect(result2.hooks).to.eq(context.hooks)
     expect(result3.hooks).to.eq(context.hooks)
-    expect(result4.hooks).to.eq(context.hooks)
-    expect(result5.hooks).to.eq(context.hooks)
     expect(result1.parser).to.eq(context.parser)
     expect(result2.parser).to.eq(context.parser)
     expect(result3.parser).to.eq(context.parser)
-    expect(result4.parser).to.eq(context.parser)
-    expect(result5.parser).to.eq(context.parser)
     expect(result1.place).to.eql(place).but.not.eq(place)
     expect(result2.place).to.eql(place).but.not.eq(place)
     expect(result3.place).to.eql(place).but.not.eq(place)
-    expect(result4.place).to.eql(place).but.not.eq(place)
-    expect(result5.place).to.eql(place).but.not.eq(place)
     expect(result1.place).to.not.eq(context.place)
     expect(result1.place).to.not.eq(result2.place)
     expect(result1.place).to.not.eq(result3.place)
-    expect(result1.place).to.not.eq(result4.place)
-    expect(result1.place).to.not.eq(result5.place)
     expect(result2.place).to.not.eq(context.place)
     expect(result2.place).to.not.eq(result3.place)
-    expect(result2.place).to.not.eq(result4.place)
-    expect(result2.place).to.not.eq(result5.place)
     expect(result3.place).to.not.eq(context.place)
-    expect(result3.place).to.not.eq(result4.place)
-    expect(result3.place).to.not.eq(result5.place)
-    expect(result4.place).to.not.eq(context.place)
-    expect(result4.place).to.not.eq(result5.place)
-    expect(result5.place).to.not.eq(context.place)
   })
 
   it.each<[Initialize]>([
     [{ tokenize: vi.fn() }],
-    [{ [ct.document]: { tokenize: vi.fn() } }]
+    [{ [ct.source]: { tokenize: vi.fn() } }]
   ])('should create tokenize context with custom start point (%#)', init => {
     // Act
     const subject: TokenizeContext = testSubject(init, from)
 
     // Expect
-    if (ct.document in init) {
-      expect(subject.parser.document().now()).to.eql(place)
+    if (ct.source in init) {
+      expect(subject.parser.source().now()).to.eql(place)
     } else {
       expect(subject.now()).to.eql(place)
     }
@@ -252,10 +222,9 @@ describe('unit:createTokenizer', () => {
       ['bos'],
       ['break'],
       ['empty'],
-      ['eof'],
       ['eos'],
       ['sof'],
-      ['vs']
+      ['virtualSpace']
     ])('should only move chunk position (`codes.%s`)', key => {
       // Arrange
       const code: Code = codes[key]
@@ -271,13 +240,13 @@ describe('unit:createTokenizer', () => {
 
     it.each<[key: keyof typeof codes, options?: Partial<Options>]>([
       ['break', { eol: code => code === codes.break }],
+      ['carriageReturn'],
+      ['carriageReturnLineFeed'],
       ['cr'],
-      ['crlf'],
       ['lf'],
+      ['lineFeed'],
       ['ls'],
-      ['ps'],
-      ['vcr'],
-      ['vlf']
+      ['ps']
     ])('should move line on line ending (%#)', (key, options) => {
       // Arrange
       const code: Code = codes[key]
@@ -293,7 +262,7 @@ describe('unit:createTokenizer', () => {
         _index: now._index + 1,
         column: 1,
         line: now.line + 1,
-        offset: code === codes.crlf ? 2 : 1
+        offset: code === codes.carriageReturnLineFeed ? 2 : 1
       })
     })
 

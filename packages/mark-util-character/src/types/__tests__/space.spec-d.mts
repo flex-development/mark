@@ -13,10 +13,8 @@ describe('unit-d:types/Space', () => {
   })
 
   it('should extract typeof codes.virtualSpace', () => {
-    // Arrange
-    type Extract = typeof codes.virtualSpace | typeof codes.vs
-
-    // Expect
-    expectTypeOf<TestSubject>().extract<Extract>().not.toBeNever()
+    expectTypeOf<TestSubject>()
+      .extract<typeof codes.virtualSpace>()
+      .not.toBeNever()
   })
 })

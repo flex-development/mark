@@ -7,7 +7,7 @@ import type { Position, TokenFields } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../token-info.mts'
 
-describe('unit-d:interfaces/TokenInfo', () => {
+describe('unit-d:parse/interfaces/TokenInfo', () => {
   it('should extend Position', () => {
     expectTypeOf<TestSubject>().toExtend<Position>()
   })

@@ -11,12 +11,10 @@ import type { codes } from '@flex-development/mark-util-symbol'
  *
  * @see {@linkcode codes.horizontalTab}
  * @see {@linkcode codes.ht}
- * @see {@linkcode codes.vht}
  */
 type Whitespace =
   | Space
   | typeof codes.horizontalTab
   | typeof codes.ht
-  | typeof codes.vht
 
 export type { Whitespace as default }

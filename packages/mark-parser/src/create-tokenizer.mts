@@ -8,9 +8,12 @@ import { eol, eos } from '@flex-development/mark-util-character'
 import { push, splice } from '@flex-development/mark-util-chunked'
 import combineExtensions from '@flex-development/mark-util-combine-extensions'
 import { resolveAll } from '@flex-development/mark-util-resolve-all'
-import { serializeChunks } from '@flex-development/mark-util-serialize'
+import {
+  serializeChunks,
+  sliceChunks
+} from '@flex-development/mark-util-serialize'
 import { chars, codes, ev } from '@flex-development/mark-util-symbol'
-import type { IfNever, List } from '@flex-development/mark/core'
+import type { IfNever } from '@flex-development/mark/core'
 import type {
   Attempt,
   Chunk,
@@ -28,7 +31,6 @@ import type {
   Extension,
   InitialConstruct,
   InitialConstructs,
-  NormalizedExtension,
   ParseContext,
   Place,
   Point,
@@ -42,7 +44,6 @@ import type {
   TokenType,
   Writable
 } from '@flex-development/mark/parse'
-import type { Debugger } from 'debug'
 import { ok as assert, equal } from 'devlop'
 import createDebugger from './internal/create-debugger.mts'
 import createTokenFactory from './internal/create-token-factory.mts'
@@ -138,12 +139,12 @@ function createTokenizer(
   /**
    * The debug logger.
    *
-   * @const {Debugger} debug
+   * @const {TokenizeContext['debug']} debug
    */
-  const debug: Debugger = createDebugger(options)
+  const debug: TokenizeContext['debug'] = createDebugger(options)
 
   /**
-   * The context object to transition the state machine.
+   * The context object used to transition the state machine.
    *
    * @const {Effects} effects
    */
@@ -632,12 +633,12 @@ function createTokenizer(
       code !== codes.bos && // beginning of stream
       code !== codes.empty && // empty string chunk (preprocessed)
       code !== codes.eos && // end of stream
-      code !== codes.vs // virtual space
+      code !== codes.virtualSpace // virtual space
     ) {
       if ((options.eol ?? eol)(code)) {
         context.place.column = 1
         context.place.line++
-        context.place.offset += code === codes.crlf ? 2 : 1
+        context.place.offset += code === codes.carriageReturnLineFeed ? 2 : 1
         context.applySkip(code)
         context.debug('position after eol: %o', context.place)
       } else if (code !== codes.break || context.moveOnBreak) {
@@ -929,24 +930,12 @@ function createTokenizer(
     /**
      * The base syntax extension.
      *
-     * @const {NormalizedExtension} extension
+     * @const {Extension} extension
      */
-    const extension: NormalizedExtension = {
-      disable: { null: options.disable ? [...options.disable] : [] }
-    }
-
-    /**
-     * The extension, or extensions, to combine.
-     *
-     * @const {Extension | List<Extension> | null | undefined} extensions
-     */
-    const extensions: Extension | List<Extension> | null | undefined =
-      typeof options.extensions === 'function'
-        ? options.extensions()
-        : options.extensions
+    const extension: Extension = { disable: { null: [] } }
 
     // combine extensions.
-    context.parser.constructs = combineExtensions(extension, extensions)
+    context.parser.constructs = combineExtensions(extension, options.extensions)
 
     // add content-level tokenizers.
     if (!Object.prototype.hasOwnProperty.call(initialize, 'tokenize')) {
@@ -1077,69 +1066,6 @@ function createTokenizer(
     }
 
     return eos(context.chunks.at(-1)) ? codes.eos : codes.break
-  }
-
-  /**
-   * Get the chunks spanning a token (or location).
-   *
-   * Numeric chunks are addressed by `_index` only.\
-   * String chunks are addressed by `_index` plus `_bufferIndex`.
-   *
-   * @this {void}
-   *
-   * @param {Chunk[]} chunks
-   *  The slice of chunks
-   * @param {Position} range
-   *  The position in stream
-   * @return {Chunk[]}
-   *  The list of chunks spanning `range`
-   */
-  function sliceChunks(this: void, chunks: Chunk[], range: Position): Chunk[] {
-    const { _bufferIndex: endBufIndex, _index: endIndex } = range.end
-    const { _bufferIndex: startBufIndex, _index: startIndex } = range.start
-
-    /**
-     * The chunks spanning {@linkcode range}.
-     *
-     * @var {Chunk[]} view
-     */
-    let view: Chunk[] = []
-
-    if (!chunks.length) {
-      // no chunks, no view.
-    } else if (startIndex === endIndex) { // within the same chunk.
-      if (startBufIndex === endBufIndex) {
-        view = [chars.empty]
-      } else { // slice string chunk.
-        assert(endBufIndex > -1, 'expected non-negative end buffer index')
-        assert(startBufIndex > -1, 'expected non-negative start buffer index')
-        assert(typeof chunks[startIndex] === 'string', 'expected string chunk')
-        view = [chunks[startIndex].slice(startBufIndex, endBufIndex)]
-      }
-    } else { // spanning multiple chunks.
-      view = chunks.slice(startIndex, endIndex)
-
-      // starts inside string chunk.
-      if (startBufIndex > -1) {
-        /**
-         * The first chunk in the slice.
-         *
-         * @const {Chunk | undefined} head
-         */
-        const head: Chunk | undefined = view[0]
-
-        // replace `head` with slice of itself.
-        assert(typeof head === 'string', 'expected string chunk')
-        view[0] = head.slice(startBufIndex)
-      }
-
-      if (endBufIndex > 0) { // ends inside string chunk.
-        assert(typeof chunks[endIndex] === 'string', 'expected string chunk')
-        view.push(chunks[endIndex].slice(0, endBufIndex))
-      }
-    }
-
-    return view
   }
 
   /**

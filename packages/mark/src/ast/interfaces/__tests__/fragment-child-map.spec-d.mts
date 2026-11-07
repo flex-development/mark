@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../fragment-child-map.mts'
 
-describe('unit-d:interfaces/FragmentChildMap', () => {
+describe('unit-d:ast/interfaces/FragmentChildMap', () => {
   it('should register custom child nodes', () => {
     expectTypeOf<keyof TestSubject>().not.toBeNever()
   })

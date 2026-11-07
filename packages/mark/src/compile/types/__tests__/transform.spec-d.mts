@@ -8,7 +8,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../transform.mts'
 
-describe('unit-d:types/Transform', () => {
+describe('unit-d:compile/types/Transform', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

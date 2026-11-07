@@ -41,9 +41,9 @@ describe('unit:lib/asciiPunctuation', () => {
   it.each<Parameters<typeof testSubject>>([
     [codes.colon],
     [codes.semicolon],
-    [codes.leftAngleBracket],
+    [codes.lessThan],
     [codes.equalsTo],
-    [codes.rightAngleBracket],
+    [codes.greaterThan],
     [codes.questionMark],
     [codes.atSign]
   ])('should return `true` given code in range [U+003A,U+0040] (%j)', code => {

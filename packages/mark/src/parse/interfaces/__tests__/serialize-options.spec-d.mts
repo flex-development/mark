@@ -7,7 +7,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../serialize-options.mts'
 
-describe('unit-d:interfaces/SerializeOptions', () => {
+describe('unit-d:parse/interfaces/SerializeOptions', () => {
   it('should match [breaks?: boolean | string | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('breaks')

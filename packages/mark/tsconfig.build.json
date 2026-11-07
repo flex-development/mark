@@ -8,5 +8,6 @@
   },
   "extends": "../../tsconfig.build.json",
   "files": [],
-  "include": ["src/**/**.mts"]
+  "include": ["src/**/**.mts"],
+  "references": []
 }

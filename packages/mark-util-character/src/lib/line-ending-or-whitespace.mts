@@ -8,7 +8,7 @@ import type {
   Whitespace
 } from '@flex-development/mark-util-character'
 import lineEnding from './line-ending.mts'
-import space from './whitespace.mts'
+import whitespace from './whitespace.mts'
 
 /**
  * Check if `code` represents a line ending or whitespace.
@@ -21,13 +21,13 @@ import space from './whitespace.mts'
  * @param {unknown} code
  *  The character code to check
  * @return {code is LineEnding | Whitespace}
- *  `true` if `code` is line ending or whitespace code, `false` otherwise
+ *  Whether `code` is line ending or whitespace code
  */
 function lineEndingOrWhitespace(
   this: void,
   code: unknown
 ): code is LineEnding | Whitespace {
-  return lineEnding(code) || space(code)
+  return lineEnding(code) || whitespace(code)
 }
 
 export default lineEndingOrWhitespace

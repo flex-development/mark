@@ -7,7 +7,7 @@ import type { Config, Extension } from '@flex-development/mark/ast'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../take-extension.mts'
 
-describe('unit-d:types/TakeExtension', () => {
+describe('unit-d:ast/types/TakeExtension', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

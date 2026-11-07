@@ -3,22 +3,20 @@
  * @module fixtures/initialize
  */
 
+import ct from '#fixtures/ct'
 import type { InitialConstructs } from '@flex-development/mark/parse'
-import { constants } from 'micromark-util-symbol'
 import { vi } from 'vitest'
 
 /**
- * Record, where each key is a content type,
+ * Record, where each key is a content type
  * and each value is a mock initial construct.
  *
  * @const {InitialConstructs} initialize
  */
 const initialize: InitialConstructs = {
-  [constants.contentTypeDocument]: { tokenize: vi.fn() },
-  [constants.contentTypeFlow]: { tokenize: vi.fn() },
-  [constants.contentTypeContent]: { tokenize: vi.fn() },
-  [constants.contentTypeString]: { tokenize: vi.fn() },
-  [constants.contentTypeText]: { tokenize: vi.fn() }
+  [ct.comments]: { tokenize: vi.fn() },
+  [ct.language]: { tokenize: vi.fn() },
+  [ct.source]: { tokenize: vi.fn() }
 }
 
 export default initialize

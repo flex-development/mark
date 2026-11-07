@@ -10,7 +10,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../constructs.mts'
 
-describe('unit-d:types/Constructs', () => {
+describe('unit-d:parse/types/Constructs', () => {
   it('should extract ConstructPack', () => {
     expectTypeOf<TestSubject>().extract<ConstructPack>().not.toBeNever()
   })

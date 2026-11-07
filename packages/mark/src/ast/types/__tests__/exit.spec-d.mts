@@ -8,7 +8,7 @@ import type { Token } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../exit.mts'
 
-describe('unit-d:types/Exit', () => {
+describe('unit-d:ast/types/Exit', () => {
   it('should match [this: Context]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })

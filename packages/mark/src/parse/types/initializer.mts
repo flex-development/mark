@@ -22,7 +22,7 @@ import type {
  * @this {Context}
  *
  * @param {Effects} effects
- *  The context object to transition the state machine
+ *  The context object used to transition the state machine
  * @return {State}
  *  The initial state
  */

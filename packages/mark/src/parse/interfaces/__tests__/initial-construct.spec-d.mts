@@ -7,7 +7,7 @@ import type { Construct, Initializer } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../initial-construct.mts'
 
-describe('unit-d:interfaces/InitialConstruct', () => {
+describe('unit-d:parse/interfaces/InitialConstruct', () => {
   it('should extend Construct', () => {
     expectTypeOf<TestSubject>().toExtend<Construct>()
   })

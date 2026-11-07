@@ -15,7 +15,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extension.mts'
 
-describe('unit-d:interfaces/Extension', () => {
+describe('unit-d:compile/interfaces/Extension', () => {
   it('should match [afterEnter?: Handle | List<Handle> | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('afterEnter')

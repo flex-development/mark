@@ -7,7 +7,7 @@ import type { EncodingMap } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../encoding.mts'
 
-describe('unit-d:types/Encoding', () => {
+describe('unit-d:parse/types/Encoding', () => {
   it('should equal EncodingMap[keyof EncodingMap]', () => {
     expectTypeOf<TestSubject>().toEqualTypeOf<EncodingMap[keyof EncodingMap]>()
   })

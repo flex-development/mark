@@ -1,0 +1,14 @@
+
+{
+  
+  "tag": {
+    /*
+     * The commit message.
+     */
+    "message": "release: {tag}",
+    /*
+     * Whether to sign the commit.
+     */
+    "sign": true
+  }
+}

@@ -31,8 +31,6 @@
     "access": "public",
     "diff-dst-prefix": "mark-parser",
     "diff-src-prefix": "mark-parser",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,
@@ -77,16 +75,11 @@
     "@flex-development/mark-util-serialize": "workspace:1.0.0-alpha.1",
     "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13",
     "@flex-development/unist-util-builder": "2.0.0",
-    "@types/debug": "4.1.13",
     "debug": "4.4.3",
     "devlop": "1.1.0"
   },
   "devDependencies": {
-    "micromark": "4.0.3",
-    "micromark-core-commonmark": "2.0.4",
-    "micromark-util-character": "2.1.1",
-    "micromark-util-symbol": "2.0.1",
-    "micromark-util-types": "2.0.3"
+    "@types/debug": "4.1.13"
   },
   "sideEffects": false
 }

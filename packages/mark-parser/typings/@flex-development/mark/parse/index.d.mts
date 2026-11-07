@@ -2,77 +2,28 @@ import type { Store } from '@flex-development/mark-parser'
 import type {
   ApplySkip,
   Chunk,
-  Code,
   Column,
-  Construct,
-  ConstructRecord,
-  ContentType,
   Effects,
   Line,
-  Place,
-  Token
+  Place
 } from '@flex-development/mark/parse'
-import type { Debugger } from 'debug'
-import type * as micromark from 'micromark-util-types'
 
 declare module '@flex-development/mark/parse' {
-  type AttentionMarkers = {
-    null?: Code[] | null | undefined
-  }
-
-  interface ContainerState extends micromark.ContainerState {}
-
   interface ContentTypeMap {
-    content: 'content'
-    document: 'document'
-    flow: 'flow'
-    string: 'string'
-    text: 'text'
+    comments: 'comments'
+    language: 'language'
+    source: 'source'
   }
 
   interface ContextMap {
     mark: TokenizeContext
   }
 
-  interface Extension {
-    attentionMarkers?: AttentionMarkers | null | undefined
-    contentInitial?: ConstructRecord | null | undefined
-    flowInitial?: ConstructRecord | null | undefined
-    insideSpan?: InsideSpan | null | undefined
-  }
-
-  type InsideSpan = {
-    null?: Pick<Construct, 'resolveAll'>[] | null | undefined
-  }
-
-  interface ParseContext {
-    defined: string[]
-    lazy: Record<Line, boolean>
-  }
-
-  interface Settings {
-    sass?: { indented?: boolean | null | undefined }
-  }
-
   interface TokenFields {
-    _balanced?: boolean | undefined
-    _close?: boolean | undefined
-    _container?: boolean | undefined
-    _contentTypeTextTrailing?: boolean | undefined
-    _inactive?: boolean | undefined
-    _isInFirstContentOfListItem?: boolean | undefined
-    _loose?: boolean | undefined
-    _open?: boolean | undefined
-    _tokenizer?: TokenizeContext | undefined
-    contentType?: ContentType | undefined
-    next?: Token | undefined
-    previous?: Token | undefined
     value?: string | null | undefined
   }
 
   interface TokenizeContext {
-    _gfmTableDynamicInterruptHack?: boolean
-
     /**
      * Move {@linkcode place} a bit forward.
      *
@@ -102,17 +53,7 @@ declare module '@flex-development/mark/parse' {
     copyContainerState?: boolean | null | undefined
 
     /**
-     * The debug logger.
-     *
-     * @see {@linkcode Debugger}
-     *
-     * @internal
-     * @readonly
-     */
-    readonly debug: Debugger
-
-    /**
-     * The context object to transition the state machine.
+     * The context object used to transition the state machine.
      *
      * @see {@linkcode Effects}
      *
@@ -152,7 +93,7 @@ declare module '@flex-development/mark/parse' {
     store: Store
   }
 
-  interface TokenTypeMap extends micromark.TokenTypeMap {
+  interface TokenTypeMap {
     eoc: 'eoc'
     fail: 'fail'
     succ: 'succ'

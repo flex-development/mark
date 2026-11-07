@@ -21,6 +21,7 @@ import type {
   State,
   Write
 } from '@flex-development/mark/parse'
+import type { Debugger } from 'debug'
 
 /**
  * Context object to assist with parsing.
@@ -36,9 +37,7 @@ import type {
  */
 interface TokenizeContext {
   /**
-   * Whether a speculative check is being ran.
-   *
-   * @see {@linkcode Check}
+   * Whether a speculative {@linkcode Check} is being ran.
    */
   check?: boolean | null | undefined
 
@@ -52,9 +51,9 @@ interface TokenizeContext {
   /**
    * Shared state set when parsing containers.
    *
-   * Containers are typically parsed in separate phases:
-   * their first line (`tokenize`), continued lines (`continuation.tokenize`),
-   * and finally `exit`.
+   * Containers are typically parsed in separate phases:\
+   * first line (`tokenize`), continued lines (`continuation`),
+   * and finally `exit`.\
    * This record can be used to store information between these hooks.
    *
    * @see {@linkcode ContainerState}
@@ -78,6 +77,13 @@ interface TokenizeContext {
   currentConstruct?: Construct | null | undefined
 
   /**
+   * The debug logger.
+   *
+   * @see {@linkcode Debugger}
+   */
+  debug: Debugger
+
+  /**
    * Define a skip.
    *
    * @see {@linkcode DefineSkip}
@@ -99,7 +105,16 @@ interface TokenizeContext {
   hooks: Hooks
 
   /**
-   * Whether a construct is interrupting another construct.
+   * Whether a construct is interrupting.
+   *
+   * For example, in markdown:
+   *
+   * ```markdown
+   * a
+   * # b
+   * ```
+   *
+   * At `2:1` there is an interruption.
    */
   interrupt?: boolean | null | undefined
 
@@ -109,13 +124,13 @@ interface TokenizeContext {
   moveOnBreak?: boolean | null | undefined
 
   /**
-   * Whether empty tokens are allowed.
+   * Whether empty tokens are not allowed.
    */
   noEmptyTokens?: boolean | null | undefined
 
   /**
-   * When trying a construct, whether {@linkcode Construct.previous}
-   * should **not** be called.
+   * Whether {@linkcode Construct.previous} should **not** be called when trying
+   * a construct.
    *
    * If `false`, `previous` should be called via {@linkcode State} function.
    */
@@ -151,14 +166,14 @@ interface TokenizeContext {
   previous: Code
 
   /**
-   * Get the string value of a slice of chunks.
+   * Stringify a slice of chunks.
    *
    * @see {@linkcode SerializeChunks}
    */
   serializeChunks: SerializeChunks
 
   /**
-   * Get the text spanning the specified range.
+   * Get the content spanning the specified range.
    *
    * @see {@linkcode SliceSerialize}
    */
@@ -181,7 +196,7 @@ interface TokenizeContext {
   /**
    * Write a slice of chunks.
    *
-   * The eof code (`null`) can be used to signal the end of the stream.
+   * The eos code (`null`) can be used to signal the end of the stream.
    *
    * @see {@linkcode Write}
    */

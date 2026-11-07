@@ -6,16 +6,14 @@
 import type { ContentType } from '@flex-development/mark/parse'
 
 /**
- * Content types.
+ * The content type dictionary.
  *
  * @enum {ContentType}
  */
 enum ct {
-  content = 'content',
-  flow = 'flow',
-  document = 'document',
-  string = 'string',
-  text = 'text'
+  comments = 'comments',
+  language = 'language',
+  source = 'source'
 }
 
 export default ct

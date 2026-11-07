@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../code.mts'
 
-describe('unit-d:types/Code', () => {
+describe('unit-d:parse/types/Code', () => {
   it('should extract null', () => {
     expectTypeOf<TestSubject>().extract<null>().not.toBeNever()
   })

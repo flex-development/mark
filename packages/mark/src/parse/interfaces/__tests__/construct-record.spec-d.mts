@@ -8,7 +8,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../construct-record.mts'
 
-describe('unit-d:interfaces/ConstructRecord', () => {
+describe('unit-d:parse/interfaces/ConstructRecord', () => {
   type Value = Nilable<ConstructPack>
 
   it('should match [[x: Numeric]: ConstructPack | null | undefined]', () => {

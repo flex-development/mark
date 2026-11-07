@@ -1,7 +1,9 @@
+alnum
 atext
 attw
 cefc
 chunker
+cntrl
 commitlintrc
 dedupe
 devlop
@@ -18,14 +20,17 @@ onreturn
 onsuccessfulcheck
 onsuccessfulconstruct
 pilcrow
+punct
 rollup
 rtags
 shfmt
+subtokenization
 succ
 tokenizable
 unstub
 vates
 vitest
 vtab
+xdigit
 yarnrc
 zwnj

@@ -14,7 +14,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../construct.mts'
 
-describe('unit-d:interfaces/Construct', () => {
+describe('unit-d:parse/interfaces/Construct', () => {
   it('should match [add?: ConstructPosition | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('add')

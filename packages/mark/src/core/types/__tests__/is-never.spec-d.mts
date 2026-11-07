@@ -7,7 +7,7 @@ import type { Primitive } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../is-never.mts'
 
-describe('unit-d:types/IsNever', () => {
+describe('unit-d:core/types/IsNever', () => {
   it('should equal false if [T] does not extend [never]', () => {
     expectTypeOf<TestSubject<Primitive>>().toEqualTypeOf<false>()
     expectTypeOf<TestSubject<any>>().toEqualTypeOf<false>()

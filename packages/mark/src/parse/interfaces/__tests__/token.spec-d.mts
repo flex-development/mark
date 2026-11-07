@@ -7,7 +7,7 @@ import type { TokenInfo, TokenType } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../token.mts'
 
-describe('unit-d:interfaces/Token', () => {
+describe('unit-d:parse/interfaces/Token', () => {
   it('should extend TokenInfo', () => {
     expectTypeOf<TestSubject>().toExtend<TokenInfo>()
   })

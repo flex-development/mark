@@ -195,10 +195,10 @@ describe('integration:createTokenizer', () => {
           }
         },
         options: {
-          extensions: constant({ [ct.document]: { null: [partialSucc] } }),
-          initialize: { document: initialize(ct.document) }
+          extensions: constant({ [ct.comments]: { null: [partialSucc] } }),
+          initialize: { [ct.comments]: initialize(ct.comments) }
         },
-        parser: ct.document,
+        parser: ct.comments,
         slice: codes.digit1
       }
     ],
@@ -220,7 +220,7 @@ describe('integration:createTokenizer', () => {
           }
         },
         options: {
-          disable: [eventsThenSucc.name],
+          extensions: { disable: { null: [eventsThenSucc.name] } },
           initialize: initialize(eventsThenSucc)
         },
         slice: import.meta.url
@@ -266,7 +266,7 @@ describe('integration:createTokenizer', () => {
         options: {
           extensions: [
             {
-              [ct.document]: {
+              [ct.comments]: {
                 null: [
                   Object.assign({}, eventsThenSucc, {
                     resolve,
@@ -278,7 +278,7 @@ describe('integration:createTokenizer', () => {
             }
           ],
           initialize: {
-            [ct.document]: initialize(ct.document, {
+            [ct.comments]: initialize(ct.comments, {
               /**
                * @this {void}
                *
@@ -340,7 +340,7 @@ describe('integration:createTokenizer', () => {
             })
           }
         },
-        parser: ct.document,
+        parser: ct.comments,
         slice: [codes.lowercaseA, codes.lowercaseB, codes.lowercaseC],
         snapshot: true
       }
@@ -443,10 +443,10 @@ describe('integration:createTokenizer', () => {
           }
         },
         options: {
-          extensions: { [ct.document]: { [codes.lowercaseB]: checkThenSucc } },
-          initialize: { document: initialize(ct.document) }
+          extensions: { [ct.comments]: { [codes.lowercaseB]: checkThenSucc } },
+          initialize: { [ct.comments]: initialize(ct.comments) }
         },
-        parser: ct.document,
+        parser: ct.comments,
         slice: chars.lowercaseB
       }
     ],
@@ -519,13 +519,13 @@ describe('integration:createTokenizer', () => {
         },
         options: {
           extensions: {
-            [ct.document]: {
+            [ct.comments]: {
               [codes.lowercaseD]: [eventsThenSucc, failEventsThenSucc]
             }
           },
-          initialize: { document: initialize(ct.document) }
+          initialize: { [ct.comments]: initialize(ct.comments) }
         },
-        parser: ct.document,
+        parser: ct.comments,
         slice: chars.lowercaseD
       }
     ]

@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../event-type.mts'
 
-describe('unit-d:types/EventType', () => {
+describe('unit-d:parse/types/EventType', () => {
   it('should extract "enter"', () => {
     expectTypeOf<TestSubject>().extract<'enter'>().not.toBeNever()
   })

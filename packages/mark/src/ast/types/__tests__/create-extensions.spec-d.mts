@@ -13,7 +13,7 @@ import type { List } from '@flex-development/mark/core'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../create-extensions.mts'
 
-describe('unit-d:types/CreateExtensions', () => {
+describe('unit-d:ast/types/CreateExtensions', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

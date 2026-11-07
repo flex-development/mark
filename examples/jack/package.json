@@ -1,0 +1,84 @@
+{
+  "name": "@flex-development/jack",
+  "description": "json parser",
+  "version": "0.0.0",
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/examples/jack",
+  "repository": {
+    "directory": "examples/jack",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "jack",
+    "diff-src-prefix": "jack",
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "jack@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    "./ast": {
+      "mark": "./src/ast/index.mts",
+      "default": "./dist/ast/index.mjs"
+    },
+    "./compile": {
+      "mark": "./src/compile/index.mts",
+      "default": "./dist/compile/index.mjs"
+    },
+    "./package.json": "./package.json",
+    "./parse": {
+      "mark": "./src/parse/index.mts",
+      "default": "./dist/parse/index.mjs"
+    },
+    "./symbol": {
+      "mark": "./src/symbol/index.mts",
+      "default": "./dist/symbol/index.mjs"
+    }
+  },
+  "imports": {
+    "#tests/*": "./__tests__/*.mts"
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark-factory-markers": "workspace:0.0.0",
+    "@flex-development/mark-factory-space": "workspace:0.0.0",
+    "@flex-development/mark-parser": "workspace:1.0.0-alpha.21",
+    "@flex-development/mark-util-character": "workspace:1.1.1",
+    "@flex-development/mark-util-chunked": "workspace:1.1.1",
+    "@flex-development/mark-util-combine-extensions": "workspace:1.0.0-alpha.1",
+    "@flex-development/mark-util-subtokenize": "workspace:0.0.0",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13",
+    "@flex-development/unist-util-builder": "2.0.0",
+    "@flex-development/unist-util-types": "1.6.1",
+    "@types/unist": "3.0.3",
+    "devlop": "1.1.0",
+    "micromark-core-commonmark": "2.0.4",
+    "micromark-util-symbol": "2.0.1",
+    "micromark-util-types": "2.0.3"
+  },
+  "sideEffects": false
+}

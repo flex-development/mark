@@ -24,7 +24,6 @@ describe('unit:lib/asciiControl', () => {
     ['carriageReturn'],
     ['carriageReturnLineFeed'],
     ['cr'],
-    ['crlf'],
     ['dc1'],
     ['dc2'],
     ['dc3'],
@@ -54,11 +53,7 @@ describe('unit:lib/asciiControl', () => {
     ['sub'],
     ['syn'],
     ['us'],
-    ['vcr'],
-    ['vht'],
     ['virtualSpace'],
-    ['vlf'],
-    ['vs'],
     ['vt']
   ])('should return `true` if `code` is control code (`codes.%s`)', key => {
     expect(testSubject(codes[key])).to.be.true

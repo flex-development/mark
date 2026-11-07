@@ -17,7 +17,7 @@ import space from './space.mts'
  * @param {unknown} code
  *  The character code to check
  * @return {code is Whitespace}
- *  `true` if `code` is whitespace code, `false` otherwise
+ *  Whether `code` is a whitespace code
  */
 function whitespace(this: void, code: unknown): code is Whitespace {
   switch (code) {

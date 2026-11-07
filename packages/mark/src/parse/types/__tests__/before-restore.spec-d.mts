@@ -7,7 +7,7 @@ import type { Context } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../before-restore.mts'
 
-describe('unit-d:types/BeforeRestore', () => {
+describe('unit-d:parse/types/BeforeRestore', () => {
   it('should match [this: Context]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })

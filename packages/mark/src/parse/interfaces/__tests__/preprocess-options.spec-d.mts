@@ -7,7 +7,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../preprocess-options.mts'
 
-describe('unit-d:interfaces/PreprocessOptions', () => {
+describe('unit-d:parse/interfaces/PreprocessOptions', () => {
   it('should match [allowEmptyChunk?: boolean | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('allowEmptyChunk')

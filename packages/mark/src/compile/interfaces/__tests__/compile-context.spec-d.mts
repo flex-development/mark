@@ -18,7 +18,7 @@ import type { Point, SliceSerialize } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-context.mts'
 
-describe('unit-d:interfaces/CompileContext', () => {
+describe('unit-d:compile/interfaces/CompileContext', () => {
   it('should match [buffer: Buffer]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('buffer').toEqualTypeOf<Buffer>()
   })

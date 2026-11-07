@@ -7,8 +7,8 @@
   },
   "extends": "../../tsconfig.build.json",
   "files": [
-    "typings/@flex-development/mark/parse/index.d.mts",
-    "typings/typescript/lib.es5.d.ts"
+    "../../typings/typescript/lib.es5.d.mts",
+    "typings/@flex-development/mark/parse/index.d.mts"
   ],
   "include": ["src/**/**.mts"],
   "references": [
@@ -28,13 +28,13 @@
       "path": "../mark-util-decode/tsconfig.build.json"
     },
     {
+      "path": "../mark-util-resolve-all/tsconfig.build.json"
+    },
+    {
       "path": "../mark-util-serialize/tsconfig.build.json"
     },
     {
       "path": "../mark-util-symbol/tsconfig.build.json"
-    },
-    {
-      "path": "../mark-util-resolve-all/tsconfig.build.json"
     }
   ]
 }

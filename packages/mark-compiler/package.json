@@ -33,8 +33,6 @@
     "access": "public",
     "diff-dst-prefix": "mark-compiler",
     "diff-src-prefix": "mark-compiler",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,

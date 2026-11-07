@@ -8,7 +8,7 @@ import type { Chunk } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../writable.mts'
 
-describe('unit-d:types/Writable', () => {
+describe('unit-d:parse/types/Writable', () => {
   it('should extract Chunk', () => {
     expectTypeOf<TestSubject>().extract<Chunk>().not.toBeNever()
   })

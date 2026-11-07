@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../container-state.mts'
 
-describe('unit-d:interfaces/ContainerState', () => {
+describe('unit-d:parse/interfaces/ContainerState', () => {
   it('should register custom fields', () => {
     expectTypeOf<keyof TestSubject>().toEqualTypeOf<never>()
   })

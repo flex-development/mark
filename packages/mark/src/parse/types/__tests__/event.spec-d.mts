@@ -11,7 +11,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../event.mts'
 
-describe('unit-d:types/Event', () => {
+describe('unit-d:parse/types/Event', () => {
   it('should match [0: EventType]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('0').toEqualTypeOf<EventType>()
   })

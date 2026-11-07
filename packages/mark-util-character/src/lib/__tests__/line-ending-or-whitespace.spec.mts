@@ -13,19 +13,17 @@ describe('unit:lib/lineEndingOrWhitespace', () => {
   })
 
   it.each<[keyof typeof codes]>([
+    ['carriageReturn'],
+    ['carriageReturnLineFeed'],
     ['cr'],
-    ['crlf'],
     ['horizontalTab'],
     ['ht'],
     ['lf'],
+    ['lineFeed'],
     ['ls'],
     ['ps'],
     ['space'],
-    ['vcr'],
-    ['vht'],
-    ['virtualSpace'],
-    ['vlf'],
-    ['vs']
+    ['virtualSpace']
   ])('should return `true` if `code` is eol or ws code (`codes.%s`)', k => {
     expect(testSubject(codes[k])).to.be.true
   })

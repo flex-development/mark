@@ -10,8 +10,7 @@ import type { codes } from '@flex-development/mark-util-symbol'
  *
  * @see {@linkcode codes.space}
  * @see {@linkcode codes.virtualSpace}
- * @see {@linkcode codes.vs}
  */
-type Space = typeof codes.space | typeof codes.virtualSpace | typeof codes.vs
+type Space = typeof codes.space | typeof codes.virtualSpace
 
 export type { Space as default }

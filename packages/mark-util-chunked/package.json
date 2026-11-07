@@ -32,8 +32,6 @@
     "access": "public",
     "diff-dst-prefix": "mark-util-chunked",
     "diff-src-prefix": "mark-util-chunked",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,

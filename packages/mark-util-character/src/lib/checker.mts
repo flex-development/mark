@@ -50,7 +50,7 @@ function checker(
     if (serialize) return this.test(serialize(code))
 
     // possible eos code, or virtual code.
-    if (typeof code !== 'number' || code <= codes.vs) return false
+    if (typeof code !== 'number' || code <= codes.virtualSpace) return false
 
     // invalid code point.
     if (Number.isNaN(code)) return false

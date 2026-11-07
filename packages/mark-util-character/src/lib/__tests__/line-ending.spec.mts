@@ -13,13 +13,13 @@ describe('unit:lib/lineEnding', () => {
   })
 
   it.each<[keyof typeof codes]>([
+    ['carriageReturn'],
+    ['carriageReturnLineFeed'],
     ['cr'],
-    ['crlf'],
     ['lf'],
+    ['lineFeed'],
     ['ls'],
-    ['ps'],
-    ['vcr'],
-    ['vlf']
+    ['ps']
   ])('should return `true` if `code` is line ending code (`codes.%s`)', key => {
     expect(testSubject(codes[key])).to.be.true
   })

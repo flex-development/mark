@@ -21,7 +21,7 @@ import type {
  * @param {Event[]} events
  *  The current list of events
  * @param {Context} context
- *  The tokenize context
+ *  The tokenization context
  * @return {Event[]}
  *  The list of changed events
  */

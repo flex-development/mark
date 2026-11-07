@@ -28,7 +28,7 @@ function asciiControl(this: void, code: Code): boolean {
   if (code === codes.del) return true // control character DEL.
 
   // special Space codes (which have negative values) and C0.
-  return code >= codes.vcr && code < codes.space
+  return code >= codes.carriageReturn && code < codes.space
 }
 
 export default asciiControl

@@ -6,7 +6,6 @@
     "customConditions": ["mark"],
     "declarationMap": false,
     "noEmitOnError": true,
-    "rewriteRelativeImportExtensions": true,
     "sourceMap": false,
     "target": "es2025"
   },
@@ -20,6 +19,12 @@
     },
     {
       "path": "packages/mark-parser/tsconfig.build.json"
+    },
+    {
+      "path": "examples/jack/tsconfig.build.json"
+    },
+    {
+      "path": "examples/splat/tsconfig.build.json"
     }
   ]
 }

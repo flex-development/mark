@@ -60,20 +60,20 @@ function error(
     if (onEnterError) return void onEnterError.call(this, left, right)
 
     reason += chars.space + chars.graveAccent + left.type + chars.graveAccent
-    reason += chars.space + chars.leftParen
+    reason += chars.space + chars.leftParenthesis
     reason += stringifyPosition([left.start, left.end])
-    reason += chars.rightParen + chars.semicolon + chars.space
-    reason += 'a different token' + chars.space + chars.leftParen
+    reason += chars.rightParenthesis + chars.semicolon + chars.space
+    reason += 'a different token' + chars.space + chars.leftParenthesis
     reason += chars.graveAccent + right.type + chars.graveAccent + chars.comma
-    reason += chars.space + openPosition + chars.rightParen + chars.space
+    reason += chars.space + openPosition + chars.rightParenthesis + chars.space
     reason += 'is open'
   } else {
     if (onEnterError) return void onEnterError.call(this, left, right)
 
     reason += chars.comma + chars.space + 'a token'
-    reason += chars.space + chars.leftParen
+    reason += chars.space + chars.leftParenthesis
     reason += chars.graveAccent + right.type + chars.graveAccent + chars.comma
-    reason += chars.space + openPosition + chars.rightParen + chars.space
+    reason += chars.space + openPosition + chars.rightParenthesis + chars.space
     reason += 'is still open'
   }
 

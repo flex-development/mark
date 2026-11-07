@@ -7,7 +7,7 @@ import type { Construct } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../partial-construct.mts'
 
-describe('unit-d:interfaces/PartialConstruct', () => {
+describe('unit-d:parse/interfaces/PartialConstruct', () => {
   it('should extend Construct', () => {
     expectTypeOf<TestSubject>().toExtend<Construct>()
   })

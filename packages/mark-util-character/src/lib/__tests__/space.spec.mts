@@ -14,8 +14,7 @@ describe('unit:lib/space', () => {
 
   it.each<[keyof typeof codes]>([
     ['space'],
-    ['virtualSpace'],
-    ['vs']
+    ['virtualSpace']
   ])('should return `true` if `code` is space code (`codes.%s`)', key => {
     expect(testSubject(codes[key])).to.be.true
   })

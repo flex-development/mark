@@ -7,7 +7,7 @@ import type { Place } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../position.mts'
 
-describe('unit-d:interfaces/Position', () => {
+describe('unit-d:parse/interfaces/Position', () => {
   it('should match [end: Place]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('end').toEqualTypeOf<Place>()
   })

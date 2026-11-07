@@ -6,7 +6,7 @@
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../encoding-map.mts'
 
-describe('unit-d:interfaces/EncodingMap', () => {
+describe('unit-d:parse/interfaces/EncodingMap', () => {
   it('should match [unicode: "unicode-1-1-utf-8"]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('unicode')

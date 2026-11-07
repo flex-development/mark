@@ -13,7 +13,7 @@ import type { NIL } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../full-normalized-extension.mts'
 
-describe('unit-d:types/FullNormalizedExtension', () => {
+describe('unit-d:parse/types/FullNormalizedExtension', () => {
   it('should extend `Extension`', () => {
     expectTypeOf<TestSubject>().toExtend<Extension>()
   })

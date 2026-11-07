@@ -7,7 +7,7 @@ import type { Primitive } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../if-never.mts'
 
-describe('unit-d:types/IfNever', () => {
+describe('unit-d:core/types/IfNever', () => {
   type F = false
   type T = true
 

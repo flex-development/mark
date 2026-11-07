@@ -31,8 +31,6 @@
     "access": "public",
     "diff-dst-prefix": "mark-util-resolve-all",
     "diff-src-prefix": "mark-util-resolve-all",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,

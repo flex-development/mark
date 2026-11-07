@@ -13,7 +13,7 @@ import { codes } from '@flex-development/mark-util-symbol'
  * @param {unknown} code
  *  The character code to check
  * @return {code is typeof codes.eos}
- *  `true` if `code` is {@linkcode codes.eos}, `false` otherwise
+ *  Whether `code` is {@linkcode codes.eos}
  */
 function eos(this: void, code: unknown): code is typeof codes.eos {
   return code === codes.eos

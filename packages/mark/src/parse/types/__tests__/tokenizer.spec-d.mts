@@ -7,7 +7,7 @@ import type { Context, Effects, State } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../tokenizer.mts'
 
-describe('unit-d:types/Tokenizer', () => {
+describe('unit-d:parse/types/Tokenizer', () => {
   it('should match [this: Context]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })

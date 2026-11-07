@@ -18,7 +18,7 @@ import type * as compile from '@flex-development/mark/compile'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../compile-context.mts'
 
-describe('unit-d:interfaces/CompileContext', () => {
+describe('unit-d:ast/interfaces/CompileContext', () => {
   it('should extend compile.CompileContext', () => {
     expectTypeOf<TestSubject>().toExtend<compile.CompileContext>()
   })

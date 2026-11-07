@@ -1,0 +1,61 @@
+{
+  "name": "@flex-development/mark-factory-markers",
+  "description": "mark factory to parse markers",
+  "version": "0.0.0",
+  "keywords": [
+    "mark",
+    "factory",
+    "tokenize"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/flex-development/mark/tree/main/packages/mark-factory-markers",
+  "repository": {
+    "directory": "packages/mark-factory-markers",
+    "type": "git",
+    "url": "git+https://github.com/flex-development/mark.git"
+  },
+  "bugs": "https://github.com/flex-development/mark/issues",
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/flex-development"
+    }
+  ],
+  "author": {
+    "name": "Lexus Drumgold",
+    "url": "https://github.com/unicornware"
+  },
+  "publishConfig": {
+    "access": "public",
+    "diff-dst-prefix": "mark-factory-markers",
+    "diff-src-prefix": "mark-factory-markers",
+    "node-options": null,
+    "pack-destination": ".",
+    "parseable": true,
+    "prefer-dedupe": true,
+    "provenance": true,
+    "tag-version-prefix": "mark-factory-markers@"
+  },
+  "type": "module",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "mark": "./src/index.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "dependencies": {
+    "@flex-development/mark": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark-util-character": "workspace:1.1.1",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13",
+    "devlop": "1.1.0"
+  },
+  "sideEffects": false
+}

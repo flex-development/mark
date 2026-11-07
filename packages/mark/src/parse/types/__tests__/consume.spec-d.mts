@@ -7,7 +7,7 @@ import type { Code } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../consume.mts'
 
-describe('unit-d:types/Consume', () => {
+describe('unit-d:parse/types/Consume', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

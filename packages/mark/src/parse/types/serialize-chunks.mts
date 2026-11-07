@@ -6,7 +6,7 @@
 import type { Chunk, SerializeOptions } from '@flex-development/mark/parse'
 
 /**
- * Get the string value of a slice of `chunks`.
+ * Stringify a slice of `chunks`.
  *
  * @see {@linkcode Chunk}
  * @see {@linkcode SerializeOptions}

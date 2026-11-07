@@ -16,10 +16,26 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
+    "rewriteRelativeImportExtensions": true,
     "sourceMap": true,
     "target": "esnext",
     "verbatimModuleSyntax": true
   },
-  "exclude": ["**/dist", "**/node_modules", "coverage"],
-  "extends": "@tsconfig/strictest/tsconfig"
+  "exclude": ["coverage/", "examples/", "node_modules/", "packages/"],
+  "extends": "@tsconfig/strictest/tsconfig",
+  "include": ["**/*.mjs", "**/*.mts", "**/.*.mjs", "**/.*.mts"],
+  "references": [
+    {
+      "path": "packages/mark-compiler/tsconfig.json"
+    },
+    {
+      "path": "packages/mark-parser/tsconfig.json"
+    },
+    {
+      "path": "examples/jack/tsconfig.json"
+    },
+    {
+      "path": "examples/splat/tsconfig.json"
+    }
+  ]
 }

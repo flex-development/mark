@@ -10,7 +10,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../parse-context.mts'
 
-describe('unit-d:interfaces/ParseContext', () => {
+describe('unit-d:parse/interfaces/ParseContext', () => {
   it('should extend Parsers', () => {
     expectTypeOf<TestSubject>().toExtend<Parsers>()
   })

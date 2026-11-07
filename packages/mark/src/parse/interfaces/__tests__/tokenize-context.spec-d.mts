@@ -19,10 +19,11 @@ import type {
   Write
 } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
+import type { Debugger } from 'debug'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../tokenize-context.mts'
 
-describe('unit-d:interfaces/TokenizeContext', () => {
+describe('unit-d:parse/interfaces/TokenizeContext', () => {
   it('should match [check?: boolean | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('check')
@@ -49,6 +50,12 @@ describe('unit-d:interfaces/TokenizeContext', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('currentConstruct')
       .toEqualTypeOf<Nilable<Construct>>()
+  })
+
+  it('should match [debug: Debugger]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('debug')
+      .toEqualTypeOf<Debugger>()
   })
 
   it('should match [defineSkip: DefineSkip]', () => {

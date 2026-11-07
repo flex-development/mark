@@ -7,7 +7,7 @@ import type { Position, SerializeOptions } from '@flex-development/mark/parse'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../slice-serialize.mts'
 
-describe('unit-d:types/SliceSerialize', () => {
+describe('unit-d:parse/types/SliceSerialize', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

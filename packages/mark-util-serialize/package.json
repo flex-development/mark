@@ -32,8 +32,6 @@
     "access": "public",
     "diff-dst-prefix": "mark-util-serialize",
     "diff-src-prefix": "mark-util-serialize",
-    "directory": "./",
-    "executableFiles": [],
     "node-options": null,
     "pack-destination": ".",
     "parseable": true,

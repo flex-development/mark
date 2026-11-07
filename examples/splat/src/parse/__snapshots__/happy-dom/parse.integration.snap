@@ -1,0 +1,9412 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`integration:parse > should handle malformed content ("01.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[fail",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[fail",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("02.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[:alnum",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[:alnum",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("03.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[:alpha:",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[:alpha:",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("04.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[.ch",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[.ch",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("05.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[.ch.",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[.ch.",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("06.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[=e",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[=e",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("07.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[=e=",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[[=e=",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("08.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[r-",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[r-",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should handle malformed content ("09.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[r-]",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "[r-]",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("01.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "foo",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "foo",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("02.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "1234567890",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "1234567890",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("03.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "README.md",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "README.md",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("04.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "hello",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "hello",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "whitespace",
+      "value": " ",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "whitespace",
+      "value": " ",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "data",
+      "value": "world",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "data",
+      "value": "world",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("05.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("06.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("07.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("08.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "***",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "***",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("09.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "****",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "****",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("10.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "flex-development-",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "flex-development-",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 17,
+        "_index": 0,
+        "column": 18,
+        "line": 1,
+        "offset": 17,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "start": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "type": "data",
+      "value": "-esm.mjs",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "type": "data",
+      "value": "-esm.mjs",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "start": {
+        "_bufferIndex": 18,
+        "_index": 0,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 27,
+        "line": 1,
+        "offset": 26,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("11.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "packages",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "packages",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "data",
+      "value": "package.json",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "data",
+      "value": "package.json",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 24,
+        "line": 1,
+        "offset": 23,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("12.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "data",
+      "value": ".mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "data",
+      "value": ".mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("13.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("14.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "data",
+      "value": ".spec.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "data",
+      "value": ".spec.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 19,
+        "line": 1,
+        "offset": 18,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("15.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("16.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("17.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "hello",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "hello",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "questionMark",
+      "value": "?",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "data",
+      "value": "world",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "data",
+      "value": "world",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("18.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 2,
+        "column": 2,
+        "line": 2,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 1,
+        "line": 2,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "lineEnding",
+      "value": "
+",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 1,
+        "line": 2,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "lineEnding",
+      "value": "
+",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 2,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 1,
+        "column": 1,
+        "line": 2,
+        "offset": 2,
+      },
+      "type": "data",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 2,
+        "line": 2,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 1,
+        "column": 1,
+        "line": 2,
+        "offset": 2,
+      },
+      "type": "data",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 2,
+        "column": 2,
+        "line": 2,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 2,
+        "column": 4,
+        "line": 2,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 2,
+        "column": 2,
+        "line": 2,
+        "offset": 3,
+      },
+      "type": "asterisk",
+      "value": "**",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 2,
+        "column": 4,
+        "line": 2,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 2,
+        "column": 2,
+        "line": 2,
+        "offset": 3,
+      },
+      "type": "asterisk",
+      "value": "**",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 2,
+        "column": 4,
+        "line": 2,
+        "offset": 5,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 2,
+        "column": 5,
+        "line": 2,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 2,
+        "column": 4,
+        "line": 2,
+        "offset": 5,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 2,
+        "column": 5,
+        "line": 2,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 2,
+        "column": 4,
+        "line": 2,
+        "offset": 5,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 2,
+        "column": 5,
+        "line": 2,
+        "offset": 6,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 5,
+        "line": 2,
+        "offset": 6,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 5,
+        "line": 2,
+        "offset": 6,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 2,
+        "column": 5,
+        "line": 2,
+        "offset": 6,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 2,
+        "column": 4,
+        "line": 2,
+        "offset": 5,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 4,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 4,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 3,
+        "column": 14,
+        "line": 2,
+        "offset": 15,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("19.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "data",
+      "value": "pages",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "data",
+      "value": "pages",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 12,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 12,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "escapeValue",
+      "value": "[",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 12,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 11,
+        "_index": 0,
+        "column": 12,
+        "line": 1,
+        "offset": 11,
+      },
+      "type": "escapeValue",
+      "value": "[",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 12,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": 12,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "data",
+      "value": "slug].mdx",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "data",
+      "value": "slug].mdx",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": 12,
+        "_index": 0,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 22,
+        "line": 1,
+        "offset": 21,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("20.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "*",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "*",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("21.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("22.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "escapeValue",
+      "value": "*",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "escapeValue",
+      "value": "*",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("23.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("24.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "escapeValue",
+      "value": "\\",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "escapeMarker",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "escapeValue",
+      "value": "*",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "escapeValue",
+      "value": "*",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "escape",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("25.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "data",
+      "value": "src",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "*",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "data",
+      "value": ".",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "data",
+      "value": ".",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 5,
+        "_index": 0,
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "bracketExpression",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "data",
+      "value": "cm",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "data",
+      "value": "cm",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 9,
+        "_index": 0,
+        "column": 10,
+        "line": 1,
+        "offset": 9,
+      },
+      "start": {
+        "_bufferIndex": 8,
+        "_index": 0,
+        "column": 9,
+        "line": 1,
+        "offset": 8,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "bracketExpression",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "data",
+      "value": "ts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "data",
+      "value": "ts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 10,
+        "_index": 0,
+        "column": 11,
+        "line": 1,
+        "offset": 10,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("26.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("27.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": 2,
+        "_index": 0,
+        "column": 3,
+        "line": 1,
+        "offset": 2,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 13,
+        "line": 1,
+        "offset": 12,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("28.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("29.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "globstar": true,
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "asterisk",
+      "value": "**",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": 3,
+        "_index": 0,
+        "column": 4,
+        "line": 1,
+        "offset": 3,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 14,
+        "line": 1,
+        "offset": 13,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;
+
+exports[`integration:parse > should parse input pattern ("30.txt") 1`] = `
+[
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+      "type": "patternNegation",
+      "value": "!",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "foo",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "data",
+      "value": "foo",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "start": {
+        "_bufferIndex": 1,
+        "_index": 0,
+        "column": 2,
+        "line": 1,
+        "offset": 1,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "**",
+      "wildcard": true,
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "start": {
+        "_bufferIndex": 4,
+        "_index": 0,
+        "column": 5,
+        "line": 1,
+        "offset": 4,
+      },
+      "type": "asterisk",
+      "value": "**",
+      "wildcard": true,
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "separator",
+      "value": "/",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 0,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "data",
+      "value": "index.mts",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 7,
+        "_index": 0,
+        "column": 8,
+        "line": 1,
+        "offset": 7,
+      },
+      "type": "literal",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": 6,
+        "_index": 0,
+        "column": 7,
+        "line": 1,
+        "offset": 6,
+      },
+      "type": "segment",
+    },
+  ],
+  [
+    "enter",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "type": "eoc",
+    },
+  ],
+  [
+    "exit",
+    {
+      "end": {
+        "_bufferIndex": -1,
+        "_index": 2,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "start": {
+        "_bufferIndex": -1,
+        "_index": 1,
+        "column": 17,
+        "line": 1,
+        "offset": 16,
+      },
+      "type": "eoc",
+    },
+  ],
+]
+`;

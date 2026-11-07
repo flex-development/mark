@@ -7,7 +7,7 @@ import type { Context } from '@flex-development/mark/compile'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../buffer.mts'
 
-describe('unit-d:types/Buffer', () => {
+describe('unit-d:compile/types/Buffer', () => {
   it('should match [this: Context]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<Context>()
   })

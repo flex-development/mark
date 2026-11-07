@@ -14,7 +14,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../config.mts'
 
-describe('unit-d:interfaces/Config', () => {
+describe('unit-d:compile/interfaces/Config', () => {
   it('should extend Extension', () => {
     expectTypeOf<TestSubject>().toExtend<Extension>()
   })

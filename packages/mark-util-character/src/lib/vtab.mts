@@ -13,7 +13,7 @@ import { codes } from '@flex-development/mark-util-symbol'
  * @param {unknown} code
  *  The character code to check
  * @return {code is typeof codes.vt}
- *  `true` if `code` is {@linkcode codes.vt}, `false` otherwise
+ *  Whether `code` is {@linkcode codes.vt}
  */
 function vtab(this: void, code: unknown): code is typeof codes.vt {
   return code === codes.vt

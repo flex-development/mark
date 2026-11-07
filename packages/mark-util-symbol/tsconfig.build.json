@@ -6,5 +6,7 @@
     "rootDir": "src"
   },
   "extends": "../../tsconfig.build.json",
-  "include": ["src/**/**.mts"]
+  "files": [],
+  "include": ["src/**/**.mts"],
+  "references": []
 }

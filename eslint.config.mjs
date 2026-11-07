@@ -19,8 +19,43 @@ const config = [
     files: ['**/*.+(cjs|cts|js|jsx|mjs|mts|ts|tsx)'],
     languageOptions: {
       parserOptions: {
-        project: pathe.resolve('tsconfig.eslint.json')
+        project: false,
+        projectService: true,
+        tsconfigRootDir: pathe.cwd()
       }
+    }
+  },
+  {
+    files: ['dprint/shfmt.mts'],
+    rules: {
+      '@typescript-eslint/no-misused-promises': 0
+    }
+  },
+  {
+    files: [
+      'examples/**/src/**/{constructs,initialize}/**/*.mts',
+      'packages/**/{__fixtures__,src}/{constructs,initialize}/**/*.mts',
+      'packages/mark-parser/src/constructs/initialize.mts',
+      'packages/mark-parser/src/create-tokenizer.mts'
+    ],
+    rules: {
+      'unicorn/no-this-assignment': 0
+    }
+  },
+  {
+    files: [
+      'eslint.config.mjs',
+      'examples/jack/src/parse/initialize/comment.mts',
+      'packages/mark-parser/src/create-tokenizer.mts'
+    ],
+    rules: {
+      'node/no-unsupported-features/node-builtins': [
+        2,
+        {
+          allowExperimental: true,
+          version: '>=17.0.0'
+        }
+      ]
     }
   },
   {
@@ -39,31 +74,9 @@ const config = [
     }
   },
   {
-    files: [
-      'packages/mark-parser/__fixtures__/constructs/**/*.mts',
-      'packages/mark-parser/src/constructs/initialize.mts',
-      'packages/mark-parser/src/create-tokenizer.mts'
-    ],
-    rules: {
-      'unicorn/no-this-assignment': 0
-    }
-  },
-  {
     files: ['packages/mark-parser/__fixtures__/markdown/*.md'],
     rules: {
       'mdx/remark': 0
-    }
-  },
-  {
-    files: ['packages/mark-parser/src/create-tokenizer.mts'],
-    rules: {
-      'node/no-unsupported-features/node-builtins': [
-        2,
-        {
-          allowExperimental: true,
-          version: '>=17.0.0'
-        }
-      ]
     }
   },
   {

@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
-    "rootDir": "."
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "outDir": "dist"
   },
-  "extends": "../../tsconfig.json"
+  "exclude": ["dist/", "node_modules/"],
+  "extends": "../../tsconfig.json",
+  "files": [],
+  "include": ["**/*.mts"],
+  "references": []
 }

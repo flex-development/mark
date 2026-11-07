@@ -7,7 +7,7 @@ import type { Literal, Node, Parent } from 'unist'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../root.mts'
 
-describe('unit-d:interfaces/Root', () => {
+describe('unit-d:ast/interfaces/Root', () => {
   it('should extend Parent', () => {
     expectTypeOf<TestSubject>().toExtend<Parent>()
   })

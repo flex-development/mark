@@ -8,7 +8,7 @@ import type { Nilable } from '@flex-development/tutils'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../parse-options.mts'
 
-describe('unit-d:interfaces/ParseOptions', () => {
+describe('unit-d:parse/interfaces/ParseOptions', () => {
   it('should match [extensions?: Extensions | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('extensions')

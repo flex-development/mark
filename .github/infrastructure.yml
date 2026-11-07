@@ -24,6 +24,8 @@ branches:
           - context: add-to-project
           - context: artifacts (@flex-development/mark)
           - context: artifacts (@flex-development/mark-compiler)
+          - context: artifacts (@flex-development/mark-factory-markers)
+          - context: artifacts (@flex-development/mark-factory-space)
           - context: artifacts (@flex-development/mark-parser)
           - context: artifacts (@flex-development/mark-util-character)
           - context: artifacts (@flex-development/mark-util-chunked)
@@ -31,6 +33,7 @@ branches:
           - context: artifacts (@flex-development/mark-util-decode)
           - context: artifacts (@flex-development/mark-util-resolve-all)
           - context: artifacts (@flex-development/mark-util-serialize)
+          - context: artifacts (@flex-development/mark-util-subtokenize)
           - context: artifacts (@flex-development/mark-util-symbol)
           - context: auto-merge
           - context: auto-review
@@ -38,6 +41,8 @@ branches:
           - context: codecov/patch
           - context: codecov/project
           - context: codecov/project/mark-compiler
+          - context: codecov/project/mark-factory-markers
+          - context: codecov/project/mark-factory-space
           - context: codecov/project/mark-parser
           - context: codecov/project/mark-util-character
           - context: codecov/project/mark-util-chunked
@@ -45,6 +50,7 @@ branches:
           - context: codecov/project/mark-util-decode
           - context: codecov/project/mark-util-resolve-all
           - context: codecov/project/mark-util-serialize
+          - context: codecov/project/mark-util-subtokenize
           - context: codecov/project/mark-util-symbol
           - context: commitlint
           - context: dedupe
@@ -108,6 +114,12 @@ labels:
   - name: package:mark-compiler
     description: '@flex-development/mark-compiler'
     color: c6cde1
+  - name: package:mark-factory-markers
+    description: '@flex-development/mark-factory-markers'
+    color: c6cde1
+  - name: package:mark-factory-space
+    description: '@flex-development/mark-factory-space'
+    color: c6cde1
   - name: package:mark-parser
     description: '@flex-development/mark-parser'
     color: c6cde1
@@ -128,6 +140,9 @@ labels:
     color: c6cde1
   - name: package:mark-util-serialize
     description: '@flex-development/mark-util-serialize'
+    color: c6cde1
+  - name: package:mark-util-subtokenize
+    description: '@flex-development/mark-util-subtokenize'
     color: c6cde1
   - name: package:mark-util-symbol
     description: '@flex-development/mark-util-symbol'

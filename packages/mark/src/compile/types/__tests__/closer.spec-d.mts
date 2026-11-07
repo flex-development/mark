@@ -7,7 +7,7 @@ import type { Handle } from '@flex-development/mark/compile'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../closer.mts'
 
-describe('unit-d:types/Closer', () => {
+describe('unit-d:compile/types/Closer', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

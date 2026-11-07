@@ -3,6 +3,7 @@
  * @module mark/parse/interfaces
  */
 
+export type { Debugger } from 'debug'
 export type {
   default as ConstructPositionMap
 } from './construct-position-map.mts'
@@ -14,11 +15,16 @@ export type { default as Construct } from './construct.mts'
 export type { default as ContainerState } from './container-state.mts'
 export type { default as ContentTypeMap } from './content-type-map.mts'
 export type { default as ContextMap } from './context-map.mts'
+export type {
+  default as ContinuableConstruct
+} from './continuable-construct.mts'
 export type { default as Effects } from './effects.mts'
 export type { default as EncodingMap } from './encoding-map.mts'
 export type { default as Extension } from './extension.mts'
 export type { default as Hooks } from './hooks.mts'
 export type { default as InitialConstruct } from './initial-construct.mts'
+export type { default as InitialConstructs } from './initial-constructs.mts'
+export type { default as MarkerInfo } from './marker-info.mts'
 export type { default as NamedConstruct } from './named-construct.mts'
 export type { default as ParseContext } from './parse-context.mts'
 export type { default as ParseOptions } from './parse-options.mts'

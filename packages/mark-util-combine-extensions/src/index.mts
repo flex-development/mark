@@ -4,9 +4,10 @@
  */
 
 import { splice } from '@flex-development/mark-util-chunked'
-import type { List } from '@flex-development/mark/core'
 import type {
+  CreateExtensions,
   Extension,
+  Extensions,
   NormalizedExtension
 } from '@flex-development/mark/parse'
 import { ok } from 'devlop'
@@ -18,61 +19,61 @@ export { combineExtensions, combineExtensions as default }
 /**
  * Combine multiple extensions into one.
  *
- * @see {@linkcode AnyExtension}
- * @see {@linkcode AnyNormalizedExtension}
- * @see {@linkcode List}
+ * @see {@linkcode CreateExtensions}
+ * @see {@linkcode Extensions}
+ * @see {@linkcode NormalizedExtension}
  *
- * @template {AnyNormalizedExtension} T
+ * @template {NormalizedExtension} T
  *  The combined extension
  *
- * @param {AnyExtension | List<AnyExtension> | null | undefined} extensions
+ * @param {CreateExtensions | Extensions | null | undefined} extensions
  *  The extension to copy or the list of extensions to combine
  * @return {T}
  *  The combined extension
  */
-function combineExtensions<T extends AnyNormalizedExtension>(
-  extensions: AnyExtension | List<AnyExtension> | null | undefined
+function combineExtensions<T extends NormalizedExtension>(
+  extensions: CreateExtensions | Extensions | null | undefined
 ): T
 
 /**
  * Combine multiple extensions into one.
  *
- * @see {@linkcode AnyExtension}
- * @see {@linkcode AnyNormalizedExtension}
- * @see {@linkcode List}
+ * @see {@linkcode CreateExtensions}
+ * @see {@linkcode Extensions}
+ * @see {@linkcode NormalizedExtension}
  *
- * @template {AnyNormalizedExtension} T
+ * @template {NormalizedExtension} T
  *  The combined extension
  *
- * @param {(AnyExtension | List<AnyExtension> | null | undefined)[]} extensions
+ * @param {(CreateExtensions | Extensions | null | undefined)[]} extensions
  *  The extensions to combine
  * @return {T}
  *  The combined extension
  */
-function combineExtensions<T extends AnyNormalizedExtension>(
-  ...extensions: (AnyExtension | List<AnyExtension> | null | undefined)[]
+function combineExtensions<T extends NormalizedExtension>(
+  ...extensions: (CreateExtensions | Extensions | null | undefined)[]
 ): T
 
 /**
  * Combine multiple extensions into one.
  *
- * @see {@linkcode AnyExtension}
- * @see {@linkcode AnyNormalizedExtension}
- * @see {@linkcode List}
+ * @see {@linkcode CreateExtensions}
+ * @see {@linkcode Extensions}
+ * @see {@linkcode NormalizedExtension}
  *
- * @template {AnyNormalizedExtension} T
+ * @template {NormalizedExtension} T
  *  The combined extension
  *
- * @param {AnyExtension | List<AnyExtension> | null | undefined} extensions
+ * @param {CreateExtensions | Extensions | null | undefined} extensions
  *  The extension or list of extensions
- * @param {(AnyExtension | List<AnyExtension> | null | undefined)[]} sources
+ * @param {(CreateExtensions | Extensions | null | undefined)[]} sources
  *  The extensions to combine
  * @return {T}
  *  The combined extension
  */
-function combineExtensions<T extends AnyNormalizedExtension>(
-  extensions: AnyExtension | List<AnyExtension> | null | undefined,
-  ...sources: (AnyExtension | List<AnyExtension> | null | undefined)[]
+function combineExtensions<T extends NormalizedExtension>(
+  extensions: CreateExtensions | Extensions | null | undefined,
+  ...sources: (CreateExtensions | Extensions | null | undefined)[]
 ): T {
   /**
    * The combined extension.
@@ -89,7 +90,10 @@ function combineExtensions<T extends AnyNormalizedExtension>(
   let index: number = -1
 
   // normalize the list of syntax extensions.
-  extensions = [extensions, ...sources].filter(s => !!s).flatMap(list)
+  extensions = [extensions, ...sources].filter(s => !!s).flatMap(extension => {
+    if (typeof extension === 'function') extension = extension()
+    return list(extension)
+  })
 
   // merge extensions into `all`.
   while (++index < extensions.length) {
@@ -156,16 +160,6 @@ function combineExtensions<T extends AnyNormalizedExtension>(
 
   return all as T
 }
-
-/**
- * A supported extension.
- */
-type AnyExtension = Pick<Extension, 'disable'>
-
-/**
- * A supported extension that has been normalized.
- */
-type AnyNormalizedExtension = Pick<NormalizedExtension, 'disable'>
 
 /**
  * Merge `list` into `existing` (both lists of constructs, partial constructs,

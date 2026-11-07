@@ -12,7 +12,7 @@ import type {
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../preprocessor.mts'
 
-describe('unit-d:interfaces/Preprocessor', () => {
+describe('unit-d:parse/interfaces/Preprocessor', () => {
   it('should match [this: void]', () => {
     expectTypeOf<TestSubject>().thisParameter.toEqualTypeOf<void>()
   })

@@ -5,7 +5,7 @@
  */
 
 import Notifier from '#tests/reporters/notifier'
-import listWorkspaces, { type Workspace } from '#utils/list-workspaces'
+import { listExamples, listPackages, type Workspace } from '#utils/workspaces'
 import {
   lookupPackageScope,
   resolveModule,
@@ -48,9 +48,9 @@ function config(this: void, env: ConfigEnv): ViteUserConfig {
   /**
    * The list of workspaces.
    *
-   * @const {ReadonlyArray<Workspace>} workspaces
+   * @const {ReadonlyArray<Workspace>} projects
    */
-  const workspaces: readonly Workspace[] = listWorkspaces()
+  const projects: readonly Workspace[] = [...listPackages(), ...listExamples()]
 
   return {
     plugins: [
@@ -148,11 +148,18 @@ function config(this: void, env: ConfigEnv): ViteUserConfig {
         junit: pathe.join('__tests__', 'reports', env.mode + '.junit.xml')
       },
       passWithNoTests: true,
-      projects: workspaces.flatMap((
+      projects: projects.flatMap((
         workspace: Workspace,
         groupOrder: number
       ): TestProjectInlineConfiguration[] => {
         const { customConditions } = tsconfig.compilerOptions
+
+        /**
+         * The path to the workspace root.
+         *
+         * @const {string} root
+         */
+        const root: string = pathe.join(workspace.parentPath, workspace.name)
 
         /**
          * The list of environments to test in.
@@ -165,6 +172,38 @@ function config(this: void, env: ConfigEnv): ViteUserConfig {
           'happy-dom'
         ]
 
+        if (env.mode === 'typecheck') {
+          return [
+            {
+              extends: true as const,
+              mode: env.mode,
+              resolve: {
+                conditions: customConditions,
+                preserveSymlinks: true,
+                tsconfigPaths: true
+              },
+              root,
+              ssr: { resolve: { conditions: customConditions } },
+              test: {
+                environmentOptions: {},
+                name: { color: 'magenta', label: workspace.name },
+                sequence: { groupOrder },
+                setupFiles: [],
+                typecheck: {
+                  allowJs: false,
+                  build: true,
+                  checker: 'tsc',
+                  enabled: true,
+                  ignoreSourceErrors: false,
+                  include: ['**/__tests__/*.spec-d.mts'],
+                  only: true,
+                  tsconfig: pathe.resolve(root, 'tsconfig.json')
+                }
+              }
+            }
+          ]
+        }
+
         return environments.map(environment => {
           /**
            * The list of conditions to apply.
@@ -174,31 +213,35 @@ function config(this: void, env: ConfigEnv): ViteUserConfig {
           const conditions: string[] = Object.assign([], customConditions)
 
           /**
-           * The path to the workspace root.
-           *
-           * @const {string} root
-           */
-          const root: string = pathe.join(workspace.parentPath, workspace.name)
-
-          /**
            * The color of the project name label.
            *
            * @var {LabelColor} color
            */
           let color: LabelColor
 
+          /**
+           * The project name label text.
+           *
+           * @var {string} label
+           */
+          let label: string = workspace.name + ':' + environment
+
           switch (environment) {
             case 'edge-runtime':
               color = 'magenta'
               break
             case 'happy-dom':
-              // @ts-expect-error blueBright is a valid color (2322).
+              // @ts-expect-error(2322): blueBright is a valid color.
               color = env.mode === 'typecheck' ? 'blueBright' : 'blue'
               conditions.unshift('browser')
               break
             default:
               color = 'blackBright' as LabelColor
               break
+          }
+
+          if (workspace.parentPath === 'examples') {
+            label = pathe.join(workspace.parentPath, label)
           }
 
           return {
@@ -219,11 +262,12 @@ function config(this: void, env: ConfigEnv): ViteUserConfig {
               env: { VITEST_ENVIRONMENT: environment },
               environment,
               environmentOptions: {},
-              name: { color, label: workspace.name + ':' + environment },
+              name: { color, label },
               sequence: { groupOrder },
               setupFiles: [],
               typecheck: {
                 allowJs: false,
+                build: true,
                 checker: 'tsc',
                 enabled: env.mode === 'typecheck',
                 ignoreSourceErrors: false,

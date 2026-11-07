@@ -4,13 +4,12 @@
  */
 
 import type {
-  CreateExtensions,
   FinalizeContext,
   Initialize
 } from '@flex-development/mark-parser'
-import type { List } from '@flex-development/mark/core'
 import type {
   CodeCheck,
+  CreateExtensions,
   CreateToken,
   Extensions,
   Point
@@ -24,12 +23,6 @@ describe('unit-d:interfaces/Options', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('debug')
       .toEqualTypeOf<Nilable<string>>()
-  })
-
-  it('should match [disable?: List<string> | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('disable')
-      .toEqualTypeOf<Nilable<List<string>>>()
   })
 
   it('should match [eol?: CodeCheck | null | undefined]', () => {
