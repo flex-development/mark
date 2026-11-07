@@ -83,7 +83,7 @@ jobs:
       - id: command
         name: Get publish command
         run: |
-          echo "result=npm publish --provenance ${{ steps.dist.outputs.flag }} ${{ steps.artifact.outputs.artifact }}" >>$GITHUB_OUTPUT
+          echo "result=npm publish --provenance ${{ steps.dist.outputs.flag }} ${{ steps.artifact.outputs.artifact }} --allow-remote=all" >>$GITHUB_OUTPUT
   gpr:
     needs: preflight
     permissions:
