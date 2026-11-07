@@ -1,3 +1,9 @@
+## [mark-util-chunked@2.0.0-alpha.2](https://github.com/flex-development/mark/compare/mark-util-chunked@2.0.0-alpha.1...mark-util-chunked@2.0.0-alpha.2) (2026-11-07)
+
+### :robot: Continuous Integration
+
+- [[`8ed9078`](https://github.com/flex-development/mark/commit/8ed907858b7ba75c4ec2a06536ae6dbafae07e6b)] **workflows:** [`publish`] fix remove URL dependency resolution
+
 ## [mark-util-chunked@2.0.0-alpha.1](https://github.com/flex-development/mark/compare/mark-util-chunked@1.1.1...mark-util-chunked@2.0.0-alpha.1) (2026-11-07)
 
 ### ⚠ BREAKING CHANGES
@@ -197,5 +203,6 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 
 

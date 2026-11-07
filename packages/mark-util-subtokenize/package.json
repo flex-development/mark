@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-util-subtokenize",
   "description": "mark utility to tokenize subtokens",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "keywords": [
     "mark",
     "subtoken",
@@ -55,10 +55,10 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.14",
-    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.1",
-    "@flex-development/mark-util-chunked": "workspace:2.0.0-alpha.1",
-    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.14",
+    "@flex-development/mark": "workspace:1.0.0-alpha.15",
+    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.2",
+    "@flex-development/mark-util-chunked": "workspace:2.0.0-alpha.2",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.15",
     "devlop": "1.1.0"
   },
   "sideEffects": false

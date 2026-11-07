@@ -1,3 +1,9 @@
+## [mark-compiler@1.0.0-alpha.13](https://github.com/flex-development/mark/compare/mark-compiler@1.0.0-alpha.12...mark-compiler@1.0.0-alpha.13) (2026-11-07)
+
+### :robot: Continuous Integration
+
+- [[`8ed9078`](https://github.com/flex-development/mark/commit/8ed907858b7ba75c4ec2a06536ae6dbafae07e6b)] **workflows:** [`publish`] fix remove URL dependency resolution
+
 ## [mark-compiler@1.0.0-alpha.12](https://github.com/flex-development/mark/compare/mark-compiler@1.0.0-alpha.11...mark-compiler@1.0.0-alpha.12) (2026-11-07)
 
 ### ⚠ BREAKING CHANGES
@@ -350,6 +356,7 @@
 ### :house_with_garden: Housekeeping
 
 - [[`1dbbbdb`](https://github.com/flex-development/mark-compiler/commit/1dbbbdb4197bbf31530d57e3a8c67d9958deb543)] initial commit
+
 
 
 

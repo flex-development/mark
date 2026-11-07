@@ -1,3 +1,9 @@
+## [mark-parser@1.0.0-alpha.23](https://github.com/flex-development/mark/compare/mark-parser@1.0.0-alpha.22...mark-parser@1.0.0-alpha.23) (2026-11-07)
+
+### :robot: Continuous Integration
+
+- [[`8ed9078`](https://github.com/flex-development/mark/commit/8ed907858b7ba75c4ec2a06536ae6dbafae07e6b)] **workflows:** [`publish`] fix remove URL dependency resolution
+
 ## [mark-parser@1.0.0-alpha.22](https://github.com/flex-development/mark/compare/mark-parser@1.0.0-alpha.21...mark-parser@1.0.0-alpha.22) (2026-11-07)
 
 ### ⚠ BREAKING CHANGES
@@ -1111,6 +1117,7 @@
 
 - [[`85f91f2`](https://github.com/flex-development/mark-tokenizer/commit/85f91f22fbf2dcb23c07fae8eaf5b552841d15d5)] api
 - [[`3d662fc`](https://github.com/flex-development/mark-tokenizer/commit/3d662fc675a0a92679b9fd040acd929b1a7f610a)] api
+
 
 
 
