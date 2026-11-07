@@ -1,3 +1,14 @@
+## [mark-util-character@2.0.0-alpha.1](https://github.com/flex-development/mark/compare/mark-util-character@1.1.1...mark-util-character@2.0.0-alpha.1) (2026-11-07)
+
+### ⚠ BREAKING CHANGES
+
+- `Extension#postprocess`, `Extension#preprocess`
+
+### :sparkles: Features
+
+- [[`eabd4cc`](https://github.com/flex-development/mark/commit/eabd4cc3963144118bf228378707747df3b12e68)] `factory-markers`, `factory-space`, `util-subtokenize`
+- [[`968207b`](https://github.com/flex-development/mark/commit/968207b12e83f73f52cd7dd04778211300c1a94e)] `Extension#postprocess`, `Extension#preprocess`
+
 ## mark-util-character@1.1.1 (2026-10-28)
 
 ### ⚠ BREAKING CHANGES
@@ -186,4 +197,5 @@
 - [[`a0a5161`](https://github.com/flex-development/mark/commit/a0a5161ad240e24930c68a91b0e721c61d1f5f2a)] **parse:** forbid token type `null`
 - [[`cde4845`](https://github.com/flex-development/mark/commit/cde4845c3550ee23279e61ff594962110c61713e)] **parse:** improvements
 - [[`d742e57`](https://github.com/flex-development/mark/commit/d742e57367980a39ee3bb87583cb1f80b5eacf0f)] **parse:** move `Numeric` to `core`
+
 

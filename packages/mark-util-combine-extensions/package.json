@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-util-combine-extensions",
   "description": "mark utility to combine extensions",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "keywords": [
     "mark",
     "extension",
@@ -52,8 +52,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.13",
-    "@flex-development/mark-util-chunked": "workspace:1.1.1",
+    "@flex-development/mark": "workspace:1.0.0-alpha.14",
+    "@flex-development/mark-util-chunked": "workspace:2.0.0-alpha.1",
     "devlop": "1.1.0"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-factory-markers",
   "description": "mark factory to parse markers",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.1",
   "keywords": [
     "mark",
     "factory",
@@ -52,9 +52,9 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.13",
-    "@flex-development/mark-util-character": "workspace:1.1.1",
-    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark": "workspace:1.0.0-alpha.14",
+    "@flex-development/mark-util-character": "workspace:2.0.0-alpha.1",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.14",
     "devlop": "1.1.0"
   },
   "sideEffects": false
