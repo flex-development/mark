@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-util-serialize",
   "description": "mark serialization utilities",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "keywords": [
     "fsm",
     "lexer",
@@ -55,8 +55,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
-    "@flex-development/mark": "workspace:1.0.0-alpha.13",
-    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark": "workspace:1.0.0-alpha.14",
+    "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.14",
     "devlop": "1.1.0"
   },
   "sideEffects": false

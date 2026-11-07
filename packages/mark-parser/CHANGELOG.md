@@ -1,3 +1,14 @@
+## [mark-parser@1.0.0-alpha.22](https://github.com/flex-development/mark/compare/mark-parser@1.0.0-alpha.21...mark-parser@1.0.0-alpha.22) (2026-11-07)
+
+### ⚠ BREAKING CHANGES
+
+- `Extension#postprocess`, `Extension#preprocess`
+
+### :sparkles: Features
+
+- [[`eabd4cc`](https://github.com/flex-development/mark/commit/eabd4cc3963144118bf228378707747df3b12e68)] `factory-markers`, `factory-space`, `util-subtokenize`
+- [[`968207b`](https://github.com/flex-development/mark/commit/968207b12e83f73f52cd7dd04778211300c1a94e)] `Extension#postprocess`, `Extension#preprocess`
+
 ## mark-parser@1.0.0-alpha.21 (2026-10-28)
 
 ### ⚠ BREAKING CHANGES
@@ -1100,6 +1111,7 @@
 
 - [[`85f91f2`](https://github.com/flex-development/mark-tokenizer/commit/85f91f22fbf2dcb23c07fae8eaf5b552841d15d5)] api
 - [[`3d662fc`](https://github.com/flex-development/mark-tokenizer/commit/3d662fc675a0a92679b9fd040acd929b1a7f610a)] api
+
 
 
 

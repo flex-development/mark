@@ -1,3 +1,14 @@
+## [mark-compiler@1.0.0-alpha.12](https://github.com/flex-development/mark/compare/mark-compiler@1.0.0-alpha.11...mark-compiler@1.0.0-alpha.12) (2026-11-07)
+
+### ⚠ BREAKING CHANGES
+
+- `Extension#postprocess`, `Extension#preprocess`
+
+### :sparkles: Features
+
+- [[`eabd4cc`](https://github.com/flex-development/mark/commit/eabd4cc3963144118bf228378707747df3b12e68)] `factory-markers`, `factory-space`, `util-subtokenize`
+- [[`968207b`](https://github.com/flex-development/mark/commit/968207b12e83f73f52cd7dd04778211300c1a94e)] `Extension#postprocess`, `Extension#preprocess`
+
 ## mark-compiler@1.0.0-alpha.11 (2026-10-28)
 
 ### ⚠ BREAKING CHANGES
@@ -339,6 +350,7 @@
 ### :house_with_garden: Housekeeping
 
 - [[`1dbbbdb`](https://github.com/flex-development/mark-compiler/commit/1dbbbdb4197bbf31530d57e3a8c67d9958deb543)] initial commit
+
 
 
 

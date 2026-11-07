@@ -1,3 +1,14 @@
+## [mark-util-symbol@1.0.0-alpha.14](https://github.com/flex-development/mark/compare/mark-util-symbol@1.0.0-alpha.13...mark-util-symbol@1.0.0-alpha.14) (2026-11-07)
+
+### ⚠ BREAKING CHANGES
+
+- `Extension#postprocess`, `Extension#preprocess`
+
+### :sparkles: Features
+
+- [[`eabd4cc`](https://github.com/flex-development/mark/commit/eabd4cc3963144118bf228378707747df3b12e68)] `factory-markers`, `factory-space`, `util-subtokenize`
+- [[`968207b`](https://github.com/flex-development/mark/commit/968207b12e83f73f52cd7dd04778211300c1a94e)] `Extension#postprocess`, `Extension#preprocess`
+
 ## mark-util-symbol@1.0.0-alpha.13 (2026-10-28)
 
 ### ⚠ BREAKING CHANGES
@@ -282,6 +293,7 @@
 ### :mechanical_arm: Refactors
 
 - [[`4e6bfa1`](https://github.com/flex-development/mark-util-symbol/commit/4e6bfa1eba5ca91f7e41fbe351ea84b40962cf39)] project rename
+
 
 
 
