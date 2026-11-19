@@ -98,12 +98,12 @@ function tokenizeEquivalenceClass(
          *
          * @this {void}
          *
-         * @param {Code} code
-         *  The code to check
+         * @param {unknown} code
+         *  The character code to check
          * @return {boolean}
          *  Whether `code` can represent a class value
          */
-        code(this: void, code: Code): boolean {
+        code(this: void, code: unknown): boolean {
           return !eos(code)
         },
         type: tt.equivalenceClassValue

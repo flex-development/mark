@@ -45,7 +45,6 @@ process.stdin.pipe(new Transform({
       indent_style = 'space',
       keep_comments = true,
       keep_padding = false,
-      shell_variant = 0,
       space_redirects = false,
       switch_case_indent = true,
       tab_width = 2
@@ -67,8 +66,7 @@ process.stdin.pipe(new Transform({
       spaceRedirects: space_redirects,
       switchCaseIndent: switch_case_indent,
       tabWidth: tab_width === 'unset' ? 2 : tab_width,
-      useTabs: indent_style === 'tab',
-      variant: shell_variant
+      useTabs: indent_style === 'tab'
     }
 
     /**

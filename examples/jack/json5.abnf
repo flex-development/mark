@@ -1,0 +1,107 @@
+; ==============================================================================
+; Syntactic Grammar
+; ==============================================================================
+
+json5-text = ws value ws
+
+; any json5 value
+value = array / boolean / null / number / object / string
+
+; Objects & Arrays (supports trailing commas)
+object    = "{" ws [ member *( ws "," ws member ) [ ws "," ] ws ] "}"
+member    = name ws ":" ws value
+name      = identifier / string
+
+array     = "[" ws [ value *( ws "," ws value ) [ ws "," ] ws ] "]"
+
+; Primitives (case-sensitive per RFC 7405)
+null      = %s"null"
+boolean   = %s"true" / %s"false"
+
+; ==============================================================================
+; Numbers (Decimal, Hexadecimal, Infinity, NaN, leading/trailing dots, + sign)
+; ==============================================================================
+
+number    = [ "+" / "-" ] ( num-lit / %s"Infinity" / %s"NaN" )
+
+num-lit   = hex-lit
+                / dec-lit
+
+hex-lit   = "0" ( "x" / "X" ) 1*HEXDIG
+
+dec-lit   = ( "0" / ( %x31-39 *DIGIT ) ) [ "." *DIGIT ] [ exp ]
+                / "." 1*DIGIT [ exp ]
+
+exp       = ( "e" / "E" ) [ "+" / "-" ] 1*DIGIT
+
+; ==============================================================================
+; Strings (Double-quoted, Single-quoted, Multi-line, Hex & Unicode escapes)
+; ==============================================================================
+
+string    = DQUOTE *dchar DQUOTE
+                / "'" *schar "'"
+
+dchar     = unescaped-d
+                / "\" escape
+                / line-cont
+
+schar     = unescaped-s
+                / "\" escape
+                / line-cont
+
+; Any Unicode scalar value except ", \, and line terminators
+unescaped-d = %x00-09 / %x0B-0C / %x0E-21 / %x23-5B / %x5D-2027 / %x202A-D7FF / %xE000-10FFFF
+
+; Any Unicode scalar value except ', \, and line terminators
+unescaped-s = %x00-09 / %x0B-0C / %x0E-26 / %x28-5B / %x5D-2027 / %x202A-D7FF / %xE000-10FFFF
+
+line-cont = "\" line-term
+
+escape    = "'" / DQUOTE / "\" / "b" / "f" / "n" / "r" / "t" / "v"
+                / "0" ; Note: must not be followed by a DIGIT
+                / "x" 2HEXDIG
+                / "u" 4HEXDIG
+                / non-esc-char
+
+; Any character other than escape letters, digits 0-9, x, u, or line terminators
+non-esc-char = %x00-09 / %x0B-0C / %x0E-21 / %x23-26 / %x28-2F / %x3A-5B / %x5D-61
+                   / %x63-65 / %x67-6D / %x6F-71 / %x73 / %x75-77 / %x79-2027 / %x202A-D7FF / %xE000-10FFFF
+
+; ==============================================================================
+; Identifiers (ASCII subset shown; full spec allows Unicode ID_Start / ID_Continue)
+; ==============================================================================
+
+identifier = id-start *id-cont
+
+id-start   = ALPHA / "$" / "_"
+                 / "\u" 4HEXDIG ; Unicode escape sequences are valid in identifiers
+
+id-cont    = id-start / DIGIT
+
+; ==============================================================================
+; Whitespace & Comments
+; ==============================================================================
+
+ws              = *( ws-char / line-term / comment )
+
+ws-char   = %x09      ; Horizontal Tab
+                / %x0B      ; Vertical Tab
+                / %x0C      ; Form Feed
+                / %x20      ; Space
+                / %xA0      ; Non-breaking space
+                / %xFEFF    ; Byte Order Mark
+
+line-term = %x0A      ; LF
+                / %x0D      ; CR
+                / %x0D.0A   ; CRLF
+                / %x2028    ; Line Separator
+                / %x2029    ; Paragraph Separator
+
+comment   = "//" *( %x00-09 / %x0B-0C / %x0E-2027 / %x202A-D7FF / %xE000-10FFFF )
+                / "/*" *( %x00-29 / %x2B-D7FF / %xE000-10FFFF / ( "*" ( %x00-2E / %x30-D7FF / %xE000-10FFFF ) ) ) "*/"
+
+; Core RFC 5234 Rules
+ALPHA           = %x41-5A / %x61-7A
+DIGIT           = %x30-39
+DQUOTE          = %x22
+HEXDIG          = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"

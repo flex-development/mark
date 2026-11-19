@@ -3,7 +3,7 @@
  * @module mark-util-character/lib/asciiDigit
  */
 
-import type { Code, CodeCheck } from '@flex-development/mark/parse'
+import type { CodeCheck } from '@flex-development/mark/parse'
 import checker from './checker.mts'
 
 /**
@@ -13,11 +13,10 @@ import checker from './checker.mts'
  * `U+0039` (`9`).
  *
  * @see {@linkcode CodeCheck}
- * @see {@linkcode Code}
  *
  * @this {void}
  *
- * @param {Code} code
+ * @param {unknown} code
  *  The character code to check
  * @return {boolean}
  *  Whether the character code matches

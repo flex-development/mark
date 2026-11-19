@@ -1,4 +1,4 @@
-import type { CompileContext } from '@flex-development/mark/compile'
+import type {} from '@flex-development/mark/compile'
 
 declare module '@flex-development/mark/compile' {
   interface CompileData {
@@ -7,9 +7,5 @@ declare module '@flex-development/mark/compile' {
 
   interface CompileValueMap {
     undefined: undefined
-  }
-
-  interface ContextMap {
-    mark: CompileContext
   }
 }

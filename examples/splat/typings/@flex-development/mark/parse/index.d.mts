@@ -7,10 +7,6 @@ declare module '@flex-development/mark/parse' {
     pattern: 'pattern'
   }
 
-  interface ContextMap {
-    mark: TokenizeContext
-  }
-
   interface Extension {
     bracketExpression?: ConstructRecord | null | undefined
     segment?: ConstructRecord | null | undefined

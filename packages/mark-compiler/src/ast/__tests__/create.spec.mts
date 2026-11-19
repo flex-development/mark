@@ -10,10 +10,7 @@ import error from '#internal/error'
 import positionTree from '#internal/position-tree'
 import mockEvents from '#tests/utils/mock-events'
 import thrower from '#tests/utils/thrower'
-import type {
-  FinalizeContext,
-  Options
-} from '@flex-development/mark-compiler/ast'
+import type { FinalizeContext } from '@flex-development/mark-compiler/ast'
 import { chars } from '@flex-development/mark-util-symbol'
 import type {
   Buffer,
@@ -21,6 +18,7 @@ import type {
   CompileContext,
   CreateNode,
   Extension,
+  Extensions,
   Handle,
   Node,
   OnEnterError,
@@ -32,7 +30,6 @@ import type {
   Transform,
   Tree
 } from '@flex-development/mark/ast'
-import type { List } from '@flex-development/mark/core'
 import type {
   SliceSerialize,
   Token,
@@ -65,11 +62,9 @@ vi.mock('#internal/position-tree', async og => {
 
 describe('unit:ast/create', () => {
   let onEnterError: Mock<OnEnterError>
-  let finalizeContext: Mock<FinalizeContext>
   let node: Node
   let parent: Parent
   let serializeNode: Mock<SerializeNode>
-  let takeExtension: Mock<TakeExtension>
 
   afterEach(() => {
     delete node.position
@@ -82,33 +77,15 @@ describe('unit:ast/create', () => {
   })
 
   beforeEach(() => {
-    finalizeContext = vi.fn().mockName('finalizeContext')
     serializeNode = vi.fn(() => null).mockName('serializeNode')
-    takeExtension = vi.fn().mockName('takeExtension')
   })
 
   it('should create compile context', () => {
     expect(testSubject()).toMatchSnapshot()
   })
 
-  it.todo('should finalize compile context before merging extensions', () => {
-    // Arrange
-    const field: keyof Extension = 'canContainEols'
-    const extension: Extension = { [field]: [] }
-    const extensions: [Extension] = [extension]
-    const options: Options = { extensions, finalizeContext, takeExtension }
-
-    // Act
-    const result = testSubject(options)
-
-    // Expect
-    expect(finalizeContext).toHaveBeenCalledExactlyOnceWith(result, options)
-    expect(finalizeContext).toHaveBeenCalledBefore(takeExtension)
-    expect(takeExtension).toHaveBeenCalledOnce()
-    expect(takeExtension).toHaveBeenCalledWith(result.config, extension, field)
-  })
-
-  it.each<[extensions: Extension | List<Extension>]>([
+  it.each<[extensions: Extensions | null | undefined]>([
+    [null],
     [
       {
         afterEnter: null,
@@ -128,17 +105,19 @@ describe('unit:ast/create', () => {
           enter: { [tt.succ]: vi.fn().mockName('succEnter') },
           exit: { [tt.succ]: vi.fn().mockName('succExit') }
         },
-        Object.create({
-          enter: { [tt.fail]: vi.fn().mockName('failEnter') },
-          exit: { [tt.fail]: vi.fn().mockName('failExit') }
-        }),
-        {
-          afterExit: vi.fn().mockName('afterExit'),
-          beforeExit: vi.fn().mockName('beforeExit'),
-          enter: { [tt.eoc]: vi.fn().mockName('eocEnter') },
-          exit: { [tt.eoc]: vi.fn().mockName('eocExit') },
-          transforms: new Set([vi.fn().mockName('transform')])
-        }
+        [
+          Object.create({
+            enter: { [tt.fail]: vi.fn().mockName('failEnter') },
+            exit: { [tt.fail]: vi.fn().mockName('failExit') }
+          }),
+          {
+            afterExit: vi.fn().mockName('afterExit'),
+            beforeExit: vi.fn().mockName('beforeExit'),
+            enter: { [tt.eoc]: vi.fn().mockName('eocEnter') },
+            exit: { [tt.eoc]: vi.fn().mockName('eocExit') },
+            transforms: new Set([vi.fn().mockName('transform')])
+          }
+        ]
       ]
     ]
   ])('should merge extensions into `config` (%#)', extensions => {

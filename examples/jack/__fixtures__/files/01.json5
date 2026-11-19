@@ -1,0 +1,14 @@
+{
+  array: [],
+  
+  false: false,
+  
+  null: null,
+  
+  object: {},
+  
+  string: 'string',
+  
+  true: true
+}
+

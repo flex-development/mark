@@ -3,7 +3,7 @@
  * @module mark-util-character/lib/asciiPunctuation
  */
 
-import type { Code, CodeCheck } from '@flex-development/mark/parse'
+import type { CodeCheck } from '@flex-development/mark/parse'
 import checker from './checker.mts'
 
 /**
@@ -17,11 +17,10 @@ import checker from './checker.mts'
  * - `U+007B` LEFT CURLY BRACE (`{`) to `U+007E` TILDE (`~`)
  *
  * @see {@linkcode CodeCheck}
- * @see {@linkcode Code}
  *
  * @this {void}
  *
- * @param {Code} code
+ * @param {unknown} code
  *  The character code to check
  * @return {boolean}
  *  Whether the character code matches

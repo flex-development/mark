@@ -8,6 +8,6 @@ import type TestSubject from '../context-map.mts'
 
 describe('unit-d:parse/interfaces/ContextMap', () => {
   it('should register tokenization contexts', () => {
-    expectTypeOf<keyof TestSubject>().not.toBeNever()
+    expectTypeOf<keyof TestSubject>().toBeNever()
   })
 })

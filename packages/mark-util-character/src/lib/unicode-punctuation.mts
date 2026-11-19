@@ -3,7 +3,7 @@
  * @module mark-util-character/lib/unicodePunctuation
  */
 
-import type { Code, CodeCheck } from '@flex-development/mark/parse'
+import type { CodeCheck } from '@flex-development/mark/parse'
 import checker from './checker.mts'
 
 /**
@@ -23,7 +23,6 @@ import checker from './checker.mts'
  * or an ASCII punctuation (see {@linkcode asciiPunctuation}).
  *
  * @see {@linkcode CodeCheck}
- * @see {@linkcode Code}
  * @see https://www.fileformat.info/info/unicode/category/Pc/list.htm
  * @see https://www.fileformat.info/info/unicode/category/Pd/list.htm
  * @see https://www.fileformat.info/info/unicode/category/Pe/list.htm
@@ -34,7 +33,7 @@ import checker from './checker.mts'
  *
  * @this {void}
  *
- * @param {Code} code
+ * @param {unknown} code
  *  The character code to check
  * @return {boolean}
  *  Whether the character code matches

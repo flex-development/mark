@@ -4,6 +4,7 @@
  * @see https://github.com/micromark/micromark/blob/4.0.2/packages/micromark/dev/lib/initialize/flow.js
  */
 
+import { tt } from '@flex-development/jack/symbol'
 import { factorySpace } from '@flex-development/mark-factory-space'
 import { eol } from '@flex-development/mark-util-character'
 import { codes } from '@flex-development/mark-util-symbol'
@@ -16,7 +17,6 @@ import type {
 } from '@flex-development/mark/parse'
 import { ok as assert } from 'devlop'
 import { blankLine, content } from 'micromark-core-commonmark'
-import { types as tt } from 'micromark-util-symbol'
 
 /**
  * The markdown flow construct.

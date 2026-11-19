@@ -3,12 +3,18 @@
  * @module mark/ast/types/tests/unit-d/Context
  */
 
-import type { ContextMap } from '@flex-development/mark/ast'
+import type { CompileContext, ContextMap } from '@flex-development/mark/ast'
+import type { IfNever } from '@flex-development/mark/core'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../context.mts'
 
 describe('unit-d:ast/types/Context', () => {
-  it('should equal ContextMap[keyof ContextMap]', () => {
-    expectTypeOf<TestSubject>().toEqualTypeOf<ContextMap[keyof ContextMap]>()
+  it('should equal IfNever<keyof ContextMap, CompileContext, ContextMap[keyof ContextMap]>', () => {
+    // Arrange
+    type Registered = ContextMap[keyof ContextMap]
+    type Expect = IfNever<keyof ContextMap, CompileContext, Registered>
+
+    // Expect
+    expectTypeOf<TestSubject>().toEqualTypeOf<Expect>()
   })
 })

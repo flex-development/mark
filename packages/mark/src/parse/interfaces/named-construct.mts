@@ -3,7 +3,7 @@
  * @module mark/parse/interfaces/NamedConstruct
  */
 
-import type { Construct } from '@flex-development/mark/parse'
+import type { Construct, ConstructName } from '@flex-development/mark/parse'
 
 /**
  * A construct with a name.
@@ -16,9 +16,11 @@ interface NamedConstruct extends Construct {
   /**
    * The name of the construct.
    *
+   * @see {@linkcode ConstructName}
+   *
    * @override
    */
-  name: string
+  name: ConstructName
 }
 
 export type { NamedConstruct as default }

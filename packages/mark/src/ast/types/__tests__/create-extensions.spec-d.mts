@@ -7,9 +7,9 @@ import type {
   Buffer,
   Closer,
   Extension,
+  ExtensionList,
   Opener
 } from '@flex-development/mark/ast'
-import type { List } from '@flex-development/mark/core'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../create-extensions.mts'
 
@@ -27,10 +27,10 @@ describe('unit-d:ast/types/CreateExtensions', () => {
   })
 
   describe('returns', () => {
-    it('should return Extension | List<Extension | List<Extension>>', () => {
+    it('should return Extension | ExtensionList', () => {
       expectTypeOf<TestSubject>()
         .returns
-        .toEqualTypeOf<Extension | List<Extension | List<Extension>>>()
+        .toEqualTypeOf<Extension | ExtensionList>()
     })
   })
 })

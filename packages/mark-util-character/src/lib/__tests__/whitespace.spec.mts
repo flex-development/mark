@@ -13,10 +13,13 @@ describe('unit:lib/space', () => {
   })
 
   it.each<[keyof typeof codes]>([
+    ['ff'],
     ['horizontalTab'],
     ['ht'],
+    ['nbsp'],
     ['space'],
-    ['virtualSpace']
+    ['virtualSpace'],
+    ['vt']
   ])('should return `true` if `code` is whitespace code (`codes.%s`)', key => {
     expect(testSubject(codes[key])).to.be.true
   })

@@ -6,7 +6,8 @@
 import LARGEST_CODE_POINT from '#internal/largest-code-point'
 import type { Serialize } from '@flex-development/mark-util-character'
 import { codes } from '@flex-development/mark-util-symbol'
-import type { Code, CodeCheck } from '@flex-development/mark/parse'
+import type { CodeCheck } from '@flex-development/mark/parse'
+import isCode from './is-code.mts'
 
 export default checker
 
@@ -40,12 +41,14 @@ function checker(
    * @this {RegExp}
    *  The regular expression to match against
    *
-   * @param {Code} code
-   *  The character code
+   * @param {unknown} code
+   *  The character code to check
    * @return {boolean}
    *  Whether the character code matches the bound regex
    */
-  function check(this: RegExp, code: Code): boolean {
+  function check(this: RegExp, code: unknown): boolean {
+    if (!isCode(code)) return false // cannot match.
+
     // check custom serialized code point.
     if (serialize) return this.test(serialize(code))
 

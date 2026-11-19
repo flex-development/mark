@@ -5,9 +5,10 @@
 
 import type {
   CreateExtensions,
-  Extension
+  Extension,
+  ExtensionPack,
+  ExtensionPackList
 } from '@flex-development/mark/compile'
-import type { List } from '@flex-development/mark/core'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extensions.mts'
 
@@ -20,9 +21,11 @@ describe('unit-d:compile/types/Extensions', () => {
     expectTypeOf<TestSubject>().extract<Extension>().not.toBeNever()
   })
 
-  it('should allow List<Extension | List<Extension>>', () => {
-    expectTypeOf<TestSubject>()
-      .extract<List<Extension | List<Extension>>>()
-      .not.toBeNever()
+  it('should allow ExtensionPack', () => {
+    expectTypeOf<TestSubject>().extract<ExtensionPack>().not.toBeNever()
+  })
+
+  it('should allow ExtensionPackList', () => {
+    expectTypeOf<TestSubject>().extract<ExtensionPackList>().not.toBeNever()
   })
 })

@@ -72,6 +72,20 @@ exports[`unit:ast/create > should merge extensions into \`config\` (0) 1`] = `
 
 exports[`unit:ast/create > should merge extensions into \`config\` (1) 1`] = `
 {
+  "afterEnter": [],
+  "afterExit": [],
+  "beforeEnter": [],
+  "beforeExit": [],
+  "enter": {},
+  "exit": {},
+  "postprocess": [],
+  "preprocess": [],
+  "transforms": [],
+}
+`;
+
+exports[`unit:ast/create > should merge extensions into \`config\` (2) 1`] = `
+{
   "afterEnter": [
     [MockFunction],
   ],

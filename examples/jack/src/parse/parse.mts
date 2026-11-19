@@ -5,6 +5,7 @@
 
 import { constants } from '@flex-development/jack/symbol'
 import { createTokenizer } from '@flex-development/mark-parser'
+import combineExtensions from '@flex-development/mark-util-combine-extensions'
 import { codes } from '@flex-development/mark-util-symbol'
 import type {
   InitialConstructs,
@@ -12,36 +13,8 @@ import type {
   ParseContext,
   TokenizeContext
 } from '@flex-development/mark/parse'
-import {
-  attention,
-  autolink,
-  blockQuote,
-  characterEscape,
-  characterReference,
-  codeFenced,
-  codeIndented,
-  codeText,
-  definition,
-  hardBreakEscape,
-  headingAtx,
-  htmlFlow,
-  htmlText,
-  labelEnd,
-  labelStartImage,
-  labelStartLink,
-  lineEnding,
-  list,
-  setextUnderline,
-  thematicBreak
-} from 'micromark-core-commonmark'
-import arrayExpression from './constructs/array.expression.mts'
-import blockComment from './constructs/block.comment.mts'
-import booleanExpression from './constructs/boolean.expression.mts'
-import lineComment from './constructs/line.comment.mts'
-import nullExpression from './constructs/null.expression.mts'
-import numberExpression from './constructs/number.expression.mts'
-import objectExpression from './constructs/object.expression.mts'
-import stringExpression from './constructs/string.expression.mts'
+import markdown from './extensions/markdown.mts'
+import syntax from './extensions/syntax.mts'
 import comment from './initialize/comment.mts'
 import content from './initialize/content.mts'
 import document from './initialize/document.mts'
@@ -89,89 +62,7 @@ function parse(this: void): ParseContext {
    *  The new extension
    */
   function extensions(this: void): NormalizedExtension {
-    return {
-      [constants.contentTypeExpression]: {
-        [codes.quotationMark]: stringExpression, // string
-        [codes.plusSign]: numberExpression, // number (explicit positive)
-        [codes.dash]: numberExpression, // number (negative)
-        [codes.digit0]: numberExpression, // number
-        [codes.digit1]: numberExpression, // number
-        [codes.digit2]: numberExpression, // number
-        [codes.digit3]: numberExpression, // number
-        [codes.digit4]: numberExpression, // number
-        [codes.digit5]: numberExpression, // number
-        [codes.digit6]: numberExpression, // number
-        [codes.digit7]: numberExpression, // number
-        [codes.digit8]: numberExpression, // number
-        [codes.digit9]: numberExpression, // number
-        [codes.leftSquareBracket]: arrayExpression, // array
-        [codes.lowercaseF]: booleanExpression, // false
-        [codes.lowercaseN]: nullExpression, // null
-        [codes.lowercaseT]: booleanExpression, // true
-        [codes.leftCurlyBrace]: objectExpression // object
-      },
-      [constants.contentTypeComments]: {
-        [codes.slash]: [blockComment, lineComment]
-      },
-      [constants.contentTypeDocument]: {
-        [codes.asterisk]: list,
-        [codes.plusSign]: list,
-        [codes.dash]: list,
-        [codes.digit0]: list,
-        [codes.digit1]: list,
-        [codes.digit2]: list,
-        [codes.digit3]: list,
-        [codes.digit4]: list,
-        [codes.digit5]: list,
-        [codes.digit6]: list,
-        [codes.digit7]: list,
-        [codes.digit8]: list,
-        [codes.digit9]: list,
-        [codes.greaterThan]: blockQuote
-      },
-      [constants.contentTypeFlow]: {
-        [codes.numberSign]: headingAtx,
-        [codes.asterisk]: thematicBreak,
-        [codes.dash]: [setextUnderline, thematicBreak],
-        [codes.lessThan]: htmlFlow,
-        [codes.equalsTo]: setextUnderline,
-        [codes.underscore]: thematicBreak,
-        [codes.graveAccent]: codeFenced,
-        [codes.tilde]: codeFenced
-      },
-      [constants.contentTypeString]: {
-        [codes.ampersand]: characterReference,
-        [codes.backslash]: characterEscape
-      },
-      [constants.contentTypeText]: {
-        [codes.carriageReturn]: lineEnding,
-        [codes.lineFeed]: lineEnding,
-        [codes.carriageReturnLineFeed]: lineEnding,
-        [codes.exclamationMark]: labelStartImage,
-        [codes.ampersand]: characterReference,
-        [codes.asterisk]: attention,
-        [codes.lessThan]: [autolink, htmlText],
-        [codes.leftSquareBracket]: labelStartLink,
-        [codes.backslash]: [hardBreakEscape, characterEscape],
-        [codes.rightSquareBracket]: labelEnd,
-        [codes.underscore]: attention,
-        [codes.graveAccent]: codeText
-      },
-      attentionMarkers: {
-        null: [codes.asterisk, codes.underscore]
-      },
-      contentInitial: {
-        [codes.leftSquareBracket]: definition
-      },
-      flowInitial: {
-        [codes.horizontalTab]: codeIndented,
-        [codes.virtualSpace]: codeIndented,
-        [codes.space]: codeIndented
-      },
-      insideSpan: {
-        null: [attention, { resolveAll: string.resolveAll }]
-      }
-    } as unknown as NormalizedExtension
+    return combineExtensions(markdown, syntax)
   }
 
   /**
@@ -228,13 +119,13 @@ function parse(this: void): ParseContext {
   function initialize(this: void): InitialConstructs {
     return {
       [constants.contentTypeSource]: source,
+      [constants.contentTypeLanguage]: language,
       [constants.contentTypeComment]: comment,
       [constants.contentTypeDocument]: document,
       [constants.contentTypeFlow]: flow,
       [constants.contentTypeContent]: content,
       [constants.contentTypeText]: text,
-      [constants.contentTypeString]: string,
-      [constants.contentTypeLanguage]: language
+      [constants.contentTypeString]: string
     }
   }
 }

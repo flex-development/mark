@@ -76,9 +76,11 @@ exports[`unit:createTokenizer > #sliceStream > should return list of chunks span
 
 exports[`unit:createTokenizer > should create tokenize context (0) 1`] = `
 {
+  "break": [Function streamBreak],
   "code": -1000,
   "currentConstruct": undefined,
   "defineSkip": [Function defineSkip],
+  "eol": [Function lineEnding],
   "events": [],
   "now": [Function now],
   "parser": {
@@ -98,9 +100,11 @@ exports[`unit:createTokenizer > should create tokenize context (0) 1`] = `
 
 exports[`unit:createTokenizer > should create tokenize context (1) 1`] = `
 {
+  "break": [Function streamBreak],
   "code": -1000,
   "currentConstruct": undefined,
   "defineSkip": [Function defineSkip],
+  "eol": [Function lineEnding],
   "events": [],
   "now": [Function now],
   "parser": {

@@ -3,7 +3,8 @@
  * @module mark/parse/types/Context
  */
 
-import type { ContextMap } from '@flex-development/mark/parse'
+import type { IfNever } from '@flex-development/mark/core'
+import type { ContextMap, TokenizeContext } from '@flex-development/mark/parse'
 
 /**
  * Union of registered tokenization contexts.
@@ -11,6 +12,10 @@ import type { ContextMap } from '@flex-development/mark/parse'
  * To register custom contexts, augment {@linkcode ContextMap}.\
  * They will be added to this union automatically.
  */
-type Context = ContextMap[keyof ContextMap]
+type Context = IfNever<
+  keyof ContextMap,
+  TokenizeContext,
+  ContextMap[keyof ContextMap]
+>
 
 export type { Context as default }

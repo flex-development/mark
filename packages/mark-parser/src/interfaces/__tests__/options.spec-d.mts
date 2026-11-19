@@ -19,6 +19,12 @@ import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../options.mts'
 
 describe('unit-d:interfaces/Options', () => {
+  it('should match [break?: CodeCheck | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('break')
+      .toEqualTypeOf<Nilable<CodeCheck>>()
+  })
+
   it('should match [debug?: string | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('debug')

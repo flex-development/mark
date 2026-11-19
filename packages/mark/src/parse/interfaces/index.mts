@@ -4,6 +4,7 @@
  */
 
 export type { Debugger } from 'debug'
+export type { default as ConstructNameMap } from './construct-name-map.mts'
 export type {
   default as ConstructPositionMap
 } from './construct-position-map.mts'

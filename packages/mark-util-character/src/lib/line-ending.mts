@@ -25,8 +25,8 @@ function lineEnding(this: void, code: unknown): code is LineEnding {
     case codes.cr:
     case codes.lf:
     case codes.lineFeed:
-    case codes.ls:
-    case codes.ps:
+    case codes.ls: // unusual line terminator.
+    case codes.ps: // unusual line terminator.
       return true
     default:
       return false

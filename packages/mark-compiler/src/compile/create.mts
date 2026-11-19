@@ -13,8 +13,10 @@ import type {
   CompileResult,
   CompileValue,
   Context,
+  CreateExtensions,
   CreateValue,
   Extension,
+  ExtensionList,
   Extensions,
   Handle,
   OnEnterError,
@@ -221,27 +223,14 @@ function create(
    *  The configured compiler
    */
   function configure(this: void): CompileContext {
+    const { extensions, finalizeContext, takeExtension } = options
+
     // finalize `context` before combining extensions
     // so finalized context is available to `options.takeExtension`.
-    void options.finalizeContext?.(context, options)
-
-    /**
-     * The extension, or extensions, to merge.
-     *
-     * @var {Extensions} extensions
-     */
-    let extensions: Extensions = options.extensions ?? []
-
-    // create extensions.
-    if (typeof extensions === 'function') {
-      extensions = extensions(opener, closer, context.buffer)
-    }
-
-    // normalize extensions.
-    extensions = !isList(extensions) ? [extensions] : [...extensions]
+    void finalizeContext?.(context, options)
 
     // combine extensions.
-    void takeExtensions(extensions, options.takeExtension)
+    void takeExtensions(normalizeExtensions(extensions), takeExtension)
 
     return context
   }
@@ -437,6 +426,32 @@ function create(
   }
 
   /**
+   * Normalize an extensions configuration.
+   *
+   * @this {void}
+   *
+   * @param {Extensions | null | undefined} extensions
+   *  The extensions configuration to normalize
+   * @return {ReadonlyArray<CreateExtensions | Extension>}
+   *  The normalized configuration
+   */
+  function normalizeExtensions(
+    this: void,
+    extensions: Extensions | null | undefined
+  ): readonly (CreateExtensions | Extension)[] {
+    if (!extensions) return [] // no extensions.
+
+    // extension object or factory function.
+    if (!isList(extensions)) return [extensions]
+
+    // extension pack list.
+    return [...extensions].flatMap(extension => {
+      if (!isList(extension)) return [extension]
+      return [...extension].flatMap(normalizeExtensions)
+    })
+  }
+
+  /**
    * Handle a compilation `result` before transforms are applied.
    *
    * @this {CompileContext}
@@ -550,7 +565,7 @@ function create(
    *
    * @this {void}
    *
-   * @param {ReadonlyArray<Extension | List<Extension>>} extensions
+   * @param {ReadonlyArray<CreateExtensions | Extension | ExtensionList>} list
    *  The extensions to merge
    * @param {TakeExtension | null | undefined} [take]
    *  Merge additional extension fields into the compiler configuration
@@ -558,7 +573,7 @@ function create(
    */
   function takeExtensions(
     this: void,
-    extensions: readonly (Extension | List<Extension>)[],
+    list: readonly (CreateExtensions | Extension | ExtensionList)[],
     take?: TakeExtension | null | undefined
   ): undefined {
     /**
@@ -569,15 +584,20 @@ function create(
     let index: number = -1
 
     // combine extensions.
-    while (++index < extensions.length) {
-      ok(extensions[index], 'expected `extensions[index]`')
+    while (++index < list.length) {
+      ok(list[index], 'expected `list[index]`')
 
       /**
        * The current extension or list of extensions.
        *
-       * @const {Extension | List<Extension>} value
+       * @var {CreateExtensions | Extension | ExtensionList} extension
        */
-      const extension: Extension | List<Extension> = extensions[index]!
+      let extension: CreateExtensions | Extension | ExtensionList = list[index]!
+
+      // call extension factory function.
+      if (typeof extension === 'function') {
+        extension = extension(opener, closer, context.buffer)
+      }
 
       // merge sublist.
       if (isList(extension)) {
@@ -627,6 +647,6 @@ function create(
       }
     }
 
-    return void extensions
+    return void list
   }
 }

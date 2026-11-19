@@ -3,19 +3,25 @@
  * @module mark/ast/types/Extensions
  */
 
-import type { CreateExtensions, Extension } from '@flex-development/mark/ast'
-import type { List } from '@flex-development/mark/core'
+import type {
+  CreateExtensions,
+  Extension,
+  ExtensionPack,
+  ExtensionPackList
+} from '@flex-development/mark/ast'
 
 /**
- * An extension, a list of extensions, or a factory function.
+ * An extension object, an extension pack list, or a factory function.
  *
  * @see {@linkcode CreateExtensions}
+ * @see {@linkcode ExtensionPackList}
+ * @see {@linkcode ExtensionPack}
  * @see {@linkcode Extension}
- * @see {@linkcode List}
  */
 type Extensions =
   | CreateExtensions
   | Extension
-  | List<Extension | List<Extension>>
+  | ExtensionPack
+  | ExtensionPackList
 
 export type { Extensions as default }

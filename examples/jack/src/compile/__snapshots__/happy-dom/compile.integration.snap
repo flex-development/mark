@@ -1,0 +1,1976 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`integration:compile > comments > should handle comments ("01.json5") 1`] = `
+root[1] (1:1-1:11, 0-10)
+└─0 comment[3] (1:1-1:11, 0-10)
+    │ kind: "line"
+    ├─0 commentOpener[2] (1:1-1:3, 0-2)
+    │   ├─0 commentMarker "/" (1:1-1:2, 0-1)
+    │   └─1 commentMarker "/" (1:2-1:3, 1-2)
+    ├─1 commentPadding (1:3-1:4, 2-3)
+    └─2 paragraph[1] (1:4-1:11, 3-10)
+        └─0 text "comment" (1:4-1:11, 3-10)
+`;
+
+exports[`integration:compile > comments > should handle comments ("02.json5") 1`] = `
+root[1] (1:1-1:14, 0-13)
+└─0 comment[5] (1:1-1:14, 0-13)
+    │ kind: "block"
+    ├─0 commentOpener[2] (1:1-1:3, 0-2)
+    │   ├─0 commentMarker "/" (1:1-1:2, 0-1)
+    │   └─1 commentMarker "*" (1:2-1:3, 1-2)
+    ├─1 commentPadding (1:3-1:4, 2-3)
+    ├─2 paragraph[1] (1:4-1:11, 3-10)
+    │   └─0 text "comment" (1:4-1:11, 3-10)
+    ├─3 commentPadding (1:11-1:12, 10-11)
+    └─4 commentCloser[2] (1:12-1:14, 11-13)
+        ├─0 commentMarker "*" (1:12-1:13, 11-12)
+        └─1 commentMarker "/" (1:13-1:14, 12-13)
+`;
+
+exports[`integration:compile > comments > should handle comments ("03.json5") 1`] = `
+root[1] (1:1-7:5, 0-198)
+└─0 comment[5] (1:1-7:5, 0-198)
+    │ kind: "block"
+    ├─0 commentOpener[2] (1:1-1:3, 0-2)
+    │   ├─0 commentMarker "/" (1:1-1:2, 0-1)
+    │   └─1 commentMarker "*" (1:2-1:3, 1-2)
+    ├─1 commentPadding (1:3-1:4, 2-3)
+    ├─2 paragraph[20] (1:4-7:2, 3-195)
+    │   ├─0  text "{" (1:4-1:5, 3-4)
+    │   ├─1  break (1:5-2:1, 4-5)
+    │   ├─2  commentLinePrefix[1] (2:1-2:3, 5-7)
+    │   │    └─0 commentPadding (2:1-2:3, 5-7)
+    │   ├─3  text "\\"$schema\\": \\"https://raw.githubusercontent.com/flex-development/grease/refs/tags/grease@3.0.0-alpha.9/grease.schema.json\\"," (2:3-2:124, 7-128)
+    │   ├─4  break (2:124-3:1, 128-129)
+    │   ├─5  commentLinePrefix[1] (3:1-3:3, 129-131)
+    │   │    └─0 commentPadding (3:1-3:3, 129-131)
+    │   ├─6  text "\\"tag\\": {" (3:3-3:11, 131-139)
+    │   ├─7  break (3:11-4:1, 139-140)
+    │   ├─8  commentLinePrefix[1] (4:1-4:3, 140-142)
+    │   │    └─0 commentPadding (4:1-4:3, 140-142)
+    │   ├─9  linePrefix (4:3-4:5, 142-144)
+    │   ├─10 text "\\"message\\": \\"release: {tag}\\"," (4:5-4:33, 144-172)
+    │   ├─11 break (4:33-5:1, 172-173)
+    │   ├─12 commentLinePrefix[1] (5:1-5:3, 173-175)
+    │   │    └─0 commentPadding (5:1-5:3, 173-175)
+    │   ├─13 linePrefix (5:3-5:5, 175-177)
+    │   ├─14 text "\\"sign\\": true" (5:5-5:17, 177-189)
+    │   ├─15 break (5:17-6:1, 189-190)
+    │   ├─16 commentLinePrefix[1] (6:1-6:3, 190-192)
+    │   │    └─0 commentPadding (6:1-6:3, 190-192)
+    │   ├─17 text "}" (6:3-6:4, 192-193)
+    │   ├─18 break (6:4-7:1, 193-194)
+    │   └─19 text "}" (7:1-7:2, 194-195)
+    ├─3 commentPadding (7:2-7:3, 195-196)
+    └─4 commentCloser[2] (7:3-7:5, 196-198)
+        ├─0 commentMarker "*" (7:3-7:4, 196-197)
+        └─1 commentMarker "/" (7:4-7:5, 197-198)
+`;
+
+exports[`integration:compile > comments > should handle comments ("04.json5") 1`] = `
+root[1] (1:1-4:4, 0-43)
+└─0 comment[7] (1:1-4:4, 0-43)
+    │ kind: "block"
+    ├─0 commentOpener[2] (1:1-1:3, 0-2)
+    │   ├─0 commentMarker "/" (1:1-1:2, 0-1)
+    │   └─1 commentMarker "*" (1:2-1:3, 1-2)
+    ├─1 break (1:3-2:1, 2-3)
+    ├─2 commentLinePrefix[3] (2:1-2:4, 3-6)
+    │   ├─0 commentPadding (2:1-2:2, 3-4)
+    │   ├─1 commentMarker "*" (2:2-2:3, 4-5)
+    │   └─2 commentPadding (2:3-2:4, 5-6)
+    ├─3 code "{ hello: 'world' }*  ^" (2:4-3:11, 6-39)
+    │     lang: null
+    │     meta: null
+    ├─4 break (3:11-4:1, 39-40)
+    ├─5 commentLinePrefix[1] (4:1-4:2, 40-41)
+    │   └─0 commentPadding (4:1-4:2, 40-41)
+    └─6 commentCloser[2] (4:2-4:4, 41-43)
+        ├─0 commentMarker "*" (4:2-4:3, 41-42)
+        └─1 commentMarker "/" (4:3-4:4, 42-43)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/01.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 arrayExpression[2] (1:1-1:3, 0-2)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    └─1 arrayMarker (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/02.json5") 1`] = `
+root[1] (1:1-1:22, 0-21)
+└─0 arrayExpression[3] (1:1-1:22, 0-21)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 comment[5] (1:2-1:21, 1-20)
+    │   │ kind: "block"
+    │   ├─0 commentOpener[2] (1:2-1:4, 1-3)
+    │   │   ├─0 commentMarker "/" (1:2-1:3, 1-2)
+    │   │   └─1 commentMarker "*" (1:3-1:4, 2-3)
+    │   ├─1 commentPadding (1:4-1:5, 3-4)
+    │   ├─2 paragraph[1] (1:5-1:18, 4-17)
+    │   │   └─0 text "block comment" (1:5-1:18, 4-17)
+    │   ├─3 commentPadding (1:18-1:19, 17-18)
+    │   └─4 commentCloser[2] (1:19-1:21, 18-20)
+    │       ├─0 commentMarker "*" (1:19-1:20, 18-19)
+    │       └─1 commentMarker "/" (1:20-1:21, 19-20)
+    └─2 arrayMarker (1:21-1:22, 20-21)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/03.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 arrayExpression[3] (1:1-1:4, 0-3)
+    │ sparse: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 valueSeparator (1:2-1:3, 1-2)
+    │     trailing: true
+    └─2 arrayMarker (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/04.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 arrayExpression[5] (1:1-1:6, 0-5)
+    │ sparse: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 valueSeparator (1:2-1:3, 1-2)
+    ├─2 valueSeparator (1:3-1:4, 2-3)
+    ├─3 valueSeparator (1:4-1:5, 3-4)
+    │     trailing: true
+    └─4 arrayMarker (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/05.json5") 1`] = `
+root[1] (1:1-1:21, 0-20)
+└─0 arrayExpression[8] (1:1-1:21, 0-20)
+    │ sparse: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 comment[3] (1:2-1:7, 1-6)
+    │   │ kind: "block"
+    │   ├─0 commentOpener[2] (1:2-1:4, 1-3)
+    │   │   ├─0 commentMarker "/" (1:2-1:3, 1-2)
+    │   │   └─1 commentMarker "*" (1:3-1:4, 2-3)
+    │   ├─1 paragraph[1] (1:4-1:5, 3-4)
+    │   │   └─0 text "1" (1:4-1:5, 3-4)
+    │   └─2 commentCloser[2] (1:5-1:7, 4-6)
+    │       ├─0 commentMarker "*" (1:5-1:6, 4-5)
+    │       └─1 commentMarker "/" (1:6-1:7, 5-6)
+    ├─2 valueSeparator (1:7-1:8, 6-7)
+    ├─3 comment[3] (1:8-1:13, 7-12)
+    │   │ kind: "block"
+    │   ├─0 commentOpener[2] (1:8-1:10, 7-9)
+    │   │   ├─0 commentMarker "/" (1:8-1:9, 7-8)
+    │   │   └─1 commentMarker "*" (1:9-1:10, 8-9)
+    │   ├─1 paragraph[1] (1:10-1:11, 9-10)
+    │   │   └─0 text "2" (1:10-1:11, 9-10)
+    │   └─2 commentCloser[2] (1:11-1:13, 10-12)
+    │       ├─0 commentMarker "*" (1:11-1:12, 10-11)
+    │       └─1 commentMarker "/" (1:12-1:13, 11-12)
+    ├─4 valueSeparator (1:13-1:14, 12-13)
+    ├─5 comment[3] (1:14-1:19, 13-18)
+    │   │ kind: "block"
+    │   ├─0 commentOpener[2] (1:14-1:16, 13-15)
+    │   │   ├─0 commentMarker "/" (1:14-1:15, 13-14)
+    │   │   └─1 commentMarker "*" (1:15-1:16, 14-15)
+    │   ├─1 paragraph[1] (1:16-1:17, 15-16)
+    │   │   └─0 text "3" (1:16-1:17, 15-16)
+    │   └─2 commentCloser[2] (1:17-1:19, 16-18)
+    │       ├─0 commentMarker "*" (1:17-1:18, 16-17)
+    │       └─1 commentMarker "/" (1:18-1:19, 17-18)
+    ├─6 valueSeparator (1:19-1:20, 18-19)
+    │     trailing: true
+    └─7 arrayMarker (1:20-1:21, 19-20)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/06.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 arrayExpression[4] (1:1-1:6, 0-5)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 numberExpression[1] (1:2-1:4, 1-3)
+    │   └─0 unsignedNumber 13 (1:2-1:4, 1-3)
+    ├─2 valueSeparator (1:4-1:5, 3-4)
+    │     trailing: true
+    └─3 arrayMarker (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/07.json5") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 arrayExpression[6] (1:1-1:8, 0-7)
+    │ sparse: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 numberExpression[1] (1:2-1:3, 1-2)
+    │   └─0 unsignedNumber 3 (1:2-1:3, 1-2)
+    ├─2 valueSeparator (1:3-1:4, 2-3)
+    ├─3 valueSeparator (1:4-1:5, 3-4)
+    ├─4 numberExpression[1] (1:5-1:7, 4-6)
+    │   └─0 unsignedNumber 13 (1:5-1:7, 4-6)
+    └─5 arrayMarker (1:7-1:8, 6-7)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/08.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 arrayExpression[3] (1:1-1:5, 0-4)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 numberExpression[1] (1:2-1:4, 1-3)
+    │   └─0 unsignedNumber 13 (1:2-1:4, 1-3)
+    └─2 arrayMarker (1:4-1:5, 3-4)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("flat/09.json5") 1`] = `
+root[1] (1:1-1:36, 0-35)
+└─0 arrayExpression[19] (1:1-1:36, 0-35)
+    ├─0  arrayMarker (1:1-1:2, 0-1)
+    ├─1  whitespace " " (1:2-1:3, 1-2)
+    ├─2  numberExpression[2] (1:3-1:5, 2-4)
+    │    ├─0 signOperator "-" (1:3-1:4, 2-3)
+    │    └─1 operand "3" (1:4-1:5, 3-4)
+    ├─3  valueSeparator (1:5-1:6, 4-5)
+    ├─4  whitespace " " (1:6-1:7, 5-6)
+    ├─5  numberExpression[1] (1:7-1:8, 6-7)
+    │    └─0 unsignedNumber 0 (1:7-1:8, 6-7)
+    ├─6  valueSeparator (1:8-1:9, 7-8)
+    ├─7  whitespace " " (1:9-1:10, 8-9)
+    ├─8  numberExpression[2] (1:10-1:13, 9-12)
+    │    ├─0 signOperator "+" (1:10-1:11, 9-10)
+    │    └─1 operand "13" (1:11-1:13, 10-12)
+    ├─9  valueSeparator (1:13-1:14, 12-13)
+    ├─10 whitespace " " (1:14-1:15, 13-14)
+    ├─11 stringExpression[3] (1:15-1:23, 14-22)
+    │    ├─0 stringMarker "'" (1:15-1:16, 14-15)
+    │    ├─1 text "string" (1:16-1:22, 15-21)
+    │    └─2 stringMarker "'" (1:22-1:23, 21-22)
+    ├─12 valueSeparator (1:23-1:24, 22-23)
+    ├─13 whitespace " " (1:24-1:25, 23-24)
+    ├─14 booleanExpression true (1:25-1:29, 24-28)
+    ├─15 valueSeparator (1:29-1:30, 28-29)
+    ├─16 whitespace " " (1:30-1:31, 29-30)
+    ├─17 nullExpression null (1:31-1:35, 30-34)
+    └─18 arrayMarker (1:35-1:36, 34-35)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/01.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 arrayExpression[3] (1:1-1:5, 0-4)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[2] (1:2-1:4, 1-3)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   └─1 arrayMarker (1:3-1:4, 2-3)
+    └─2 arrayMarker (1:4-1:5, 3-4)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/02.json5") 1`] = `
+root[1] (1:1-1:18, 0-17)
+└─0 arrayExpression[5] (1:1-1:18, 0-17)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 whitespace " " (1:2-1:3, 1-2)
+    ├─2 arrayExpression[3] (1:3-1:16, 2-15)
+    │   ├─0 arrayMarker (1:3-1:4, 2-3)
+    │   ├─1 comment[3] (1:4-1:15, 3-14)
+    │   │   │ kind: "block"
+    │   │   ├─0 commentOpener[2] (1:4-1:6, 3-5)
+    │   │   │   ├─0 commentMarker "/" (1:4-1:5, 3-4)
+    │   │   │   └─1 commentMarker "*" (1:5-1:6, 4-5)
+    │   │   ├─1 paragraph[1] (1:6-1:13, 5-12)
+    │   │   │   └─0 text "comment" (1:6-1:13, 5-12)
+    │   │   └─2 commentCloser[2] (1:13-1:15, 12-14)
+    │   │       ├─0 commentMarker "*" (1:13-1:14, 12-13)
+    │   │       └─1 commentMarker "/" (1:14-1:15, 13-14)
+    │   └─2 arrayMarker (1:15-1:16, 14-15)
+    ├─3 whitespace " " (1:16-1:17, 15-16)
+    └─4 arrayMarker (1:17-1:18, 16-17)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/03.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 arrayExpression[3] (1:1-1:7, 0-6)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[3] (1:2-1:6, 1-5)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   ├─1 arrayExpression[2] (1:3-1:5, 2-4)
+    │   │   ├─0 arrayMarker (1:3-1:4, 2-3)
+    │   │   └─1 arrayMarker (1:4-1:5, 3-4)
+    │   └─2 arrayMarker (1:5-1:6, 4-5)
+    └─2 arrayMarker (1:6-1:7, 5-6)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/04.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 arrayExpression[4] (1:1-1:6, 0-5)
+    │ sparse: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 valueSeparator (1:2-1:3, 1-2)
+    ├─2 arrayExpression[2] (1:3-1:5, 2-4)
+    │   ├─0 arrayMarker (1:3-1:4, 2-3)
+    │   └─1 arrayMarker (1:4-1:5, 3-4)
+    └─3 arrayMarker (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/05.json5") 1`] = `
+root[1] (1:1-1:9, 0-8)
+└─0 arrayExpression[6] (1:1-1:9, 0-8)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[2] (1:2-1:4, 1-3)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   └─1 arrayMarker (1:3-1:4, 2-3)
+    ├─2 valueSeparator (1:4-1:5, 3-4)
+    ├─3 whitespace " " (1:5-1:6, 4-5)
+    ├─4 arrayExpression[2] (1:6-1:8, 5-7)
+    │   ├─0 arrayMarker (1:6-1:7, 5-6)
+    │   └─1 arrayMarker (1:7-1:8, 6-7)
+    └─5 arrayMarker (1:8-1:9, 7-8)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/06.json5") 1`] = `
+root[1] (1:1-1:19, 0-18)
+└─0 arrayExpression[9] (1:1-1:19, 0-18)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[2] (1:2-1:4, 1-3)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   └─1 arrayMarker (1:3-1:4, 2-3)
+    ├─2 valueSeparator (1:4-1:5, 3-4)
+    ├─3 whitespace " " (1:5-1:6, 4-5)
+    ├─4 arrayExpression[6] (1:6-1:14, 5-13)
+    │   ├─0 arrayMarker (1:6-1:7, 5-6)
+    │   ├─1 arrayExpression[2] (1:7-1:9, 6-8)
+    │   │   ├─0 arrayMarker (1:7-1:8, 6-7)
+    │   │   └─1 arrayMarker (1:8-1:9, 7-8)
+    │   ├─2 valueSeparator (1:9-1:10, 8-9)
+    │   ├─3 whitespace " " (1:10-1:11, 9-10)
+    │   ├─4 arrayExpression[2] (1:11-1:13, 10-12)
+    │   │   ├─0 arrayMarker (1:11-1:12, 10-11)
+    │   │   └─1 arrayMarker (1:12-1:13, 11-12)
+    │   └─5 arrayMarker (1:13-1:14, 12-13)
+    ├─5 valueSeparator (1:14-1:15, 13-14)
+    ├─6 whitespace " " (1:15-1:16, 14-15)
+    ├─7 arrayExpression[2] (1:16-1:18, 15-17)
+    │   ├─0 arrayMarker (1:16-1:17, 15-16)
+    │   └─1 arrayMarker (1:17-1:18, 16-17)
+    └─8 arrayMarker (1:18-1:19, 17-18)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/07.json5") 1`] = `
+root[1] (1:1-1:11, 0-10)
+└─0 arrayExpression[6] (1:1-1:11, 0-10)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[3] (1:2-1:5, 1-4)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   ├─1 numberExpression[1] (1:3-1:4, 2-3)
+    │   │   └─0 unsignedNumber 0 (1:3-1:4, 2-3)
+    │   └─2 arrayMarker (1:4-1:5, 3-4)
+    ├─2 valueSeparator (1:5-1:6, 4-5)
+    ├─3 whitespace " " (1:6-1:7, 5-6)
+    ├─4 arrayExpression[3] (1:7-1:10, 6-9)
+    │   ├─0 arrayMarker (1:7-1:8, 6-7)
+    │   ├─1 numberExpression[1] (1:8-1:9, 7-8)
+    │   │   └─0 unsignedNumber 1 (1:8-1:9, 7-8)
+    │   └─2 arrayMarker (1:9-1:10, 8-9)
+    └─5 arrayMarker (1:10-1:11, 9-10)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/08.json5") 1`] = `
+root[1] (1:1-1:14, 0-13)
+└─0 arrayExpression[9] (1:1-1:14, 0-13)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[3] (1:2-1:5, 1-4)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   ├─1 numberExpression[1] (1:3-1:4, 2-3)
+    │   │   └─0 unsignedNumber 0 (1:3-1:4, 2-3)
+    │   └─2 arrayMarker (1:4-1:5, 3-4)
+    ├─2 valueSeparator (1:5-1:6, 4-5)
+    ├─3 whitespace " " (1:6-1:7, 5-6)
+    ├─4 numberExpression[1] (1:7-1:8, 6-7)
+    │   └─0 unsignedNumber 1 (1:7-1:8, 6-7)
+    ├─5 valueSeparator (1:8-1:9, 7-8)
+    ├─6 whitespace " " (1:9-1:10, 8-9)
+    ├─7 arrayExpression[3] (1:10-1:13, 9-12)
+    │   ├─0 arrayMarker (1:10-1:11, 9-10)
+    │   ├─1 numberExpression[1] (1:11-1:12, 10-11)
+    │   │   └─0 unsignedNumber 2 (1:11-1:12, 10-11)
+    │   └─2 arrayMarker (1:12-1:13, 11-12)
+    └─8 arrayMarker (1:13-1:14, 12-13)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/09.json5") 1`] = `
+root[1] (1:1-1:20, 0-19)
+└─0 arrayExpression[9] (1:1-1:20, 0-19)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[6] (1:2-1:8, 1-7)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   ├─1 numberExpression[1] (1:3-1:4, 2-3)
+    │   │   └─0 unsignedNumber 0 (1:3-1:4, 2-3)
+    │   ├─2 valueSeparator (1:4-1:5, 3-4)
+    │   ├─3 whitespace " " (1:5-1:6, 4-5)
+    │   ├─4 numberExpression[1] (1:6-1:7, 5-6)
+    │   │   └─0 unsignedNumber 1 (1:6-1:7, 5-6)
+    │   └─5 arrayMarker (1:7-1:8, 6-7)
+    ├─2 valueSeparator (1:8-1:9, 7-8)
+    ├─3 whitespace " " (1:9-1:10, 8-9)
+    ├─4 numberExpression[1] (1:10-1:11, 9-10)
+    │   └─0 unsignedNumber 3 (1:10-1:11, 9-10)
+    ├─5 valueSeparator (1:11-1:12, 10-11)
+    ├─6 whitespace " " (1:12-1:13, 11-12)
+    ├─7 arrayExpression[6] (1:13-1:19, 12-18)
+    │   ├─0 arrayMarker (1:13-1:14, 12-13)
+    │   ├─1 numberExpression[1] (1:14-1:15, 13-14)
+    │   │   └─0 unsignedNumber 4 (1:14-1:15, 13-14)
+    │   ├─2 valueSeparator (1:15-1:16, 14-15)
+    │   ├─3 whitespace " " (1:16-1:17, 15-16)
+    │   ├─4 numberExpression[1] (1:17-1:18, 16-17)
+    │   │   └─0 unsignedNumber 5 (1:17-1:18, 16-17)
+    │   └─5 arrayMarker (1:18-1:19, 17-18)
+    └─8 arrayMarker (1:19-1:20, 18-19)
+`;
+
+exports[`integration:compile > expressions > array > should handle array expressions ("nested/10.json5") 1`] = `
+root[1] (1:1-1:25, 0-24)
+└─0 arrayExpression[9] (1:1-1:25, 0-24)
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 arrayExpression[6] (1:2-1:8, 1-7)
+    │   ├─0 arrayMarker (1:2-1:3, 1-2)
+    │   ├─1 numberExpression[1] (1:3-1:4, 2-3)
+    │   │   └─0 unsignedNumber 0 (1:3-1:4, 2-3)
+    │   ├─2 valueSeparator (1:4-1:5, 3-4)
+    │   ├─3 whitespace " " (1:5-1:6, 4-5)
+    │   ├─4 numberExpression[1] (1:6-1:7, 5-6)
+    │   │   └─0 unsignedNumber 1 (1:6-1:7, 5-6)
+    │   └─5 arrayMarker (1:7-1:8, 6-7)
+    ├─2 valueSeparator (1:8-1:9, 7-8)
+    ├─3 whitespace " " (1:9-1:10, 8-9)
+    ├─4 arrayExpression[6] (1:10-1:21, 9-20)
+    │   ├─0 arrayMarker (1:10-1:11, 9-10)
+    │   ├─1 numberExpression[1] (1:11-1:12, 10-11)
+    │   │   └─0 unsignedNumber 2 (1:11-1:12, 10-11)
+    │   ├─2 valueSeparator (1:12-1:13, 11-12)
+    │   ├─3 whitespace " " (1:13-1:14, 12-13)
+    │   ├─4 arrayExpression[6] (1:14-1:20, 13-19)
+    │   │   ├─0 arrayMarker (1:14-1:15, 13-14)
+    │   │   ├─1 numberExpression[1] (1:15-1:16, 14-15)
+    │   │   │   └─0 unsignedNumber 3 (1:15-1:16, 14-15)
+    │   │   ├─2 valueSeparator (1:16-1:17, 15-16)
+    │   │   ├─3 whitespace " " (1:17-1:18, 16-17)
+    │   │   ├─4 numberExpression[1] (1:18-1:19, 17-18)
+    │   │   │   └─0 unsignedNumber 4 (1:18-1:19, 17-18)
+    │   │   └─5 arrayMarker (1:19-1:20, 18-19)
+    │   └─5 arrayMarker (1:20-1:21, 19-20)
+    ├─5 valueSeparator (1:21-1:22, 20-21)
+    ├─6 whitespace " " (1:22-1:23, 21-22)
+    ├─7 numberExpression[1] (1:23-1:24, 22-23)
+    │   └─0 unsignedNumber 5 (1:23-1:24, 22-23)
+    └─8 arrayMarker (1:24-1:25, 23-24)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("01.txt") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 arrayExpression[1] (1:1-1:2, 0-1)
+    │ malformed: true
+    └─0 arrayMarker (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("02.txt") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 arrayExpression[2] (1:1-1:3, 0-2)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    └─1 numberExpression[1] (1:2-1:3, 1-2)
+        └─0 unsignedNumber 3 (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("03.txt") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 arrayExpression[4] (1:1-1:6, 0-5)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 numberExpression[1] (1:2-1:3, 1-2)
+    │   └─0 unsignedNumber 3 (1:2-1:3, 1-2)
+    ├─2 valueSeparator (1:3-1:4, 2-3)
+    └─3 numberExpression[1] (1:4-1:6, 3-5)
+        └─0 unsignedNumber 13 (1:4-1:6, 3-5)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("04.txt") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 arrayExpression[2] (1:1-1:4, 0-3)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    └─1 arrayExpression[2] (1:2-1:4, 1-3)
+        ├─0 arrayMarker (1:2-1:3, 1-2)
+        └─1 arrayMarker (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("05.txt") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 arrayExpression[2] (1:1-1:5, 0-4)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    └─1 arrayExpression[3] (1:2-1:5, 1-4)
+        ├─0 arrayMarker (1:2-1:3, 1-2)
+        ├─1 numberExpression[1] (1:3-1:4, 2-3)
+        │   └─0 unsignedNumber 5 (1:3-1:4, 2-3)
+        └─2 arrayMarker (1:4-1:5, 3-4)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("06.txt") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 arrayExpression[2] (1:1-1:8, 0-7)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    └─1 arrayExpression[6] (1:2-1:8, 1-7)
+        ├─0 arrayMarker (1:2-1:3, 1-2)
+        ├─1 numberExpression[1] (1:3-1:4, 2-3)
+        │   └─0 unsignedNumber 6 (1:3-1:4, 2-3)
+        ├─2 valueSeparator (1:4-1:5, 3-4)
+        ├─3 whitespace " " (1:5-1:6, 4-5)
+        ├─4 numberExpression[1] (1:6-1:7, 5-6)
+        │   └─0 unsignedNumber 7 (1:6-1:7, 5-6)
+        └─5 arrayMarker (1:7-1:8, 6-7)
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("07.txt") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 arrayExpression[3] (1:1-1:4, 0-3)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 numberExpression[1] (1:2-1:3, 1-2)
+    │   └─0 unsignedNumber 7 (1:2-1:3, 1-2)
+    └─2 valueSeparator (1:3-1:4, 2-3)
+          trailing: true
+`;
+
+exports[`integration:compile > expressions > array > should handle malformed array expressions ("08.txt") 1`] = `
+root[1] (1:1-1:12, 0-11)
+└─0 arrayExpression[4] (1:1-1:12, 0-11)
+    │ malformed: true
+    ├─0 arrayMarker (1:1-1:2, 0-1)
+    ├─1 booleanExpression false (1:2-1:7, 1-6)
+    ├─2 booleanExpression true (1:7-1:11, 6-10)
+    └─3 arrayMarker (1:11-1:12, 10-11)
+`;
+
+exports[`integration:compile > expressions > boolean > should handle boolean expressions ("01.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 booleanExpression false (1:1-1:6, 0-5)
+`;
+
+exports[`integration:compile > expressions > boolean > should handle boolean expressions ("02.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 booleanExpression true (1:1-1:5, 0-4)
+`;
+
+exports[`integration:compile > expressions > null > should handle null expressions ("01.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 nullExpression null (1:1-1:5, 0-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("01.txt") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 numberExpression[1] (1:1-1:2, 0-1)
+    │ malformed: true
+    └─0 signOperator "+" (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("02.txt") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 numberExpression[1] (1:1-1:2, 0-1)
+    │ malformed: true
+    └─0 signOperator "-" (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("03.txt") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 unexpectedValue ".." (1:1-1:3, 0-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("04.txt") 1`] = `
+root[2] (1:1-1:3, 0-2)
+├─0 numberExpression[1] (1:1-1:2, 0-1)
+│   └─0 unsignedNumber 0 (1:1-1:2, 0-1)
+└─1 numberExpression[1] (1:2-1:3, 1-2)
+    └─0 unsignedNumber 4 (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("05.txt") 1`] = `
+root[2] (1:1-1:4, 0-3)
+├─0 numberExpression[1] (1:1-1:2, 0-1)
+│   └─0 unsignedNumber 0 (1:1-1:2, 0-1)
+└─1 numberExpression[1] (1:2-1:4, 1-3)
+    └─0 unsignedNumber "5." (1:2-1:4, 1-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("06.txt") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[1] (1:1-1:3, 0-2)
+    │ malformed: true
+    └─0 unsignedNumber "0e" (1:1-1:3, 0-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("07.txt") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    │ malformed: true
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "7e+" (1:2-1:5, 1-4)
+          malformed: true
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("08.txt") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[1] (1:1-1:3, 0-2)
+    │ malformed: true
+    └─0 unsignedNumber "0x" (1:1-1:3, 0-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("09.txt") 1`] = `
+root[2] (1:1-1:4, 0-3)
+├─0 numberExpression[1] (1:1-1:3, 0-2)
+│   │ malformed: true
+│   └─0 unsignedNumber "0x" (1:1-1:3, 0-2)
+└─1 numberExpression[1] (1:3-1:4, 2-3)
+    │ malformed: true
+    └─0 signOperator "-" (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("10.txt") 1`] = `
+root[2] (1:1-1:4, 0-3)
+├─0 numberExpression[1] (1:1-1:3, 0-2)
+│   │ malformed: true
+│   └─0 unsignedNumber "0x" (1:1-1:3, 0-2)
+└─1 unexpectedValue "!" (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("11.txt") 1`] = `
+root[1] (1:1-1:9, 0-8)
+└─0 unexpectedValue "INFINITY" (1:1-1:9, 0-8)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("12.txt") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 unexpectedValue "nan" (1:1-1:4, 0-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle malformed number expressions ("13.txt") 1`] = `
+root[3] (1:1-1:14, 0-13)
+├─0 unexpectedValue "infinity" (1:1-1:9, 0-8)
+├─1 numberExpression[1] (1:9-1:11, 8-10)
+│   └─0 unsignedNumber 13 (1:9-1:11, 8-10)
+└─2 unexpectedValue "nan" (1:11-1:14, 10-13)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/01.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[1] (1:1-1:4, 0-3)
+    └─0 unsignedNumber "0e0" (1:1-1:4, 0-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/02.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0e0" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/03.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0e0" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/04.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[1] (1:1-1:5, 0-4)
+    └─0 unsignedNumber "3e13" (1:1-1:5, 0-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/05.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[2] (1:1-1:6, 0-5)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "3e13" (1:2-1:6, 1-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/06.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[2] (1:1-1:6, 0-5)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "3e13" (1:2-1:6, 1-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/07.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[1] (1:1-1:6, 0-5)
+    └─0 unsignedNumber "13e98" (1:1-1:6, 0-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/08.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[2] (1:1-1:7, 0-6)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "13e98" (1:2-1:7, 1-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/09.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[2] (1:1-1:7, 0-6)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "13e98" (1:2-1:7, 1-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/10.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[1] (1:1-1:5, 0-4)
+    └─0 unsignedNumber "0e+3" (1:1-1:5, 0-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/11.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[2] (1:1-1:6, 0-5)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0e+3" (1:2-1:6, 1-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/12.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[2] (1:1-1:6, 0-5)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0e-3" (1:2-1:6, 1-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/13.json5") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 numberExpression[1] (1:1-1:8, 0-7)
+    └─0 unsignedNumber ".313E98" (1:1-1:8, 0-7)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("exponential/14.json5") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 numberExpression[1] (1:1-1:8, 0-7)
+    └─0 unsignedNumber "3.13E98" (1:1-1:8, 0-7)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/01.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[1] (1:1-1:4, 0-3)
+    └─0 unsignedNumber "0.0" (1:1-1:4, 0-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/02.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0.0" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/03.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0.0" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/04.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[1] (1:1-1:3, 0-2)
+    └─0 unsignedNumber "0." (1:1-1:3, 0-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/05.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[2] (1:1-1:4, 0-3)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0." (1:2-1:4, 1-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/06.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[2] (1:1-1:4, 0-3)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0." (1:2-1:4, 1-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/07.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[1] (1:1-1:5, 0-4)
+    └─0 unsignedNumber "3.13" (1:1-1:5, 0-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/08.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[2] (1:1-1:6, 0-5)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "3.13" (1:2-1:6, 1-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/09.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[2] (1:1-1:6, 0-5)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "3.13" (1:2-1:6, 1-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/10.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[1] (1:1-1:6, 0-5)
+    └─0 unsignedNumber "13.98" (1:1-1:6, 0-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/11.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[2] (1:1-1:7, 0-6)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "13.98" (1:2-1:7, 1-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/12.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[2] (1:1-1:7, 0-6)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "13.98" (1:2-1:7, 1-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/13.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[1] (1:1-1:6, 0-5)
+    └─0 unsignedNumber ".1398" (1:1-1:6, 0-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/14.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[2] (1:1-1:7, 0-6)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand ".1398" (1:2-1:7, 1-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("float/15.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[2] (1:1-1:7, 0-6)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand ".1398" (1:2-1:7, 1-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("hexadecimal/01.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[1] (1:1-1:4, 0-3)
+    └─0 unsignedNumber "0X0" (1:1-1:4, 0-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("hexadecimal/02.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0X0" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("hexadecimal/03.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0X0" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("hexadecimal/04.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 numberExpression[1] (1:1-1:7, 0-6)
+    └─0 unsignedNumber "0xffff" (1:1-1:7, 0-6)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("hexadecimal/05.json5") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 numberExpression[2] (1:1-1:8, 0-7)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0xffff" (1:2-1:8, 1-7)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("hexadecimal/06.json5") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 numberExpression[2] (1:1-1:8, 0-7)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0xffff" (1:2-1:8, 1-7)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("infinity/01.json5") 1`] = `
+root[1] (1:1-1:9, 0-8)
+└─0 numberExpression[1] (1:1-1:9, 0-8)
+    └─0 unsignedNumber null (1:1-1:9, 0-8)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("infinity/02.json5") 1`] = `
+root[1] (1:1-1:10, 0-9)
+└─0 numberExpression[2] (1:1-1:10, 0-9)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "Infinity" (1:2-1:10, 1-9)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("infinity/03.json5") 1`] = `
+root[1] (1:1-1:10, 0-9)
+└─0 numberExpression[2] (1:1-1:10, 0-9)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "Infinity" (1:2-1:10, 1-9)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/01.json5") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 numberExpression[1] (1:1-1:2, 0-1)
+    └─0 unsignedNumber 0 (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/02.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[2] (1:1-1:3, 0-2)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "0" (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/03.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[2] (1:1-1:3, 0-2)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "0" (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/04.json5") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 numberExpression[1] (1:1-1:2, 0-1)
+    └─0 unsignedNumber 3 (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/05.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[2] (1:1-1:3, 0-2)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "3" (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/06.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[2] (1:1-1:3, 0-2)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "3" (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/07.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 numberExpression[1] (1:1-1:3, 0-2)
+    └─0 unsignedNumber 13 (1:1-1:3, 0-2)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/08.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[2] (1:1-1:4, 0-3)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "13" (1:2-1:4, 1-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/09.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[2] (1:1-1:4, 0-3)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "13" (1:2-1:4, 1-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("integer/10.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 numberExpression[1] (1:1-1:6, 0-5)
+    └─0 unsignedNumber 13000 (1:1-1:6, 0-5)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("nan/01.json5") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 numberExpression[1] (1:1-1:4, 0-3)
+    └─0 unsignedNumber null (1:1-1:4, 0-3)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("nan/02.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "+" (1:1-1:2, 0-1)
+    └─1 operand "NaN" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > number > should handle number expressions ("nan/03.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 numberExpression[2] (1:1-1:5, 0-4)
+    ├─0 signOperator "-" (1:1-1:2, 0-1)
+    └─1 operand "NaN" (1:2-1:5, 1-4)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("01.txt") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 objectExpression[1] (1:1-1:2, 0-1)
+    │ malformed: true
+    └─0 objectMarker (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("02.txt") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 objectExpression[3] (1:1-1:4, 0-3)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 unexpectedValue "," (1:2-1:3, 1-2)
+    └─2 objectMarker (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("03.txt") 1`] = `
+root[1] (1:1-1:13, 0-12)
+└─0 objectExpression[3] (1:1-1:13, 0-12)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[2] (1:2-1:12, 1-11)
+    │   │ key: "key"
+    │   │ malformed: true
+    │   ├─0 identifier<key> (1:2-1:5, 1-4)
+    │   └─1 stringExpression[3] (1:5-1:12, 4-11)
+    │       ├─0 stringMarker "'" (1:5-1:6, 4-5)
+    │       ├─1 text "value" (1:6-1:11, 5-10)
+    │       └─2 stringMarker "'" (1:11-1:12, 10-11)
+    └─2 objectMarker (1:12-1:13, 11-12)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("04.txt") 1`] = `
+root[1] (1:1-1:18, 0-17)
+└─0 objectExpression[3] (1:1-1:18, 0-17)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[3] (1:2-1:17, 1-16)
+    │   │ key: "key"
+    │   │ malformed: true
+    │   ├─0 identifier<key> (1:2-1:5, 1-4)
+    │   ├─1 comment[3] (1:5-1:10, 4-9)
+    │   │   │ kind: "block"
+    │   │   ├─0 commentOpener[2] (1:5-1:7, 4-6)
+    │   │   │   ├─0 commentMarker "/" (1:5-1:6, 4-5)
+    │   │   │   └─1 commentMarker "*" (1:6-1:7, 5-6)
+    │   │   ├─1 paragraph[1] (1:7-1:8, 6-7)
+    │   │   │   └─0 text ":" (1:7-1:8, 6-7)
+    │   │   └─2 commentCloser[2] (1:8-1:10, 7-9)
+    │   │       ├─0 commentMarker "*" (1:8-1:9, 7-8)
+    │   │       └─1 commentMarker "/" (1:9-1:10, 8-9)
+    │   └─2 stringExpression[3] (1:10-1:17, 9-16)
+    │       ├─0 stringMarker "'" (1:10-1:11, 9-10)
+    │       ├─1 text "value" (1:11-1:16, 10-15)
+    │       └─2 stringMarker "'" (1:16-1:17, 15-16)
+    └─2 objectMarker (1:17-1:18, 16-17)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("05.txt") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 objectExpression[2] (1:1-1:6, 0-5)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    └─1 objectMember[2] (1:2-1:6, 1-5)
+        │ key: "key"
+        │ malformed: true
+        ├─0 identifier<key> (1:2-1:5, 1-4)
+        └─1 fieldSeparator (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("06.txt") 1`] = `
+root[1] (1:1-1:11, 0-10)
+└─0 objectExpression[5] (1:1-1:11, 0-10)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:8, 1-7)
+    │   │ key: "\\"a\\""
+    │   ├─0 stringExpression[3] (1:2-1:5, 1-4)
+    │   │   ├─0 stringMarker "\\"" (1:2-1:3, 1-2)
+    │   │   ├─1 text "a" (1:3-1:4, 2-3)
+    │   │   └─2 stringMarker "\\"" (1:4-1:5, 3-4)
+    │   ├─1 fieldSeparator (1:5-1:6, 4-5)
+    │   ├─2 whitespace " " (1:6-1:7, 5-6)
+    │   └─3 numberExpression[1] (1:7-1:8, 6-7)
+    │       └─0 unsignedNumber 1 (1:7-1:8, 6-7)
+    ├─2 valueSeparator (1:8-1:9, 7-8)
+    │     trailing: true
+    ├─3 unexpectedValue "," (1:9-1:10, 8-9)
+    └─4 objectMarker (1:10-1:11, 9-10)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("07.txt") 1`] = `
+root[1] (1:1-1:12, 0-11)
+└─0 objectExpression[5] (1:1-1:12, 0-11)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:6, 1-5)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 numberExpression[1] (1:5-1:6, 4-5)
+    │       └─0 unsignedNumber 1 (1:5-1:6, 4-5)
+    ├─2 whitespace " " (1:6-1:7, 5-6)
+    ├─3 objectMember[4] (1:7-1:11, 6-10)
+    │   │ key: "b"
+    │   ├─0 identifier<b> (1:7-1:8, 6-7)
+    │   ├─1 fieldSeparator (1:8-1:9, 7-8)
+    │   ├─2 whitespace " " (1:9-1:10, 8-9)
+    │   └─3 numberExpression[1] (1:10-1:11, 9-10)
+    │       └─0 unsignedNumber 2 (1:10-1:11, 9-10)
+    └─4 objectMarker (1:11-1:12, 10-11)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("08.txt") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 objectExpression[3] (1:1-1:7, 0-6)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[2] (1:2-1:6, 1-5)
+    │   │ key: "key"
+    │   │ malformed: true
+    │   ├─0 identifier<key> (1:2-1:5, 1-4)
+    │   └─1 fieldSeparator (1:5-1:6, 4-5)
+    └─2 objectMarker (1:6-1:7, 5-6)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("09.txt") 1`] = `
+root[1] (1:1-1:10, 0-9)
+└─0 objectExpression[3] (1:1-1:10, 0-9)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:9, 1-8)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 objectExpression[3] (1:5-1:9, 4-8)
+    │       │ malformed: true
+    │       ├─0 objectMarker (1:5-1:6, 4-5)
+    │       ├─1 objectMember[2] (1:6-1:8, 5-7)
+    │       │   │ key: "b"
+    │       │   │ malformed: true
+    │       │   ├─0 identifier<b> (1:6-1:7, 5-6)
+    │       │   └─1 fieldSeparator (1:7-1:8, 6-7)
+    │       └─2 objectMarker (1:8-1:9, 7-8)
+    └─2 objectMarker (1:9-1:10, 8-9)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("10.txt") 1`] = `
+root[1] (1:1-1:25, 0-24)
+└─0 objectExpression[6] (1:1-1:25, 0-24)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:18, 1-17)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 objectExpression[7] (1:5-1:18, 4-17)
+    │       │ malformed: true
+    │       ├─0 objectMarker (1:5-1:6, 4-5)
+    │       ├─1 objectMember[4] (1:6-1:10, 5-9)
+    │       │   │ key: "b"
+    │       │   ├─0 identifier<b> (1:6-1:7, 5-6)
+    │       │   ├─1 fieldSeparator (1:7-1:8, 6-7)
+    │       │   ├─2 whitespace " " (1:8-1:9, 7-8)
+    │       │   └─3 numberExpression[1] (1:9-1:10, 8-9)
+    │       │       └─0 unsignedNumber 1 (1:9-1:10, 8-9)
+    │       ├─2 valueSeparator (1:10-1:11, 9-10)
+    │       ├─3 unexpectedValue "," (1:11-1:12, 10-11)
+    │       ├─4 whitespace " " (1:12-1:13, 11-12)
+    │       ├─5 objectMember[4] (1:13-1:17, 12-16)
+    │       │   │ key: "c"
+    │       │   ├─0 identifier<c> (1:13-1:14, 12-13)
+    │       │   ├─1 fieldSeparator (1:14-1:15, 13-14)
+    │       │   ├─2 whitespace " " (1:15-1:16, 14-15)
+    │       │   └─3 numberExpression[1] (1:16-1:17, 15-16)
+    │       │       └─0 unsignedNumber 2 (1:16-1:17, 15-16)
+    │       └─6 objectMarker (1:17-1:18, 16-17)
+    ├─2 valueSeparator (1:18-1:19, 17-18)
+    ├─3 whitespace " " (1:19-1:20, 18-19)
+    ├─4 objectMember[4] (1:20-1:24, 19-23)
+    │   │ key: "d"
+    │   ├─0 identifier<d> (1:20-1:21, 19-20)
+    │   ├─1 fieldSeparator (1:21-1:22, 20-21)
+    │   ├─2 whitespace " " (1:22-1:23, 21-22)
+    │   └─3 numberExpression[1] (1:23-1:24, 22-23)
+    │       └─0 unsignedNumber 3 (1:23-1:24, 22-23)
+    └─5 objectMarker (1:24-1:25, 23-24)
+`;
+
+exports[`integration:compile > expressions > object > should handle malformed object expressions ("11.txt") 1`] = `
+root[1] (1:1-1:15, 0-14)
+└─0 objectExpression[2] (1:1-1:15, 0-14)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    └─1 objectMember[4] (1:2-1:15, 1-14)
+        │ key: "a"
+        ├─0 identifier<a> (1:2-1:3, 1-2)
+        ├─1 fieldSeparator (1:3-1:4, 2-3)
+        ├─2 whitespace " " (1:4-1:5, 3-4)
+        └─3 objectExpression[2] (1:5-1:15, 4-14)
+            │ malformed: true
+            ├─0 objectMarker (1:5-1:6, 4-5)
+            └─1 objectMember[4] (1:6-1:15, 5-14)
+                │ key: "b"
+                ├─0 identifier<b> (1:6-1:7, 5-6)
+                ├─1 fieldSeparator (1:7-1:8, 6-7)
+                ├─2 whitespace " " (1:8-1:9, 7-8)
+                └─3 objectExpression[3] (1:9-1:15, 8-14)
+                    ├─0 objectMarker (1:9-1:10, 8-9)
+                    ├─1 objectMember[4] (1:10-1:14, 9-13)
+                    │   │ key: "c"
+                    │   ├─0 identifier<c> (1:10-1:11, 9-10)
+                    │   ├─1 fieldSeparator (1:11-1:12, 10-11)
+                    │   ├─2 whitespace " " (1:12-1:13, 11-12)
+                    │   └─3 numberExpression[1] (1:13-1:14, 12-13)
+                    │       └─0 unsignedNumber 1 (1:13-1:14, 12-13)
+                    └─2 objectMarker (1:14-1:15, 13-14)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/01.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 objectExpression[2] (1:1-1:3, 0-2)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    └─1 objectMarker (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/02.json5") 1`] = `
+root[1] (1:1-1:16, 0-15)
+└─0 objectExpression[3] (1:1-1:16, 0-15)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 comment[5] (1:2-1:15, 1-14)
+    │   │ kind: "block"
+    │   ├─0 commentOpener[2] (1:2-1:4, 1-3)
+    │   │   ├─0 commentMarker "/" (1:2-1:3, 1-2)
+    │   │   └─1 commentMarker "*" (1:3-1:4, 2-3)
+    │   ├─1 commentPadding (1:4-1:5, 3-4)
+    │   ├─2 paragraph[1] (1:5-1:12, 4-11)
+    │   │   └─0 text "comment" (1:5-1:12, 4-11)
+    │   ├─3 commentPadding (1:12-1:13, 11-12)
+    │   └─4 commentCloser[2] (1:13-1:15, 12-14)
+    │       ├─0 commentMarker "*" (1:13-1:14, 12-13)
+    │       └─1 commentMarker "/" (1:14-1:15, 13-14)
+    └─2 objectMarker (1:15-1:16, 14-15)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/03.json5") 1`] = `
+root[1] (1:1-1:123, 0-122)
+└─0 objectExpression[5] (1:1-1:123, 0-122)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 whitespace " " (1:2-1:3, 1-2)
+    ├─2 objectMember[4] (1:3-1:121, 2-120)
+    │   │ key: "$schema"
+    │   ├─0 identifier<$schema> (1:3-1:10, 2-9)
+    │   ├─1 fieldSeparator (1:10-1:11, 9-10)
+    │   ├─2 whitespace " " (1:11-1:12, 10-11)
+    │   └─3 stringExpression[3] (1:12-1:121, 11-120)
+    │       ├─0 stringMarker "'" (1:12-1:13, 11-12)
+    │       ├─1 text "https://raw.githubusercontent.com/flex-development/grease/refs/tags/grease@3.0.0-alpha.9/grease.schema.json" (1:13-1:120, 12-119)
+    │       └─2 stringMarker "'" (1:120-1:121, 119-120)
+    ├─3 whitespace " " (1:121-1:122, 120-121)
+    └─4 objectMarker (1:122-1:123, 121-122)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/04.json5") 1`] = `
+root[1] (1:1-1:23, 0-22)
+└─0 objectExpression[6] (1:1-1:23, 0-22)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 whitespace " " (1:2-1:3, 1-2)
+    ├─2 objectMember[4] (1:3-1:20, 2-19)
+    │   │ key: "_malformed"
+    │   ├─0 identifier<_malformed> (1:3-1:13, 2-12)
+    │   ├─1 fieldSeparator (1:13-1:14, 12-13)
+    │   ├─2 whitespace " " (1:14-1:15, 13-14)
+    │   └─3 booleanExpression false (1:15-1:20, 14-19)
+    ├─3 valueSeparator (1:20-1:21, 19-20)
+    │     trailing: true
+    ├─4 whitespace " " (1:21-1:22, 20-21)
+    └─5 objectMarker (1:22-1:23, 21-22)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/05.json5") 1`] = `
+root[1] (1:1-1:20, 0-19)
+└─0 objectExpression[6] (1:1-1:20, 0-19)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 whitespace " " (1:2-1:3, 1-2)
+    ├─2 objectMember[4] (1:3-1:17, 2-16)
+    │   │ key: "'key'"
+    │   ├─0 stringExpression[3] (1:3-1:8, 2-7)
+    │   │   ├─0 stringMarker "'" (1:3-1:4, 2-3)
+    │   │   ├─1 text "key" (1:4-1:7, 3-6)
+    │   │   └─2 stringMarker "'" (1:7-1:8, 6-7)
+    │   ├─1 fieldSeparator (1:8-1:9, 7-8)
+    │   ├─2 whitespace " " (1:9-1:10, 8-9)
+    │   └─3 stringExpression[3] (1:10-1:17, 9-16)
+    │       ├─0 stringMarker "'" (1:10-1:11, 9-10)
+    │       ├─1 text "value" (1:11-1:16, 10-15)
+    │       └─2 stringMarker "'" (1:16-1:17, 15-16)
+    ├─3 valueSeparator (1:17-1:18, 16-17)
+    │     trailing: true
+    ├─4 whitespace " " (1:18-1:19, 17-18)
+    └─5 objectMarker (1:19-1:20, 18-19)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/06.json5") 1`] = `
+root[1] (1:1-1:20, 0-19)
+└─0 objectExpression[6] (1:1-1:20, 0-19)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 whitespace " " (1:2-1:3, 1-2)
+    ├─2 objectMember[4] (1:3-1:17, 2-16)
+    │   │ key: "\\"key\\""
+    │   ├─0 stringExpression[3] (1:3-1:8, 2-7)
+    │   │   ├─0 stringMarker "\\"" (1:3-1:4, 2-3)
+    │   │   ├─1 text "key" (1:4-1:7, 3-6)
+    │   │   └─2 stringMarker "\\"" (1:7-1:8, 6-7)
+    │   ├─1 fieldSeparator (1:8-1:9, 7-8)
+    │   ├─2 whitespace " " (1:9-1:10, 8-9)
+    │   └─3 stringExpression[3] (1:10-1:17, 9-16)
+    │       ├─0 stringMarker "\\"" (1:10-1:11, 9-10)
+    │       ├─1 text "value" (1:11-1:16, 10-15)
+    │       └─2 stringMarker "\\"" (1:16-1:17, 15-16)
+    ├─3 valueSeparator (1:17-1:18, 16-17)
+    │     trailing: true
+    ├─4 whitespace " " (1:18-1:19, 17-18)
+    └─5 objectMarker (1:19-1:20, 18-19)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("flat/07.json5") 1`] = `
+root[1] (1:1-1:50, 0-49)
+└─0 objectExpression[15] (1:1-1:50, 0-49)
+    ├─0  objectMarker (1:1-1:2, 0-1)
+    ├─1  comment[3] (1:2-1:7, 1-6)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:2-1:4, 1-3)
+    │    │   ├─0 commentMarker "/" (1:2-1:3, 1-2)
+    │    │   └─1 commentMarker "*" (1:3-1:4, 2-3)
+    │    ├─1 paragraph[1] (1:4-1:5, 3-4)
+    │    │   └─0 text "1" (1:4-1:5, 3-4)
+    │    └─2 commentCloser[2] (1:5-1:7, 4-6)
+    │        ├─0 commentMarker "*" (1:5-1:6, 4-5)
+    │        └─1 commentMarker "/" (1:6-1:7, 5-6)
+    ├─2  objectMember[3] (1:7-1:10, 6-9)
+    │    │ key: "a"
+    │    ├─0 identifier<a> (1:7-1:8, 6-7)
+    │    ├─1 fieldSeparator (1:8-1:9, 7-8)
+    │    └─2 numberExpression[1] (1:9-1:10, 8-9)
+    │        └─0 unsignedNumber 1 (1:9-1:10, 8-9)
+    ├─3  comment[3] (1:10-1:15, 9-14)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:10-1:12, 9-11)
+    │    │   ├─0 commentMarker "/" (1:10-1:11, 9-10)
+    │    │   └─1 commentMarker "*" (1:11-1:12, 10-11)
+    │    ├─1 paragraph[1] (1:12-1:13, 11-12)
+    │    │   └─0 text "2" (1:12-1:13, 11-12)
+    │    └─2 commentCloser[2] (1:13-1:15, 12-14)
+    │        ├─0 commentMarker "*" (1:13-1:14, 12-13)
+    │        └─1 commentMarker "/" (1:14-1:15, 13-14)
+    ├─4  valueSeparator (1:15-1:16, 14-15)
+    ├─5  comment[3] (1:16-1:21, 15-20)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:16-1:18, 15-17)
+    │    │   ├─0 commentMarker "/" (1:16-1:17, 15-16)
+    │    │   └─1 commentMarker "*" (1:17-1:18, 16-17)
+    │    ├─1 paragraph[1] (1:18-1:19, 17-18)
+    │    │   └─0 text "3" (1:18-1:19, 17-18)
+    │    └─2 commentCloser[2] (1:19-1:21, 18-20)
+    │        ├─0 commentMarker "*" (1:19-1:20, 18-19)
+    │        └─1 commentMarker "/" (1:20-1:21, 19-20)
+    ├─6  objectMember[3] (1:21-1:24, 20-23)
+    │    │ key: "b"
+    │    ├─0 identifier<b> (1:21-1:22, 20-21)
+    │    ├─1 fieldSeparator (1:22-1:23, 21-22)
+    │    └─2 numberExpression[1] (1:23-1:24, 22-23)
+    │        └─0 unsignedNumber 2 (1:23-1:24, 22-23)
+    ├─7  comment[3] (1:24-1:29, 23-28)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:24-1:26, 23-25)
+    │    │   ├─0 commentMarker "/" (1:24-1:25, 23-24)
+    │    │   └─1 commentMarker "*" (1:25-1:26, 24-25)
+    │    ├─1 paragraph[1] (1:26-1:27, 25-26)
+    │    │   └─0 text "4" (1:26-1:27, 25-26)
+    │    └─2 commentCloser[2] (1:27-1:29, 26-28)
+    │        ├─0 commentMarker "*" (1:27-1:28, 26-27)
+    │        └─1 commentMarker "/" (1:28-1:29, 27-28)
+    ├─8  valueSeparator (1:29-1:30, 28-29)
+    ├─9  comment[3] (1:30-1:35, 29-34)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:30-1:32, 29-31)
+    │    │   ├─0 commentMarker "/" (1:30-1:31, 29-30)
+    │    │   └─1 commentMarker "*" (1:31-1:32, 30-31)
+    │    ├─1 paragraph[1] (1:32-1:33, 31-32)
+    │    │   └─0 text "5" (1:32-1:33, 31-32)
+    │    └─2 commentCloser[2] (1:33-1:35, 32-34)
+    │        ├─0 commentMarker "*" (1:33-1:34, 32-33)
+    │        └─1 commentMarker "/" (1:34-1:35, 33-34)
+    ├─10 objectMember[3] (1:35-1:38, 34-37)
+    │    │ key: "c"
+    │    ├─0 identifier<c> (1:35-1:36, 34-35)
+    │    ├─1 fieldSeparator (1:36-1:37, 35-36)
+    │    └─2 numberExpression[1] (1:37-1:38, 36-37)
+    │        └─0 unsignedNumber 3 (1:37-1:38, 36-37)
+    ├─11 comment[3] (1:38-1:43, 37-42)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:38-1:40, 37-39)
+    │    │   ├─0 commentMarker "/" (1:38-1:39, 37-38)
+    │    │   └─1 commentMarker "*" (1:39-1:40, 38-39)
+    │    ├─1 paragraph[1] (1:40-1:41, 39-40)
+    │    │   └─0 text "6" (1:40-1:41, 39-40)
+    │    └─2 commentCloser[2] (1:41-1:43, 40-42)
+    │        ├─0 commentMarker "*" (1:41-1:42, 40-41)
+    │        └─1 commentMarker "/" (1:42-1:43, 41-42)
+    ├─12 valueSeparator (1:43-1:44, 42-43)
+    │      trailing: true
+    ├─13 comment[3] (1:44-1:49, 43-48)
+    │    │ kind: "block"
+    │    ├─0 commentOpener[2] (1:44-1:46, 43-45)
+    │    │   ├─0 commentMarker "/" (1:44-1:45, 43-44)
+    │    │   └─1 commentMarker "*" (1:45-1:46, 44-45)
+    │    ├─1 paragraph[1] (1:46-1:47, 45-46)
+    │    │   └─0 text "7" (1:46-1:47, 45-46)
+    │    └─2 commentCloser[2] (1:47-1:49, 46-48)
+    │        ├─0 commentMarker "*" (1:47-1:48, 46-47)
+    │        └─1 commentMarker "/" (1:48-1:49, 47-48)
+    └─14 objectMarker (1:49-1:50, 48-49)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("nested/01.json5") 1`] = `
+root[1] (1:1-1:17, 0-16)
+└─0 objectExpression[3] (1:1-1:17, 0-16)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:16, 1-15)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 objectExpression[3] (1:5-1:16, 4-15)
+    │       ├─0 objectMarker (1:5-1:6, 4-5)
+    │       ├─1 objectMember[4] (1:6-1:15, 5-14)
+    │       │   │ key: "b"
+    │       │   ├─0 identifier<b> (1:6-1:7, 5-6)
+    │       │   ├─1 fieldSeparator (1:7-1:8, 6-7)
+    │       │   ├─2 whitespace " " (1:8-1:9, 7-8)
+    │       │   └─3 objectExpression[3] (1:9-1:15, 8-14)
+    │       │       ├─0 objectMarker (1:9-1:10, 8-9)
+    │       │       ├─1 objectMember[4] (1:10-1:14, 9-13)
+    │       │       │   │ key: "c"
+    │       │       │   ├─0 identifier<c> (1:10-1:11, 9-10)
+    │       │       │   ├─1 fieldSeparator (1:11-1:12, 10-11)
+    │       │       │   ├─2 whitespace " " (1:12-1:13, 11-12)
+    │       │       │   └─3 numberExpression[1] (1:13-1:14, 12-13)
+    │       │       │       └─0 unsignedNumber 1 (1:13-1:14, 12-13)
+    │       │       └─2 objectMarker (1:14-1:15, 13-14)
+    │       └─2 objectMarker (1:15-1:16, 14-15)
+    └─2 objectMarker (1:16-1:17, 15-16)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("nested/02.json5") 1`] = `
+root[1] (1:1-1:22, 0-21)
+└─0 objectExpression[3] (1:1-1:22, 0-21)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:21, 1-20)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 arrayExpression[6] (1:5-1:21, 4-20)
+    │       ├─0 arrayMarker (1:5-1:6, 4-5)
+    │       ├─1 objectExpression[3] (1:6-1:12, 5-11)
+    │       │   ├─0 objectMarker (1:6-1:7, 5-6)
+    │       │   ├─1 objectMember[4] (1:7-1:11, 6-10)
+    │       │   │   │ key: "b"
+    │       │   │   ├─0 identifier<b> (1:7-1:8, 6-7)
+    │       │   │   ├─1 fieldSeparator (1:8-1:9, 7-8)
+    │       │   │   ├─2 whitespace " " (1:9-1:10, 8-9)
+    │       │   │   └─3 numberExpression[1] (1:10-1:11, 9-10)
+    │       │   │       └─0 unsignedNumber 1 (1:10-1:11, 9-10)
+    │       │   └─2 objectMarker (1:11-1:12, 10-11)
+    │       ├─2 valueSeparator (1:12-1:13, 11-12)
+    │       ├─3 whitespace " " (1:13-1:14, 12-13)
+    │       ├─4 objectExpression[3] (1:14-1:20, 13-19)
+    │       │   ├─0 objectMarker (1:14-1:15, 13-14)
+    │       │   ├─1 objectMember[4] (1:15-1:19, 14-18)
+    │       │   │   │ key: "c"
+    │       │   │   ├─0 identifier<c> (1:15-1:16, 14-15)
+    │       │   │   ├─1 fieldSeparator (1:16-1:17, 15-16)
+    │       │   │   ├─2 whitespace " " (1:17-1:18, 16-17)
+    │       │   │   └─3 numberExpression[1] (1:18-1:19, 17-18)
+    │       │   │       └─0 unsignedNumber 2 (1:18-1:19, 17-18)
+    │       │   └─2 objectMarker (1:19-1:20, 18-19)
+    │       └─5 arrayMarker (1:20-1:21, 19-20)
+    └─2 objectMarker (1:21-1:22, 20-21)
+`;
+
+exports[`integration:compile > expressions > object > should handle object expressions ("nested/03.json5") 1`] = `
+root[1] (1:1-1:24, 0-23)
+└─0 objectExpression[3] (1:1-1:24, 0-23)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:23, 1-22)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 arrayExpression[3] (1:5-1:23, 4-22)
+    │       ├─0 arrayMarker (1:5-1:6, 4-5)
+    │       ├─1 objectExpression[3] (1:6-1:22, 5-21)
+    │       │   ├─0 objectMarker (1:6-1:7, 5-6)
+    │       │   ├─1 objectMember[4] (1:7-1:21, 6-20)
+    │       │   │   │ key: "b"
+    │       │   │   ├─0 identifier<b> (1:7-1:8, 6-7)
+    │       │   │   ├─1 fieldSeparator (1:8-1:9, 7-8)
+    │       │   │   ├─2 whitespace " " (1:9-1:10, 8-9)
+    │       │   │   └─3 arrayExpression[6] (1:10-1:21, 9-20)
+    │       │   │       ├─0 arrayMarker (1:10-1:11, 9-10)
+    │       │   │       ├─1 numberExpression[1] (1:11-1:12, 10-11)
+    │       │   │       │   └─0 unsignedNumber 1 (1:11-1:12, 10-11)
+    │       │   │       ├─2 valueSeparator (1:12-1:13, 11-12)
+    │       │   │       ├─3 whitespace " " (1:13-1:14, 12-13)
+    │       │   │       ├─4 objectExpression[3] (1:14-1:20, 13-19)
+    │       │   │       │   ├─0 objectMarker (1:14-1:15, 13-14)
+    │       │   │       │   ├─1 objectMember[4] (1:15-1:19, 14-18)
+    │       │   │       │   │   │ key: "c"
+    │       │   │       │   │   ├─0 identifier<c> (1:15-1:16, 14-15)
+    │       │   │       │   │   ├─1 fieldSeparator (1:16-1:17, 15-16)
+    │       │   │       │   │   ├─2 whitespace " " (1:17-1:18, 16-17)
+    │       │   │       │   │   └─3 numberExpression[1] (1:18-1:19, 17-18)
+    │       │   │       │   │       └─0 unsignedNumber 2 (1:18-1:19, 17-18)
+    │       │   │       │   └─2 objectMarker (1:19-1:20, 18-19)
+    │       │   │       └─5 arrayMarker (1:20-1:21, 19-20)
+    │       │   └─2 objectMarker (1:21-1:22, 20-21)
+    │       └─2 arrayMarker (1:22-1:23, 21-22)
+    └─2 objectMarker (1:23-1:24, 22-23)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("01.txt") 1`] = `
+root[1] (1:1-1:2, 0-1)
+└─0 stringExpression[1] (1:1-1:2, 0-1)
+    │ malformed: true
+    └─0 stringMarker "'" (1:1-1:2, 0-1)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("02.txt") 1`] = `
+root[1] (1:1-1:13, 0-12)
+└─0 stringExpression[4] (1:1-1:13, 0-12)
+    │ malformed: true
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 text "hello" (1:2-1:7, 1-6)
+    ├─2 whitespace " " (1:7-1:8, 6-7)
+    └─3 text "world" (1:8-1:13, 7-12)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("03.txt") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 stringExpression[3] (1:1-1:6, 0-5)
+    │ malformed: true
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 hexEscape[1] (1:2-1:4, 1-3)
+    │   │ malformed: true
+    │   └─0 characterEscape[2] (1:2-1:4, 1-3)
+    │       ├─0 escapeMarker (1:2-1:3, 1-2)
+    │       └─1 characterEscapeValue "x" (1:3-1:4, 2-3)
+    └─2 text "xx" (1:4-1:6, 3-5)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("04.txt") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 stringExpression[3] (1:1-1:6, 0-5)
+    │ malformed: true
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 hexEscape[2] (1:2-1:5, 1-4)
+    │   │ malformed: true
+    │   ├─0 characterEscape[2] (1:2-1:4, 1-3)
+    │   │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   │   └─1 characterEscapeValue "x" (1:3-1:4, 2-3)
+    │   └─1 hexEscapeValue "a" (1:4-1:5, 3-4)
+    │         malformed: true
+    └─2 text "z" (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("05.txt") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 stringExpression[4] (1:1-1:6, 0-5)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 characterEscape[2] (1:2-1:4, 1-3)
+    │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   └─1 characterEscapeValue "0" (1:3-1:4, 2-3)
+    ├─2 text "3" (1:4-1:5, 3-4)
+    └─3 stringMarker "\\"" (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("06.txt") 1`] = `
+root[1] (1:1-1:9, 0-8)
+└─0 stringExpression[4] (1:1-1:9, 0-8)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 unicodeEscape[1] (1:2-1:4, 1-3)
+    │   │ malformed: true
+    │   └─0 characterEscape[2] (1:2-1:4, 1-3)
+    │       ├─0 escapeMarker (1:2-1:3, 1-2)
+    │       └─1 characterEscapeValue "u" (1:3-1:4, 2-3)
+    ├─2 text "uuuu" (1:4-1:8, 3-7)
+    └─3 stringMarker "'" (1:8-1:9, 7-8)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("07.txt") 1`] = `
+root[1] (1:1-1:8, 0-7)
+└─0 stringExpression[3] (1:1-1:8, 0-7)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 unicodeEscape[2] (1:2-1:7, 1-6)
+    │   │ malformed: true
+    │   ├─0 characterEscape[2] (1:2-1:4, 1-3)
+    │   │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   │   └─1 characterEscapeValue "u" (1:3-1:4, 2-3)
+    │   └─1 unicodeEscapeValue "123" (1:4-1:7, 3-6)
+    │         malformed: true
+    └─2 stringMarker "'" (1:7-1:8, 6-7)
+`;
+
+exports[`integration:compile > expressions > string > should handle malformed string expressions ("08.txt") 1`] = `
+root[1] (1:1-1:4, 0-3)
+└─0 stringExpression[2] (1:1-1:4, 0-3)
+    │ malformed: true
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    └─1 characterEscape[2] (1:2-1:4, 1-3)
+        ├─0 escapeMarker (1:2-1:3, 1-2)
+        └─1 characterEscapeValue "\\"" (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("01.json5") 1`] = `
+root[1] (1:1-1:3, 0-2)
+└─0 stringExpression[2] (1:1-1:3, 0-2)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    └─1 stringMarker "\\"" (1:2-1:3, 1-2)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("02.json5") 1`] = `
+root[1] (1:1-1:6, 0-5)
+└─0 stringExpression[3] (1:1-1:6, 0-5)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 whitespace "   " (1:2-1:5, 1-4)
+    └─2 stringMarker "'" (1:5-1:6, 4-5)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("03.json5") 1`] = `
+root[1] (1:1-1:43, 0-42)
+└─0 stringExpression[3] (1:1-1:43, 0-42)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 text "https://github.com/flex-development/mark" (1:2-1:42, 1-41)
+    └─2 stringMarker "\\"" (1:42-1:43, 41-42)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("04.json5") 1`] = `
+root[1] (1:1-1:30, 0-29)
+└─0 stringExpression[3] (1:1-1:30, 0-29)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 text "https://flexdevelopment.llc" (1:2-1:29, 1-28)
+    └─2 stringMarker "'" (1:29-1:30, 28-29)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("05.json5") 1`] = `
+root[1] (1:1-1:19, 0-18)
+└─0 stringExpression[9] (1:1-1:19, 0-18)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 text "//" (1:2-1:4, 1-3)
+    ├─2 whitespace " " (1:4-1:5, 3-4)
+    ├─3 text "not" (1:5-1:8, 4-7)
+    ├─4 whitespace " " (1:8-1:9, 7-8)
+    ├─5 text "a" (1:9-1:10, 8-9)
+    ├─6 whitespace " " (1:10-1:11, 9-10)
+    ├─7 text "comment" (1:11-1:18, 10-17)
+    └─8 stringMarker "\\"" (1:18-1:19, 17-18)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("06.json5") 1`] = `
+root[1] (1:1-1:22, 0-21)
+└─0 stringExpression[11] (1:1-1:22, 0-21)
+    ├─0  stringMarker "'" (1:1-1:2, 0-1)
+    ├─1  text "/*" (1:2-1:4, 1-3)
+    ├─2  whitespace " " (1:4-1:5, 3-4)
+    ├─3  text "not" (1:5-1:8, 4-7)
+    ├─4  whitespace " " (1:8-1:9, 7-8)
+    ├─5  text "a" (1:9-1:10, 8-9)
+    ├─6  whitespace " " (1:10-1:11, 9-10)
+    ├─7  text "comment" (1:11-1:18, 10-17)
+    ├─8  whitespace " " (1:18-1:19, 17-18)
+    ├─9  text "*/" (1:19-1:21, 18-20)
+    └─10 stringMarker "'" (1:21-1:22, 20-21)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("07.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 stringExpression[4] (1:1-1:7, 0-6)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 characterEscape[2] (1:2-1:4, 1-3)
+    │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   └─1 characterEscapeValue "\\\\" (1:3-1:4, 2-3)
+    ├─2 characterEscape[2] (1:4-1:6, 3-5)
+    │   ├─0 escapeMarker (1:4-1:5, 3-4)
+    │   └─1 characterEscapeValue "\\"" (1:5-1:6, 4-5)
+    └─3 stringMarker "\\"" (1:6-1:7, 5-6)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("08.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 stringExpression[4] (1:1-1:7, 0-6)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 characterEscape[2] (1:2-1:4, 1-3)
+    │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   └─1 characterEscapeValue "\\\\" (1:3-1:4, 2-3)
+    ├─2 characterEscape[2] (1:4-1:6, 3-5)
+    │   ├─0 escapeMarker (1:4-1:5, 3-4)
+    │   └─1 characterEscapeValue "\\\\" (1:5-1:6, 4-5)
+    └─3 stringMarker "\\"" (1:6-1:7, 5-6)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("09.json5") 1`] = `
+root[1] (1:1-1:16, 0-15)
+└─0 stringExpression[7] (1:1-1:16, 0-15)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 text "say" (1:2-1:5, 1-4)
+    ├─2 whitespace " " (1:5-1:6, 4-5)
+    ├─3 characterEscape[2] (1:6-1:8, 5-7)
+    │   ├─0 escapeMarker (1:6-1:7, 5-6)
+    │   └─1 characterEscapeValue "\\"" (1:7-1:8, 6-7)
+    ├─4 text "hello" (1:8-1:13, 7-12)
+    ├─5 characterEscape[2] (1:13-1:15, 12-14)
+    │   ├─0 escapeMarker (1:13-1:14, 12-13)
+    │   └─1 characterEscapeValue "\\"" (1:14-1:15, 13-14)
+    └─6 stringMarker "\\"" (1:15-1:16, 14-15)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("10.json5") 1`] = `
+root[1] (1:1-1:16, 0-15)
+└─0 stringExpression[7] (1:1-1:16, 0-15)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 text "say" (1:2-1:5, 1-4)
+    ├─2 whitespace " " (1:5-1:6, 4-5)
+    ├─3 characterEscape[2] (1:6-1:8, 5-7)
+    │   ├─0 escapeMarker (1:6-1:7, 5-6)
+    │   └─1 characterEscapeValue "'" (1:7-1:8, 6-7)
+    ├─4 text "hello" (1:8-1:13, 7-12)
+    ├─5 characterEscape[2] (1:13-1:15, 12-14)
+    │   ├─0 escapeMarker (1:13-1:14, 12-13)
+    │   └─1 characterEscapeValue "'" (1:14-1:15, 13-14)
+    └─6 stringMarker "'" (1:15-1:16, 14-15)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("11.json5") 1`] = `
+root[1] (1:1-1:14, 0-13)
+└─0 stringExpression[5] (1:1-1:14, 0-13)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 text "say" (1:2-1:5, 1-4)
+    ├─2 whitespace " " (1:5-1:6, 4-5)
+    ├─3 text "\\"hello\\"" (1:6-1:13, 5-12)
+    └─4 stringMarker "'" (1:13-1:14, 12-13)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("12.json5") 1`] = `
+root[1] (1:1-1:7, 0-6)
+└─0 stringExpression[3] (1:1-1:7, 0-6)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 hexEscape[2] (1:2-1:6, 1-5)
+    │   ├─0 characterEscape[2] (1:2-1:4, 1-3)
+    │   │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   │   └─1 characterEscapeValue "x" (1:3-1:4, 2-3)
+    │   └─1 hexEscapeValue "41" (1:4-1:6, 3-5)
+    └─2 stringMarker "'" (1:6-1:7, 5-6)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("13.json5") 1`] = `
+root[1] (1:1-1:5, 0-4)
+└─0 stringExpression[3] (1:1-1:5, 0-4)
+    ├─0 stringMarker "'" (1:1-1:2, 0-1)
+    ├─1 nulEscape[2] (1:2-1:4, 1-3)
+    │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   └─1 nulEscapeValue "0" (1:3-1:4, 2-3)
+    └─2 stringMarker "'" (1:4-1:5, 3-4)
+`;
+
+exports[`integration:compile > expressions > string > should handle string expressions ("14.json5") 1`] = `
+root[1] (1:1-1:9, 0-8)
+└─0 stringExpression[3] (1:1-1:9, 0-8)
+    ├─0 stringMarker "\\"" (1:1-1:2, 0-1)
+    ├─1 unicodeEscape[2] (1:2-1:8, 1-7)
+    │   ├─0 characterEscape[2] (1:2-1:4, 1-3)
+    │   │   ├─0 escapeMarker (1:2-1:3, 1-2)
+    │   │   └─1 characterEscapeValue "u" (1:3-1:4, 2-3)
+    │   └─1 unicodeEscapeValue "00A9" (1:4-1:8, 3-7)
+    └─2 stringMarker "\\"" (1:8-1:9, 7-8)
+`;
+
+exports[`integration:compile > files > should handle files ("01.json5") 1`] = `
+root[3] (1:1-15:1, 0-110)
+├─0 objectExpression[36] (1:1-13:2, 0-108)
+│   ├─0  objectMarker (1:1-1:2, 0-1)
+│   ├─1  break (1:2-2:1, 1-2)
+│   ├─2  linePrefix (2:1-2:3, 2-4)
+│   ├─3  objectMember[4] (2:3-2:12, 4-13)
+│   │    │ key: "array"
+│   │    ├─0 identifier<array> (2:3-2:8, 4-9)
+│   │    ├─1 fieldSeparator (2:8-2:9, 9-10)
+│   │    ├─2 whitespace " " (2:9-2:10, 10-11)
+│   │    └─3 arrayExpression[2] (2:10-2:12, 11-13)
+│   │        ├─0 arrayMarker (2:10-2:11, 11-12)
+│   │        └─1 arrayMarker (2:11-2:12, 12-13)
+│   ├─4  valueSeparator (2:12-2:13, 13-14)
+│   ├─5  break (2:13-3:1, 14-15)
+│   ├─6  linePrefix (3:1-3:3, 15-17)
+│   ├─7  break (3:3-4:1, 17-18)
+│   ├─8  linePrefix (4:1-4:3, 18-20)
+│   ├─9  objectMember[4] (4:3-4:15, 20-32)
+│   │    │ key: "false"
+│   │    ├─0 identifier<false> (4:3-4:8, 20-25)
+│   │    ├─1 fieldSeparator (4:8-4:9, 25-26)
+│   │    ├─2 whitespace " " (4:9-4:10, 26-27)
+│   │    └─3 booleanExpression false (4:10-4:15, 27-32)
+│   ├─10 valueSeparator (4:15-4:16, 32-33)
+│   ├─11 break (4:16-5:1, 33-34)
+│   ├─12 linePrefix (5:1-5:3, 34-36)
+│   ├─13 break (5:3-6:1, 36-37)
+│   ├─14 linePrefix (6:1-6:3, 37-39)
+│   ├─15 objectMember[4] (6:3-6:13, 39-49)
+│   │    │ key: "null"
+│   │    ├─0 identifier<null> (6:3-6:7, 39-43)
+│   │    ├─1 fieldSeparator (6:7-6:8, 43-44)
+│   │    ├─2 whitespace " " (6:8-6:9, 44-45)
+│   │    └─3 nullExpression null (6:9-6:13, 45-49)
+│   ├─16 valueSeparator (6:13-6:14, 49-50)
+│   ├─17 break (6:14-7:1, 50-51)
+│   ├─18 linePrefix (7:1-7:3, 51-53)
+│   ├─19 break (7:3-8:1, 53-54)
+│   ├─20 linePrefix (8:1-8:3, 54-56)
+│   ├─21 objectMember[4] (8:3-8:13, 56-66)
+│   │    │ key: "object"
+│   │    ├─0 identifier<object> (8:3-8:9, 56-62)
+│   │    ├─1 fieldSeparator (8:9-8:10, 62-63)
+│   │    ├─2 whitespace " " (8:10-8:11, 63-64)
+│   │    └─3 objectExpression[2] (8:11-8:13, 64-66)
+│   │        ├─0 objectMarker (8:11-8:12, 64-65)
+│   │        └─1 objectMarker (8:12-8:13, 65-66)
+│   ├─22 valueSeparator (8:13-8:14, 66-67)
+│   ├─23 break (8:14-9:1, 67-68)
+│   ├─24 linePrefix (9:1-9:3, 68-70)
+│   ├─25 break (9:3-10:1, 70-71)
+│   ├─26 linePrefix (10:1-10:3, 71-73)
+│   ├─27 objectMember[4] (10:3-10:19, 73-89)
+│   │    │ key: "string"
+│   │    ├─0 identifier<string> (10:3-10:9, 73-79)
+│   │    ├─1 fieldSeparator (10:9-10:10, 79-80)
+│   │    ├─2 whitespace " " (10:10-10:11, 80-81)
+│   │    └─3 stringExpression[3] (10:11-10:19, 81-89)
+│   │        ├─0 stringMarker "'" (10:11-10:12, 81-82)
+│   │        ├─1 text "string" (10:12-10:18, 82-88)
+│   │        └─2 stringMarker "'" (10:18-10:19, 88-89)
+│   ├─28 valueSeparator (10:19-10:20, 89-90)
+│   ├─29 break (10:20-11:1, 90-91)
+│   ├─30 linePrefix (11:1-11:3, 91-93)
+│   ├─31 break (11:3-12:1, 93-94)
+│   ├─32 linePrefix (12:1-12:3, 94-96)
+│   ├─33 objectMember[4] (12:3-12:13, 96-106)
+│   │    │ key: "true"
+│   │    ├─0 identifier<true> (12:3-12:7, 96-100)
+│   │    ├─1 fieldSeparator (12:7-12:8, 100-101)
+│   │    ├─2 whitespace " " (12:8-12:9, 101-102)
+│   │    └─3 booleanExpression true (12:9-12:13, 102-106)
+│   ├─34 break (12:13-13:1, 106-107)
+│   └─35 objectMarker (13:1-13:2, 107-108)
+├─1 break (13:2-14:1, 108-109)
+└─2 break (14:1-15:1, 109-110)
+`;
+
+exports[`integration:compile > files > should handle files ("02.json5") 1`] = `
+root[1] (1:1-5:2, 0-38)
+└─0 objectExpression[7] (1:1-5:2, 0-38)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 break (1:2-2:1, 1-2)
+    ├─2 linePrefix (2:1-2:3, 2-4)
+    ├─3 objectMember[4] (2:3-4:4, 4-35)
+    │   │ key: "items"
+    │   ├─0 identifier<items> (2:3-2:8, 4-9)
+    │   ├─1 fieldSeparator (2:8-2:9, 9-10)
+    │   ├─2 whitespace " " (2:9-2:10, 10-11)
+    │   └─3 arrayExpression[8] (2:10-4:4, 11-35)
+    │       ├─0 arrayMarker (2:10-2:11, 11-12)
+    │       ├─1 break (2:11-3:1, 12-13)
+    │       ├─2 linePrefix (3:1-3:5, 13-17)
+    │       ├─3 objectExpression[6] (3:5-3:18, 17-30)
+    │       │   ├─0 objectMarker (3:5-3:6, 17-18)
+    │       │   ├─1 whitespace " " (3:6-3:7, 18-19)
+    │       │   ├─2 objectMember[4] (3:7-3:15, 19-27)
+    │       │   │   │ key: "value"
+    │       │   │   ├─0 identifier<value> (3:7-3:12, 19-24)
+    │       │   │   ├─1 fieldSeparator (3:12-3:13, 24-25)
+    │       │   │   ├─2 whitespace " " (3:13-3:14, 25-26)
+    │       │   │   └─3 numberExpression[1] (3:14-3:15, 26-27)
+    │       │   │       └─0 unsignedNumber 1 (3:14-3:15, 26-27)
+    │       │   ├─3 valueSeparator (3:15-3:16, 27-28)
+    │       │   │     trailing: true
+    │       │   ├─4 whitespace " " (3:16-3:17, 28-29)
+    │       │   └─5 objectMarker (3:17-3:18, 29-30)
+    │       ├─4 valueSeparator (3:18-3:19, 30-31)
+    │       │     trailing: true
+    │       ├─5 break (3:19-4:1, 31-32)
+    │       ├─6 linePrefix (4:1-4:3, 32-34)
+    │       └─7 arrayMarker (4:3-4:4, 34-35)
+    ├─4 valueSeparator (4:4-4:5, 35-36)
+    │     trailing: true
+    ├─5 break (4:5-5:1, 36-37)
+    └─6 objectMarker (5:1-5:2, 37-38)
+`;
+
+exports[`integration:compile > files > should handle files with malformed content ("01.txt") 1`] = `
+root[3] (1:1-2:4, 0-5)
+├─0 unexpectedValue "@" (1:1-1:2, 0-1)
+├─1 break (1:2-2:1, 1-2)
+└─2 linePrefix (2:1-2:4, 2-5)
+`;
+
+exports[`integration:compile > files > should handle files with malformed content ("02.txt") 1`] = `
+root[2] (1:1-1:12, 0-11)
+├─0 unexpectedValue "@" (1:1-1:2, 0-1)
+└─1 comment[3] (1:2-1:12, 1-11)
+    │ kind: "line"
+    ├─0 commentOpener[2] (1:2-1:4, 1-3)
+    │   ├─0 commentMarker "/" (1:2-1:3, 1-2)
+    │   └─1 commentMarker "/" (1:3-1:4, 2-3)
+    ├─1 commentPadding (1:4-1:5, 3-4)
+    └─2 paragraph[1] (1:5-1:12, 4-11)
+        └─0 text "comment" (1:5-1:12, 4-11)
+`;
+
+exports[`integration:compile > files > should handle files with malformed content ("03.txt") 1`] = `
+root[2] (1:1-1:4, 0-3)
+├─0 unexpectedValue "#" (1:1-1:2, 0-1)
+└─1 objectExpression[2] (1:2-1:4, 1-3)
+    ├─0 objectMarker (1:2-1:3, 1-2)
+    └─1 objectMarker (1:3-1:4, 2-3)
+`;
+
+exports[`integration:compile > files > should handle files with malformed content ("04.txt") 1`] = `
+root[1] (1:1-1:11, 0-10)
+└─0 objectExpression[3] (1:1-1:11, 0-10)
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    ├─1 objectMember[4] (1:2-1:10, 1-9)
+    │   │ key: "a"
+    │   ├─0 identifier<a> (1:2-1:3, 1-2)
+    │   ├─1 fieldSeparator (1:3-1:4, 2-3)
+    │   ├─2 whitespace " " (1:4-1:5, 3-4)
+    │   └─3 arrayExpression[5] (1:5-1:10, 4-9)
+    │       │ malformed: true
+    │       ├─0 arrayMarker (1:5-1:6, 4-5)
+    │       ├─1 numberExpression[1] (1:6-1:7, 5-6)
+    │       │   └─0 unsignedNumber 1 (1:6-1:7, 5-6)
+    │       ├─2 whitespace " " (1:7-1:8, 6-7)
+    │       ├─3 numberExpression[1] (1:8-1:9, 7-8)
+    │       │   └─0 unsignedNumber 2 (1:8-1:9, 7-8)
+    │       └─4 arrayMarker (1:9-1:10, 8-9)
+    └─2 objectMarker (1:10-1:11, 9-10)
+`;
+
+exports[`integration:compile > files > should handle files with malformed content ("05.txt") 1`] = `
+root[1] (1:1-1:12, 0-11)
+└─0 objectExpression[2] (1:1-1:12, 0-11)
+    │ malformed: true
+    ├─0 objectMarker (1:1-1:2, 0-1)
+    └─1 objectMember[4] (1:2-1:12, 1-11)
+        │ key: "a"
+        ├─0 identifier<a> (1:2-1:3, 1-2)
+        ├─1 fieldSeparator (1:3-1:4, 2-3)
+        ├─2 whitespace " " (1:4-1:5, 3-4)
+        └─3 arrayExpression[2] (1:5-1:12, 4-11)
+            │ malformed: true
+            ├─0 arrayMarker (1:5-1:6, 4-5)
+            └─1 objectExpression[3] (1:6-1:12, 5-11)
+                ├─0 objectMarker (1:6-1:7, 5-6)
+                ├─1 objectMember[4] (1:7-1:11, 6-10)
+                │   │ key: "b"
+                │   ├─0 identifier<b> (1:7-1:8, 6-7)
+                │   ├─1 fieldSeparator (1:8-1:9, 7-8)
+                │   ├─2 whitespace " " (1:9-1:10, 8-9)
+                │   └─3 numberExpression[1] (1:10-1:11, 9-10)
+                │       └─0 unsignedNumber 1 (1:10-1:11, 9-10)
+                └─2 objectMarker (1:11-1:12, 10-11)
+`;

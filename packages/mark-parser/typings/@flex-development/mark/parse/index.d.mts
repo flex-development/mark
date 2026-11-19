@@ -15,10 +15,6 @@ declare module '@flex-development/mark/parse' {
     source: 'source'
   }
 
-  interface ContextMap {
-    mark: TokenizeContext
-  }
-
   interface TokenFields {
     value?: string | null | undefined
   }

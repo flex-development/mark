@@ -46,6 +46,7 @@ describe('unit:preprocess', () => {
       [chars.bom, true, { ignoreBOM: true }],
       [chars.nul, true],
       [chars.nul, true, { nul: false }],
+      [chars.ls],
       [chars.lf + chars.cr, true],
       [chars.cr + chars.lowercaseH],
       [chars.cr + chars.lf + chars.lowercaseA + chars.lowercaseB],

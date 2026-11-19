@@ -5,20 +5,23 @@
 
 import type {
   CreateExtensions,
-  Extension
+  Extension,
+  ExtensionPack,
+  ExtensionPackList
 } from '@flex-development/mark/compile'
-import type { List } from '@flex-development/mark/core'
 
 /**
- * An extension, a list of extensions, or a factory function.
+ * An extension object, an extension pack list, or a factory function.
  *
  * @see {@linkcode CreateExtensions}
+ * @see {@linkcode ExtensionPackList}
+ * @see {@linkcode ExtensionPack}
  * @see {@linkcode Extension}
- * @see {@linkcode List}
  */
 type Extensions =
   | CreateExtensions
   | Extension
-  | List<Extension | List<Extension>>
+  | ExtensionPack
+  | ExtensionPackList
 
 export type { Extensions as default }

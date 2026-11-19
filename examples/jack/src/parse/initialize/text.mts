@@ -4,6 +4,7 @@
  * @see https://github.com/micromark/micromark/blob/4.0.2/packages/micromark/dev/lib/initialize/text.js
  */
 
+import { constants, tt } from '@flex-development/jack/symbol'
 import { codes, ev } from '@flex-development/mark-util-symbol'
 import type {
   Chunk,
@@ -21,7 +22,6 @@ import type {
   TokenType
 } from '@flex-development/mark/parse'
 import { ok as assert } from 'devlop'
-import { constants, types as tt } from 'micromark-util-symbol'
 
 /**
  * The markdown string construct.

@@ -6,7 +6,7 @@
   },
   "exclude": ["dist/", "node_modules/"],
   "extends": "../../tsconfig.json",
-  "files": ["typings/@flex-development/mark/parse/index.d.mts"],
+  "files": [],
   "include": ["**/*.mts"],
   "references": [
     {

@@ -24,6 +24,7 @@ branches:
           - context: add-to-project
           - context: artifacts (@flex-development/mark)
           - context: artifacts (@flex-development/mark-compiler)
+          - context: artifacts (@flex-development/mark-factory-identifier)
           - context: artifacts (@flex-development/mark-factory-markers)
           - context: artifacts (@flex-development/mark-factory-space)
           - context: artifacts (@flex-development/mark-parser)
@@ -41,6 +42,7 @@ branches:
           - context: codecov/patch
           - context: codecov/project
           - context: codecov/project/mark-compiler
+          - context: codecov/project/mark-factory-identifier
           - context: codecov/project/mark-factory-markers
           - context: codecov/project/mark-factory-space
           - context: codecov/project/mark-parser
@@ -113,6 +115,9 @@ labels:
     color: c6cde1
   - name: package:mark-compiler
     description: '@flex-development/mark-compiler'
+    color: c6cde1
+  - name: package:mark-factory-identifier
+    description: '@flex-development/mark-factory-identifier'
     color: c6cde1
   - name: package:mark-factory-markers
     description: '@flex-development/mark-factory-markers'

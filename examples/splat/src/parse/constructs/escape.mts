@@ -115,12 +115,12 @@ function tokenizeEscape(
          *
          * @this {void}
          *
-         * @param {Code} code
-         *  The current character code
+         * @param {unknown} code
+         *  The character code to check
          * @return {boolean}
          *  Whether `code` can follow an escape sequence marker
          */
-        code(this: void, code: Code): boolean {
+        code(this: void, code: unknown): boolean {
           return !eos(code)
         },
         type: tt.escapeValue

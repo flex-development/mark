@@ -4,6 +4,7 @@
  * @see https://github.com/micromark/micromark/blob/4.0.2/packages/micromark/dev/lib/initialize/document.js
  */
 
+import { constants, tt } from '@flex-development/jack/symbol'
 import { factorySpace } from '@flex-development/mark-factory-space'
 import { eol } from '@flex-development/mark-util-character'
 import { splice } from '@flex-development/mark-util-chunked'
@@ -23,7 +24,6 @@ import type {
   TokenizeContext
 } from '@flex-development/mark/parse'
 import { ok as assert } from 'devlop'
-import { constants, types as tt } from 'micromark-util-symbol'
 
 /**
  * The markdown document construct.

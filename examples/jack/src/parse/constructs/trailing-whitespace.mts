@@ -5,7 +5,7 @@
 
 import { tt } from '@flex-development/jack/symbol'
 import { factorySpace } from '@flex-development/mark-factory-space'
-import { eol, eos, whitespace } from '@flex-development/mark-util-character'
+import { eos, whitespace } from '@flex-development/mark-util-character'
 import type {
   Code,
   Effects,
@@ -51,6 +51,13 @@ function tokenizeTrailingWhitespace(
   ok: State,
   nok: State
 ): State {
+  /**
+   * The tokenization context.
+   *
+   * @const {TokenizeContext} self
+   */
+  const self: TokenizeContext = this
+
   return startWhitespaceTrail
 
   /**
@@ -97,7 +104,7 @@ function tokenizeTrailingWhitespace(
    */
   function afterWhitespaceTrail(this: void, code: Code): State | undefined {
     // capture line ending.
-    if (eol(code)) {
+    if (self.eol(code)) {
       effects.enter(tt.lineEnding)
       effects.consume(code)
       effects.exit(tt.lineEnding)

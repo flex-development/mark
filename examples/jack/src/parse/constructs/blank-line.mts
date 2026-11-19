@@ -5,12 +5,7 @@
 
 import { constants, tt } from '@flex-development/jack/symbol'
 import { factorySpace } from '@flex-development/mark-factory-space'
-import {
-  bos,
-  eol,
-  eos,
-  whitespace
-} from '@flex-development/mark-util-character'
+import { bos, eos, whitespace } from '@flex-development/mark-util-character'
 import { ev } from '@flex-development/mark-util-symbol'
 import type {
   Code,
@@ -55,7 +50,7 @@ export default blankLine
  *  Whether a blank line may begin after `code`
  */
 function previousBlankLine(this: TokenizeContext, code: Code): boolean {
-  if (bos(code) || eol(code)) return true // beginning of stream or line.
+  if (bos(code) || this.eol(code)) return true // beginning of stream or line.
 
   /**
    * The last emitted event.
@@ -166,7 +161,7 @@ function tokenizeBlankLine(
   function afterLinePrefix(this: void, code: Code): State | undefined {
     // confirmed blank line.
     // at a line ending or end of stream.
-    if (eol(code) || eos(code)) return ok(code)
+    if (self.eol(code) || eos(code)) return ok(code)
 
     // not a blank line.
     // this line has content on it.

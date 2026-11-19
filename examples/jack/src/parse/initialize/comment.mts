@@ -3,8 +3,10 @@
  * @module examples/jack/parse/initialize/comment
  */
 
+import blankLine from '#constructs/blank-line'
 import { constants, tt } from '@flex-development/jack/symbol'
-import { bos, eol, eos } from '@flex-development/mark-util-character'
+import { factorySpace } from '@flex-development/mark-factory-space'
+import { bos, eos } from '@flex-development/mark-util-character'
 import { splice } from '@flex-development/mark-util-chunked'
 import { codes, ev } from '@flex-development/mark-util-symbol'
 import type {
@@ -15,14 +17,13 @@ import type {
   Effects,
   Event,
   InitialConstruct,
+  PartialConstruct,
   Place,
   State,
   Token,
   TokenizeContext
 } from '@flex-development/mark/parse'
 import { ok as assert } from 'devlop'
-import blankLine from '../constructs/blank-line.mts'
-import region from '../constructs/region.mts'
 import postprocess from '../postprocess.mts'
 
 /**
@@ -48,6 +49,24 @@ const comment: InitialConstruct = {
 }
 
 export default comment
+
+/**
+ * Attempt a comment region at the current position.
+ *
+ * An unprefixed region attempt is made first.\
+ * If the initial attempt fails, a line prefix is then attempted and regions are
+ * checked again at the new position, or the current position if no line prefix
+ * is present.
+ *
+ * The construct fails without consuming any input if no prefixed or unprefixed
+ * region can begin.
+ *
+ * Constructs registered for the `comment` content type are then attempted
+ * in extension order.
+ *
+ * @const {PartialConstruct} region
+ */
+const region: PartialConstruct = { partial: true, tokenize: tokenizeRegion }
 
 /**
  * Resolve events emitted while tokenizing a comment content stream.
@@ -325,7 +344,7 @@ function tokenizeComment(this: TokenizeContext, effects: Effects): State {
    */
   function start(this: void, code: Code): State | undefined {
     assert(
-      bos(self.previous) || eol(self.previous) || eos(code),
+      bos(self.previous) || self.eol(self.previous) || eos(code),
       'expected beginning of stream, beginning of line, or end of stream'
     )
 
@@ -540,12 +559,12 @@ function tokenizeComment(this: TokenizeContext, effects: Effects): State {
     if (self.containerState._closeFlow) flush()
 
     // beginning of stream or beginning of new line.
-    if (bos(self.previous) || eol(self.previous)) return start(code)
+    if (bos(self.previous) || self.eol(self.previous)) return start(code)
 
     // `tokenize` finished before a line ending.
     // capture line ending so its not mistaken for a blank markdown line.
     // no need to check for blank lines because regions cannot start on them.
-    if (eol(code)) {
+    if (self.eol(code)) {
       effects.enter(tt.lineEnding)
       effects.consume(code)
       effects.exit(tt.lineEnding)
@@ -665,7 +684,7 @@ function tokenizeComment(this: TokenizeContext, effects: Effects): State {
 
     // continuation construct did not consume entire line.
     // start markdown chunk from current point in the stream.
-    if (!eol(self.previous)) return beforeMarkdown(code)
+    if (!self.eol(self.previous)) return beforeMarkdown(code)
 
     // continuation construct consumed entire line.
     return start(code)
@@ -786,7 +805,7 @@ function tokenizeComment(this: TokenizeContext, effects: Effects): State {
 
     // at the end of a line.
     // consume the current line ending and write the completed markdown chunk.
-    if (eol(code)) {
+    if (self.eol(code)) {
       effects.consume(code) // consume line ending.
       write(effects.exit(tt.chunkMarkdown)) // write completed chunk.
       return start // resume region discovery or continuation.
@@ -994,7 +1013,7 @@ function tokenizeComment(this: TokenizeContext, effects: Effects): State {
     const stream: Chunk[] = self.sliceStream(token)
 
     // update blank line history after an entire line is consumed.
-    if (eol(stream.at(-1))) {
+    if (self.eol(stream.at(-1))) {
       self.parser.previousBlankLine = self.parser.atBlankLine
       self.parser.atBlankLine = null
     }
@@ -1021,5 +1040,75 @@ function tokenizeComment(this: TokenizeContext, effects: Effects): State {
     self.concrete = markdown.concrete
 
     return void markdown
+  }
+}
+
+/**
+ * Attempt a registered comment region.
+ *
+ * An unprefixed region attempt is made first.
+ *
+ * If the initial attempt fails, a line prefix is then attempted and regions are
+ * checked again at the new position, or the current position if no line prefix
+ * is present.
+ *
+ * The construct fails without consuming any input if no prefixed or unprefixed
+ * region can begin.
+ *
+ * @this {TokenizeContext}
+ *
+ * @param {Effects} effects
+ *  The context object used to transition the state machine
+ * @param {State} ok
+ *  The successful tokenization state
+ * @param {State} nok
+ *  The failed tokenization state
+ * @return {State}
+ *  The initial state
+ */
+function tokenizeRegion(
+  this: TokenizeContext,
+  effects: Effects,
+  ok: State,
+  nok: State
+): State {
+  /**
+   * The tokenization context.
+   *
+   * @const {TokenizeContext} self
+   */
+  const self: TokenizeContext = this
+
+  return effects.attempt(this.parser.constructs.comment, ok, prefixedRegion)
+
+  /**
+   * Attempt a prefixed comment region.
+   *
+   * A line prefix is consumed before the region attempt.
+   * If a region cannot be entered, the construct fails without consuming input.
+   *
+   * @this {void}
+   *
+   * @param {Code} code
+   *  The current character code
+   * @return {State | undefined}
+   *  The next state
+   */
+  function prefixedRegion(this: void, code: Code): State | undefined {
+    assert(self.parser.constructs.disable.null, 'expected `disable.null`')
+
+    assert(
+      eos(code) || bos(self.previous) || self.eol(self.previous),
+      'expected end of stream, beginning of stream, or beginning of line'
+    )
+
+    return factorySpace(
+      effects,
+      effects.attempt(self.parser.constructs.comment, ok, nok),
+      tt.linePrefix,
+      self.parser.constructs.disable.null.includes(tt.codeIndented)
+        ? undefined
+        : constants.tabSize
+    )(code)
   }
 }

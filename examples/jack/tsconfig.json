@@ -9,12 +9,20 @@
   "extends": "../../tsconfig.json",
   "files": [
     "../../typings/chai/index.d.mts",
-    "typings/@flex-development/mark/parse/index.d.mts"
+    "typings/@flex-development/mark/ast/index.d.mts",
+    "typings/@flex-development/mark/parse/index.d.mts",
+    "typings/micromark-util-types/index.d.mts"
   ],
   "include": ["**/*.mts"],
   "references": [
     {
       "path": "../../packages/mark/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-compiler/tsconfig.json"
+    },
+    {
+      "path": "../../packages/mark-factory-identifier/tsconfig.json"
     },
     {
       "path": "../../packages/mark-factory-markers/tsconfig.json"

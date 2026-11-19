@@ -6,6 +6,7 @@
 import type {
   Check,
   Code,
+  CodeCheck,
   Construct,
   ContainerState,
   ContentType,
@@ -36,6 +37,16 @@ import type { Debugger } from 'debug'
  *  }
  */
 interface TokenizeContext {
+  /**
+   * Check if a character code represents a stream break.
+   *
+   * @see {@linkcode CodeCheck}
+   *
+   * @default
+   *  import('@flex-development/mark-util-character').streamBreak
+   */
+  break: CodeCheck
+
   /**
    * Whether a speculative {@linkcode Check} is being ran.
    */
@@ -89,6 +100,16 @@ interface TokenizeContext {
    * @see {@linkcode DefineSkip}
    */
   defineSkip: DefineSkip
+
+  /**
+   * Check whether a character code represents a line ending.
+   *
+   * @see {@linkcode CodeCheck}
+   *
+   * @default
+   *  import('@flex-development/mark-util-character').eol
+   */
+  eol: CodeCheck
 
   /**
    * The current list of events.

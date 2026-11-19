@@ -3,10 +3,10 @@
  * @module examples/jack/parse/initialize/source
  */
 
+import blankLine from '#constructs/blank-line'
 import { constants, tt } from '@flex-development/jack/symbol'
 import {
   bos,
-  eol,
   eos,
   whitespace
 } from '@flex-development/mark-util-character'
@@ -26,7 +26,6 @@ import type {
   TokenizeContext
 } from '@flex-development/mark/parse'
 import { ok as assert } from 'devlop'
-import blankLine from '../constructs/blank-line.mts'
 
 /**
  * The initial source file construct.
@@ -205,7 +204,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
    */
   function start(this: void, code: Code): State | undefined {
     assert(
-      bos(self.previous) || eol(self.previous),
+      bos(self.previous) || self.eol(self.previous),
       'expected beginning of stream or line'
     )
 
@@ -330,7 +329,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
 
     // continuation construct did not consume entire line.
     // start comment chunk from current point in the stream.
-    if (!eol(self.previous)) return chunkStart(code)
+    if (!self.eol(self.previous)) return chunkStart(code)
 
     // continuation construct consumed entire line.
     return start(code)
@@ -451,7 +450,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
     if (self.containerState._closeFlow) return noContinuation(code)
 
     // try to continue comment from beginning of new line.
-    if (eol(self.previous)) return start(code)
+    if (self.eol(self.previous)) return start(code)
 
     // start comment chunk from current position.
     return chunkStart(code)
@@ -537,7 +536,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
 
     // at the end of a line.
     // write the completed chunk before continuing the active comment.
-    if (eol(code)) {
+    if (self.eol(code)) {
       effects.consume(code)
       write(effects.exit(tt.chunkComment))
       self.interrupt = undefined // get ready for the next line.
@@ -622,7 +621,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
     }
 
     // at the end of a line.
-    if (eol(code)) {
+    if (self.eol(code)) {
       write(code) // write to the active `language` parser.
       effects.consume(code) // add to source language chunk.
       effects.exit(tt.chunkLanguage) // finish source language chunk.
@@ -771,7 +770,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
         // done by checking `self.parser.activeComment`, or for a more targeted
         // check, `self.parser.activeComment && eol(code)`.
         if (typeof chunk === 'number') {
-          assert(eol(chunk), 'expected line ending')
+          assert(self.eol(chunk), 'expected line ending')
           language.write([chunk])
           continue
         }
@@ -964,7 +963,7 @@ function tokenizeComments(this: TokenizeContext, effects: Effects): State {
       language.place.offset = now.offset
 
       // write the chunk to the child stream.
-      if (eol(chunk) || eos(chunk)) language.write([chunk])
+      if (self.eol(chunk) || eos(chunk)) language.write([chunk])
       else language.write([self.serializeChunks([chunk])])
     }
 

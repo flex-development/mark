@@ -21,6 +21,16 @@ import type { u } from '@flex-development/unist-util-builder'
  */
 interface Options {
   /**
+   * Check if a character code represents a stream break.
+   *
+   * @see {@linkcode CodeCheck}
+   *
+   * @default
+   *  import('@flex-development/mark-util-character').streamBreak
+   */
+  break?: CodeCheck | null | undefined
+
+  /**
    * The name of the debug logger.
    *
    * @default 'mark-parser'
@@ -31,6 +41,9 @@ interface Options {
    * Check if a character code represents a line ending.
    *
    * @see {@linkcode CodeCheck}
+   *
+   * @default
+   *  import('@flex-development/mark-util-character').eol
    */
   eol?: CodeCheck | null | undefined
 

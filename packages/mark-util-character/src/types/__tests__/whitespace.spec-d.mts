@@ -13,6 +13,10 @@ describe('unit-d:types/Whitespace', () => {
     expectTypeOf<TestSubject>().extract<Space>().not.toBeNever()
   })
 
+  it('should extract typeof codes.ff', () => {
+    expectTypeOf<TestSubject>().extract<typeof codes.ff>().not.toBeNever()
+  })
+
   it('should extract typeof codes.horizontalTab', () => {
     expectTypeOf<TestSubject>()
       .extract<typeof codes.horizontalTab>()
@@ -21,5 +25,13 @@ describe('unit-d:types/Whitespace', () => {
 
   it('should extract typeof codes.ht', () => {
     expectTypeOf<TestSubject>().extract<typeof codes.ht>().not.toBeNever()
+  })
+
+  it('should extract typeof codes.nbsp', () => {
+    expectTypeOf<TestSubject>().extract<typeof codes.nbsp>().not.toBeNever()
+  })
+
+  it('should extract typeof codes.vt', () => {
+    expectTypeOf<TestSubject>().extract<typeof codes.vt>().not.toBeNever()
   })
 })

@@ -5,10 +5,14 @@ cefc
 chunker
 cntrl
 commitlintrc
+dchar
 dedupe
 devlop
+dquote
+exitatxheadingsequence
 exiter
 fbca
+feff
 gpgsign
 gyas
 hmarr
@@ -23,6 +27,7 @@ pilcrow
 punct
 rollup
 rtags
+schar
 shfmt
 subtokenization
 succ

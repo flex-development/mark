@@ -40,9 +40,28 @@ function group(
   // entering or exiting a token that starts and ends on the same line.
   if (token.start.line === token.end.line) {
     // child token belongs to a different bucket.
-    // token was produced from a chunk without a line ending.
-    // this can happen when a single line is split into multiple chunks.
-    if (token.start.offset < linked.start.offset) return void child
+    // the token starts and ends after the current linked token.
+    if (
+      token.start.offset >= linked.end.offset &&
+      token.end.offset >= linked.end.offset
+    ) {
+      ok(!seen.has(token), 'expected not to have added `token` to `bucket`')
+      return -1
+    }
+
+    // child token already added to bucket.
+    if (seen.has(token)) {
+      ok(event === ev.enter, 'expected sameline token `enter` event')
+      return bucket.unshift(child)
+    }
+
+    // we move from back to front.
+    ok(event === ev.exit, 'expected sameline token `exit` event')
+
+    // exiting a sameline token.
+
+    // child token belongs to a different linked token.
+    if (oor(token, linked)) return void child
 
     // mark token as seen and add child event to bucket.
     seen.add(token)
@@ -78,14 +97,7 @@ function group(
   // exiting a token that spans multiple lines.
   if (event === ev.exit) {
     // child token belongs to a different linked token.
-    if (
-      // token ends before the linked token starts...
-      token.end.offset <= linked.start.offset ||
-      // ...or after the linked token ends.
-      token.end.offset > linked.end.offset
-    ) {
-      return void child
-    }
+    if (oor(token, linked)) return void child
 
     // child token belongs to the current linked token.
     // the token ends before or at linked token's end.
@@ -96,4 +108,27 @@ function group(
   // entering a multiline token.
   ok(seen.has(token), 'expected to have seen multiline `token`')
   return bucket.unshift(child)
+}
+
+/**
+ * Check if `token` is **not** in the range of the current `linked` token.
+ *
+ * @internal
+ *
+ * @this {void}
+ *
+ * @param {Token} token
+ *  The child token
+ * @param {Token} linked
+ *  The current linked token
+ * @return {boolean}
+ *  Whether bucketing should stop before `token` is added
+ */
+function oor(this: void, token: Token, linked: Token): boolean {
+  return (
+    // token ends before the linked token starts...
+    token.end.offset <= linked.start.offset ||
+    // ...or after the linked token ends.
+    token.end.offset > linked.end.offset
+  )
 }

@@ -7,17 +7,17 @@ import type {
   Buffer,
   Closer,
   Extension,
+  ExtensionList,
   Opener
 } from '@flex-development/mark/ast'
-import type { List } from '@flex-development/mark/core'
 
 /**
- * Create an extension or a collection of extensions.
+ * Create an extension or an extension list.
  *
  * @see {@linkcode Buffer}
  * @see {@linkcode Closer}
  * @see {@linkcode Extension}
- * @see {@linkcode List}
+ * @see {@linkcode ExtensionList}
  * @see {@linkcode Opener}
  *
  * @this {void}
@@ -27,8 +27,8 @@ import type { List } from '@flex-development/mark/core'
  * @param {Closer} closer
  *  Create an `exit` event handler
  * @param {Buffer} buffer
- *  Start capturing output into a fragment
- * @return {Extension | List<Extension | List<Extension>>}
+ *  Start capturing output into a temporary compilation value
+ * @return {Extension | ExtensionList}
  *  The extension, or the list of extensions
  */
 type CreateExtensions = (
@@ -36,6 +36,6 @@ type CreateExtensions = (
   opener: Opener,
   closer: Closer,
   buffer: Buffer
-) => Extension | List<Extension | List<Extension>>
+) => Extension | ExtensionList
 
 export type { CreateExtensions as default }

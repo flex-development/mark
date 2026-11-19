@@ -25,6 +25,7 @@ const config: UserConfig = {
       'combine-extensions',
       'compiler',
       'decode',
+      'examples',
       'factory-markers',
       'factory-space',
       'parser',

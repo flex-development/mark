@@ -52,13 +52,17 @@ describe('unit:lib/checker', () => {
       expect(tester).toHaveBeenCalledWith(fromCodePoint.mock.results[0]!.value)
     })
 
+    it('should return `false` if `code` is not a `Code`', () => {
+      expect(subject(undefined)).to.be.false
+    })
+
     it.each<[code: unknown]>([
       [LARGEST_CODE_POINT + 1],
       [Number.NaN],
       [codes.break],
       [codes.virtualSpace]
     ])('should return `false` if `code` is invalid code point (%#)', code => {
-      expect(subject(code as Code)).to.be.false
+      expect(subject(code)).to.be.false
     })
 
     it('should return `false` if typeof `code` is not a number', () => {

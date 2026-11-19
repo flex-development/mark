@@ -16,6 +16,12 @@ import pathe from '@flex-development/pathe'
 const config = [
   ...fldv.configs.node,
   {
+    ignores: [
+      'examples/jack/__fixtures__/comments/*.json5',
+      'examples/jack/__fixtures__/files/empty.json5'
+    ]
+  },
+  {
     files: ['**/*.+(cjs|cts|js|jsx|mjs|mts|ts|tsx)'],
     languageOptions: {
       parserOptions: {
@@ -23,6 +29,26 @@ const config = [
         projectService: true,
         tsconfigRootDir: pathe.cwd()
       }
+    },
+    rules: {
+      'node/no-unsupported-features/node-builtins': [
+        2,
+        {
+          allowExperimental: true,
+          version: '>=22'
+        }
+      ]
+    }
+  },
+  {
+    files: ['**/*.json5'],
+    rules: {
+      'jsonc/no-hexadecimal-numeric-literals': 0,
+      'jsonc/no-infinity': 0,
+      'jsonc/no-nan': 0,
+      'jsonc/no-plus-sign': 0,
+      'jsonc/no-sparse-arrays': 0,
+      'jsonc/valid-json-number': 0
     }
   },
   {
@@ -40,22 +66,6 @@ const config = [
     ],
     rules: {
       'unicorn/no-this-assignment': 0
-    }
-  },
-  {
-    files: [
-      'eslint.config.mjs',
-      'examples/jack/src/parse/initialize/comment.mts',
-      'packages/mark-parser/src/create-tokenizer.mts'
-    ],
-    rules: {
-      'node/no-unsupported-features/node-builtins': [
-        2,
-        {
-          allowExperimental: true,
-          version: '>=17.0.0'
-        }
-      ]
     }
   },
   {

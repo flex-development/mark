@@ -23,6 +23,9 @@ function whitespace(this: void, code: unknown): code is Whitespace {
   switch (code) {
     case codes.horizontalTab:
     case codes.ht:
+    case codes.vt:
+    case codes.ff:
+    case codes.nbsp:
       return true
     default:
       return space(code)

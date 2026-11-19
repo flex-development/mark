@@ -108,6 +108,7 @@
     }
   ],
   "editor.tabSize": 2,
+  "editor.unusualLineTerminators": "off",
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
   "emmet.excludeLanguages": [],

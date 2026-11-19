@@ -4,6 +4,7 @@
  */
 
 import type {
+  ConstructName,
   ConstructPosition,
   Exiter,
   Previous,
@@ -39,10 +40,10 @@ describe('unit-d:parse/interfaces/Construct', () => {
       .toEqualTypeOf<Nilable<Exiter>>()
   })
 
-  it('should match [name?: string | null | undefined]', () => {
+  it('should match [name?: ConstructName | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('name')
-      .toEqualTypeOf<Nilable<string>>()
+      .toEqualTypeOf<Nilable<ConstructName>>()
   })
 
   it('should match [partial?: boolean | null | undefined]', () => {

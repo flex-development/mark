@@ -149,12 +149,12 @@ function tokenizeRangeExpression(
    *
    * @this {void}
    *
-   * @param {Code} code
-   *  The current character code
+   * @param {unknown} code
+   *  The character code to check
    * @return {boolean}
    *  Whether `code` represents a start or end value
    */
-  function value(this: void, code: Code): boolean {
+  function value(this: void, code: unknown): boolean {
     return !eos(code)
   }
 }

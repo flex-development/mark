@@ -4,7 +4,12 @@
  */
 
 import type { Initialize, Options, Store } from '@flex-development/mark-parser'
-import { eol, eos } from '@flex-development/mark-util-character'
+import {
+  bos,
+  eol,
+  eos,
+  streamBreak
+} from '@flex-development/mark-util-character'
 import { push, splice } from '@flex-development/mark-util-chunked'
 import combineExtensions from '@flex-development/mark-util-combine-extensions'
 import { resolveAll } from '@flex-development/mark-util-resolve-all'
@@ -215,12 +220,14 @@ function createTokenizer(
    */
   const context: TokenizeContext = Object.defineProperties({
     applySkip,
+    break: options.break ?? streamBreak,
     chunks: [],
     code: codes.bos,
     currentConstruct: undefined,
     debug,
     defineSkip,
     effects,
+    eol: options.eol ?? eol,
     events: [],
     hooks: {},
     now,
@@ -630,18 +637,18 @@ function createTokenizer(
 
     // move position in content.
     if (
-      code !== codes.bos && // beginning of stream
       code !== codes.empty && // empty string chunk (preprocessed)
-      code !== codes.eos && // end of stream
-      code !== codes.virtualSpace // virtual space
+      code !== codes.virtualSpace && // virtual space
+      !bos(code) && // beginning of stream
+      !eos(code) // end of stream
     ) {
-      if ((options.eol ?? eol)(code)) {
+      if (context.eol(code)) {
         context.place.column = 1
         context.place.line++
         context.place.offset += code === codes.carriageReturnLineFeed ? 2 : 1
         context.applySkip(code)
         context.debug('position after eol: %o', context.place)
-      } else if (code !== codes.break || context.moveOnBreak) {
+      } else if (!context.break(code) || context.moveOnBreak) {
         context.place.column++
         context.place.offset += width
       }

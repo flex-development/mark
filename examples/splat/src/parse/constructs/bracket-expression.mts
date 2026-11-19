@@ -7,10 +7,10 @@ import { eos } from '@flex-development/mark-util-character'
 import { codes } from '@flex-development/mark-util-symbol'
 import type {
   Code,
+  ContentType,
   Effects,
   NamedConstruct,
   State,
-  Token,
   TokenizeContext
 } from '@flex-development/mark/parse'
 import { constants, tt } from '@flex-development/splat/symbol'
@@ -69,13 +69,6 @@ function tokenizeBracketExpression(
    * @const {TokenizeContext} self
    */
   const self: TokenizeContext = this
-
-  /**
-   * The previous chunk token.
-   *
-   * @var {Token | undefined} previous
-   */
-  let previous: Token | undefined
 
   /**
    * Whether a value has been seen inside the bracket expression.
@@ -231,24 +224,16 @@ function tokenizeBracketExpression(
       return ok
     }
 
+    /**
+     * The content type.
+     *
+     * @const {ContentType} contentType
+     */
+    const contentType: ContentType = constants.contentTypeLiteral
+
     // start the literal container.
     effects.enter(tt.literal)
-
-    /**
-     * The new chunk token.
-     *
-     * @const {Token} token
-     */
-    const token: Token = effects.enter(tt.chunkLiteral, {
-      contentType: constants.contentTypeLiteral,
-      previous
-    })
-
-    // link the tokens together.
-    token.previous = previous
-    if (previous) previous.next = token
-    previous = token
-
+    effects.enter(tt.chunkLiteral, { contentType })
     effects.consume(code)
     effects.exit(tt.chunkLiteral)
     effects.exit(tt.literal)

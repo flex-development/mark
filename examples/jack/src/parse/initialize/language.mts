@@ -3,14 +3,10 @@
  * @module examples/jack/parse/initialize/language
  */
 
+import wc from '#constructs/wc'
 import { tt } from '@flex-development/jack/symbol'
-import { factorySpace } from '@flex-development/mark-factory-space'
-import {
-  bos,
-  eol,
-  eos,
-  whitespace
-} from '@flex-development/mark-util-character'
+import { eos, streamBreak } from '@flex-development/mark-util-character'
+import { splice } from '@flex-development/mark-util-chunked'
 import type {
   Code,
   Construct,
@@ -19,11 +15,10 @@ import type {
   InitialConstruct,
   Place,
   State,
+  Token,
   TokenizeContext
 } from '@flex-development/mark/parse'
 import { ok as assert } from 'devlop'
-import blankLine from '../constructs/blank-line.mts'
-import trailingWhitespace from '../constructs/trailing-whitespace.mts'
 
 /**
  * The initial source language construct.
@@ -77,12 +72,19 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
    */
   let then: Place | undefined
 
+  /**
+   * The current unexpected value.
+   *
+   * @var {Token | undefined} unexpectedValue
+   */
+  let unexpectedValue: Token | undefined
+
   return start
 
   /**
    * Start or resume scanning source language content.
    *
-   * Whitespace and blank lines are handled before attempting to enter a new
+   * Whitespace and comments are handled before attempting to enter a new
    * expression or continue an open expression.
    *
    * @this {void}
@@ -93,50 +95,52 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
    *  The next state
    */
   function start(this: void, code: Code): State | undefined {
-    self.containerState ??= {} // initialize container state.
+    restate() // initialize container state.
 
     // inside a comment.
-    if (self.parser.activeComment) return effects.consume(code), start
+    if (streamBreak(code)) return beforeSpaceOrComment(code)
 
     // at least one expression on stack.
-    // try continuing the active expression.
+    // check for whitespace and comments
+    // before trying to continue the active expression.
     if (stack.length) {
-      // at the beginning of a line.
-      // first try parsing a blank line.
-      // capture line prefix before continuation attempt otherwise.
-      if (eol(self.previous)) {
-        return effects.attempt(
-          blankLine,
-          endBlankLine,
-          factorySpace(effects, tryContinuation, tt.linePrefix)
-        )(code)
-      }
-
-      // in the middle of a line.
-      // capture arbitrary whitespace before continuation attempt.
-      return factorySpace(effects, tryContinuation, tt.whitespace)(code)
+      return effects.check(wc, beforeSpaceOrComment, tryContinuation)(code)
     }
 
     // no expression on stack.
+    // check for whitespace and comments before checking for a new expression.
+    return effects.check(wc, beforeSpaceOrComment, checkExpression)(code)
+  }
 
-    // at beginning of stream or line.
-    // first try parsing a blank line.
-    // capture line prefix and try starting a new expression.
-    if (bos(self.previous) || eol(self.previous)) {
-      return effects.attempt(
-        blankLine,
-        endBlankLine,
-        factorySpace(effects, tryExpression, tt.linePrefix)
-      )(code)
+  /**
+   * Before unicode whitespace or a comment.
+   *
+   * @this {void}
+   *
+   * @param {Code} code
+   *  The current character code
+   * @return {State | undefined}
+   *  The next state
+   */
+  function beforeSpaceOrComment(this: void, code: Code): State | undefined {
+    // close the current unexpected value.
+    if (unexpectedValue) {
+      effects.exit(unexpectedValue.type)
+      unexpectedValue = undefined
     }
 
-    // in the middle of a line.
-    // capture arbitrary whitespace before trying to start a new expression.
-    return factorySpace(effects, tryExpression, tt.whitespace)(code)
+    // at least one expression on stack.
+    // capture whitespace or a comment before trying
+    // to continue the active expression.
+    if (stack.length) return effects.attempt(wc, tryContinuation)(code)
+
+    // no expression on stack.
+    // capture whitespace or a comment before checking for a new expression.
+    return effects.attempt(wc, checkExpression)(code)
   }
 
   /**
-   * End a blank line.
+   * Check for a new expression.
    *
    * @this {void}
    *
@@ -145,21 +149,21 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
    * @return {State | undefined}
    *  The next state
    */
-  function endBlankLine(this: void, code: Code): State | undefined {
-    assert(eol(code) || eos(code), 'expected line ending or end of stream')
+  function checkExpression(this: void, code: Code): State | undefined {
+    restate() // get ready for a new expression.
 
-    // at end of stream.
-    if (eos(code)) return void end(code)
-
-    // capture the blank line ending.
-    effects.enter(tt.lineEndingBlank)
-    effects.consume(code)
-    effects.exit(tt.lineEndingBlank)
-    return start
+    // check for a new expression.
+    // if successful, prepare to enter a new expression.
+    // on failure, start or continue an unexpected value.
+    return effects.check(
+      self.parser.constructs.expression,
+      beforeExpression,
+      unexpected
+    )(code)
   }
 
   /**
-   * Try entering a new expression.
+   * Before a new expression.
    *
    * @this {void}
    *
@@ -168,22 +172,21 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
    * @return {State | undefined}
    *  The next state
    */
-  function tryExpression(this: void, code: Code): State | undefined {
-    assert(!whitespace(code), 'did not expect whitespace')
+  function beforeExpression(this: void, code: Code): State | undefined {
+    // close the current unexpected value.
+    if (unexpectedValue) {
+      effects.exit(unexpectedValue.type)
+      unexpectedValue = undefined
+    }
 
-    // inside a comment.
-    if (self.parser.activeComment) return start(code)
+    // get ready for the new expression.
+    restate()
 
-    // get ready for a new expression.
-    self.containerState = {}
-
-    // try starting a new expression.
-    // register the expression if the attempt is successful.
-    // try raising an error otherwise.
+    // start a new expression.
+    // no failure state needed, expression start has already been confirmed.
     return effects.attempt(
       self.parser.constructs.expression,
-      takeExpression,
-      raise
+      takeExpression
     )(code)
   }
 
@@ -200,6 +203,33 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
   function takeExpression(this: void, code: Code): State | undefined {
     assert(self.containerState, 'expected `containerState`')
     assert(self.currentConstruct, 'expected `currentConstruct`')
+    assert(!unexpectedValue, 'did not expect unexpected value')
+
+    if (stack.length) {
+      /**
+       * The parent expression.
+       *
+       * @const {Expression} parent
+       */
+      const parent: Expression = stack[stack.length - 1]!
+
+      assert(parent[1].members, 'expected object members stack')
+
+      // the new expression is the field value of the active object member.
+      if (parent[1].members.length) {
+        parent[1].members.at(-1)![2] ??= self.containerState
+      }
+
+      // check if a container expression is missing a separator.
+
+      // malformed container expression.
+      // a separator was expected, but is missing.
+      if (parent[1].phase === 'afterValue') parent[1].malformed = true
+
+      // parent expression just opened, or a separator was just seen.
+      assert(parent[1].phase !== undefined)
+      parent[1].phase = 'afterValue'
+    }
 
     // register the new expression.
     stack.push([self.currentConstruct, self.containerState])
@@ -207,49 +237,8 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
     // no continuation to attempt.
     if (!self.currentConstruct.continuation) return noContinuation(code)
 
-    // immediate container closure requested.
-    if (self.containerState._closeFlow) {
-      delete self.containerState._closeFlow
-      return noContinuation(code)
-    }
-
-    // finish the line before resuming scanning.
-    if (eol(code)) {
-      effects.enter(tt.lineEnding)
-      effects.consume(code)
-      effects.exit(tt.lineEnding)
-      return start
-    }
-
-    // try capturing trailing whitespace before resuming scanning.
-    return effects.attempt(
-      trailingWhitespace,
-      afterTrailingWhitespace,
-      start
-    )(code)
-  }
-
-  /**
-   * Process trailing whitespace after an expression.
-   *
-   * @this {void}
-   *
-   * @param {Code} code
-   *  The current character code
-   * @return {State | undefined}
-   *  The next state
-   */
-  function afterTrailingWhitespace(this: void, code: Code): State | undefined {
-    assert(eol(code) || eos(code), 'expected line ending or end of stream')
-
-    // at end of stream.
-    if (eos(code)) return void end(code)
-
-    // finish the line.
-    effects.enter(tt.lineEnding)
-    effects.consume(code)
-    effects.exit(tt.lineEnding)
-    return start
+    // try capturing whitespace and/or comments before resuming scanning.
+    return effects.attempt(wc, start, start)(code)
   }
 
   /**
@@ -312,7 +301,7 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
     const now: Place = self.now()
 
     // continuation succeeded without consuming input.
-    // try entering a new expression from the current point in the stream.
+    // check for a new expression at the current point in the stream.
     if (
       then.line === now.line &&
       then.column === now.column &&
@@ -320,7 +309,7 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
       then._bufferIndex === now._bufferIndex &&
       then._index === now._index
     ) {
-      return tryExpression(code)
+      return effects.attempt(wc, checkExpression, checkExpression)(code)
     }
 
     // continuation succeeded and consumed input.
@@ -385,12 +374,29 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
      */
     let k: number = 0
 
+    // close the current unexpected value.
+    if (unexpectedValue) {
+      effects.exit(unexpectedValue.type)
+      unexpectedValue = undefined
+    }
+
     // call the exit hook on each expression container.
     while (++k <= count) {
       assert(stack[stack.length - k], 'expected `stack[stack.length - k]`')
       const [construct, containerState] = stack[stack.length - k]!
+      assert(containerState.members, 'expected object `members` stack')
+
       self.containerState = containerState
       construct.exit?.call(self, effects)
+
+      // finalize the active object member.
+      if (containerState.members.at(-1)?.[2] === containerState) {
+        const [exitIndex, member] = containerState.members.pop()!
+
+        // fix end position of the object member and its `exit` event position.
+        member.end = self.now()
+        self.events.push(...splice(self.events, exitIndex, 1))
+      }
     }
 
     // remove closed expressions from the stack.
@@ -399,7 +405,7 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
   }
 
   /**
-   * Raise an unexpected character error.
+   * Capture an unexpected character.
    *
    * @this {void}
    *
@@ -408,23 +414,39 @@ function tokenizeLanguage(this: TokenizeContext, effects: Effects): State {
    * @return {State | undefined}
    *  The next state
    */
-  function raise(this: void, code: Code): State | undefined {
+  function unexpected(this: void, code: Code): State | undefined {
     // at end of stream.
     if (eos(code)) return void end(code)
 
-    // capture line ending, then restart from beginning of next line.
-    // no need to worry about blank lines; they've already been parsed.
-    if (eol(code)) {
-      effects.enter(tt.lineEnding)
-      effects.consume(code)
-      effects.exit(tt.lineEnding)
-      return start
-    }
+    // add to the current unexpected value and resume scanning.
+    if (unexpectedValue) return effects.consume(code), start
 
-    // capture the unexpected character and resume scanning.
-    effects.enter(tt.unexpectedValue)
+    // capture the first unexpected character.
+    unexpectedValue = effects.enter(tt.unexpectedValue)
     effects.consume(code)
-    effects.exit(tt.unexpectedValue)
+
+    // resume scanning.
     return start
+  }
+
+  /**
+   * Reset container state.
+   *
+   * The active `members` stack is retained after reset.
+   *
+   * @this {void}
+   *
+   * @return {undefined}
+   */
+  function restate(this: void): undefined {
+    const { members = [] } = self.containerState ?? {}
+
+    // get ready for the next expression.
+    self.containerState = {}
+
+    // re-expose the active object members stack.
+    self.containerState.members = members
+
+    return void self.containerState
   }
 }

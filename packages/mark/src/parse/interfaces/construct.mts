@@ -4,6 +4,7 @@
  */
 
 import type {
+  ConstructName,
   ConstructPosition,
   ConstructRecord,
   Exiter,
@@ -72,8 +73,12 @@ interface Construct {
 
   /**
    * The name of the construct.
+   *
+   * Only named constructs can be disabled.
+   *
+   * @see {@linkcode ConstructName}
    */
-  name?: string | null | undefined
+  name?: ConstructName | null | undefined
 
   /**
    * Whether the construct is partial.

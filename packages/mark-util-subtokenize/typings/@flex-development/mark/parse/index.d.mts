@@ -1,12 +1,8 @@
-import type { Create, TokenizeContext } from '@flex-development/mark/parse'
+import type { Create } from '@flex-development/mark/parse'
 
 declare module '@flex-development/mark/parse' {
   interface ContentTypeMap {
     test: 'test'
-  }
-
-  interface ContextMap {
-    mark: TokenizeContext
   }
 
   interface ParseContext {

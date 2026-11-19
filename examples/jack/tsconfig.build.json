@@ -6,11 +6,21 @@
     "rootDir": "src"
   },
   "extends": "../../tsconfig.build.json",
-  "files": ["typings/@flex-development/mark/parse/index.d.mts"],
+  "files": [
+    "typings/@flex-development/mark/ast/index.d.mts",
+    "typings/@flex-development/mark/parse/index.d.mts",
+    "typings/micromark-util-types/index.d.mts"
+  ],
   "include": ["src/**/**.mts"],
   "references": [
     {
       "path": "../../packages/mark/tsconfig.build.json"
+    },
+    {
+      "path": "../../packages/mark-compiler/tsconfig.build.json"
+    },
+    {
+      "path": "../../packages/mark-factory-identifier/tsconfig.build.json"
     },
     {
       "path": "../../packages/mark-factory-markers/tsconfig.build.json"

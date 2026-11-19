@@ -1,29 +1,30 @@
-import type { ConstructRecord, Place } from '@flex-development/mark/parse'
-import type * as micromark from 'micromark-util-types'
+import type * as docmark from '@flex-development/docmark-util-types'
+import type { ContainerPhase } from '@flex-development/jack/parse'
+import type {
+  ConstructRecord,
+  Disable,
+  Place,
+  Settings
+} from '@flex-development/mark/parse'
 
 declare module '@flex-development/mark/parse' {
-  type AttentionMarkers = { null?: Marker[] | null | undefined }
-
-  interface ContainerState extends micromark.ContainerState {
-    /**
-     * For array expressions, the current array nesting depth.
-     *
-     * The first array expression marker in the content establishes a nesting
-     * depth of one. Nested left square brackets increase the depth, while right
-     * square brackets decrease it.\
-     * An array expression closes when the depth returns to zero.
-     */
-    arrays?: number | undefined
-
+  interface ContainerState extends docmark.ContainerState {
     /**
      * For comments, the token representing the active comment.
      *
      * The comment token is captured at the `comments` level after a new comment
      * has just been entered.\
-     * The token is extracted from the first event produced by the current comment
-     * construct.
+     * The token is extracted from the first event produced by the current
+     * comment construct.
+     *
+     * @see {@linkcode Token}
      */
     comment?: Token | undefined
+
+    /**
+     * Whether syntax is malformed.
+     */
+    malformed?: boolean | null | undefined
 
     /**
      * Whether markdown indentation was is active.
@@ -34,31 +35,30 @@ declare module '@flex-development/mark/parse' {
     markdownIndent?: boolean | undefined
 
     /**
-     * For object expressions, the current object nesting depth.
+     * The object member stack.
      *
-     * The first object expression marker in the content establishes a nesting
-     * depth of one. Nested left curly braces increase the depth, while right
-     * curly braces decrease it.\
-     * An object expression closes when the depth returns to zero.
+     * Each item is a tuple where the first value is the original `exit` event
+     * index of the object member, the second value is the object member token,
+     * and the last value is the persistent state of the member's field value.
+     *
+     * @see {@linkcode Token}
      */
-    objects?: number | undefined
+    members?: [number, Token, ContainerState?][] | undefined
 
     /**
      * For comments, the token representing the comment opener.
      *
      * By default, this is a `commentOpener` token.
      *
-     * Comment openers are a specific sequence of {@linkcode Marker} (non-`null`
-     * character codes), unique to the surrounding source language, used to
-     * signal the beginning of a comment.
+     * Comment openers are a specific sequence of markers (non-`null` character
+     * codes), unique to the surrounding source language, used to signal the
+     * beginning of a comment.
      *
      * Marker sequences for block comment openers are unique in comparison to
      * their comment closer and comment line sequences.
      *
      * For line comments, the beginning sequence *is* the comment opener.\
      * Further sequences are considered part of the current comment line prefix.
-     * When indented syntax is disabled, markers on continued lines are expected
-     * to match the sequence established by `opener`.
      *
      * @see {@linkcode Token}
      */
@@ -69,9 +69,6 @@ declare module '@flex-development/mark/parse' {
      *
      * Opener width is the difference between `end` and `start` columns.
      *
-     * When a comment is active and indented syntax is enabled, opener width is
-     * used to derive the expected indentation of a candidate continuation line.
-     *
      * Before any whitespace can be treated as a marker sequence, a line
      * comment's candidate line must have leading comment padding that ends
      * directly below the active opener. For block comments, leading comment
@@ -80,94 +77,112 @@ declare module '@flex-development/mark/parse' {
      * form the line's indent.
      */
     openerWidth?: number | undefined
+
+    /**
+     * The current container expression phase.
+     *
+     * @see {@linkcode ContainerPhase}
+     */
+    phase?: ContainerPhase
+
+    /**
+     * For array expressions, whether a sparse element was encountered.
+     */
+    sparse?: boolean | null | undefined
   }
 
-  interface ContentTypeMap {
-    comment: 'comment'
-    content: 'content'
-    document: 'document'
-    flow: 'flow'
-    language: 'language'
+  interface ContentTypeMap extends docmark.ContentTypeMap {
+    comments: never
     source: 'source'
-    string: 'string'
-    text: 'text'
-  }
-
-  interface ContextMap {
-    mark: TokenizeContext
+    type: never
   }
 
   interface Extension {
-    attentionMarkers?: AttentionMarkers | null | undefined
-    contentInitial?: ConstructRecord | null | undefined
-    comments?: ConstructRecord | null | undefined
-    expression?: ConstructRecord | null | undefined
-    flowInitial?: ConstructRecord | null | undefined
-    insideSpan?: InsideSpan | null | undefined
+    attentionMarkers?: docmark.AttentionMarkers | undefined
+    comments?: ConstructRecord | undefined
+    contentInitial?: ConstructRecord | undefined
+    disable?: Disable | undefined
+    expression?: ConstructRecord | undefined
+    flowInitial?: ConstructRecord | undefined
+    insideSpan?: docmark.InsideSpan | undefined
+    settings?: Settings | undefined
     source?: null | undefined
   }
 
-  type InsideSpan = {
-    null?: Pick<Construct, 'resolveAll'>[] | null | undefined
-  }
-
-  interface ParseContext {
-    activeComment?: boolean | null | undefined
-    atBlankLine?: boolean | null | undefined
-    defined: string[]
-    freshComment?: boolean | null | undefined
-    freshRegion?: boolean | null | undefined
-    lazy: Record<Line, boolean>
-    previousBlankLine?: boolean | null | undefined
-    skipComment?: boolean | undefined
-    skipSummary?: boolean | undefined
-  }
-
-  interface Token {
+  interface ParseContext extends docmark.ParseContext {
     /**
-     * The value of the token.
+     * Whether a comment is not allowed at the current position.
+     */
+    skipComment?: boolean | null | undefined
+  }
+
+  interface Token extends docmark.Token {
+    /**
+     * Whether syntax is malformed.
+     */
+    malformed?: boolean | null | undefined
+
+    /**
+     * For array expressions, whether a sparse element was encountered.
+     */
+    sparse?: boolean | null | undefined
+
+    /**
+     * For value separators, whether the separator is trailing.
+     */
+    trailing?: boolean | null | undefined
+
+    /**
+     * The string value of the token.
      */
     value?: string | null | undefined
   }
 
-  interface TokenFields {
-    _container?: boolean | undefined
-    _close?: boolean | undefined
-    _open?: boolean | undefined
-    _region?: boolean | undefined
-    _trailing?: boolean | undefined
-  }
+  interface TokenFields extends docmark.TokenFields {}
 
-  interface TokenTypeMap extends micromark.TokenTypeMap {
+  interface TokenTypeMap extends docmark.TokenTypeMap {
     arrayExpression: 'arrayExpression'
     arrayMarker: 'arrayMarker'
     booleanExpression: 'booleanExpression'
-    chunkComment: 'chunkComment'
-    chunkExpression: 'chunkExpression'
-    chunkLanguage: 'chunkLanguage'
-    chunkMarkdown: 'chunkMarkdown'
-    chunkString: 'chunkString'
-    comment: 'comment'
-    commentCloser: 'commentCloser'
-    commentLinePrefix: 'commentLinePrefix'
-    commentMarker: 'commentMarker'
-    commentOpener: 'commentOpener'
-    commentPadding: 'commentPadding'
-    eoc: 'eoc'
     escapeMarker: 'escapeMarker'
     fieldSeparator: 'fieldSeparator'
+    hexEscape: 'hexEscape'
+    hexEscapeValue: 'hexEscapeValue'
+    identifier: 'identifier'
+    nulEscape: 'nulEscape'
+    nulEscapeValue: 'nulEscapeValue'
     nullExpression: 'nullExpression'
     numberExpression: 'numberExpression'
     objectExpression: 'objectExpression'
     objectMarker: 'objectMarker'
+    objectMember: 'objectMember'
+    operand: 'operand'
+    signOperator: 'signOperator'
     stringExpression: 'stringExpression'
     stringMarker: 'stringMarker'
     unexpectedValue: 'unexpectedValue'
+    unicodeEscape: 'unicodeEscape'
+    unicodeEscapeValue: 'unicodeEscapeValue'
+    unsignedNumber: 'unsignedNumber'
     valueSeparator: 'valueSeparator'
   }
 
   interface TokenizeContext {
+    /**
+     * Whether concrete markdown was detected.
+     *
+     * Concrete constructs cannot be interrupted by other constructs.
+     */
     concrete?: boolean | undefined
+
+    /**
+     * The current place in the content.
+     *
+     * @see {@linkcode Place}
+     *
+     * @internal
+     * @readonly
+     */
     readonly place: Place
   }
 }

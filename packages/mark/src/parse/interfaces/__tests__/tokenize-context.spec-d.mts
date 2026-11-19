@@ -5,6 +5,7 @@
 
 import type {
   Code,
+  CodeCheck,
   Construct,
   ContainerState,
   ContentType,
@@ -24,6 +25,12 @@ import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../tokenize-context.mts'
 
 describe('unit-d:parse/interfaces/TokenizeContext', () => {
+  it('should match [break: CodeCheck]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('break')
+      .toEqualTypeOf<CodeCheck>()
+  })
+
   it('should match [check?: boolean | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('check')
@@ -62,6 +69,10 @@ describe('unit-d:parse/interfaces/TokenizeContext', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('defineSkip')
       .toEqualTypeOf<DefineSkip>()
+  })
+
+  it('should match [eol: CodeCheck]', () => {
+    expectTypeOf<TestSubject>().toHaveProperty('eol').toEqualTypeOf<CodeCheck>()
   })
 
   it('should match [events: Event[]]', () => {

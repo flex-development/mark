@@ -1,6 +1,6 @@
 /**
  * @file Test Utilities - snapshotEvents
- * @module jack/tests/utils/snapshotEvents
+ * @module examples/jack/tests/utils/snapshotEvents
  */
 
 import { tt } from '@flex-development/jack/symbol'
@@ -24,6 +24,7 @@ function snapshotEvents(this: void, events: Event[]): [EventType, Token][] {
       token.type !== tt.arrayExpression &&
       token.type !== tt.arrayMarker &&
       token.type !== tt.blockQuotePrefix &&
+      token.type !== tt.characterEscape &&
       token.type !== tt.characterReference &&
       token.type !== tt.codeFenced &&
       token.type !== tt.codeFencedFence &&
@@ -31,24 +32,32 @@ function snapshotEvents(this: void, events: Event[]): [EventType, Token][] {
       token.type !== tt.codeIndented &&
       token.type !== tt.codeText &&
       token.type !== tt.comment &&
+      token.type !== tt.commentCloser &&
       token.type !== tt.commentLinePrefix &&
+      token.type !== tt.commentOpener &&
       token.type !== tt.content &&
       token.type !== tt.eoc &&
       token.type !== tt.emphasis &&
       token.type !== tt.emphasisText &&
+      token.type !== tt.escapeMarker &&
       token.type !== tt.definition &&
       token.type !== tt.definitionDestination &&
       token.type !== tt.definitionDestinationRaw &&
       token.type !== tt.definitionDestinationString &&
       token.type !== tt.definitionLabel &&
+      token.type !== tt.fieldSeparator &&
+      token.type !== tt.hexEscape &&
       token.type !== tt.htmlFlow &&
       token.type !== tt.htmlText &&
       token.type !== tt.htmlTextData &&
       token.type !== tt.label &&
       token.type !== tt.link &&
       token.type !== tt.listItemPrefix &&
+      token.type !== tt.nulEscape &&
+      token.type !== tt.numberExpression &&
       token.type !== tt.objectExpression &&
       token.type !== tt.objectMarker &&
+      token.type !== tt.objectMember &&
       token.type !== tt.paragraph &&
       token.type !== tt.reference &&
       token.type !== tt.referenceString &&
@@ -56,6 +65,8 @@ function snapshotEvents(this: void, events: Event[]): [EventType, Token][] {
       token.type !== tt.stringMarker &&
       token.type !== tt.strong &&
       token.type !== tt.strongText &&
+      token.type !== tt.unicodeEscape &&
+      token.type !== tt.valueSeparator &&
       !token._container &&
       !token._region &&
       !Object.prototype.hasOwnProperty.call(token, 'value')

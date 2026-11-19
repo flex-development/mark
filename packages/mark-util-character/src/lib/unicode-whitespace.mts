@@ -3,7 +3,7 @@
  * @module mark-util-character/lib/unicodeWhitespace
  */
 
-import type { Code, CodeCheck } from '@flex-development/mark/parse'
+import type { CodeCheck } from '@flex-development/mark/parse'
 import checker from './checker.mts'
 
 /**
@@ -18,13 +18,12 @@ import checker from './checker.mts'
  * - `U+000D` CARRIAGE RETURN (`CR`)
  *
  * @see {@linkcode CodeCheck}
- * @see {@linkcode Code}
  * @see https://www.fileformat.info/info/unicode/category/Zs/list.htm
  * @see https://www.unicode.org/versions
  *
  * @this {void}
  *
- * @param {Code} code
+ * @param {unknown} code
  *  The character code to check
  * @return {boolean}
  *  Whether the character code matches

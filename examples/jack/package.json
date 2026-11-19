@@ -58,12 +58,24 @@
     }
   },
   "imports": {
+    "#constructs/*": {
+      "mark": "./src/parse/constructs/*.mts",
+      "default": "./dist/parse/constructs/*.mjs"
+    },
+    "#initialize/*": {
+      "mark": "./src/parse/initialize/*.mts",
+      "default": "./dist/parse/initialize/*.mjs"
+    },
     "#tests/*": "./__tests__/*.mts"
   },
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "dependencies": {
+    "@flex-development/docast": "1.0.0-beta.6",
+    "@flex-development/docmark-util-types": "1.0.0-alpha.22",
     "@flex-development/mark": "workspace:1.0.0-alpha.15",
+    "@flex-development/mark-compiler": "workspace:1.0.0-alpha.13",
+    "@flex-development/mark-factory-identifier": "workspace:0.0.0",
     "@flex-development/mark-factory-markers": "workspace:1.0.0-alpha.2",
     "@flex-development/mark-factory-space": "workspace:1.0.0-alpha.2",
     "@flex-development/mark-parser": "workspace:1.0.0-alpha.23",
@@ -72,13 +84,20 @@
     "@flex-development/mark-util-combine-extensions": "workspace:1.0.0-alpha.3",
     "@flex-development/mark-util-subtokenize": "workspace:1.0.0-alpha.2",
     "@flex-development/mark-util-symbol": "workspace:1.0.0-alpha.15",
+    "@flex-development/mdast-util-from-markdown": "2.0.0",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-types": "1.6.1",
+    "@types/mdast": "4.0.4",
     "@types/unist": "3.0.3",
     "devlop": "1.1.0",
-    "micromark-core-commonmark": "2.0.4",
+    "mdast-util-to-string": "4.0.0",
+    "micromark-core-commonmark": "2.0.4"
+  },
+  "devDependencies": {
+    "@flex-development/unist-util-inspect": "1.1.0",
     "micromark-util-symbol": "2.0.1",
-    "micromark-util-types": "2.0.3"
+    "micromark-util-types": "2.0.3",
+    "unist-util-size": "4.0.0"
   },
   "sideEffects": false
 }

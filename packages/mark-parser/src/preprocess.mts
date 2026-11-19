@@ -161,29 +161,7 @@ function preprocess(
 
         // process character code.
         switch (code) {
-          case codes.ht:
-            /**
-             * The next column.
-             *
-             * @const {number} n
-             */
-            const n: number = Math.ceil(column / tabSize) * tabSize
-
-            // normalize horizontal tab into virtual tab and spaces.
-            chunks.push(codes.horizontalTab)
-            while (column++ < n) chunks.push(codes.virtualSpace)
-
-            break
-          case codes.lf: // add virtual line feed.
-            chunks.push(codes.lineFeed)
-            column = 1
-            break
-          case codes.nul: // replace `nul` with replacement character.
-            if (options?.nul !== false) chunks.push(codes.nul)
-            else chunks.push(codes.replacementCharacter)
-            column++
-            break
-          default: // carriage return.
+          case codes.cr: // carriage return.
             /**
              * The index of the next character code.
              *
@@ -207,6 +185,31 @@ function preprocess(
 
             column = 1
             break
+          case codes.ht:
+            /**
+             * The next column.
+             *
+             * @const {number} n
+             */
+            const n: number = Math.ceil(column / tabSize) * tabSize
+
+            // normalize horizontal tab into virtual tab and spaces.
+            chunks.push(codes.horizontalTab)
+            while (column++ < n) chunks.push(codes.virtualSpace)
+
+            break
+          case codes.lf: // add virtual line feed.
+            chunks.push(codes.lineFeed)
+            column = 1
+            break
+          case codes.nul: // replace `nul` with replacement character.
+            if (options?.nul !== false) chunks.push(codes.nul)
+            else chunks.push(codes.replacementCharacter)
+            column++
+            break
+          default: // unusual line terminator.
+            chunks.push(code)
+            column = 1
         }
 
         index += k

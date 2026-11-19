@@ -3,8 +3,12 @@
  * @module mark/ast/types/tests/unit-d/Extensions
  */
 
-import type { CreateExtensions, Extension } from '@flex-development/mark/ast'
-import type { List } from '@flex-development/mark/core'
+import type {
+  CreateExtensions,
+  Extension,
+  ExtensionPack,
+  ExtensionPackList
+} from '@flex-development/mark/ast'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../extensions.mts'
 
@@ -17,9 +21,11 @@ describe('unit-d:ast/types/Extensions', () => {
     expectTypeOf<TestSubject>().extract<Extension>().not.toBeNever()
   })
 
-  it('should allow List<Extension | List<Extension>>', () => {
-    expectTypeOf<TestSubject>()
-      .extract<List<Extension | List<Extension>>>()
-      .not.toBeNever()
+  it('should allow ExtensionPack', () => {
+    expectTypeOf<TestSubject>().extract<ExtensionPack>().not.toBeNever()
+  })
+
+  it('should allow ExtensionPackList', () => {
+    expectTypeOf<TestSubject>().extract<ExtensionPackList>().not.toBeNever()
   })
 })
